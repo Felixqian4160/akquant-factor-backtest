@@ -1,0 +1,25 @@
+cmd: /media/felix/f/quant/akquant-factor-backtest/system.sh verify
+  OK  examples/build_picks_v34_factorrank.py
+  OK  examples/v41_run_akquant_v34.py
+  OK  examples/stage_a_1_matrices_and_picks.py
+  OK  examples/stage_a_2_run_sims.py
+  OK  examples/stage5_picks_and_sims.py
+  OK  examples/stage5_run_sims.py
+  OK  examples/stage5_report.py
+  OK  examples/diag_split_mechanism.py
+  OK  examples/derive_corporate_actions_local.py
+  OK  data/wavehunter_hs300_v34_adj_20261007.parquet
+  OK  evidence/stage_a_20261007/matrix_v34_ADJ.parquet
+  OK  evidence/v34_adj_20261007/corporate_actions_derived.parquet
+  OK  evidence/causal_zigzag_router_20261006/router_map.json
+  OK  STRATEGIES/v34_lb20_factor_return_voting.md
+  OK  SYSTEM_VERIFY.py
+  DIR evidence/stage_a_20261007 present
+  DIR evidence/stage5_20261007 present
+  DIR evidence/v34_adj_20261007 present
+  DIR evidence/causal_zigzag_router_20261006 present
+
+FAILED:
+  CHANGED: system.sh  was=f4290c6de3ee now=172e12f19d9e
+
+16 checks run, 1 failed

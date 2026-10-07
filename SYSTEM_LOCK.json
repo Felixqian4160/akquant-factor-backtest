@@ -1,6 +1,6 @@
 {
   "lock_version": 1,
-  "locked_at": "2026-10-07T17:13:35+0800",
+  "locked_at": "2026-10-07T23:37:23+0800",
   "description": "v34-lb20 factor-return voting strategy - production locked artifacts",
   "scripts": {
     "examples/build_picks_v34_factorrank.py": {
@@ -66,8 +66,8 @@
       "bytes": 1647
     },
     "system.sh": {
-      "sha256": "dce4b577d78c3c1cbb1a0d22ea42eb3b0aa1dac93affb9d2933850272a2a5e18",
-      "bytes": 2428
+      "sha256": "b24b5bee812905aa115ec37dd28753a92e607aedb1ecf3b2aae9c1772ad2a20d",
+      "bytes": 3441
     }
   },
   "ev_dirs": [

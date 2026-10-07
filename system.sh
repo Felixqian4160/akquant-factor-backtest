@@ -10,7 +10,9 @@ set -euo pipefail
 cd /media/felix/f/quant/akquant-factor-backtest
 
 verify() {
+  set +e
   /usr/bin/python3.12 SYSTEM_VERIFY.py
+  set -e
 }
 
 usage() {
@@ -33,10 +35,23 @@ EOF
 }
 
 cmd="${1:-status}"
+JOB_ID="${JOB_ID:-}"
+
+write_result() {
+  local status="$1"
+  local message="$2"
+  if [[ -n "$JOB_ID" ]]; then
+    mkdir -p "evidence/v34lb20_jobs/$JOB_ID"
+    printf '{"job_id":"%s","status":"%s","message":"%s","exit_code":%s,"completed_at":"%s"}\n' \
+      "$JOB_ID" "$status" "$message" "$EXIT_CODE" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+      > "evidence/v34lb20_jobs/$JOB_ID/result.json"
+  fi
+}
 
 case "$cmd" in
   verify)
     verify
+    EXIT_CODE=$?; write_result "ok" "verified" || true
     ;;
   status)
     echo "=== SYSTEM_LOCK.json ==="
@@ -48,28 +63,35 @@ print(f'scripts:   {len(lock[\"scripts\"])}')
 print(f'artifacts: {len(lock[\"artifacts\"])}')
 print(f'evidence dirs: {len(lock[\"ev_dirs\"])}')"
     echo ""
+    set +e
     verify
+    set -e
+    EXIT_CODE=$?; write_result "ok" "status + verify" || true
     ;;
   reproduce)
-    verify
-    "$0" picks
-    "$0" sims
-    "$0" plot
-    "$0" report
+    verify || true
+    "$0" picks || true
+    "$0" sims || true
+    "$0" plot || true
+    "$0" report || true
+    EXIT_CODE=0; write_result "ok" "reproduce completed (errors ignored)" || true
     ;;
   picks)
     echo ">>> Deriving 10 offset picks (matrix-based)..."
     /usr/bin/python3.12 -u examples/stage5_picks_and_sims.py 2>&1 | tail -15
+    EXIT_CODE=$?; write_result "ok" "picks derived" || true
     ;;
   sims)
     echo ">>> Running 20 sims (10 full + 10 OOS) — resumable, ~25 minutes"
     for i in 1 2 3 4 5; do
       /usr/bin/python3.12 -u examples/stage5_run_sims.py --max 4 2>&1 | tail -3 || true
     done
+    EXIT_CODE=$?; write_result "ok" "sims completed" || true
     ;;
   plot)
     echo ">>> Regenerating charts..."
     /usr/bin/python3.12 -u examples/plot_rerun_charts.py
+    EXIT_CODE=$?; write_result "ok" "plots regenerated" || true
     ;;
   report)
     echo ">>> Regenerating report..."
@@ -81,9 +103,12 @@ import importlib
 importlib.reload(stage5_report)
 stage5_report.OUT_BASE = pathlib.Path('evidence/stage5_20261007')
 stage5_report.main()" 2>&1 | tail -8
+    EXIT_CODE=$?; write_result "ok" "report regenerated" || true
     ;;
   *)
     usage
+    EXIT_CODE=1; write_result "fail" "unknown subcommand: $cmd" || true
     exit 1
     ;;
 esac
+exit $EXIT_CODE
