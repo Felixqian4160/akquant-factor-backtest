@@ -1,0 +1,16 @@
+{
+  "contract_id": "v2_stage7c_cooldown_sweep_20260930_031336",
+  "title": "v2 Stage 7c: kill cooldown sweep (20d -> {10, 30, 40, 60}d)",
+  "status": "active",
+  "single_variable": "kill cooldown (20d -> sweep {10, 30, 40, 60}d)",
+  "NOT changing": [
+    "factors",
+    "top_k=10",
+    "rebal=20",
+    "kill_threshold=8%",
+    "weight_mode=equal"
+  ],
+  "method": "For each cooldown, run per-bull-leg backtest (10 legs).",
+  "expected": "Longer cooldown → more time flat after kill → less trading → MDD ↓, closed_only ↓",
+  "output": "/media/felix/f/quant/akquant-factor-backtest/evidence/factor_research_workflow_v2_stage7c_20260930_031336/stage7c_results.json"
+}

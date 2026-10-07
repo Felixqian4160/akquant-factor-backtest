@@ -1,0 +1,6 @@
+{"stage": "init", "job_id": "v16b_regime_1790816279", "timestamp": "2026-10-01T08:57:59.728159", "start_date": "2020-01-01", "end_date": "2023-12-31", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "ic_window_days": 20, "min_hold_days": 5, "fwd_days": 20, "lot_size": 100}
+{"stage": "panel_loaded", "job_id": "v16b_regime_1790816279", "timestamp": "2026-10-01T08:58:01.997263", "n_rows": 1298335, "n_cols": 419, "n_candidates": 391}
+{"stage": "computing_rolling_ic", "job_id": "v16b_regime_1790816279", "timestamp": "2026-10-01T08:58:25.593392", "factors": 391, "window": 20, "fwd_days": 20}
+{"stage": "rolling_ic_done", "job_id": "v16b_regime_1790816279", "timestamp": "2026-10-01T08:58:29.470400", "duration_sec": 3.866194248199463}
+{"stage": "top_factors_per_day_built", "job_id": "v16b_regime_1790816279", "timestamp": "2026-10-01T08:58:29.493537", "n_rows": 9630}
+{"stage": "votes_filtered", "job_id": "v16b_regime_1790816279", "timestamp": "2026-10-01T08:59:26.078321", "n_votes": 57940}

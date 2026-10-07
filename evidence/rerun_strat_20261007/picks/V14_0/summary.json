@@ -1,0 +1,10 @@
+{
+  "tag": "V14_0",
+  "offset": 0,
+  "lookback_sessions": 20,
+  "panel": "/media/felix/f/quant/akquant-factor-backtest/data/wavehunter_hs300_v34_adj_20261007.parquet",
+  "panel_version": "v34_adj_20261007",
+  "n_rebalances": 195,
+  "avg_n_stocks": 8.256410256410257,
+  "window": "2010-01-01~2025-12-31"
+}

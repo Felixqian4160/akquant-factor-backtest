@@ -1,0 +1,16 @@
+{"stage": "init", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:20:15.291795", "start_date": "2020-01-01", "end_date": "2024-12-31", "n_factors": 391, "fwd_days": 20, "bear_lookback_sessions": 60, "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "min_stocks": 5, "max_stocks": 10, "bear_rebalance_sessions": 20, "min_factor_mean_return": 0.0, "lot_size": 100}
+{"stage": "bear_history_rows", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:00.184194", "rows": 151809, "bear_dates": 461}
+{"stage": "factor_returns_progress", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:01.025091", "completed": 50, "total": 391, "elapsed_sec": 0.8230328559875488}
+{"stage": "factor_returns_progress", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:01.422218", "completed": 100, "total": 391, "elapsed_sec": 1.2203965187072754}
+{"stage": "factor_returns_progress", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:01.812147", "completed": 150, "total": 391, "elapsed_sec": 1.610325813293457}
+{"stage": "factor_returns_progress", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:02.213607", "completed": 200, "total": 391, "elapsed_sec": 2.0117850303649902}
+{"stage": "factor_returns_progress", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:02.634278", "completed": 250, "total": 391, "elapsed_sec": 2.4324562549591064}
+{"stage": "factor_returns_progress", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:03.017641", "completed": 300, "total": 391, "elapsed_sec": 2.815819263458252}
+{"stage": "factor_returns_progress", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:03.413694", "completed": 350, "total": 391, "elapsed_sec": 3.2118730545043945}
+{"stage": "factor_returns_ready", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:03.794199", "rows": 356842, "duration_sec": 3.592376470565796}
+{"stage": "bear_picks_ready", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:17.984325", "rebalance_dates": 18, "picked_dates": 17}
+{"stage": "universe_ready", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:18.023431", "n_symbols": 119}
+{"stage": "data_ready", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:18.908027", "n_symbols": 119}
+{"stage": "akquant_start", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:18.908139"}
+{"stage": "akquant_done", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:23.253558"}
+{"stage": "done", "job_id": "v19_5y_1790828412", "timestamp": "2026-10-01T12:21:23.330751", "final_value": 98889824.48726, "final_return_pct": -1.110175512739997, "n_trades": 158, "n_orders": 318, "result_file": "evidence/daily_factor_reselect/pipeline_v19/v19_5y_1790828412/result.json"}

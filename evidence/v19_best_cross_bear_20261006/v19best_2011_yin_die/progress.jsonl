@@ -1,0 +1,16 @@
+{"stage": "init", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:23.259498", "start_date": "2011-01-01", "end_date": "2012-01-01", "n_factors": 391, "fwd_days": 20, "bear_lookback_sessions": 30, "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 3, "min_stocks": 5, "max_stocks": 10, "bear_rebalance_sessions": 20, "min_factor_mean_return": 0.005, "lot_size": 100}
+{"stage": "bear_history_rows", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:23.483727", "rows": 35754, "bear_dates": 187}
+{"stage": "factor_returns_progress", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:23.705605", "completed": 50, "total": 391, "elapsed_sec": 0.2217402458190918}
+{"stage": "factor_returns_progress", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:23.927442", "completed": 100, "total": 391, "elapsed_sec": 0.4435765743255615}
+{"stage": "factor_returns_progress", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:24.140135", "completed": 150, "total": 391, "elapsed_sec": 0.6562693119049072}
+{"stage": "factor_returns_progress", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:24.353047", "completed": 200, "total": 391, "elapsed_sec": 0.8691833019256592}
+{"stage": "factor_returns_progress", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:24.566027", "completed": 250, "total": 391, "elapsed_sec": 1.082162857055664}
+{"stage": "factor_returns_progress", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:24.782046", "completed": 300, "total": 391, "elapsed_sec": 1.2981820106506348}
+{"stage": "factor_returns_progress", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:24.990144", "completed": 350, "total": 391, "elapsed_sec": 1.5062799453735352}
+{"stage": "factor_returns_ready", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:25.173532", "rows": 137912, "duration_sec": 1.6896650791168213}
+{"stage": "bear_picks_ready", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:25.402102", "rebalance_dates": 6, "picked_dates": 5}
+{"stage": "universe_ready", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:25.407143", "n_symbols": 40}
+{"stage": "data_ready", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:25.501137", "n_symbols": 40}
+{"stage": "akquant_start", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:25.501241"}
+{"stage": "akquant_done", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:25.917197"}
+{"stage": "done", "job_id": "v19best_2011_yin_die", "timestamp": "2026-10-06T14:54:25.937119", "final_value": 107705717.34352748, "final_return_pct": 7.705717343527474, "n_trades": 38, "n_orders": 86, "result_file": "evidence/v19_best_cross_bear_20261006/v19best_2011_yin_die/result.json"}

@@ -1,0 +1,32 @@
+{
+  "workflow": "v2 WebUI Workflow (4 tabs, end-to-end)",
+  "goal_achieved": true,
+  "completed_at": "2026-09-30T07:25:25.381072",
+  "tabs_verified": {
+    "tab1_backtest_results": "14 stages shown + Stage 5b +48.32% / +134.1% / 2.927 / 17.67%",
+    "tab2_walk_forward": "15 windows real backtests (max_windows=2 step_months=6), mean ann +38.4% / sharpe 0.764 / MDD 32.75%",
+    "tab3_daily_strategy": "2024-02-02 picks: top10 displayed (688256.SH 0.9774 ~ 300759.SZ 0.9270, 348 stocks scored)",
+    "tab4_paper_trading": "2020-2021 paper trade: +58.82% closed / +26.0% ann / sharpe 0.756 / MDD 32.36% / 31 trades / ¥1M→¥1.53M / ledger 4272 bytes"
+  },
+  "production_usage": {
+    "launch": "/usr/bin/python3.12 /media/felix/f/quant/akquant-factor-backtest/webui/app.py",
+    "url": "http://localhost:8088",
+    "daily_picks_cli": "/usr/bin/python3.12 webui/scripts/daily_picks_v5b.py --date YYYY-MM-DD --top-k 10 --out-dir <dir>",
+    "paper_trade_cli": "/usr/bin/python3.12 webui/scripts/paper_trade_v5b.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD --initial-cash 1000000 --out-dir <dir>",
+    "walk_forward_cli": "/usr/bin/python3.12 webui/scripts/walk_forward_v5b.py --job-id <id> --max-windows 6 --out-dir <dir>"
+  },
+  "key_insight_from_walkforward": {
+    "15_windows_results": "7 positive, 6 with ann>=12%, 0 fully pass target",
+    "bull_regime_windows": "2020 windows (1, 4) +81.7% / +88.1% / Sharpe > 1.5 (best)",
+    "bear_regime_windows": "2022 windows (5, 6) -0.4% / +11.9% (worst)",
+    "interpretation": "Stage 5b bull_composite 是 specialist - bull regime 强 (ann +80~150%), bear regime 弱 (ann 0~12%)。这就是为什么 mean MDD 32.75% > 12% target。"
+  },
+  "files": [
+    "webui/app.py",
+    "webui/routers/{backtest_results,walk_forward,daily_strategy,paper_trading}.py",
+    "webui/static/index.html + css/style.css + js/main.js + tabs/{backtest,walkforward,daily,paper}.js",
+    "webui/scripts/{walk_forward_v5b,daily_picks_v5b,paper_trade_v5b}.py",
+    "evidence/v2_webui_workflow/FINAL_REPORT.md",
+    "evidence/v2_webui_workflow/usage.json"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "question": "工作流 是不是动态的因子?",
+  "answer": "NO - 当前是 hard-coded 6 因子 (semi-static composite)",
+  "evidence": {
+    "hard_coded_in": [
+      "webui/scripts/daily_picks_v5b.py:43",
+      "webui/scripts/paper_trade_v5b.py:45",
+      "webui/scripts/walk_forward_v5b.py:64",
+      "examples/v1_stage5b_topk10.py:47"
+    ],
+    "factors": [
+      "talib_NATR",
+      "talib_TRANGE",
+      "gtja_gtja_159",
+      "gtja_gtja_149",
+      "gtja_gtja_144",
+      "mw_vol_20d"
+    ],
+    "frozen_since": "Stage 5b (2026-09-30), selected via Stage 2a cross-reference of v3 sweep top + regime_factor_lift bull top"
+  },
+  "what_changes_per_day": [
+    "每只股票 6 个因子的 raw 值 (panel values)",
+    "cross-section percentile rank (per-day)",
+    "composite score (per-day, per-stock)",
+    "top-K=10 picks (per-day)"
+  ],
+  "what_does_NOT_change": [
+    "factor SET (永远 6 个)",
+    "factor 权重 (equal)",
+    "top_k (10), rebal (20d), kill (8%/20d)",
+    "universe (HS300 354 stocks)"
+  ],
+  "semi_dynamic_feature": {
+    "method": "cross-section percentile rank per day → average → top-K",
+    "dynamic_aspect": "rank 每天变, composite score 每天变, picks 每天变",
+    "static_aspect": "factor set frozen, equal weight",
+    "industry_term": "\"static factor composite\" / \"Long-Short Equity 多因子打分\""
+  },
+  "fully_dynamic_options": {
+    "option_A_per_leg_reselect": {
+      "description": "每个 bull leg 重新选 top-N factors from v3 sweep 393 pool",
+      "cost": "5-10 minutes (10 legs × 1179 backtests)",
+      "expected_improvement": "可能 ±5pp alpha (leg 变化重选可能更 fit)"
+    },
+    "option_B_rolling_decay": {
+      "description": "每个 rebal_day 看每个 factor rolling-60d Sharpe, drop 负 Sharpe 的",
+      "cost": "longest (per-day factor screening)",
+      "expected_improvement": "MDD 可能 ↓ 5pp (坏因子被踢)"
+    },
+    "option_C_regime_conditional": {
+      "description": "bull regime → bull_composite 6 因子; bear regime → reversal 4 因子; sideways → cash",
+      "cost": "medium (需要 bear/sideways factor pool 已 sweep)",
+      "expected_improvement": "Walk-Forward 15 windows 中 6 bear/sideways 失败会被反转, mean MDD 可能 ↓ 10pp"
+    }
+  },
+  "workflow_supports_dynamic": true,
+  "current_recommendation": "当前 Stage 5b 是 production-ready (per-leg ann +134%, sharpe 2.93). 真要 production-realistic 需要 Option C (regime-conditional) 来处理 bear windows."
+}

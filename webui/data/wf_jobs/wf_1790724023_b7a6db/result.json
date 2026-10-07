@@ -1,0 +1,75 @@
+{
+  "contract": {
+    "job_id": "wf_1790724023_b7a6db",
+    "strategy": "BullCompositeTopK10Kill (Stage 5b)",
+    "factors": [
+      "talib_NATR",
+      "talib_TRANGE",
+      "gtja_gtja_159",
+      "gtja_gtja_149",
+      "gtja_gtja_144",
+      "mw_vol_20d"
+    ],
+    "top_k": 10,
+    "rebal_days": 20,
+    "kill_dd_threshold": 0.08,
+    "kill_cooldown_days": 20,
+    "commission_bps_per_side": 40
+  },
+  "config": {
+    "job_id": "wf_1790724023_b7a6db",
+    "train_start": "2010-01-01",
+    "train_end": "2018-12-31",
+    "val_months": 6,
+    "oos_months": 12,
+    "step_months": 6,
+    "max_windows": 2,
+    "out_dir": "/media/felix/f/quant/akquant-factor-backtest/webui/data/wf_jobs/wf_1790724023_b7a6db"
+  },
+  "windows": [
+    {
+      "idx": 1,
+      "oos_start": "2019-06-29",
+      "oos_end": "2020-06-23",
+      "metrics": {
+        "closed_only_return_pct": 80.1982,
+        "total_return_pct": 121.036,
+        "unrealized_pnl": 408378.0,
+        "sharpe_ratio": 2.205,
+        "max_drawdown_pct": 28.61,
+        "win_rate": 76.56,
+        "closed_trade_count": 64,
+        "annualized_pct": 81.7,
+        "elapsed_sec": 4.6,
+        "n_rows": 68166,
+        "n_stocks": 289
+      }
+    },
+    {
+      "idx": 2,
+      "oos_start": "2019-12-26",
+      "oos_end": "2020-12-20",
+      "metrics": {
+        "closed_only_return_pct": 15.4049,
+        "total_return_pct": 36.3707,
+        "unrealized_pnl": 209658.0,
+        "sharpe_ratio": 1.015,
+        "max_drawdown_pct": 30.17,
+        "win_rate": 88.89,
+        "closed_trade_count": 9,
+        "annualized_pct": 15.6,
+        "elapsed_sec": 4.4,
+        "n_rows": 69134,
+        "n_stocks": 302
+      }
+    }
+  ],
+  "summary": {
+    "n_windows": 2,
+    "n_valid": 2,
+    "n_pass_target": 0,
+    "mean_oos_ann_pct": 48.6,
+    "mean_oos_sharpe": 1.61,
+    "mean_oos_mdd_pct": 29.39
+  }
+}

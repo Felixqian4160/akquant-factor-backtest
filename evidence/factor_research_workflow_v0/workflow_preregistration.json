@@ -1,0 +1,63 @@
+{
+  "contract_id": "factor_research_workflow_v0_20260930_025122",
+  "title": "v0 Factor Research Workflow for A-share Stable Factor Group + Strategy",
+  "status": "active",
+  "created_at": "2026-09-30T02:51:22.085537",
+  "goal": "Use AKQuant 0.3.64 to find: (1) the best factor research workflow, (2) the most stable factor group across A-share regimes, (3) the most stable strategy that exploits that factor group.",
+  "pipeline": {
+    "Stage 1_baseline": {
+      "name": "Single-factor trend-following baseline",
+      "status": "completed (v3 sweep 20260929_220211)",
+      "input": "v2 panel (420 cols), 393 unique factors after dedup",
+      "output": "1179 backtest (393 × 3 rebal), per-factor closed_only_return_pct",
+      "key_result": "gtja_gtja_132 +2.39% / gtja_gtja_076 +2.29% (single-symbol, no cap bias)"
+    },
+    "Stage 2_regime_stability": {
+      "name": "Cross-regime single-factor stability",
+      "status": "to_run",
+      "input": "v3 sweep_results.json + bull_legs.json + bear_legs.json + sideways_label",
+      "method": "Slice v3 raw_results per (factor, rebal) by regime: bull (idx in bull_legs), bear (idx in bear_legs), sideways (between legs). Compute stability metric: stability = mean(closed_ret) - stdev(closed_ret) / max_dd. Rank factors by stability > +0 AND mean > +1% across regimes.",
+      "output": "regime_stability.json (per-factor × regime closed_ret + composite stability score)",
+      "single_variable": "panel slicing (full -> per-regime)"
+    },
+    "Stage 3_multi_factor_composite": {
+      "name": "Top-N stable factors composite ranking",
+      "status": "to_run_after_2",
+      "input": "top-N factors from Stage 2",
+      "method": "Use bull_composite_topk_backtest.py pipeline (multi-symbol, cross-section rank). Replace 6-factor BULL_FACTORS with top-N from Stage 2 (N=3,5,7,10). Test each composite in 10 bull legs.",
+      "output": "per-N per-leg composite return + sharpe + MDD",
+      "single_variable": "N (number of factors in composite)"
+    },
+    "Stage 4_multi_symbol_topk": {
+      "name": "Multi-symbol top-K + rebal sweep",
+      "status": "to_run_after_3",
+      "input": "best composite from Stage 3",
+      "method": "Use bull_composite pipeline. Sweep top_k={5,10,15,20,30} × rebal={5,10,20,40}. Each backtest: closed_only_return + sharpe + MDD + commission.",
+      "output": "topk_rebal_sweep.json with 5×4=20 combinations × 10 legs = 200 backtests",
+      "single_variable": "top_k, rebal_days"
+    },
+    "Stage 5_oos_validation": {
+      "name": "Out-of-sample validation + risk controls",
+      "status": "to_run_after_4",
+      "input": "best (factor_composite, top_k, rebal) from Stage 4",
+      "method": "Time-series split: train 2010-2018, val 2019-2021, OOS 2022-2025. Add cost sensitivity: commission={0,15,25,40} bps × slippage={0,5,10} bps. Test MDD cap (e.g., 20%) with kill-switch logic.",
+      "output": "oos_validation.json + risk_sensitivity.json",
+      "single_variable": "time window + commission/slippage"
+    }
+  },
+  "single_variable_discipline": {
+    "rule": "Each Stage changes ONLY ONE variable from prior Stage. No multi-variable tuning.",
+    "rollback": "Each Stage writes artefacts to evidence/<stage>_<ts>/. If Stage N+1 fails, the prior Stage artefacts are the snapshot.",
+    "frozen_code": "panel_loader.py, bull_composite_topk_backtest.py are FROZEN. Stage 3/4 only ADD new scripts."
+  },
+  "stability_metric_definition": {
+    "formula": "stability = mean(regime_closed_ret) - stdev(regime_closed_ret) / max_drawdown",
+    "intuition": "Positive mean (alpha exists) AND low stdev/MDD (stable across regimes) -> high score",
+    "cutoff": "Mean(regime_closed_ret) > 1% AND stdev < 5% AND MDD < 30%"
+  },
+  "deliverable": {
+    "report": "evidence/factor_research_workflow_v0/report.md with Stage 1-5 results + final recommendation",
+    "code": "examples/ subdir with Stage 2-5 scripts (Stage 1 = existing sweep_v3_*)",
+    "data": "evidence/factor_research_workflow_v0/ with per-stage JSON outputs"
+  }
+}

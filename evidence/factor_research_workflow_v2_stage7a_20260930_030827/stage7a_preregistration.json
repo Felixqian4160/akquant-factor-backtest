@@ -1,0 +1,20 @@
+{
+  "contract_id": "v2_stage7a_kill_threshold_sweep_20260930_030827",
+  "title": "v2 Stage 7a: kill DD threshold sweep (8% -> {4, 6, 10, 12}%)",
+  "status": "active",
+  "created_at": "2026-09-30T03:08:27.657457",
+  "baseline": "Stage 5b: top_k=10, kill_threshold=8%, cooldown=20d, on_cross_section kill check",
+  "single_variable_change": "kill DD threshold (8% -> sweep {4, 6, 10, 12}%)",
+  "NOT changing": [
+    "factors",
+    "top_k=10",
+    "rebal=20",
+    "commission=40bps",
+    "cooldown=20d",
+    "kill check freq=rebal"
+  ],
+  "method": "For each threshold in {4, 6, 10, 12}%, run per-bull-leg backtest (10 legs). Compare mean closed_only, mean MDD, meeting_target_count.",
+  "expected_outcome": "Lower threshold (4-6%) → more aggressive kill, MDD ↓, closed ↓. Higher threshold (10-12%) → less aggressive kill, MDD ↑, closed ↑.",
+  "target": "identify threshold that meets all 3 targets (ann>=12%, sharpe>=1.2, MDD<=12%) on more legs",
+  "output": "/media/felix/f/quant/akquant-factor-backtest/evidence/factor_research_workflow_v2_stage7a_20260930_030827/stage7a_results.json + per-threshold CSV"
+}

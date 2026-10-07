@@ -1,0 +1,14 @@
+{"stage": "init", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:48.207603", "start_date": "2020-01-01", "end_date": "2020-02-29", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "min_stocks": 5, "max_stocks": 10, "min_hold_days": 5, "fwd_days": 20, "lot_size": 100}
+{"stage": "panel_loaded", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:49.282147", "n_rows": 1298335, "n_cols": 419, "n_candidates": 391}
+{"stage": "computing_forward_returns", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:49.282518", "fwd_days": 20}
+{"stage": "forward_returns_ready", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:50.010152", "n_total_dates": 36, "duration_sec": -4.76837158203125e-07}
+{"stage": "factor_scores_done", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:51.770934", "duration_sec": 1.7606348991394043}
+{"stage": "filtering_to_top_factors", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.060480", "top_factors": 10}
+{"stage": "votes_filtered_to_top_factors", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.103642", "n_votes": 3600}
+{"stage": "picks_phase_done", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.105532", "n_days": 36, "avg_stocks_per_day": 10.0}
+{"stage": "universe_size", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.105647", "n_unique_stocks": 149}
+{"stage": "data_dict_built", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.325249", "n_symbols": 149}
+{"stage": "akquant_start", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.325349"}
+{"stage": "akquant_done", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.734636"}
+{"stage": "done", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.738093", "final_value": 100000000.0, "final_return_pct": 0.0, "n_days": 36, "n_days_with_picks": 36, "avg_stocks_per_day": 10.0}
+{"stage": "result_written", "job_id": "v13_smoke2_1790812727", "timestamp": "2026-10-01T07:58:54.738159", "result_file": "evidence/daily_factor_reselect/pipeline_v13/v13_smoke2_1790812727/result.json"}

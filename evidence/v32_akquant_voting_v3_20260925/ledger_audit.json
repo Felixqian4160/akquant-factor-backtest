@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "check": "trades_exist",
+      "pass": true,
+      "detail": "548 closed trades"
+    },
+    {
+      "check": "orders_both_sides",
+      "pass": true,
+      "detail": "{'OrderSide.Buy': 397, 'OrderSide.Sell': 391}"
+    },
+    {
+      "check": "orders_filled_all",
+      "pass": true,
+      "detail": "filled=788, rejected=0"
+    },
+    {
+      "check": "qty_lot_multiple",
+      "pass": true,
+      "detail": "n=548, min=200, all %100==0"
+    },
+    {
+      "check": "nav_bounded",
+      "pass": true,
+      "detail": "last=2024-12-31"
+    },
+    {
+      "check": "commission_positive",
+      "pass": true,
+      "detail": "orders commission = \u00a511,326,266"
+    },
+    {
+      "check": "open_positions",
+      "pass": true,
+      "detail": "15 symbols held at 2024-12-31"
+    },
+    {
+      "check": "open_positions_mtm",
+      "pass": true,
+      "detail": "MTM(2024-12-31) = \u00a5214,851,187"
+    },
+    {
+      "check": "unrealized_positive_def",
+      "pass": true,
+      "detail": "basis\u2248\u00a5213,931,651, unrealized\u2248\u00a5919,536"
+    },
+    {
+      "check": "pnl_reconcile",
+      "pass": true,
+      "detail": "end - (initial + realized + unrealized) = \u00a52,754,351 (\u5bb9\u5dee 5M)"
+    },
+    {
+      "check": "commission_reconcile",
+      "pass": true,
+      "detail": "trades=10,799,639 vs orders=11,326,266"
+    }
+  ],
+  "summary": {
+    "final_value": 216697352.1276375,
+    "total_return_pct": 116.6973521276375,
+    "n_closed_trades": 548,
+    "n_orders": 788,
+    "n_rejected": 0,
+    "open_positions": 15,
+    "open_mtm": 214851187.0,
+    "open_basis": 213931650.93300003,
+    "unrealized": 919536.0669999719,
+    "realized_pnl": 113023465.04372,
+    "recon_diff": 2754351.0169175267,
+    "total_commission": 11326265.8353625
+  }
+}

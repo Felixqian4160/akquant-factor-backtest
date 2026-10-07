@@ -1,0 +1,15 @@
+{"stage": "init", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:28:29.181921", "start_date": "2020-01-01", "end_date": "2020-12-31"}
+{"stage": "panel_loaded", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:28:30.222066", "n_rows": 1298335, "n_cols": 419}
+{"stage": "dates_loaded", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:28:30.268298", "n_dates_in_range": 243}
+{"stage": "picks_computed", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:28:30.891318", "date": "2020-01-02", "day": 0, "n_total": 243, "regime": "bull", "proxy_mean": 0.1014666073574834, "elapsed_sec": 0.6228940486907959}
+{"stage": "picks_computed", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:29:01.660914", "date": "2020-03-20", "day": 50, "n_total": 243, "regime": "sideways", "proxy_mean": 0.007942866539498288, "elapsed_sec": 31.39249038696289}
+{"stage": "picks_computed", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:29:33.485479", "date": "2020-06-04", "day": 100, "n_total": 243, "regime": "sideways", "proxy_mean": -0.031374618249299456, "elapsed_sec": 63.217055320739746}
+{"stage": "picks_computed", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:30:05.626411", "date": "2020-08-17", "day": 150, "n_total": 243, "regime": "bull", "proxy_mean": 0.41178616210673125, "elapsed_sec": 95.35798621177673}
+{"stage": "picks_computed", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:30:38.351491", "date": "2020-11-03", "day": 200, "n_total": 243, "regime": "sideways", "proxy_mean": 0.031455057994532874, "elapsed_sec": 128.08306670188904}
+{"stage": "picks_phase_done", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:31:06.354918", "n_days": 243, "regime_counts": {"bull": 181, "bear": 7, "sideways": 55}, "duration_sec": 156.08649444580078}
+{"stage": "universe_size", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:31:06.355173", "n_unique_stocks": 171}
+{"stage": "data_dict_built", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:31:06.659662", "n_symbols": 171}
+{"stage": "akquant_start", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:31:06.659773"}
+{"stage": "akquant_done", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:31:09.470863"}
+{"stage": "done", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:31:09.478488", "final_value": 66246840.34732, "final_return_pct": -33.75315965268, "n_days": 243, "regime_counts": {"bull": 181, "bear": 7, "sideways": 55}, "duration_sec": 159.21006560325623}
+{"stage": "result_written", "job_id": "v10_2020_1790796508", "timestamp": "2026-10-01T03:31:09.478568", "result_file": "evidence/daily_factor_reselect/pipeline_v10/v10_2020_1790796508/result.json"}

@@ -1,0 +1,45 @@
+{
+  "structure": {
+    "n_cols": 458,
+    "n_rows": 1298335,
+    "n_stocks": 354,
+    "n_dates": 5502,
+    "first_date": "2004-01-02 00:00:00",
+    "last_date": "2026-08-27 00:00:00"
+  },
+  "duplicates": 0,
+  "ohlc_sanity": {
+    "high_lt_max_oc": 0,
+    "low_gt_min_oc": 0,
+    "high_lt_low": 0,
+    "negative_prices": 0,
+    "zero_close": 0,
+    "null_close": 0
+  },
+  "adj_factor": {
+    "min_unique": 1,
+    "median_unique": 1.0,
+    "max_unique": 1,
+    "decreases": 0
+  },
+  "null_rates": {
+    "n_voting_factors": 428,
+    "all_null_count": 2,
+    "all_null_list": [
+      "talib_MAX2",
+      "talib_MIN2"
+    ],
+    "high_null_count": 0,
+    "mid_null_count": 19,
+    "low_null_count": 407
+  },
+  "date_gaps": [],
+  "stocks_per_date": {
+    "min": 88,
+    "max": 352,
+    "mean": 235.97509996364957,
+    "median": 225.0,
+    "min_2010_plus": 113,
+    "max_2010_plus": 352
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "contract_id": "sweep_v3_full_20260929_153305",
+  "contract_type": "factor_rebal_sweep_full_panel_v3_forceclose",
+  "status": "active",
+  "created_at": "2026-09-29T15:33:05.632982",
+  "scope": {
+    "universe": "HS300 (idx_close, panel中真实指数序列)",
+    "panel": "/media/felix/f/quant/aurumq-rl/evidence/quant_workflow_migration_20260915/v10_2_mainwave_features_v2_talib_20260924_022316/wavehunter_mainwave_features_v2.parquet",
+    "factor_count_expected": "398 (panel total) - dedup → ~306 expected",
+    "factor_count_panel_actual": 398,
+    "factor_count_skip_zigzag": "已排除 v10_1_* (11 个 retrospective labels)",
+    "factor_count_skip_base": "已排除 base/idx/adj_factor/amount/vol/ts/pct_chg (5 个非因子列)"
+  },
+  "execution_contract": {
+    "engine": "AKQuant 0.3.64 (Rust + Python)",
+    "symbol": "HS300_idx_close (single-symbol)",
+    "bar_extra_field": "<factor_name> per backtest",
+    "strategy": "if factor > MA(5d) -> long 99%, else flat",
+    "force_close_eod": true,
+    "force_close_reason": "排除 unrealized PnL cap 偏差 (sweep_v1 102% 是被最后一根阳线拉满的伪信号)",
+    "commission_rate": 0.0025,
+    "slippage": 0.0,
+    "target_percent": 0.99,
+    "history_depth": 10,
+    "t_plus_one": false,
+    "fill_policy": "default"
+  },
+  "sweep_grid": {
+    "rebal_days": [
+      5,
+      10,
+      20
+    ],
+    "ma_lookback": 5,
+    "factors": "all 398 from panel v2 (dedup by fingerprint)",
+    "expected_backtests": "398 × 3 = 1194",
+    "actual_backtests": "取决于 dedup 后因子数 (~918)"
+  },
+  "outputs": {
+    "dir": "/media/felix/f/quant/akquant-factor-backtest/evidence/sweep_v3_20260929_153305",
+    "files": [
+      "sweep_results.json (full per-factor × per-rebal)",
+      "top_by_cumulative_return.csv",
+      "top_by_annualized_return.csv",
+      "top_by_sharpe.csv",
+      "top_by_win_rate.csv",
+      "ranking.md (4 rankings + audit notes)",
+      "preregistration.json (this contract)"
+    ]
+  },
+  "single_variable_comparison": {
+    "vs_sweep_v1_20260924_005030": "340 因子 (no talib_*, no force_close) → 期望看到 force-close 后 top factor 的真实 cumulative return 下降",
+    "vs_sweep_rebal_v1_20260924_011535": "1020 backtest (340 因子 × 3 rebal, no force_close) → 期望 force-close 后 ranking 重排"
+  },
+  "forbidden": [
+    "不修改 sweep_rebal_v2_forceclose.py 代码 (frozen)",
+    "不跟 v1 共享 dedup cache (新 dedup)",
+    "不调整 commission_rate 或 rebal_days (改和调都在合同外)"
+  ]
+}

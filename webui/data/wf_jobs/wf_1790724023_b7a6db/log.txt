@@ -1,0 +1,70 @@
+cmd: /usr/bin/python3.12 /media/felix/f/quant/akquant-factor-backtest/webui/scripts/walk_forward_v5b.py --job-id wf_1790724023_b7a6db --train-start 2010-01-01 --train-end 2018-12-31 --val-months 6 --oos-months 12 --step-months 6 --max-windows 2 --out-dir /media/felix/f/quant/akquant-factor-backtest/webui/data/wf_jobs/wf_1790724023_b7a6db
+2026-09-30 07:20:25 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 122889.600, Available: 118512.70000
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 152314.83200, Available: 126206.22800
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 169204.1200, Available: 156667.50400
+2026-09-30 07:20:26 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 165126.87600, Available: 141673.76800
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 164907.0000, Available: 144503.42800
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 193280.04000, Available: 176472.72800
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:27 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 247014.1200, Available: 237668.77200
+2026-09-30 07:20:30 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:30 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 133371.3600, Available: 129422.74400
+wrote /media/felix/f/quant/akquant-factor-backtest/webui/data/wf_jobs/wf_1790724023_b7a6db/result.json
+summary: {'n_windows': 2, 'n_valid': 2, 'n_pass_target': 0, 'mean_oos_ann_pct': 48.6, 'mean_oos_sharpe': 1.61, 'mean_oos_mdd_pct': 29.39}

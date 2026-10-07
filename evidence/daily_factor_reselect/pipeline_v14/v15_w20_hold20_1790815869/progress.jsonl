@@ -1,0 +1,13 @@
+{"stage": "init", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:51:09.753582", "start_date": "2020-01-01", "end_date": "2023-12-31", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "ic_window_days": 20, "min_hold_days": 20, "fwd_days": 20, "lot_size": 100}
+{"stage": "panel_loaded", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:51:12.002152", "n_rows": 1298335, "n_cols": 419, "n_candidates": 391}
+{"stage": "computing_rolling_ic", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:51:35.088735", "factors": 391, "window": 20, "fwd_days": 20}
+{"stage": "rolling_ic_done", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:51:39.114452", "duration_sec": 4.01426100730896}
+{"stage": "top_factors_per_day_built", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:51:39.139637", "n_rows": 9630}
+{"stage": "votes_filtered", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:52:35.432372", "n_votes": 57940}
+{"stage": "picks_phase_done", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:52:36.797124", "n_days": 962, "avg_stocks_per_day": 9.497920997920998}
+{"stage": "universe_size", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:52:36.797531", "n_unique_stocks": 338}
+{"stage": "data_dict_built", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:52:56.240656", "n_symbols": 338}
+{"stage": "akquant_start", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:52:56.243874"}
+{"stage": "akquant_done", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:53:21.142362"}
+{"stage": "done", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:53:21.479390", "final_value": 153475895.54492, "final_return_pct": 53.47589554492001, "n_days_with_picks": 962, "avg_stocks_per_day": 9.497920997920998}
+{"stage": "result_written", "job_id": "v15_w20_hold20_1790815869", "timestamp": "2026-10-01T08:53:21.479530", "result_file": "evidence/daily_factor_reselect/pipeline_v14/v15_w20_hold20_1790815869/result.json"}

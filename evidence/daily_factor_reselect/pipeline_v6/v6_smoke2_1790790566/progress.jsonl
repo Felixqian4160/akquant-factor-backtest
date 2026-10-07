@@ -1,0 +1,4 @@
+{"stage": "init", "job_id": "v6_smoke2_1790790566", "timestamp": "2026-10-01T01:49:26.585331", "start_date": "2020-01-01", "end_date": "2020-02-29"}
+{"stage": "panel_loaded", "job_id": "v6_smoke2_1790790566", "timestamp": "2026-10-01T01:49:28.762365", "n_rows": 1298335, "n_cols": 419}
+{"stage": "dates_loaded", "job_id": "v6_smoke2_1790790566", "timestamp": "2026-10-01T01:49:29.600968", "n_dates_in_range": 30}
+{"stage": "cycle_start", "job_id": "v6_smoke2_1790790566", "timestamp": "2026-10-01T01:49:29.601643", "cycle": 0, "eval_date": "2020-01-02", "entry_date": "2020-01-03", "exit_date": "2020-02-10"}

@@ -1,0 +1,48 @@
+{"stage": "init", "job_id": "v5_diag_1790788577", "start_date": "2020-01-01", "end_date": "2020-02-29", "top_factors": 10, "top_stocks": 10, "hold_days": 10, "timestamp": "2026-10-01T01:16:18.358520"}
+{"stage": "factors_loaded", "n_factors": 406, "timestamp": "2026-10-01T01:16:18.361217"}
+{"stage": "loading_panel", "timestamp": "2026-10-01T01:16:18.361349"}
+{"stage": "panel_loaded", "n_rows": 1298335, "n_cols": 419, "timestamp": "2026-10-01T01:16:20.606264"}
+{"stage": "dates_loaded", "n_dates_in_range": 10, "timestamp": "2026-10-01T01:16:20.812337"}
+{"stage": "loop", "date": "2020-01-08", "n_done": 5, "n_total": 10, "nav": 0.9408782917735053, "cycle_ret_pct": -1.38779768775, "factors": ["gtja_gtja_161", "talib_ATR", "gtja_gtja_093"], "elapsed_sec": 2.1373276710510254, "timestamp": "2026-10-01T01:16:22.953912"}
+{"stage": "metrics", "date": "2020-01-09", "progress": 50, "total": 406, "rate": 14.246944907381868, "timestamp": "2026-10-01T01:16:26.463821"}
+{"stage": "metrics", "date": "2020-01-09", "progress": 100, "total": 406, "rate": 18.264702106620156, "timestamp": "2026-10-01T01:16:28.429338"}
+{"stage": "metrics", "date": "2020-01-09", "progress": 150, "total": 406, "rate": 20.511526456533144, "timestamp": "2026-10-01T01:16:30.267258"}
+{"stage": "metrics", "date": "2020-01-09", "progress": 200, "total": 406, "rate": 21.810367452055118, "timestamp": "2026-10-01T01:16:32.124248"}
+{"stage": "metrics", "date": "2020-01-09", "progress": 250, "total": 406, "rate": 22.673926958227405, "timestamp": "2026-10-01T01:16:33.980177"}
+{"stage": "metrics", "date": "2020-01-09", "progress": 300, "total": 406, "rate": 23.471680798428483, "timestamp": "2026-10-01T01:16:35.735657"}
+{"stage": "metrics", "date": "2020-01-09", "progress": 350, "total": 406, "rate": 24.06674591061784, "timestamp": "2026-10-01T01:16:37.497185"}
+{"stage": "metrics", "date": "2020-01-09", "progress": 400, "total": 406, "rate": 24.503932832776197, "timestamp": "2026-10-01T01:16:39.278208"}
+{"stage": "metrics", "date": "2020-01-10", "progress": 50, "total": 406, "rate": 27.228727978236254, "timestamp": "2026-10-01T01:16:41.394874"}
+{"stage": "metrics", "date": "2020-01-10", "progress": 100, "total": 406, "rate": 25.71379421161544, "timestamp": "2026-10-01T01:16:43.447542"}
+{"stage": "metrics", "date": "2020-01-10", "progress": 150, "total": 406, "rate": 26.275677068563645, "timestamp": "2026-10-01T01:16:45.267280"}
+{"stage": "metrics", "date": "2020-01-10", "progress": 200, "total": 406, "rate": 26.485480548759085, "timestamp": "2026-10-01T01:16:47.109886"}
+{"stage": "metrics", "date": "2020-01-10", "progress": 250, "total": 406, "rate": 26.570782614627387, "timestamp": "2026-10-01T01:16:48.967409"}
+{"stage": "metrics", "date": "2020-01-10", "progress": 300, "total": 406, "rate": 26.887667760892494, "timestamp": "2026-10-01T01:16:50.716110"}
+{"stage": "metrics", "date": "2020-01-10", "progress": 350, "total": 406, "rate": 27.10737702260221, "timestamp": "2026-10-01T01:16:52.470193"}
+{"stage": "metrics", "date": "2020-01-10", "progress": 400, "total": 406, "rate": 27.239179206115033, "timestamp": "2026-10-01T01:16:54.243309"}
+{"stage": "metrics", "date": "2020-01-13", "progress": 50, "total": 406, "rate": 26.941022962699087, "timestamp": "2026-10-01T01:16:56.375748"}
+{"stage": "metrics", "date": "2020-01-13", "progress": 100, "total": 406, "rate": 26.43365227670587, "timestamp": "2026-10-01T01:16:58.302899"}
+{"stage": "metrics", "date": "2020-01-13", "progress": 150, "total": 406, "rate": 26.658054449674164, "timestamp": "2026-10-01T01:17:00.146660"}
+{"stage": "metrics", "date": "2020-01-13", "progress": 200, "total": 406, "rate": 26.662064393054507, "timestamp": "2026-10-01T01:17:02.021137"}
+{"stage": "metrics", "date": "2020-01-13", "progress": 250, "total": 406, "rate": 26.681323834130378, "timestamp": "2026-10-01T01:17:03.889692"}
+{"stage": "metrics", "date": "2020-01-13", "progress": 300, "total": 406, "rate": 26.945247743081488, "timestamp": "2026-10-01T01:17:05.653531"}
+{"stage": "metrics", "date": "2020-01-13", "progress": 350, "total": 406, "rate": 27.116183046663146, "timestamp": "2026-10-01T01:17:07.427264"}
+{"stage": "metrics", "date": "2020-01-13", "progress": 400, "total": 406, "rate": 27.195761166356828, "timestamp": "2026-10-01T01:17:09.228017"}
+{"stage": "metrics", "date": "2020-01-14", "progress": 50, "total": 406, "rate": 27.17786200245244, "timestamp": "2026-10-01T01:17:11.345164"}
+{"stage": "metrics", "date": "2020-01-14", "progress": 100, "total": 406, "rate": 26.866317920930868, "timestamp": "2026-10-01T01:17:13.227563"}
+{"stage": "metrics", "date": "2020-01-14", "progress": 150, "total": 406, "rate": 27.003118331526533, "timestamp": "2026-10-01T01:17:15.060344"}
+{"stage": "metrics", "date": "2020-01-14", "progress": 200, "total": 406, "rate": 26.95618882797729, "timestamp": "2026-10-01T01:17:16.924877"}
+{"stage": "metrics", "date": "2020-01-14", "progress": 250, "total": 406, "rate": 26.896194319422474, "timestamp": "2026-10-01T01:17:18.800426"}
+{"stage": "metrics", "date": "2020-01-14", "progress": 300, "total": 406, "rate": 27.12668452919847, "timestamp": "2026-10-01T01:17:20.564651"}
+{"stage": "metrics", "date": "2020-01-14", "progress": 350, "total": 406, "rate": 27.261095607513838, "timestamp": "2026-10-01T01:17:22.344240"}
+{"stage": "metrics", "date": "2020-01-14", "progress": 400, "total": 406, "rate": 27.318644362660176, "timestamp": "2026-10-01T01:17:24.147447"}
+{"stage": "metrics", "date": "2020-01-15", "progress": 50, "total": 406, "rate": 27.33597096992127, "timestamp": "2026-10-01T01:17:26.200780"}
+{"stage": "metrics", "date": "2020-01-15", "progress": 100, "total": 406, "rate": 27.121791750128242, "timestamp": "2026-10-01T01:17:28.058760"}
+{"stage": "metrics", "date": "2020-01-15", "progress": 150, "total": 406, "rate": 27.270178599571718, "timestamp": "2026-10-01T01:17:29.872202"}
+{"stage": "metrics", "date": "2020-01-15", "progress": 200, "total": 406, "rate": 27.234718957779343, "timestamp": "2026-10-01T01:17:31.715256"}
+{"stage": "metrics", "date": "2020-01-15", "progress": 250, "total": 406, "rate": 27.20540023209441, "timestamp": "2026-10-01T01:17:33.561040"}
+{"stage": "metrics", "date": "2020-01-15", "progress": 300, "total": 406, "rate": 27.439236647004325, "timestamp": "2026-10-01T01:17:35.304937"}
+{"stage": "metrics", "date": "2020-01-15", "progress": 350, "total": 406, "rate": 27.594238047461282, "timestamp": "2026-10-01T01:17:37.055495"}
+{"stage": "metrics", "date": "2020-01-15", "progress": 400, "total": 406, "rate": 27.68202254723435, "timestamp": "2026-10-01T01:17:38.821500"}
+{"stage": "done", "final_nav": 0.9255174523915882, "n_cycles": 9, "timestamp": "2026-10-01T01:17:39.065707"}
+{"stage": "result_written", "result_file": "/media/felix/f/quant/akquant-factor-backtest/evidence/daily_factor_reselect/pipeline_v5/v5_diag_1790788577/result.json", "timestamp": "2026-10-01T01:17:39.065857"}

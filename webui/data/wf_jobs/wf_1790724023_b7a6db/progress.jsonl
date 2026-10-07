@@ -1,0 +1,6 @@
+{"event": "start", "n_windows": 2, "config": {"job_id": "wf_1790724023_b7a6db", "train_start": "2010-01-01", "train_end": "2018-12-31", "val_months": 6, "oos_months": 12, "step_months": 6, "max_windows": 2, "out_dir": "/media/felix/f/quant/akquant-factor-backtest/webui/data/wf_jobs/wf_1790724023_b7a6db"}}
+{"event": "window_start", "idx": 1, "oos_start": "2019-06-29", "oos_end": "2020-06-23"}
+{"event": "window_done", "idx": 1, "metrics": {"closed_only_return_pct": 80.1982, "total_return_pct": 121.036, "unrealized_pnl": 408378.0, "sharpe_ratio": 2.205, "max_drawdown_pct": 28.61, "win_rate": 76.56, "closed_trade_count": 64, "annualized_pct": 81.7, "elapsed_sec": 4.6, "n_rows": 68166, "n_stocks": 289}}
+{"event": "window_start", "idx": 2, "oos_start": "2019-12-26", "oos_end": "2020-12-20"}
+{"event": "window_done", "idx": 2, "metrics": {"closed_only_return_pct": 15.4049, "total_return_pct": 36.3707, "unrealized_pnl": 209658.0, "sharpe_ratio": 1.015, "max_drawdown_pct": 30.17, "win_rate": 88.89, "closed_trade_count": 9, "annualized_pct": 15.6, "elapsed_sec": 4.4, "n_rows": 69134, "n_stocks": 302}}
+{"event": "finished", "summary": {"n_windows": 2, "n_valid": 2, "n_pass_target": 0, "mean_oos_ann_pct": 48.6, "mean_oos_sharpe": 1.61, "mean_oos_mdd_pct": 29.39}}

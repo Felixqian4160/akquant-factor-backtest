@@ -1,0 +1,908 @@
+{
+  "all": [
+    {
+      "factor": "l_ami",
+      "n_used_total": 53,
+      "n_used_bull": 27,
+      "n_used_bear": 26,
+      "pct_used_total": 27.18,
+      "pct_used_bull": 25.96,
+      "pct_used_bear": 28.57,
+      "avg_score": 0.09035
+    },
+    {
+      "factor": "idiovola_clmx",
+      "n_used_total": 36,
+      "n_used_bull": 19,
+      "n_used_bear": 17,
+      "pct_used_total": 18.46,
+      "pct_used_bull": 18.27,
+      "pct_used_bear": 18.68,
+      "avg_score": 0.10537
+    },
+    {
+      "factor": "gtja_gtja_149",
+      "n_used_total": 35,
+      "n_used_bull": 22,
+      "n_used_bear": 13,
+      "pct_used_total": 17.95,
+      "pct_used_bull": 21.15,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.1067
+    },
+    {
+      "factor": "l_turna",
+      "n_used_total": 34,
+      "n_used_bull": 21,
+      "n_used_bear": 13,
+      "pct_used_total": 17.44,
+      "pct_used_bull": 20.19,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.09875
+    },
+    {
+      "factor": "r_tv",
+      "n_used_total": 34,
+      "n_used_bull": 19,
+      "n_used_bear": 15,
+      "pct_used_total": 17.44,
+      "pct_used_bull": 18.27,
+      "pct_used_bear": 16.48,
+      "avg_score": 0.10772
+    },
+    {
+      "factor": "alpha_alpha042",
+      "n_used_total": 33,
+      "n_used_bull": 15,
+      "n_used_bear": 18,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 14.42,
+      "pct_used_bear": 19.78,
+      "avg_score": 0.06795
+    },
+    {
+      "factor": "gtja_gtja_054",
+      "n_used_total": 33,
+      "n_used_bull": 17,
+      "n_used_bear": 16,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 16.35,
+      "pct_used_bear": 17.58,
+      "avg_score": 0.05919
+    },
+    {
+      "factor": "gtja_gtja_144",
+      "n_used_total": 33,
+      "n_used_bull": 17,
+      "n_used_bear": 16,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 16.35,
+      "pct_used_bear": 17.58,
+      "avg_score": 0.08851
+    },
+    {
+      "factor": "gtja_gtja_159",
+      "n_used_total": 32,
+      "n_used_bull": 20,
+      "n_used_bear": 12,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 19.23,
+      "pct_used_bear": 13.19,
+      "avg_score": 0.10803
+    },
+    {
+      "factor": "talib_NATR",
+      "n_used_total": 32,
+      "n_used_bull": 15,
+      "n_used_bear": 17,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 14.42,
+      "pct_used_bear": 18.68,
+      "avg_score": 0.10518
+    },
+    {
+      "factor": "v_bm",
+      "n_used_total": 32,
+      "n_used_bull": 11,
+      "n_used_bear": 21,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 10.58,
+      "pct_used_bear": 23.08,
+      "avg_score": 0.06656
+    },
+    {
+      "factor": "pe",
+      "n_used_total": 31,
+      "n_used_bull": 18,
+      "n_used_bear": 13,
+      "pct_used_total": 15.9,
+      "pct_used_bull": 17.31,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.10584
+    },
+    {
+      "factor": "gtja_gtja_120",
+      "n_used_total": 28,
+      "n_used_bull": 10,
+      "n_used_bear": 18,
+      "pct_used_total": 14.36,
+      "pct_used_bull": 9.62,
+      "pct_used_bear": 19.78,
+      "avg_score": 0.06592
+    },
+    {
+      "factor": "r_beta",
+      "n_used_total": 28,
+      "n_used_bull": 18,
+      "n_used_bear": 10,
+      "pct_used_total": 14.36,
+      "pct_used_bull": 17.31,
+      "pct_used_bear": 10.99,
+      "avg_score": 0.12013
+    },
+    {
+      "factor": "p_mchg",
+      "n_used_total": 22,
+      "n_used_bull": 9,
+      "n_used_bear": 13,
+      "pct_used_total": 11.28,
+      "pct_used_bull": 8.65,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.0606
+    },
+    {
+      "factor": "gtja_gtja_121",
+      "n_used_total": 20,
+      "n_used_bull": 12,
+      "n_used_bear": 8,
+      "pct_used_total": 10.26,
+      "pct_used_bull": 11.54,
+      "pct_used_bear": 8.79,
+      "avg_score": 0.06376
+    },
+    {
+      "factor": "gtja_gtja_012",
+      "n_used_total": 19,
+      "n_used_bull": 10,
+      "n_used_bear": 9,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 9.62,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.07234
+    },
+    {
+      "factor": "gtja_gtja_035",
+      "n_used_total": 19,
+      "n_used_bull": 8,
+      "n_used_bear": 11,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 7.69,
+      "pct_used_bear": 12.09,
+      "avg_score": 0.05291
+    },
+    {
+      "factor": "gtja_gtja_170",
+      "n_used_total": 19,
+      "n_used_bull": 14,
+      "n_used_bear": 5,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 13.46,
+      "pct_used_bear": 5.49,
+      "avg_score": 0.06851
+    },
+    {
+      "factor": "l_turnm",
+      "n_used_total": 19,
+      "n_used_bull": 12,
+      "n_used_bear": 7,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 11.54,
+      "pct_used_bear": 7.69,
+      "avg_score": 0.11849
+    },
+    {
+      "factor": "alpha_alpha054",
+      "n_used_total": 18,
+      "n_used_bull": 17,
+      "n_used_bear": 1,
+      "pct_used_total": 9.23,
+      "pct_used_bull": 16.35,
+      "pct_used_bear": 1.1,
+      "avg_score": 0.09512
+    },
+    {
+      "factor": "p_m11",
+      "n_used_total": 18,
+      "n_used_bull": 6,
+      "n_used_bear": 12,
+      "pct_used_total": 9.23,
+      "pct_used_bull": 5.77,
+      "pct_used_bear": 13.19,
+      "avg_score": 0.06561
+    },
+    {
+      "factor": "p_52w",
+      "n_used_total": 18,
+      "n_used_bull": 9,
+      "n_used_bear": 9,
+      "pct_used_total": 9.23,
+      "pct_used_bull": 8.65,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.06395
+    },
+    {
+      "factor": "pb",
+      "n_used_total": 17,
+      "n_used_bull": 14,
+      "n_used_bear": 3,
+      "pct_used_total": 8.72,
+      "pct_used_bull": 13.46,
+      "pct_used_bear": 3.3,
+      "avg_score": 0.09659
+    },
+    {
+      "factor": "quick_ratio",
+      "n_used_total": 17,
+      "n_used_bull": 2,
+      "n_used_bear": 15,
+      "pct_used_total": 8.72,
+      "pct_used_bull": 1.92,
+      "pct_used_bear": 16.48,
+      "avg_score": 0.0948
+    },
+    {
+      "factor": "talib_MINUS_DI",
+      "n_used_total": 17,
+      "n_used_bull": 11,
+      "n_used_bear": 6,
+      "pct_used_total": 8.72,
+      "pct_used_bull": 10.58,
+      "pct_used_bear": 6.59,
+      "avg_score": 0.07304
+    },
+    {
+      "factor": "mom12m_jt",
+      "n_used_total": 17,
+      "n_used_bull": 8,
+      "n_used_bear": 9,
+      "pct_used_total": 8.72,
+      "pct_used_bull": 7.69,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.07391
+    },
+    {
+      "factor": "alpha_alpha047",
+      "n_used_total": 16,
+      "n_used_bull": 11,
+      "n_used_bear": 5,
+      "pct_used_total": 8.21,
+      "pct_used_bull": 10.58,
+      "pct_used_bear": 5.49,
+      "avg_score": 0.06643
+    },
+    {
+      "factor": "gtja_gtja_067",
+      "n_used_total": 16,
+      "n_used_bull": 14,
+      "n_used_bear": 2,
+      "pct_used_total": 8.21,
+      "pct_used_bull": 13.46,
+      "pct_used_bear": 2.2,
+      "avg_score": 0.09539
+    },
+    {
+      "factor": "current_ratio",
+      "n_used_total": 16,
+      "n_used_bull": 2,
+      "n_used_bear": 14,
+      "pct_used_total": 8.21,
+      "pct_used_bull": 1.92,
+      "pct_used_bear": 15.38,
+      "avg_score": 0.09555
+    }
+  ],
+  "bull_neutral": [
+    {
+      "factor": "l_ami",
+      "n_used_total": 53,
+      "n_used_bull": 27,
+      "n_used_bear": 26,
+      "pct_used_total": 27.18,
+      "pct_used_bull": 25.96,
+      "pct_used_bear": 28.57,
+      "avg_score": 0.09035
+    },
+    {
+      "factor": "gtja_gtja_149",
+      "n_used_total": 35,
+      "n_used_bull": 22,
+      "n_used_bear": 13,
+      "pct_used_total": 17.95,
+      "pct_used_bull": 21.15,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.1067
+    },
+    {
+      "factor": "l_turna",
+      "n_used_total": 34,
+      "n_used_bull": 21,
+      "n_used_bear": 13,
+      "pct_used_total": 17.44,
+      "pct_used_bull": 20.19,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.09875
+    },
+    {
+      "factor": "gtja_gtja_159",
+      "n_used_total": 32,
+      "n_used_bull": 20,
+      "n_used_bear": 12,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 19.23,
+      "pct_used_bear": 13.19,
+      "avg_score": 0.10803
+    },
+    {
+      "factor": "idiovola_clmx",
+      "n_used_total": 36,
+      "n_used_bull": 19,
+      "n_used_bear": 17,
+      "pct_used_total": 18.46,
+      "pct_used_bull": 18.27,
+      "pct_used_bear": 18.68,
+      "avg_score": 0.10537
+    },
+    {
+      "factor": "r_tv",
+      "n_used_total": 34,
+      "n_used_bull": 19,
+      "n_used_bear": 15,
+      "pct_used_total": 17.44,
+      "pct_used_bull": 18.27,
+      "pct_used_bear": 16.48,
+      "avg_score": 0.10772
+    },
+    {
+      "factor": "pe",
+      "n_used_total": 31,
+      "n_used_bull": 18,
+      "n_used_bear": 13,
+      "pct_used_total": 15.9,
+      "pct_used_bull": 17.31,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.10584
+    },
+    {
+      "factor": "r_beta",
+      "n_used_total": 28,
+      "n_used_bull": 18,
+      "n_used_bear": 10,
+      "pct_used_total": 14.36,
+      "pct_used_bull": 17.31,
+      "pct_used_bear": 10.99,
+      "avg_score": 0.12013
+    },
+    {
+      "factor": "gtja_gtja_054",
+      "n_used_total": 33,
+      "n_used_bull": 17,
+      "n_used_bear": 16,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 16.35,
+      "pct_used_bear": 17.58,
+      "avg_score": 0.05919
+    },
+    {
+      "factor": "gtja_gtja_144",
+      "n_used_total": 33,
+      "n_used_bull": 17,
+      "n_used_bear": 16,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 16.35,
+      "pct_used_bear": 17.58,
+      "avg_score": 0.08851
+    },
+    {
+      "factor": "alpha_alpha054",
+      "n_used_total": 18,
+      "n_used_bull": 17,
+      "n_used_bear": 1,
+      "pct_used_total": 9.23,
+      "pct_used_bull": 16.35,
+      "pct_used_bear": 1.1,
+      "avg_score": 0.09512
+    },
+    {
+      "factor": "alpha_alpha042",
+      "n_used_total": 33,
+      "n_used_bull": 15,
+      "n_used_bear": 18,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 14.42,
+      "pct_used_bear": 19.78,
+      "avg_score": 0.06795
+    },
+    {
+      "factor": "talib_NATR",
+      "n_used_total": 32,
+      "n_used_bull": 15,
+      "n_used_bear": 17,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 14.42,
+      "pct_used_bear": 18.68,
+      "avg_score": 0.10518
+    },
+    {
+      "factor": "gtja_gtja_002",
+      "n_used_total": 15,
+      "n_used_bull": 15,
+      "n_used_bear": 0,
+      "pct_used_total": 7.69,
+      "pct_used_bull": 14.42,
+      "pct_used_bear": 0.0,
+      "avg_score": 0.09589
+    },
+    {
+      "factor": "gtja_gtja_170",
+      "n_used_total": 19,
+      "n_used_bull": 14,
+      "n_used_bear": 5,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 13.46,
+      "pct_used_bear": 5.49,
+      "avg_score": 0.06851
+    },
+    {
+      "factor": "pb",
+      "n_used_total": 17,
+      "n_used_bull": 14,
+      "n_used_bear": 3,
+      "pct_used_total": 8.72,
+      "pct_used_bull": 13.46,
+      "pct_used_bear": 3.3,
+      "avg_score": 0.09659
+    },
+    {
+      "factor": "gtja_gtja_067",
+      "n_used_total": 16,
+      "n_used_bull": 14,
+      "n_used_bear": 2,
+      "pct_used_total": 8.21,
+      "pct_used_bull": 13.46,
+      "pct_used_bear": 2.2,
+      "avg_score": 0.09539
+    },
+    {
+      "factor": "gtja_gtja_015",
+      "n_used_total": 14,
+      "n_used_bull": 13,
+      "n_used_bear": 1,
+      "pct_used_total": 7.18,
+      "pct_used_bull": 12.5,
+      "pct_used_bear": 1.1,
+      "avg_score": 0.07933
+    },
+    {
+      "factor": "gtja_gtja_079",
+      "n_used_total": 13,
+      "n_used_bull": 13,
+      "n_used_bear": 0,
+      "pct_used_total": 6.67,
+      "pct_used_bull": 12.5,
+      "pct_used_bear": 0.0,
+      "avg_score": 0.0953
+    },
+    {
+      "factor": "gtja_gtja_121",
+      "n_used_total": 20,
+      "n_used_bull": 12,
+      "n_used_bear": 8,
+      "pct_used_total": 10.26,
+      "pct_used_bull": 11.54,
+      "pct_used_bear": 8.79,
+      "avg_score": 0.06376
+    },
+    {
+      "factor": "l_turnm",
+      "n_used_total": 19,
+      "n_used_bull": 12,
+      "n_used_bear": 7,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 11.54,
+      "pct_used_bear": 7.69,
+      "avg_score": 0.11849
+    },
+    {
+      "factor": "v_bm",
+      "n_used_total": 32,
+      "n_used_bull": 11,
+      "n_used_bear": 21,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 10.58,
+      "pct_used_bear": 23.08,
+      "avg_score": 0.06656
+    },
+    {
+      "factor": "talib_MINUS_DI",
+      "n_used_total": 17,
+      "n_used_bull": 11,
+      "n_used_bear": 6,
+      "pct_used_total": 8.72,
+      "pct_used_bull": 10.58,
+      "pct_used_bear": 6.59,
+      "avg_score": 0.07304
+    },
+    {
+      "factor": "alpha_alpha047",
+      "n_used_total": 16,
+      "n_used_bull": 11,
+      "n_used_bear": 5,
+      "pct_used_total": 8.21,
+      "pct_used_bull": 10.58,
+      "pct_used_bear": 5.49,
+      "avg_score": 0.06643
+    },
+    {
+      "factor": "or_yoy",
+      "n_used_total": 14,
+      "n_used_bull": 11,
+      "n_used_bear": 3,
+      "pct_used_total": 7.18,
+      "pct_used_bull": 10.58,
+      "pct_used_bear": 3.3,
+      "avg_score": 0.07959
+    },
+    {
+      "factor": "gtja_gtja_120",
+      "n_used_total": 28,
+      "n_used_bull": 10,
+      "n_used_bear": 18,
+      "pct_used_total": 14.36,
+      "pct_used_bull": 9.62,
+      "pct_used_bear": 19.78,
+      "avg_score": 0.06592
+    },
+    {
+      "factor": "gtja_gtja_012",
+      "n_used_total": 19,
+      "n_used_bull": 10,
+      "n_used_bear": 9,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 9.62,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.07234
+    },
+    {
+      "factor": "p_mchg",
+      "n_used_total": 22,
+      "n_used_bull": 9,
+      "n_used_bear": 13,
+      "pct_used_total": 11.28,
+      "pct_used_bull": 8.65,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.0606
+    },
+    {
+      "factor": "p_52w",
+      "n_used_total": 18,
+      "n_used_bull": 9,
+      "n_used_bear": 9,
+      "pct_used_total": 9.23,
+      "pct_used_bull": 8.65,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.06395
+    },
+    {
+      "factor": "gtja_gtja_025",
+      "n_used_total": 12,
+      "n_used_bull": 9,
+      "n_used_bear": 3,
+      "pct_used_total": 6.15,
+      "pct_used_bull": 8.65,
+      "pct_used_bear": 3.3,
+      "avg_score": 0.08258
+    }
+  ],
+  "bear": [
+    {
+      "factor": "l_ami",
+      "n_used_total": 53,
+      "n_used_bull": 27,
+      "n_used_bear": 26,
+      "pct_used_total": 27.18,
+      "pct_used_bull": 25.96,
+      "pct_used_bear": 28.57,
+      "avg_score": 0.09035
+    },
+    {
+      "factor": "v_bm",
+      "n_used_total": 32,
+      "n_used_bull": 11,
+      "n_used_bear": 21,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 10.58,
+      "pct_used_bear": 23.08,
+      "avg_score": 0.06656
+    },
+    {
+      "factor": "alpha_alpha042",
+      "n_used_total": 33,
+      "n_used_bull": 15,
+      "n_used_bear": 18,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 14.42,
+      "pct_used_bear": 19.78,
+      "avg_score": 0.06795
+    },
+    {
+      "factor": "gtja_gtja_120",
+      "n_used_total": 28,
+      "n_used_bull": 10,
+      "n_used_bear": 18,
+      "pct_used_total": 14.36,
+      "pct_used_bull": 9.62,
+      "pct_used_bear": 19.78,
+      "avg_score": 0.06592
+    },
+    {
+      "factor": "idiovola_clmx",
+      "n_used_total": 36,
+      "n_used_bull": 19,
+      "n_used_bear": 17,
+      "pct_used_total": 18.46,
+      "pct_used_bull": 18.27,
+      "pct_used_bear": 18.68,
+      "avg_score": 0.10537
+    },
+    {
+      "factor": "talib_NATR",
+      "n_used_total": 32,
+      "n_used_bull": 15,
+      "n_used_bear": 17,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 14.42,
+      "pct_used_bear": 18.68,
+      "avg_score": 0.10518
+    },
+    {
+      "factor": "gtja_gtja_054",
+      "n_used_total": 33,
+      "n_used_bull": 17,
+      "n_used_bear": 16,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 16.35,
+      "pct_used_bear": 17.58,
+      "avg_score": 0.05919
+    },
+    {
+      "factor": "gtja_gtja_144",
+      "n_used_total": 33,
+      "n_used_bull": 17,
+      "n_used_bear": 16,
+      "pct_used_total": 16.92,
+      "pct_used_bull": 16.35,
+      "pct_used_bear": 17.58,
+      "avg_score": 0.08851
+    },
+    {
+      "factor": "r_tv",
+      "n_used_total": 34,
+      "n_used_bull": 19,
+      "n_used_bear": 15,
+      "pct_used_total": 17.44,
+      "pct_used_bull": 18.27,
+      "pct_used_bear": 16.48,
+      "avg_score": 0.10772
+    },
+    {
+      "factor": "quick_ratio",
+      "n_used_total": 17,
+      "n_used_bull": 2,
+      "n_used_bear": 15,
+      "pct_used_total": 8.72,
+      "pct_used_bull": 1.92,
+      "pct_used_bear": 16.48,
+      "avg_score": 0.0948
+    },
+    {
+      "factor": "v_ep",
+      "n_used_total": 16,
+      "n_used_bull": 1,
+      "n_used_bear": 15,
+      "pct_used_total": 8.21,
+      "pct_used_bull": 0.96,
+      "pct_used_bear": 16.48,
+      "avg_score": 0.0591
+    },
+    {
+      "factor": "current_ratio",
+      "n_used_total": 16,
+      "n_used_bull": 2,
+      "n_used_bear": 14,
+      "pct_used_total": 8.21,
+      "pct_used_bull": 1.92,
+      "pct_used_bear": 15.38,
+      "avg_score": 0.09555
+    },
+    {
+      "factor": "gtja_gtja_149",
+      "n_used_total": 35,
+      "n_used_bull": 22,
+      "n_used_bear": 13,
+      "pct_used_total": 17.95,
+      "pct_used_bull": 21.15,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.1067
+    },
+    {
+      "factor": "l_turna",
+      "n_used_total": 34,
+      "n_used_bull": 21,
+      "n_used_bear": 13,
+      "pct_used_total": 17.44,
+      "pct_used_bull": 20.19,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.09875
+    },
+    {
+      "factor": "pe",
+      "n_used_total": 31,
+      "n_used_bull": 18,
+      "n_used_bear": 13,
+      "pct_used_total": 15.9,
+      "pct_used_bull": 17.31,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.10584
+    },
+    {
+      "factor": "p_mchg",
+      "n_used_total": 22,
+      "n_used_bull": 9,
+      "n_used_bear": 13,
+      "pct_used_total": 11.28,
+      "pct_used_bull": 8.65,
+      "pct_used_bear": 14.29,
+      "avg_score": 0.0606
+    },
+    {
+      "factor": "gtja_gtja_159",
+      "n_used_total": 32,
+      "n_used_bull": 20,
+      "n_used_bear": 12,
+      "pct_used_total": 16.41,
+      "pct_used_bull": 19.23,
+      "pct_used_bear": 13.19,
+      "avg_score": 0.10803
+    },
+    {
+      "factor": "p_m11",
+      "n_used_total": 18,
+      "n_used_bull": 6,
+      "n_used_bear": 12,
+      "pct_used_total": 9.23,
+      "pct_used_bull": 5.77,
+      "pct_used_bear": 13.19,
+      "avg_score": 0.06561
+    },
+    {
+      "factor": "debt_to_assets",
+      "n_used_total": 14,
+      "n_used_bull": 2,
+      "n_used_bear": 12,
+      "pct_used_total": 7.18,
+      "pct_used_bull": 1.92,
+      "pct_used_bear": 13.19,
+      "avg_score": 0.05977
+    },
+    {
+      "factor": "gtja_gtja_035",
+      "n_used_total": 19,
+      "n_used_bull": 8,
+      "n_used_bear": 11,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 7.69,
+      "pct_used_bear": 12.09,
+      "avg_score": 0.05291
+    },
+    {
+      "factor": "r_beta",
+      "n_used_total": 28,
+      "n_used_bull": 18,
+      "n_used_bear": 10,
+      "pct_used_total": 14.36,
+      "pct_used_bull": 17.31,
+      "pct_used_bear": 10.99,
+      "avg_score": 0.12013
+    },
+    {
+      "factor": "resmom_6m",
+      "n_used_total": 15,
+      "n_used_bull": 5,
+      "n_used_bear": 10,
+      "pct_used_total": 7.69,
+      "pct_used_bull": 4.81,
+      "pct_used_bear": 10.99,
+      "avg_score": 0.07854
+    },
+    {
+      "factor": "grossprofit_margin",
+      "n_used_total": 14,
+      "n_used_bull": 4,
+      "n_used_bear": 10,
+      "pct_used_total": 7.18,
+      "pct_used_bull": 3.85,
+      "pct_used_bear": 10.99,
+      "avg_score": 0.06582
+    },
+    {
+      "factor": "gtja_gtja_012",
+      "n_used_total": 19,
+      "n_used_bull": 10,
+      "n_used_bear": 9,
+      "pct_used_total": 9.74,
+      "pct_used_bull": 9.62,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.07234
+    },
+    {
+      "factor": "p_52w",
+      "n_used_total": 18,
+      "n_used_bull": 9,
+      "n_used_bear": 9,
+      "pct_used_total": 9.23,
+      "pct_used_bull": 8.65,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.06395
+    },
+    {
+      "factor": "mom12m_jt",
+      "n_used_total": 17,
+      "n_used_bull": 8,
+      "n_used_bear": 9,
+      "pct_used_total": 8.72,
+      "pct_used_bull": 7.69,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.07391
+    },
+    {
+      "factor": "talib_MININDEX",
+      "n_used_total": 16,
+      "n_used_bull": 7,
+      "n_used_bear": 9,
+      "pct_used_total": 8.21,
+      "pct_used_bull": 6.73,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.0651
+    },
+    {
+      "factor": "gtja_gtja_113",
+      "n_used_total": 14,
+      "n_used_bull": 5,
+      "n_used_bear": 9,
+      "pct_used_total": 7.18,
+      "pct_used_bull": 4.81,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.05421
+    },
+    {
+      "factor": "gp_novymarx",
+      "n_used_total": 13,
+      "n_used_bull": 4,
+      "n_used_bear": 9,
+      "pct_used_total": 6.67,
+      "pct_used_bull": 3.85,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.06486
+    },
+    {
+      "factor": "hl_52w_disposition",
+      "n_used_total": 13,
+      "n_used_bull": 4,
+      "n_used_bear": 9,
+      "pct_used_total": 6.67,
+      "pct_used_bull": 3.85,
+      "pct_used_bear": 9.89,
+      "avg_score": 0.06121
+    }
+  ]
+}

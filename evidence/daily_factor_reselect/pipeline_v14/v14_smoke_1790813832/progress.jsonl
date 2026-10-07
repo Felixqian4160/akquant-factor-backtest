@@ -1,0 +1,13 @@
+{"stage": "init", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:12.604899", "start_date": "2020-01-01", "end_date": "2020-02-29", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "ic_window_days": 60, "fwd_days": 20, "lot_size": 100}
+{"stage": "panel_loaded", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:13.666833", "n_rows": 1298335, "n_cols": 419, "n_candidates": 391}
+{"stage": "computing_rolling_ic", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:13.740465", "factors": 391, "window": 60, "fwd_days": 20}
+{"stage": "rolling_ic_done", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:14.096502", "duration_sec": 0.35590600967407227}
+{"stage": "top_factors_per_day_built", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:14.099162", "n_rows": 290}
+{"stage": "votes_filtered", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:16.454339", "n_votes": 1800}
+{"stage": "picks_phase_done", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:16.456534", "n_days": 29, "avg_stocks_per_day": 9.96551724137931}
+{"stage": "universe_size", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:16.456628", "n_unique_stocks": 38}
+{"stage": "data_dict_built", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:16.522077", "n_symbols": 38}
+{"stage": "akquant_start", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:16.522173"}
+{"stage": "akquant_done", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:16.719662"}
+{"stage": "done", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:16.725867", "final_value": 106145485.25186498, "final_return_pct": 6.145485251864979, "n_days_with_picks": 29, "avg_stocks_per_day": 9.96551724137931}
+{"stage": "result_written", "job_id": "v14_smoke_1790813832", "timestamp": "2026-10-01T08:17:16.725948", "result_file": "evidence/daily_factor_reselect/pipeline_v14/v14_smoke_1790813832/result.json"}

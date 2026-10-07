@@ -1,0 +1,13 @@
+{"stage": "init", "job_id": "v5_smoke3_1790781938", "start_date": "2024-01-01", "end_date": "2024-02-29", "top_factors": 10, "top_stocks": 10, "hold_days": 10, "timestamp": "2026-09-30T23:25:38.951077"}
+{"stage": "factors_loaded", "n_factors": 406, "timestamp": "2026-09-30T23:25:38.953533"}
+{"stage": "loading_panel", "timestamp": "2026-09-30T23:25:38.953668"}
+{"stage": "panel_loaded", "n_rows": 1298335, "n_cols": 419, "timestamp": "2026-09-30T23:25:41.164725"}
+{"stage": "dates_loaded", "n_dates_in_range": 5, "timestamp": "2026-09-30T23:25:41.432276"}
+{"stage": "metrics", "date": "2024-01-02", "progress": 50, "total": 406, "rate": 10.878899494139308, "timestamp": "2026-09-30T23:25:46.031502"}
+{"stage": "metrics", "date": "2024-01-02", "progress": 100, "total": 406, "rate": 14.806078086411102, "timestamp": "2026-09-30T23:25:48.189431"}
+{"stage": "metrics", "date": "2024-01-02", "progress": 150, "total": 406, "rate": 17.414621325870492, "timestamp": "2026-09-30T23:25:50.048900"}
+{"stage": "metrics", "date": "2024-01-02", "progress": 200, "total": 406, "rate": 18.891787361454504, "timestamp": "2026-09-30T23:25:52.022059"}
+{"stage": "metrics", "date": "2024-01-02", "progress": 250, "total": 406, "rate": 19.936685220731594, "timestamp": "2026-09-30T23:25:53.975146"}
+{"stage": "metrics", "date": "2024-01-02", "progress": 300, "total": 406, "rate": 20.988780473435337, "timestamp": "2026-09-30T23:25:55.728800"}
+{"stage": "metrics", "date": "2024-01-02", "progress": 350, "total": 406, "rate": 21.840539464923992, "timestamp": "2026-09-30T23:25:57.460694"}
+{"stage": "metrics", "date": "2024-01-02", "progress": 400, "total": 406, "rate": 22.476134235064354, "timestamp": "2026-09-30T23:25:59.232104"}

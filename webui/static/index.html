@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKQuant v2 Workflow — WebUI</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">📊</span>
+      <span class="title">AKQuant v2 Workflow</span>
+      <span class="subtitle">因子研究 + 每日策略 + 模拟交易</span>
+    </div>
+    <div class="health" id="health">
+      <span class="dot" id="healthDot"></span>
+      <span id="healthText">checking...</span>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="backtest">📊 Backtest Results</button>
+    <button class="tab-btn" data-tab="walkforward">🔄 Walk-Forward</button>
+    <button class="tab-btn" data-tab="daily">📅 Daily Strategy</button>
+    <button class="tab-btn" data-tab="paper">💼 Paper Trading</button>
+    <button class="tab-btn" data-tab="dfr">📈 Daily Factor Reselect</button>
+  </nav>
+
+  <main>
+    <!-- Tab 1: Backtest Results -->
+    <section id="tab-backtest" class="tab-pane active">
+      <div class="container">
+        <h2>v1+v2 Workflow 完整 Backtest 结果</h2>
+        <div id="backtestSummary" class="card">
+          <h3>Target Achievement Summary</h3>
+          <div id="summaryContent">Loading...</div>
+        </div>
+        <div id="backtestStages" class="card">
+          <h3>All Stages (8 stages, 107 backtests)</h3>
+          <table id="stagesTable">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>File</th>
+                <th>N Legs</th>
+                <th>Mean Closed%</th>
+                <th>Mean Ann%</th>
+                <th>Mean Sharpe</th>
+                <th>Mean MDD%</th>
+                <th>Meet Target</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div id="backtestDetail" class="card" style="display:none;">
+          <h3 id="detailTitle">Per-Leg Detail</h3>
+          <div id="detailContent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Walk-Forward -->
+    <section id="tab-walkforward" class="tab-pane">
+      <div class="container">
+        <h2>Walk-Forward 验证 (Stage 5b 配置)</h2>
+        <div class="card">
+          <h3>配置参数</h3>
+          <div class="form-row">
+            <label>Train Start: <input type="date" id="wfTrainStart" value="2010-01-01"></label>
+            <label>Train End: <input type="date" id="wfTrainEnd" value="2018-12-31"></label>
+            <label>Val Months: <input type="number" id="wfValMonths" value="6" min="3" max="12"></label>
+            <label>OOS Months: <input type="number" id="wfOosMonths" value="12" min="6" max="24"></label>
+            <label>Step Months: <input type="number" id="wfStepMonths" value="6" min="3" max="12"></label>
+            <label>Max Windows: <input type="number" id="wfMaxWindows" value="6" min="2" max="20"></label>
+            <button id="wfRunBtn" class="primary">▶ 运行 Walk-Forward</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>实时日志</h3>
+          <pre id="wfLog" class="log-box"></pre>
+        </div>
+        <div class="card">
+          <h3>结果</h3>
+          <div id="wfResult">尚未运行</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: Daily Strategy -->
+    <section id="tab-daily" class="tab-pane">
+      <div class="container">
+        <h2>📅 Daily Strategy — 当日 Top-K Picks</h2>
+        <div class="card">
+          <h3>选择日期</h3>
+          <div class="form-row">
+            <label>Pick Date: <input type="date" id="dailyDate" min="2004-01-02" max="2026-08-21"></label>
+            <label>Top K: <input type="number" id="dailyTopK" value="10" min="1" max="50"></label>
+            <button id="dailyRunBtn" class="primary">▶ 算 Picks</button>
+            <span class="hint">数据范围: 2004-01-02 ~ 2026-08-21 (5498 days)</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>实时日志</h3>
+          <pre id="dailyLog" class="log-box"></pre>
+        </div>
+        <div class="card">
+          <h3>Top-K Picks</h3>
+          <div id="dailyResult">尚未运行</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: Paper Trading -->
+    <section id="tab-paper" class="tab-pane">
+      <div class="container">
+        <h2>💼 Paper Trading 模拟交易</h2>
+        <div class="card">
+          <h3>新建模拟会话</h3>
+          <div class="form-row">
+            <label>Start Date: <input type="date" id="paperStart" value="2020-01-01"></label>
+            <label>End Date: <input type="date" id="paperEnd" value="2025-12-31"></label>
+            <label>Initial Cash: <input type="number" id="paperCash" value="1000000" step="100000"></label>
+            <label>Top K: <input type="number" id="paperTopK" value="10" min="1" max="50"></label>
+            <label>Rebal Days: <input type="number" id="paperRebal" value="20" min="5" max="60"></label>
+            <button id="paperStartBtn" class="primary">▶ 开始模拟</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>实时日志</h3>
+          <pre id="paperLog" class="log-box"></pre>
+        </div>
+        <div class="card">
+          <h3>模拟结果</h3>
+          <div id="paperResult">尚未运行</div>
+        </div>
+        <div class="card">
+          <h3>历史会话</h3>
+          <table id="paperSessionsTable">
+            <thead><tr><th>Session ID</th><th>Status</th><th>Created</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 5: Daily Factor Reselect (AKQuant full pipeline) -->
+    <section id="tab-dfr" class="tab-pane">
+      <h2>📈 Daily Factor Reselect — 全 406 因子 daily re-select + AKQuant 回测</h2>
+      <div class="card">
+        <h3>运行配置</h3>
+        <div class="form-row">
+          <label>Start Date: <input type="date" id="dfrStartDate" value="2010-01-01"></label>
+          <label>End Date: <input type="date" id="dfrEndDate" value="2025-12-31"></label>
+          <label>Rebal Days: <input type="number" id="dfrRebalDays" value="20" min="5" max="60"></label>
+          <label>Top K: <input type="number" id="dfrTopK" value="20" min="10" max="20"></label>
+          <label>Window Days: <input type="number" id="dfrWindowDays" value="60" min="20" max="120"></label>
+          <button id="dfrRunBtn" class="primary">▶ 运行 Daily Factor Reselect</button>
+        </div>
+        <div style="margin-top:8px; color:#888; font-size:12px;">
+          每天回测全 406 因子 → 选 N ∈ {5,6,7,8,9,10} 因子组 → 用 AKQuant 跑 rebal → top-K picks
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>实时进度</h3>
+        <table style="font-size:13px;">
+          <tr><td><b>Stage:</b></td><td id="dfrStage">—</td></tr>
+          <tr><td><b>Job ID:</b></td><td id="dfrJobId">—</td></tr>
+          <tr><td><b>当前 Date:</b></td><td id="dfrDate">—</td></tr>
+          <tr><td><b>进度:</b></td><td id="dfrCycleCount">0/0</td><td id="dfrPct"></td></tr>
+          <tr><td><b>Current NAV:</b></td><td id="dfrNav">—</td></tr>
+          <tr><td><b>Return:</b></td><td id="dfrRet">—</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>实时 NAV 曲线</h3>
+        <canvas id="dfrNavChart" width="1200" height="400" style="border:1px solid #333;"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>实时日志</h3>
+        <pre id="dfrLog" class="log-box"></pre>
+      </div>
+
+      <div class="card">
+        <h3>最终结果</h3>
+        <div id="dfrResult">尚未运行</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/js/main.js"></script>
+  <script src="/static/tabs/backtest.js"></script>
+  <script src="/static/tabs/walkforward.js"></script>
+  <script src="/static/tabs/daily.js"></script>
+  <script src="/static/tabs/paper.js"></script>
+  <script src="/static/tabs/daily_factor.js"></script>
+</body>
+</html>

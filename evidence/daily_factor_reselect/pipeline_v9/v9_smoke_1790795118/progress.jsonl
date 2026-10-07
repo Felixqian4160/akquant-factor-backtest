@@ -1,0 +1,5 @@
+{"stage": "init", "job_id": "v9_smoke_1790795118", "timestamp": "2026-10-01T03:05:19.175866", "start_date": "2020-01-01", "end_date": "2020-03-31"}
+{"stage": "panel_loaded", "job_id": "v9_smoke_1790795118", "timestamp": "2026-10-01T03:05:21.895504", "n_rows": 1298335, "n_cols": 419}
+{"stage": "dates_loaded", "job_id": "v9_smoke_1790795118", "timestamp": "2026-10-01T03:05:22.930668", "n_dates_in_range": 58}
+{"stage": "picks_computed", "job_id": "v9_smoke_1790795118", "timestamp": "2026-10-01T03:05:54.223837", "date": "2020-01-02", "day": 0, "n_total": 58, "elapsed_sec": 31.292221069335938}
+{"stage": "picks_computed", "job_id": "v9_smoke_1790795118", "timestamp": "2026-10-01T03:18:27.343595", "date": "2020-02-21", "day": 30, "n_total": 58, "elapsed_sec": 784.4110922813416}

@@ -1,0 +1,54 @@
+[
+  {
+    "label": "Bull composite top-20 (PROPOSED)",
+    "total_pnl": 6969865.84,
+    "unrealized": 2457657.0,
+    "closed_only_ret_pct": 451.22088399999996,
+    "sharpe": 0.5648808231847553,
+    "sortino": 0.8144833624770518,
+    "profit_factor": 1.573308650677462,
+    "win_rate": 57.029323102219784,
+    "max_drawdown_pct": 68.46228390294397,
+    "trades": 3649,
+    "total_commission": 1355288.16
+  },
+  {
+    "label": "Reverse top-20 (worst composite)",
+    "total_pnl": 0.0,
+    "unrealized": 0.0,
+    "closed_only_ret_pct": 0.0,
+    "sharpe": 0.0,
+    "sortino": 0.0,
+    "profit_factor": 0.0,
+    "win_rate": 0.0,
+    "max_drawdown_pct": 0.0,
+    "trades": 0,
+    "total_commission": 0.0
+  },
+  {
+    "label": "Buy-hold static top-20",
+    "total_pnl": 1492729.88,
+    "unrealized": 1496646.0,
+    "closed_only_ret_pct": -0.3916120000000111,
+    "sharpe": 0.35960146081669025,
+    "sortino": 0.4904988968104859,
+    "profit_factor": 0.0,
+    "win_rate": 0.0,
+    "max_drawdown_pct": 56.895747192819876,
+    "trades": 0,
+    "total_commission": 3916.12
+  },
+  {
+    "label": "Buy-hold random-20 (seed=42)",
+    "total_pnl": 312628.4040000001,
+    "unrealized": 314779.0,
+    "closed_only_ret_pct": -0.2150595999999903,
+    "sharpe": 0.19666915935290039,
+    "sortino": 0.26622549504707893,
+    "profit_factor": 0.0,
+    "win_rate": 0.0,
+    "max_drawdown_pct": 44.7961668223543,
+    "trades": 0,
+    "total_commission": 2150.596
+  }
+]

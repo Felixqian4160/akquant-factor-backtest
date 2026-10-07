@@ -1,0 +1,13 @@
+{"stage": "init", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:31:11.675939", "start_date": "2020-01-01", "end_date": "2023-12-31", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "ic_window_days": 20, "fwd_days": 20, "lot_size": 100}
+{"stage": "panel_loaded", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:31:13.837292", "n_rows": 1298335, "n_cols": 419, "n_candidates": 391}
+{"stage": "computing_rolling_ic", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:31:36.621394", "factors": 391, "window": 20, "fwd_days": 20}
+{"stage": "rolling_ic_done", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:31:40.519999", "duration_sec": 3.8859503269195557}
+{"stage": "top_factors_per_day_built", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:31:40.541846", "n_rows": 9630}
+{"stage": "votes_filtered", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:32:36.562850", "n_votes": 57940}
+{"stage": "picks_phase_done", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:32:37.687571", "n_days": 962, "avg_stocks_per_day": 9.497920997920998}
+{"stage": "universe_size", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:32:37.687995", "n_unique_stocks": 336}
+{"stage": "data_dict_built", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:32:57.323656", "n_symbols": 336}
+{"stage": "akquant_start", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:32:57.325768"}
+{"stage": "akquant_done", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:33:21.408977"}
+{"stage": "done", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:33:21.720265", "final_value": 175362501.653945, "final_return_pct": 75.362501653945, "n_days_with_picks": 962, "avg_stocks_per_day": 9.497920997920998}
+{"stage": "result_written", "job_id": "v14_w20_4y_1790814671", "timestamp": "2026-10-01T08:33:21.720401", "result_file": "evidence/daily_factor_reselect/pipeline_v14/v14_w20_4y_1790814671/result.json"}

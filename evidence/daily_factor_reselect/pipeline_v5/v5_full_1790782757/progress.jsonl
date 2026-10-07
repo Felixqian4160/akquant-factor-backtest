@@ -1,0 +1,75 @@
+{"stage": "init", "job_id": "v5_full_1790782757", "start_date": "2010-01-01", "end_date": "2025-12-31", "top_factors": 10, "top_stocks": 10, "hold_days": 10, "timestamp": "2026-09-30T23:39:18.073910"}
+{"stage": "factors_loaded", "n_factors": 406, "timestamp": "2026-09-30T23:39:18.076394"}
+{"stage": "loading_panel", "timestamp": "2026-09-30T23:39:18.076527"}
+{"stage": "panel_loaded", "n_rows": 1298335, "n_cols": 419, "timestamp": "2026-09-30T23:39:20.328333"}
+{"stage": "dates_loaded", "n_dates_in_range": 3886, "timestamp": "2026-09-30T23:39:20.556454"}
+{"stage": "metrics", "date": "2010-01-04", "progress": 50, "total": 406, "rate": 17.375945199064436, "timestamp": "2026-09-30T23:39:23.437065"}
+{"stage": "metrics", "date": "2010-01-04", "progress": 100, "total": 406, "rate": 22.212202565265198, "timestamp": "2026-09-30T23:39:25.061552"}
+{"stage": "metrics", "date": "2010-01-04", "progress": 150, "total": 406, "rate": 24.79912039863027, "timestamp": "2026-09-30T23:39:26.608125"}
+{"stage": "metrics", "date": "2010-01-04", "progress": 200, "total": 406, "rate": 26.29418312514748, "timestamp": "2026-09-30T23:39:28.165769"}
+{"stage": "metrics", "date": "2010-01-04", "progress": 250, "total": 406, "rate": 27.08981271587608, "timestamp": "2026-09-30T23:39:29.788084"}
+{"stage": "metrics", "date": "2010-01-04", "progress": 300, "total": 406, "rate": 28.135731672102374, "timestamp": "2026-09-30T23:39:31.222122"}
+{"stage": "metrics", "date": "2010-01-04", "progress": 350, "total": 406, "rate": 28.858250699101838, "timestamp": "2026-09-30T23:39:32.687770"}
+{"stage": "metrics", "date": "2010-01-04", "progress": 400, "total": 406, "rate": 29.412920442046115, "timestamp": "2026-09-30T23:39:34.158989"}
+{"stage": "metrics", "date": "2010-01-05", "progress": 50, "total": 406, "rate": 32.79181505568419, "timestamp": "2026-09-30T23:39:36.367616"}
+{"stage": "metrics", "date": "2010-01-05", "progress": 100, "total": 406, "rate": 32.254356925575124, "timestamp": "2026-09-30T23:39:37.943202"}
+{"stage": "metrics", "date": "2010-01-05", "progress": 150, "total": 406, "rate": 32.340432531572176, "timestamp": "2026-09-30T23:39:39.481003"}
+{"stage": "metrics", "date": "2010-01-05", "progress": 200, "total": 406, "rate": 32.543193904699656, "timestamp": "2026-09-30T23:39:40.988524"}
+{"stage": "metrics", "date": "2010-01-05", "progress": 250, "total": 406, "rate": 32.74069630557467, "timestamp": "2026-09-30T23:39:42.478603"}
+{"stage": "metrics", "date": "2010-01-05", "progress": 300, "total": 406, "rate": 32.995184735648984, "timestamp": "2026-09-30T23:39:43.935081"}
+{"stage": "metrics", "date": "2010-01-05", "progress": 350, "total": 406, "rate": 33.0732804047503, "timestamp": "2026-09-30T23:39:45.425406"}
+{"stage": "metrics", "date": "2010-01-05", "progress": 400, "total": 406, "rate": 33.09107031695835, "timestamp": "2026-09-30T23:39:46.930699"}
+{"stage": "metrics", "date": "2010-01-06", "progress": 50, "total": 406, "rate": 32.15465991053772, "timestamp": "2026-09-30T23:39:49.202683"}
+{"stage": "metrics", "date": "2010-01-06", "progress": 100, "total": 406, "rate": 32.216144987031136, "timestamp": "2026-09-30T23:39:50.751731"}
+{"stage": "metrics", "date": "2010-01-06", "progress": 150, "total": 406, "rate": 32.615830164869344, "timestamp": "2026-09-30T23:39:52.246691"}
+{"stage": "metrics", "date": "2010-01-06", "progress": 200, "total": 406, "rate": 32.79264444087492, "timestamp": "2026-09-30T23:39:53.746627"}
+{"stage": "metrics", "date": "2010-01-06", "progress": 250, "total": 406, "rate": 32.953671282025205, "timestamp": "2026-09-30T23:39:55.234106"}
+{"stage": "metrics", "date": "2010-01-06", "progress": 300, "total": 406, "rate": 33.121128153050535, "timestamp": "2026-09-30T23:39:56.705361"}
+{"stage": "metrics", "date": "2010-01-06", "progress": 350, "total": 406, "rate": 33.376398096662356, "timestamp": "2026-09-30T23:39:58.134150"}
+{"stage": "metrics", "date": "2010-01-06", "progress": 400, "total": 406, "rate": 33.4973277654651, "timestamp": "2026-09-30T23:39:59.588950"}
+{"stage": "metrics", "date": "2010-01-07", "progress": 50, "total": 406, "rate": 33.44448792816447, "timestamp": "2026-09-30T23:40:01.324856"}
+{"stage": "metrics", "date": "2010-01-07", "progress": 100, "total": 406, "rate": 33.49209116119619, "timestamp": "2026-09-30T23:40:02.815622"}
+{"stage": "metrics", "date": "2010-01-07", "progress": 150, "total": 406, "rate": 33.57723228381, "timestamp": "2026-09-30T23:40:04.297154"}
+{"stage": "metrics", "date": "2010-01-07", "progress": 200, "total": 406, "rate": 33.42378910400496, "timestamp": "2026-09-30T23:40:05.813604"}
+{"stage": "metrics", "date": "2010-01-07", "progress": 250, "total": 406, "rate": 33.434085341132885, "timestamp": "2026-09-30T23:40:07.307244"}
+{"stage": "metrics", "date": "2010-01-07", "progress": 300, "total": 406, "rate": 33.69593245234488, "timestamp": "2026-09-30T23:40:08.732993"}
+{"stage": "metrics", "date": "2010-01-07", "progress": 350, "total": 406, "rate": 33.85921211848209, "timestamp": "2026-09-30T23:40:10.166763"}
+{"stage": "metrics", "date": "2010-01-07", "progress": 400, "total": 406, "rate": 33.90506461623526, "timestamp": "2026-09-30T23:40:11.627489"}
+{"stage": "metrics", "date": "2010-01-08", "progress": 50, "total": 406, "rate": 33.474548337846564, "timestamp": "2026-09-30T23:40:13.353880"}
+{"stage": "metrics", "date": "2010-01-08", "progress": 100, "total": 406, "rate": 32.724979435237756, "timestamp": "2026-09-30T23:40:14.915977"}
+{"stage": "metrics", "date": "2010-01-08", "progress": 150, "total": 406, "rate": 32.977717673328826, "timestamp": "2026-09-30T23:40:16.408733"}
+{"stage": "metrics", "date": "2010-01-08", "progress": 200, "total": 406, "rate": 33.050332465082974, "timestamp": "2026-09-30T23:40:17.911584"}
+{"stage": "metrics", "date": "2010-01-08", "progress": 250, "total": 406, "rate": 33.11663537895192, "timestamp": "2026-09-30T23:40:19.409283"}
+{"stage": "metrics", "date": "2010-01-08", "progress": 300, "total": 406, "rate": 33.395362319656016, "timestamp": "2026-09-30T23:40:20.843491"}
+{"stage": "metrics", "date": "2010-01-08", "progress": 350, "total": 406, "rate": 33.60479694939364, "timestamp": "2026-09-30T23:40:22.275387"}
+{"stage": "metrics", "date": "2010-01-08", "progress": 400, "total": 406, "rate": 33.68578026813712, "timestamp": "2026-09-30T23:40:23.734655"}
+{"stage": "loop", "date": "2010-01-08", "n_done": 5, "n_total": 3886, "nav": 0.9881657594095707, "cycle_ret_pct": -0.24839589774999912, "factors": ["alpha_alpha005", "v10_1_a2_interval", "alpha_alpha021"], "elapsed_sec": 63.44649004936218, "timestamp": "2026-09-30T23:40:24.004050"}
+{"stage": "metrics", "date": "2010-01-11", "progress": 50, "total": 406, "rate": 33.27677062589751, "timestamp": "2026-09-30T23:40:25.506849"}
+{"stage": "metrics", "date": "2010-01-11", "progress": 100, "total": 406, "rate": 33.16110154238546, "timestamp": "2026-09-30T23:40:27.019881"}
+{"stage": "metrics", "date": "2010-01-11", "progress": 150, "total": 406, "rate": 33.131101340487994, "timestamp": "2026-09-30T23:40:28.531767"}
+{"stage": "metrics", "date": "2010-01-11", "progress": 200, "total": 406, "rate": 33.04543189076921, "timestamp": "2026-09-30T23:40:30.056573"}
+{"stage": "metrics", "date": "2010-01-11", "progress": 250, "total": 406, "rate": 33.06071023005213, "timestamp": "2026-09-30T23:40:31.566145"}
+{"stage": "metrics", "date": "2010-01-11", "progress": 300, "total": 406, "rate": 33.30871406049194, "timestamp": "2026-09-30T23:40:33.010952"}
+{"stage": "metrics", "date": "2010-01-11", "progress": 350, "total": 406, "rate": 33.46199124147595, "timestamp": "2026-09-30T23:40:34.463928"}
+{"stage": "metrics", "date": "2010-01-11", "progress": 400, "total": 406, "rate": 33.51330915886353, "timestamp": "2026-09-30T23:40:35.939858"}
+{"stage": "metrics", "date": "2010-01-12", "progress": 50, "total": 406, "rate": 33.60465079014079, "timestamp": "2026-09-30T23:40:37.673328"}
+{"stage": "metrics", "date": "2010-01-12", "progress": 100, "total": 406, "rate": 33.3277658650201, "timestamp": "2026-09-30T23:40:39.185939"}
+{"stage": "metrics", "date": "2010-01-12", "progress": 150, "total": 406, "rate": 33.37049914797622, "timestamp": "2026-09-30T23:40:40.680426"}
+{"stage": "metrics", "date": "2010-01-12", "progress": 200, "total": 406, "rate": 33.267184499408785, "timestamp": "2026-09-30T23:40:42.197369"}
+{"stage": "metrics", "date": "2010-01-12", "progress": 250, "total": 406, "rate": 33.237711179677305, "timestamp": "2026-09-30T23:40:43.707015"}
+{"stage": "metrics", "date": "2010-01-12", "progress": 300, "total": 406, "rate": 33.42228829343694, "timestamp": "2026-09-30T23:40:45.161484"}
+{"stage": "metrics", "date": "2010-01-12", "progress": 350, "total": 406, "rate": 33.58462899544672, "timestamp": "2026-09-30T23:40:46.606872"}
+{"stage": "metrics", "date": "2010-01-12", "progress": 400, "total": 406, "rate": 33.60472146567338, "timestamp": "2026-09-30T23:40:48.088528"}
+{"stage": "metrics", "date": "2010-01-13", "progress": 50, "total": 406, "rate": 33.247385743184545, "timestamp": "2026-09-30T23:40:49.840176"}
+{"stage": "metrics", "date": "2010-01-13", "progress": 100, "total": 406, "rate": 33.063314811914196, "timestamp": "2026-09-30T23:40:51.360800"}
+{"stage": "metrics", "date": "2010-01-13", "progress": 150, "total": 406, "rate": 33.1479322769019, "timestamp": "2026-09-30T23:40:52.861468"}
+{"stage": "metrics", "date": "2010-01-13", "progress": 200, "total": 406, "rate": 32.98859706810515, "timestamp": "2026-09-30T23:40:54.399000"}
+{"stage": "metrics", "date": "2010-01-13", "progress": 250, "total": 406, "rate": 33.008789838147145, "timestamp": "2026-09-30T23:40:55.910040"}
+{"stage": "metrics", "date": "2010-01-13", "progress": 300, "total": 406, "rate": 33.07625345498512, "timestamp": "2026-09-30T23:40:57.406250"}
+{"stage": "metrics", "date": "2010-01-13", "progress": 350, "total": 406, "rate": 33.257206077922746, "timestamp": "2026-09-30T23:40:58.860334"}
+{"stage": "metrics", "date": "2010-01-13", "progress": 400, "total": 406, "rate": 33.31785391378562, "timestamp": "2026-09-30T23:41:00.341875"}
+{"stage": "metrics", "date": "2010-01-14", "progress": 50, "total": 406, "rate": 33.10652978574508, "timestamp": "2026-09-30T23:41:02.081267"}
+{"stage": "metrics", "date": "2010-01-14", "progress": 100, "total": 406, "rate": 33.047421109137304, "timestamp": "2026-09-30T23:41:03.596947"}
+{"stage": "metrics", "date": "2010-01-14", "progress": 150, "total": 406, "rate": 33.18061476992011, "timestamp": "2026-09-30T23:41:05.091703"}
+{"stage": "metrics", "date": "2010-01-14", "progress": 200, "total": 406, "rate": 33.12444228966023, "timestamp": "2026-09-30T23:41:06.608829"}
+{"stage": "metrics", "date": "2010-01-14", "progress": 250, "total": 406, "rate": 33.12234805485775, "timestamp": "2026-09-30T23:41:08.118765"}

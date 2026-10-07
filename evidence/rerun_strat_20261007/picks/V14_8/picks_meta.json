@@ -1,0 +1,1748 @@
+{
+ "2010-01-18": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 21
+ },
+ "2010-02-22": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 22
+ },
+ "2010-03-22": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 24
+ },
+ "2010-04-20": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 19
+ },
+ "2010-05-19": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 25
+ },
+ "2010-06-21": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 25
+ },
+ "2010-07-19": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 23
+ },
+ "2010-08-16": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 21
+ },
+ "2010-09-13": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 24
+ },
+ "2010-10-21": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 26
+ },
+ "2010-11-18": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 24
+ },
+ "2010-12-16": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 25
+ },
+ "2011-01-14": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 28
+ },
+ "2011-02-18": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 19
+ },
+ "2011-03-18": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 15
+ },
+ "2011-04-19": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 6,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 6
+ },
+ "2011-05-18": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 10
+ },
+ "2011-06-16": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 7
+ },
+ "2011-07-14": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2011-08-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 12
+ },
+ "2011-09-08": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 3
+ },
+ "2011-10-14": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 4
+ },
+ "2011-11-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 4
+ },
+ "2011-12-09": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 3
+ },
+ "2012-01-10": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 33
+ },
+ "2012-02-14": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 28
+ },
+ "2012-03-13": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 17
+ },
+ "2012-04-13": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 24
+ },
+ "2012-05-15": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 8,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 8
+ },
+ "2012-06-12": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 10
+ },
+ "2012-07-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 8,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 8
+ },
+ "2012-08-08": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 0
+ },
+ "2012-09-05": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 1
+ },
+ "2012-10-10": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 5
+ },
+ "2012-11-07": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 4
+ },
+ "2012-12-05": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 9,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 9
+ },
+ "2013-01-07": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 4
+ },
+ "2013-02-04": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 5
+ },
+ "2013-03-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 4
+ },
+ "2013-04-10": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 11
+ },
+ "2013-05-13": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 4
+ },
+ "2013-06-13": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 7
+ },
+ "2013-07-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 7
+ },
+ "2013-08-08": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 0
+ },
+ "2013-09-05": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 4
+ },
+ "2013-10-14": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2013-11-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 0
+ },
+ "2013-12-09": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 8,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 8
+ },
+ "2014-01-07": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 9,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 9
+ },
+ "2014-02-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 8,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 8
+ },
+ "2014-03-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 2
+ },
+ "2014-04-09": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 30
+ },
+ "2014-05-09": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 29
+ },
+ "2014-06-09": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 23
+ },
+ "2014-07-07": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 23
+ },
+ "2014-08-04": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 21
+ },
+ "2014-09-01": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 26
+ },
+ "2014-09-30": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 26
+ },
+ "2014-11-04": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 25
+ },
+ "2014-12-02": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 17
+ },
+ "2014-12-30": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 26
+ },
+ "2015-01-29": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 17
+ },
+ "2015-03-05": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 25
+ },
+ "2015-04-02": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 24
+ },
+ "2015-05-04": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 21
+ },
+ "2015-06-01": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 25
+ },
+ "2015-06-30": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 31
+ },
+ "2015-07-28": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 26
+ },
+ "2015-08-25": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 21
+ },
+ "2015-09-24": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 25
+ },
+ "2015-10-29": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 23
+ },
+ "2015-11-26": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 21
+ },
+ "2015-12-24": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 27
+ },
+ "2016-01-22": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 24
+ },
+ "2016-02-26": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 17
+ },
+ "2016-03-25": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 25
+ },
+ "2016-04-25": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 35
+ },
+ "2016-05-24": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 21
+ },
+ "2016-06-23": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 25
+ },
+ "2016-07-21": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 24
+ },
+ "2016-08-18": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 23
+ },
+ "2016-09-19": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 27
+ },
+ "2016-10-24": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 15
+ },
+ "2016-11-21": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 29
+ },
+ "2016-12-19": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 20
+ },
+ "2017-01-17": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 26
+ },
+ "2017-02-21": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 26
+ },
+ "2017-03-21": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 19
+ },
+ "2017-04-20": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 19
+ },
+ "2017-05-19": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 20
+ },
+ "2017-06-20": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 21
+ },
+ "2017-07-18": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 26
+ },
+ "2017-08-15": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 23
+ },
+ "2017-09-12": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 10
+ },
+ "2017-10-17": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 10
+ },
+ "2017-11-14": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 21
+ },
+ "2017-12-12": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 21
+ },
+ "2018-01-10": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 20
+ },
+ "2018-02-07": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 7
+ },
+ "2018-03-14": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 3
+ },
+ "2018-04-13": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 4
+ },
+ "2018-05-15": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 5
+ },
+ "2018-06-12": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 7
+ },
+ "2018-07-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2018-08-08": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2018-09-05": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 2
+ },
+ "2018-10-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2018-11-08": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 3
+ },
+ "2018-12-06": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 2
+ },
+ "2019-01-07": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 29
+ },
+ "2019-02-11": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 21
+ },
+ "2019-03-11": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 22
+ },
+ "2019-04-09": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 21
+ },
+ "2019-05-10": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 23
+ },
+ "2019-06-10": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 19
+ },
+ "2019-07-08": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 28
+ },
+ "2019-08-05": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 21
+ },
+ "2019-09-02": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 26
+ },
+ "2019-10-08": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 24
+ },
+ "2019-11-05": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 19
+ },
+ "2019-12-03": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 22
+ },
+ "2019-12-31": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 24
+ },
+ "2020-02-06": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 20
+ },
+ "2020-03-05": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 15
+ },
+ "2020-04-02": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 10
+ },
+ "2020-05-06": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 25
+ },
+ "2020-06-03": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 21
+ },
+ "2020-07-03": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 22
+ },
+ "2020-07-31": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 21
+ },
+ "2020-08-28": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 18
+ },
+ "2020-09-25": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 21
+ },
+ "2020-11-02": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 19
+ },
+ "2020-11-30": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 17
+ },
+ "2020-12-28": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 21
+ },
+ "2021-01-26": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 19
+ },
+ "2021-03-02": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2021-03-30": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 6,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 6
+ },
+ "2021-04-28": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 10
+ },
+ "2021-05-31": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 7
+ },
+ "2021-06-29": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 9,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 9
+ },
+ "2021-07-27": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 5
+ },
+ "2021-08-24": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 7
+ },
+ "2021-09-23": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 3
+ },
+ "2021-10-28": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 0
+ },
+ "2021-11-25": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 2
+ },
+ "2021-12-23": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2022-01-21": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 2
+ },
+ "2022-02-25": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 6,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 6
+ },
+ "2022-03-25": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 0
+ },
+ "2022-04-26": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 6,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 6
+ },
+ "2022-05-27": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 2
+ },
+ "2022-06-27": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2022-07-25": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 6,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 6
+ },
+ "2022-08-22": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 5
+ },
+ "2022-09-20": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 5
+ },
+ "2022-10-25": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2022-11-22": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 6,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 6
+ },
+ "2022-12-20": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 7
+ },
+ "2023-01-18": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 2
+ },
+ "2023-02-22": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 7
+ },
+ "2023-03-22": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 11
+ },
+ "2023-04-20": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 7
+ },
+ "2023-05-23": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 12
+ },
+ "2023-06-20": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 12
+ },
+ "2023-07-20": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 2
+ },
+ "2023-08-17": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 5
+ },
+ "2023-09-14": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 0
+ },
+ "2023-10-20": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 10
+ },
+ "2023-11-17": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 8,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 8
+ },
+ "2023-12-15": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2024-01-15": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 2
+ },
+ "2024-02-20": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 21
+ },
+ "2024-03-19": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 27
+ },
+ "2024-04-18": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 25
+ },
+ "2024-05-21": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 3
+ },
+ "2024-06-19": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 8,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 8
+ },
+ "2024-07-17": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 0
+ },
+ "2024-08-14": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 4
+ },
+ "2024-09-11": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 3
+ },
+ "2024-10-18": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 8,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 8
+ },
+ "2024-11-15": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 0
+ },
+ "2024-12-13": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 8,
+  "max_votes": 6,
+  "n_at_or_above_threshold": 8
+ },
+ "2025-01-13": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 5
+ },
+ "2025-02-18": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 7,
+  "max_votes": 5,
+  "n_at_or_above_threshold": 7
+ },
+ "2025-03-18": {
+  "regime": "bear",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 5,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 1
+ },
+ "2025-04-16": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 25
+ },
+ "2025-05-19": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 7,
+  "n_at_or_above_threshold": 18
+ },
+ "2025-06-17": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 8,
+  "n_at_or_above_threshold": 22
+ },
+ "2025-07-15": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 18
+ },
+ "2025-08-12": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 19
+ },
+ "2025-09-09": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 9,
+  "n_at_or_above_threshold": 17
+ },
+ "2025-10-15": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 3,
+  "n_at_or_above_threshold": 20
+ },
+ "2025-11-12": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 4,
+  "n_at_or_above_threshold": 26
+ },
+ "2025-12-10": {
+  "regime": "bull_neutral",
+  "selector": "factor_return_voting_offset",
+  "offset": 8,
+  "n_active_factors": 10,
+  "n_picks": 10,
+  "max_votes": 10,
+  "n_at_or_above_threshold": 22
+ }
+}

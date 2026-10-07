@@ -1,0 +1,98 @@
+{
+  "workflow": "v1 + v2 + Stage 7c (8 stages, 107 backtests)",
+  "goal": "年化 ≥ 12% / Sharpe ≥ 1.2 / MDD ≤ 12% (production alpha)",
+  "panel": "v2_talib (420 cols, 354 stocks, 5498 days, 2004-2026)",
+  "regime": "bull_legs.json (10 legs ≥100d)",
+  "final_terminal_state": "Stage 5b (top_k=10, kill DD>8%, cooldown=20d)",
+  "all_sweeps_converged": true,
+  "complete_sweep_table": {
+    "Stage 5b (baseline 8%/20d)": {
+      "mean_closed": 48.32,
+      "mean_ann": 134.1,
+      "mean_sharpe": 2.927,
+      "mean_mdd": 17.67,
+      "median_mdd": 17.43,
+      "n_target": 2
+    },
+    "Stage 7a-4%": {
+      "mean_closed": 24.49,
+      "mean_ann": 72.5,
+      "mean_sharpe": 2.842,
+      "mean_mdd": 18.17,
+      "median_mdd": 16.84,
+      "n_target": 2
+    },
+    "Stage 7a-6%": {
+      "mean_closed": 34.9,
+      "mean_ann": 107.4,
+      "mean_sharpe": 2.797,
+      "mean_mdd": 18.18,
+      "median_mdd": 17.43,
+      "n_target": 2
+    },
+    "Stage 7a-10%": {
+      "mean_closed": 42.94,
+      "mean_ann": 113.5,
+      "mean_sharpe": 2.78,
+      "mean_mdd": 18.14,
+      "median_mdd": 18.51,
+      "n_target": 2
+    },
+    "Stage 7a-12%": {
+      "mean_closed": 39.16,
+      "mean_ann": 119.0,
+      "mean_sharpe": 2.618,
+      "mean_mdd": 19.5,
+      "median_mdd": 18.51,
+      "n_target": 2
+    },
+    "Stage 7c-10d": {
+      "mean_closed": 41.46,
+      "mean_ann": 123.9,
+      "mean_sharpe": 2.807,
+      "mean_mdd": 17.91,
+      "median_mdd": 18.51,
+      "n_target": 2
+    },
+    "Stage 7c-30d": {
+      "mean_closed": 29.65,
+      "mean_ann": 92.0,
+      "mean_sharpe": 2.627,
+      "mean_mdd": 19.57,
+      "median_mdd": 16.29,
+      "n_target": 2
+    },
+    "Stage 7c-40d": {
+      "mean_closed": 30.17,
+      "mean_ann": 90.2,
+      "mean_sharpe": 2.745,
+      "mean_mdd": 18.16,
+      "median_mdd": 17.33,
+      "n_target": 2
+    },
+    "Stage 7c-60d": {
+      "mean_closed": 26.43,
+      "mean_ann": 65.3,
+      "mean_sharpe": 2.755,
+      "mean_mdd": 17.61,
+      "median_mdd": 15.81,
+      "n_target": 2
+    }
+  },
+  "key_finding": "v1 framework alpha reached ceiling at Stage 5b. All sweeps (kill threshold {4,6,8,10,12}%, cooldown {10,20,30,40,60}d) confirmed 8% threshold + 20d cooldown as sweet spot. No single-variable change can reduce MDD below ~17% in v1 framework.",
+  "goal_status": {
+    "ann_12pct": "✅ EXCEEDED (mean +134%, far exceeds 12%)",
+    "sharpe_1_2": "✅ EXCEEDED (mean 2.93, far exceeds 1.2)",
+    "mdd_12pct": "⚠️ NEAR MISS (mean 17.67%, gap 5.67pp)",
+    "production_realistic": "❌ FAILED (Stage 6a full panel ann +2%, MDD -63%)",
+    "overall": "PARTIALLY MET (ann+sharpe ✅, MDD ⚠️)"
+  },
+  "next_workflow_components_required": [
+    "multi-universe diversification (HS300 + CSI500 + CSI1000) - 需要新数据",
+    "real-time regime classifier (LightGBM 3-class) - 不依赖 ground truth bull_legs",
+    "cross-strategy composite (MainWave + Reversal + MeanReversion)",
+    "position sizing risk parity (每 leg 风险平价)",
+    "multi-leg OOS validation (train/val/OOS time-split)"
+  ],
+  "final_conclusion": "v1+v2 workflow 完整完成 (8 stages, 107 backtests, all real AKQuant 0.3.64 backtests). Stage 5b 是 v1 framework 终态: top_k=10 + kill DD>8%/cooldown=20d + bull_composite 6 因子. Per-leg 实证: mean ann +134%, sharpe 2.93, MDD 17.67% (2/10 legs 完全达标). Goal \"年化 12% / Sharpe 1.2 / MDD 12%\" PARTIALLY 达成: ann+sharpe 远超, MDD 略超 5.67pp. Production-realistic 测试 (Stage 6a) 失败, 表明 bull_composite 是 specialist 不是 standalone. v1 framework alpha 已达上限, MDD 根本改善需要结构性变化 (multi-universe + cross-strategy)."
+}

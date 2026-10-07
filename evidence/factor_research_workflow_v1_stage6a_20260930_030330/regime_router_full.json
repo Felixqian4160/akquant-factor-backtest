@@ -1,0 +1,12 @@
+{
+  "regime": "router (bull_only)",
+  "panel_days": 3425,
+  "closed_only_return_pct": 57.9649,
+  "total_return_pct": 102.2073,
+  "unrealized_pnl": 442424.0,
+  "sharpe_ratio": 0.262,
+  "max_drawdown_pct": 63.09,
+  "win_rate": 70.91,
+  "closed_trade_count": 55,
+  "elapsed_sec": 112.6
+}

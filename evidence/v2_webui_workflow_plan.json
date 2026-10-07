@@ -1,0 +1,63 @@
+{
+  "contract_id": "v2_webui_workflow_20260930_071705",
+  "title": "v2 WebUI Workflow: walk-forward + daily strategy + paper trading",
+  "status": "awaiting_user_confirmation",
+  "tabs": [
+    {
+      "id": "backtest_results",
+      "name": "📊 Backtest Results",
+      "purpose": "显示 v1+v2 workflow 8 stages 完整结果 + Stage 5b 详情",
+      "data": "evidence/factor_research_workflow_v1_stage*/per_leg_bull*.json + sweep_results.json",
+      "cli_backend": "N/A (只读 evidence 文件)"
+    },
+    {
+      "id": "walk_forward",
+      "name": "🔄 Walk-Forward",
+      "purpose": "多窗口验证: train (e.g. 2010-2018) → val (2019-2021) → OOS (2022-2025)",
+      "cli_backend": "quant_workflow/scripts/v10_2_lightgbm/walk_forward_v5b.py",
+      "method": "用 Stage 5b 配置 (top_k=10, kill 8%/20d), 滚动 4-6 窗口, 每个窗口输出 ann/sharpe/MDD",
+      "verify": "OOS mean ann ≥ 12% / Sharpe ≥ 1.2 / MDD ≤ 12%"
+    },
+    {
+      "id": "daily_strategy",
+      "name": "📅 Daily Strategy",
+      "purpose": "选日期 → 跑当日选股 → 显示 top-10 picks (bull_composite score)",
+      "cli_backend": "quant_workflow/scripts/akquant/daily_picks_v5b.py --date YYYY-MM-DD",
+      "method": "读 v2 panel → 算 6 因子 composite → top-10 股票 + score",
+      "output": "json {date, picks: [{ts_code, score, close, weight}]}"
+    },
+    {
+      "id": "paper_trading",
+      "name": "💼 Paper Trading",
+      "purpose": "模拟账户: 起始资金 + 持仓 + 净值曲线 + 每日 picks apply",
+      "cli_backend": "quant_workflow/scripts/akquant/paper_trade_v5b.py",
+      "method": "从 daily_picks 读 picks → AKQuant 模拟执行 → 更新 portfolio + nav",
+      "output": "json {date, cash, positions: [...], nav, total_return}"
+    }
+  ],
+  "tech_stack": {
+    "backend": "FastAPI + uvicorn",
+    "frontend": "原生 HTML/CSS/JS (无框架, 简洁)",
+    "data": "现有 v2 panel + evidence files + JSON results",
+    "cli_spawn": "subprocess.run(quant_workflow/scripts/...)"
+  },
+  "acceptance": {
+    "ui": "美观 + 可用 + 可验证",
+    "reproducibility": "每个 backtest 输出 ledger 文件 (trades + nav + metrics) 可下载",
+    "verify_correctness": "对比 WebUI 显示的 metrics 跟原始 JSON 文件 100% 一致",
+    "daily_usable": "daily_strategy tab 可选任意日期 → 输出 picks",
+    "paper_trade": "paper_trading tab 可开始模拟 → 累积 daily picks → 显示 portfolio nav"
+  },
+  "plan_steps": [
+    "Step 1: 装 fastapi + uvicorn (system python --break-system-packages)",
+    "Step 2: 创建 webui/ 目录结构 (app.py + routers/ + static/)",
+    "Step 3: 实现 Tab 1 Backtest Results (只读, 最简单)",
+    "Step 4: 实现 Tab 2 Walk-Forward (需要新 CLI walk_forward_v5b.py)",
+    "Step 5: 实现 Tab 3 Daily Strategy (需要新 CLI daily_picks_v5b.py)",
+    "Step 6: 实现 Tab 4 Paper Trading (需要新 CLI paper_trade_v5b.py)",
+    "Step 7: 浏览器实际验证每个 Tab (启动 server + 真实点击 + 看 ledger)",
+    "Step 8: 写完整使用文档 + 把 server 启动命令给用户"
+  ],
+  "estimated_time": "2-3 小时连续实施",
+  "user_choice_required": "请用户确认大方向: 4 tab 是否 OK / 要不要简化 / 要加哪些"
+}

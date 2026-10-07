@@ -1,0 +1,24 @@
+{
+  "mom": {
+    "label": "talib_MOM (close-close[10], diff-type)",
+    "n_dates": 195,
+    "spearman_mean": 0.8821141785117864,
+    "spearman_median": 0.9034658788403145,
+    "spearman_p05": 0.7309800345582806,
+    "top10_overlap_mean": 3.98974358974359,
+    "top10_overlap_median": 4.0,
+    "pct_dates_overlap_lt_8": 94.87179487179486,
+    "pct_dates_overlap_eq_10": 0.5128205128205128
+  },
+  "roc": {
+    "label": "talib_ROC ((close/close[10]-1)*100, ratio-type)",
+    "n_dates": 195,
+    "spearman_mean": 0.981842247568377,
+    "spearman_median": 0.9974577970662648,
+    "spearman_p05": 0.9245942894719762,
+    "top10_overlap_mean": 9.78974358974359,
+    "top10_overlap_median": 10.0,
+    "pct_dates_overlap_lt_8": 0.5128205128205128,
+    "pct_dates_overlap_eq_10": 83.07692307692308
+  }
+}

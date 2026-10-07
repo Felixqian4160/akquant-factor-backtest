@@ -1,0 +1,16 @@
+{"stage": "init", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:14.397512", "start_date": "2022-01-01", "end_date": "2023-01-01", "n_factors": 391, "fwd_days": 20, "bear_lookback_sessions": 45, "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "min_stocks": 5, "max_stocks": 10, "bear_rebalance_sessions": 20, "min_factor_mean_return": 0.0, "lot_size": 100}
+{"stage": "bear_history_rows", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:14.813521", "rows": 48685, "bear_dates": 144}
+{"stage": "factor_returns_progress", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:15.118250", "completed": 50, "total": 391, "elapsed_sec": 0.30457425117492676}
+{"stage": "factor_returns_progress", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:15.421910", "completed": 100, "total": 391, "elapsed_sec": 0.6082344055175781}
+{"stage": "factor_returns_progress", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:15.717499", "completed": 150, "total": 391, "elapsed_sec": 0.9038217067718506}
+{"stage": "factor_returns_progress", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:16.018851", "completed": 200, "total": 391, "elapsed_sec": 1.2051751613616943}
+{"stage": "factor_returns_progress", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:16.302390", "completed": 250, "total": 391, "elapsed_sec": 1.4887142181396484}
+{"stage": "factor_returns_progress", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:16.585907", "completed": 300, "total": 391, "elapsed_sec": 1.7722320556640625}
+{"stage": "factor_returns_progress", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:16.864582", "completed": 350, "total": 391, "elapsed_sec": 2.0509071350097656}
+{"stage": "factor_returns_ready", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:17.105579", "rows": 111486, "duration_sec": 2.2919013500213623}
+{"stage": "bear_picks_ready", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:17.385006", "rebalance_dates": 6, "picked_dates": 5}
+{"stage": "universe_ready", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:17.391397", "n_symbols": 35}
+{"stage": "data_ready", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:17.485463", "n_symbols": 35}
+{"stage": "akquant_start", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:17.485571"}
+{"stage": "akquant_done", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:17.859935"}
+{"stage": "done", "job_id": "lb45_mv2_mr000", "timestamp": "2026-10-06T15:08:17.878549", "final_value": 96645389.1315975, "final_return_pct": -3.3546108684024967, "n_trades": 48, "n_orders": 92, "result_file": "evidence/v19_sweep_2022_20261006/lb45_mv2_mr000/result.json"}

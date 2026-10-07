@@ -1,0 +1,14 @@
+cmd: /usr/bin/python3.12 /media/felix/f/quant/akquant-factor-backtest/webui/scripts/paper_trade_v5b.py --session-id paper_1790724023_128c22 --start-date 2020-01-01 --end-date 2020-12-31 --initial-cash 1000000.0 --top-k 10 --rebal-days 20 --out-dir /media/felix/f/quant/akquant-factor-backtest/webui/data/paper_sessions/paper_1790724023_128c22
+2026-09-30 07:20:25 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:20:25 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 145901.28000, Available: 145627.54800
+wrote /media/felix/f/quant/akquant-factor-backtest/webui/data/paper_sessions/paper_1790724023_128c22/result.json
+closed_only_return: 20.247654799999996%, sharpe: 0.73, MDD: 32.36%

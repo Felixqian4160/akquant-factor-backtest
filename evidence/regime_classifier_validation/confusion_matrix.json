@@ -1,0 +1,17 @@
+{
+  "bull": {
+    "bull": 939,
+    "sideways": 619,
+    "bear": 398
+  },
+  "sideways": {
+    "bull": 0,
+    "sideways": 0,
+    "bear": 0
+  },
+  "bear": {
+    "bull": 445,
+    "sideways": 516,
+    "bear": 804
+  }
+}

@@ -1,0 +1,13 @@
+{"stage": "init", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:14.546080", "start_date": "2020-01-01", "end_date": "2020-12-31", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "min_stocks": 5, "max_stocks": 10, "min_hold_days": 5}
+{"stage": "panel_loaded", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:15.609589", "n_rows": 1298335, "n_cols": 419, "n_candidates": 28}
+{"stage": "dates_loaded", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:15.658231", "n_dates_in_range": 243}
+{"stage": "valid_candidates", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:15.706851", "n": 28, "candidates": ["talib_NATR", "talib_TRANGE", "gtja_gtja_159", "gtja_gtja_149", "gtja_gtja_144", "mw_vol_20d", "mw_ret_5d", "mw_ret_10d", "mw_ret_20d", "mw_ret_60d", "mw_rs_5d", "mw_rs_10d", "mw_rs_20d", "mw_rs_60d", "mw_vol_ratio_20", "mw_amount_ratio_20", "alpha_alpha005", "alpha_alpha018", "alpha_alpha028", "gtja_gtja_005"]}
+{"stage": "voting_aggregated", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:15.792323", "n_votes": 67950, "duration_sec": 0.13396668434143066}
+{"stage": "consensus_qualified", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:15.796375", "n_qualified": 2430}
+{"stage": "picks_phase_done", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:15.801861", "n_days": 243, "avg_stocks_per_day": 10.0, "duration_sec": 0.1435072422027588}
+{"stage": "universe_size", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:15.802034", "n_unique_stocks": 202}
+{"stage": "data_dict_built", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:16.148965", "n_symbols": 202}
+{"stage": "akquant_start", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:16.149088"}
+{"stage": "akquant_done", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:19.038531"}
+{"stage": "done", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:19.047807", "final_value": 160177565.3359975, "final_return_pct": 60.1775653359975, "n_days": 243, "n_days_with_picks": 243, "avg_stocks_per_day": 10.0, "duration_sec": 3.389453411102295}
+{"stage": "result_written", "job_id": "v12_2020_1790810893", "timestamp": "2026-10-01T07:28:19.047890", "result_file": "evidence/daily_factor_reselect/pipeline_v12/v12_2020_1790810893/result.json"}

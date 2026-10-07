@@ -1,0 +1,16 @@
+{"stage": "init", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:33.228198", "start_date": "2018-01-01", "end_date": "2019-01-01", "n_factors": 391, "fwd_days": 20, "bear_lookback_sessions": 30, "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 3, "min_stocks": 5, "max_stocks": 10, "bear_rebalance_sessions": 20, "min_factor_mean_return": 0.005, "lot_size": 100}
+{"stage": "bear_history_rows", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:33.546053", "rows": 44186, "bear_dates": 169}
+{"stage": "factor_returns_progress", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:33.814135", "completed": 50, "total": 391, "elapsed_sec": 0.2679455280303955}
+{"stage": "factor_returns_progress", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:34.068548", "completed": 100, "total": 391, "elapsed_sec": 0.5223591327667236}
+{"stage": "factor_returns_progress", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:34.323959", "completed": 150, "total": 391, "elapsed_sec": 0.7777702808380127}
+{"stage": "factor_returns_progress", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:34.588589", "completed": 200, "total": 391, "elapsed_sec": 1.0423996448516846}
+{"stage": "factor_returns_progress", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:34.866839", "completed": 250, "total": 391, "elapsed_sec": 1.3206498622894287}
+{"stage": "factor_returns_progress", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:35.111867", "completed": 300, "total": 391, "elapsed_sec": 1.5656778812408447}
+{"stage": "factor_returns_progress", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:35.362921", "completed": 350, "total": 391, "elapsed_sec": 1.8167319297790527}
+{"stage": "factor_returns_ready", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:35.581269", "rows": 130818, "duration_sec": 2.0350775718688965}
+{"stage": "bear_picks_ready", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:35.850195", "rebalance_dates": 6, "picked_dates": 5}
+{"stage": "universe_ready", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:35.856440", "n_symbols": 42}
+{"stage": "data_ready", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:35.955119", "n_symbols": 42}
+{"stage": "akquant_start", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:35.955225"}
+{"stage": "akquant_done", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:36.345005"}
+{"stage": "done", "job_id": "v19best_2018_quan_nian_xia_die", "timestamp": "2026-10-06T14:54:36.362599", "final_value": 104807151.8193475, "final_return_pct": 4.807151819347499, "n_trades": 33, "n_orders": 80, "result_file": "evidence/v19_best_cross_bear_20261006/v19best_2018_quan_nian_xia_die/result.json"}

@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "check": "trades_exist",
+      "pass": true,
+      "detail": "548"
+    },
+    {
+      "check": "orders_both_sides",
+      "pass": true,
+      "detail": "{OrderSide.Buy: 397, OrderSide.Sell: 391}"
+    },
+    {
+      "check": "rejected_orders",
+      "pass": true,
+      "detail": "0 rejected (v1 had 31)"
+    },
+    {
+      "check": "qty_lot_multiple",
+      "pass": true,
+      "detail": "min=200.0"
+    },
+    {
+      "check": "commission_positive",
+      "pass": true,
+      "detail": "orders commission=11,326,266"
+    },
+    {
+      "check": "nav_bounded",
+      "pass": false,
+      "detail": "2026-08-27"
+    },
+    {
+      "check": "open_positions_mtm",
+      "pass": true,
+      "detail": "0 pos, MTM\u2248\u00a50"
+    }
+  ],
+  "summary": {
+    "final_value": 254687733.1276375,
+    "total_return_pct": 154.6877331276375,
+    "n_trades": 548,
+    "n_rejected": 0,
+    "open_positions": 0,
+    "open_mtm": 0.0,
+    "research_full": 1.6005761020301916
+  }
+}

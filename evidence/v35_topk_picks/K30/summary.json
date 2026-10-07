@@ -1,0 +1,21 @@
+{
+  "tag": "K30",
+  "panel": "data/wavehunter_hs300_v33_with_new_factors_20261003.parquet",
+  "window": "2010-01-01 ~ 2025-12-31",
+  "factor_count_declared": 410,
+  "top_k": 30,
+  "ic_window": 60,
+  "causal_lag": 21,
+  "fwd_contract": "T+1 raw open -> T+21 close",
+  "rebalance_step": 20,
+  "k_nom": 10,
+  "min_votes": 3,
+  "min_stocks": 5,
+  "max_stocks": 20,
+  "requested_rebalances": 195,
+  "rebalance_dates_with_picks": 195,
+  "avg_n_stocks": 19.194871794871794,
+  "min_n_stocks": 10,
+  "max_n_stocks_observed": 20,
+  "runtime_sec": 1.1478972434997559
+}

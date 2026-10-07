@@ -1,0 +1,325 @@
+{
+  "nan_factor_count": 33,
+  "nan_factors": [
+    "alpha_alpha003",
+    "alpha_alpha022",
+    "alpha_alpha026",
+    "alpha_alpha028",
+    "alpha_alpha031",
+    "alpha_alpha044",
+    "alpha_alpha045",
+    "alpha_alpha054",
+    "alpha_alpha055",
+    "alpha_alpha100",
+    "alpha_alpha_custom_zscore_5d",
+    "gtja_gtja_002",
+    "gtja_gtja_005",
+    "gtja_gtja_011",
+    "gtja_gtja_023",
+    "gtja_gtja_030",
+    "gtja_gtja_060",
+    "gtja_gtja_062",
+    "gtja_gtja_067",
+    "gtja_gtja_079",
+    "gtja_gtja_104",
+    "gtja_gtja_105",
+    "gtja_gtja_109",
+    "gtja_gtja_111",
+    "gtja_gtja_118",
+    "gtja_gtja_127",
+    "gtja_gtja_144",
+    "gtja_gtja_162",
+    "gtja_gtja_164",
+    "gtja_gtja_176",
+    "gtja_gtja_188",
+    "gtja_gtja_190",
+    "gtja_gtja_191"
+  ],
+  "rebal_dates": 195,
+  "dates_with_diff": 28,
+  "pct_dates_diff": 14.4,
+  "total_slot_changes": 42,
+  "pct_slot_changes": 2.15,
+  "diff_dates": [
+    {
+      "date": "2012-03-01",
+      "added": [
+        "talib_ATR"
+      ],
+      "removed": [
+        "gtja_gtja_164"
+      ]
+    },
+    {
+      "date": "2012-05-31",
+      "added": [
+        "gtja_gtja_105"
+      ],
+      "removed": [
+        "alpha_alpha064"
+      ]
+    },
+    {
+      "date": "2014-11-20",
+      "added": [
+        "gtja_gtja_109"
+      ],
+      "removed": [
+        "talib_ROC"
+      ]
+    },
+    {
+      "date": "2015-05-20",
+      "added": [
+        "alpha_alpha054",
+        "gtja_gtja_011"
+      ],
+      "removed": [
+        "alpha_alpha012",
+        "alpha_alpha_custom_argmin_recent"
+      ]
+    },
+    {
+      "date": "2015-12-14",
+      "added": [
+        "alpha_alpha054"
+      ],
+      "removed": [
+        "v_bm"
+      ]
+    },
+    {
+      "date": "2016-01-12",
+      "added": [
+        "gtja_gtja_002"
+      ],
+      "removed": [
+        "gtja_gtja_012"
+      ]
+    },
+    {
+      "date": "2016-08-08",
+      "added": [
+        "gtja_gtja_030"
+      ],
+      "removed": [
+        "talib_OBV"
+      ]
+    },
+    {
+      "date": "2016-09-05",
+      "added": [
+        "alpha_alpha054",
+        "gtja_gtja_002"
+      ],
+      "removed": [
+        "gtja_gtja_010",
+        "gtja_gtja_137"
+      ]
+    },
+    {
+      "date": "2017-09-28",
+      "added": [
+        "gtja_gtja_111",
+        "gtja_gtja_164"
+      ],
+      "removed": [
+        "alpha_alpha079",
+        "gtja_gtja_113"
+      ]
+    },
+    {
+      "date": "2017-11-02",
+      "added": [
+        "gtja_gtja_060"
+      ],
+      "removed": [
+        "gtja_gtja_027"
+      ]
+    },
+    {
+      "date": "2017-11-30",
+      "added": [
+        "alpha_alpha054",
+        "gtja_gtja_002"
+      ],
+      "removed": [
+        "gtja_gtja_144",
+        "talib_ULTOSC"
+      ]
+    },
+    {
+      "date": "2018-07-27",
+      "added": [
+        "alpha_alpha100",
+        "gtja_gtja_030"
+      ],
+      "removed": [
+        "debt_to_assets",
+        "gtja_gtja_056"
+      ]
+    },
+    {
+      "date": "2018-08-24",
+      "added": [
+        "alpha_alpha100",
+        "gtja_gtja_030"
+      ],
+      "removed": [
+        "accruals_sloan",
+        "gtja_gtja_027"
+      ]
+    },
+    {
+      "date": "2019-02-27",
+      "added": [
+        "alpha_alpha054"
+      ],
+      "removed": [
+        "p_mdr"
+      ]
+    },
+    {
+      "date": "2019-03-27",
+      "added": [
+        "gtja_gtja_164"
+      ],
+      "removed": [
+        "gtja_gtja_056"
+      ]
+    },
+    {
+      "date": "2019-07-24",
+      "added": [
+        "gtja_gtja_002"
+      ],
+      "removed": [
+        "gtja_gtja_161"
+      ]
+    },
+    {
+      "date": "2019-12-19",
+      "added": [
+        "talib_MOM"
+      ],
+      "removed": [
+        "gtja_gtja_164"
+      ]
+    },
+    {
+      "date": "2020-01-17",
+      "added": [
+        "gtja_gtja_129"
+      ],
+      "removed": [
+        "gtja_gtja_164"
+      ]
+    },
+    {
+      "date": "2020-02-24",
+      "added": [
+        "alpha_alpha054",
+        "gtja_gtja_002",
+        "gtja_gtja_011"
+      ],
+      "removed": [
+        "alpha_alpha081",
+        "gtja_gtja_154",
+        "talib_NATR"
+      ]
+    },
+    {
+      "date": "2020-05-22",
+      "added": [
+        "alpha_alpha054",
+        "gtja_gtja_002",
+        "gtja_gtja_011",
+        "gtja_gtja_109",
+        "gtja_gtja_188"
+      ],
+      "removed": [
+        "gtja_gtja_018",
+        "gtja_gtja_019",
+        "gtja_gtja_020",
+        "gtja_gtja_029",
+        "gtja_gtja_066"
+      ]
+    },
+    {
+      "date": "2020-07-21",
+      "added": [
+        "gtja_gtja_005"
+      ],
+      "removed": [
+        "gtja_gtja_135"
+      ]
+    },
+    {
+      "date": "2020-09-15",
+      "added": [
+        "talib_TRIX"
+      ],
+      "removed": [
+        "gtja_gtja_164"
+      ]
+    },
+    {
+      "date": "2020-11-18",
+      "added": [
+        "gtja_gtja_023"
+      ],
+      "removed": [
+        "p_m3"
+      ]
+    },
+    {
+      "date": "2021-01-14",
+      "added": [
+        "gtja_gtja_111",
+        "gtja_gtja_164"
+      ],
+      "removed": [
+        "gtja_gtja_060",
+        "mom12m_jt"
+      ]
+    },
+    {
+      "date": "2023-01-06",
+      "added": [
+        "talib_AVGDEV"
+      ],
+      "removed": [
+        "gtja_gtja_164"
+      ]
+    },
+    {
+      "date": "2024-01-31",
+      "added": [
+        "alpha_alpha100",
+        "gtja_gtja_030"
+      ],
+      "removed": [
+        "l_size",
+        "l_size3"
+      ]
+    },
+    {
+      "date": "2025-02-06",
+      "added": [
+        "r_tv"
+      ],
+      "removed": [
+        "gtja_gtja_164"
+      ]
+    },
+    {
+      "date": "2025-12-26",
+      "added": [
+        "r_tv"
+      ],
+      "removed": [
+        "gtja_gtja_164"
+      ]
+    }
+  ]
+}

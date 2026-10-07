@@ -1,0 +1,17 @@
+{
+  "offset": 16,
+  "total_return_pct": 132.22101990322,
+  "annualized_return_pct": 5.406852555164132,
+  "sharpe": 0.42191547572818405,
+  "max_drawdown_pct": 52.48493648005116,
+  "profit_factor": 1.4129600735980887,
+  "win_rate": 51.789838337182445,
+  "closed_trade_count": 1732,
+  "open_position_count": 10,
+  "avg_trade_bars": 10.89,
+  "total_commission": 152416422.28478,
+  "n_rejected": 812,
+  "n_picks_dates": 194,
+  "n_bull_dates": 104,
+  "n_bear_dates": 90
+}

@@ -1,0 +1,5 @@
+{"stage": "init", "job_id": "v8_minhold_1790794353", "timestamp": "2026-10-01T02:52:34.678210", "start_date": "2020-01-01", "end_date": "2020-02-29"}
+{"stage": "panel_loaded", "job_id": "v8_minhold_1790794353", "timestamp": "2026-10-01T02:52:36.948394", "n_rows": 1298335, "n_cols": 419}
+{"stage": "dates_loaded", "job_id": "v8_minhold_1790794353", "timestamp": "2026-10-01T02:52:37.825185", "n_dates_in_range": 36}
+{"stage": "picks_computed", "job_id": "v8_minhold_1790794353", "timestamp": "2026-10-01T02:53:06.378359", "date": "2020-01-02", "day": 0, "n_total": 36, "elapsed_sec": 28.551968097686768}
+{"stage": "picks_computed", "job_id": "v8_minhold_1790794353", "timestamp": "2026-10-01T03:00:41.692365", "date": "2020-02-07", "day": 20, "n_total": 36, "elapsed_sec": 483.86524963378906}

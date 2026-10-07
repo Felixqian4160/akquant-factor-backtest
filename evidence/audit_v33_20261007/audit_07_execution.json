@@ -1,0 +1,81 @@
+{
+  "entry_price": {
+    "checked": 395,
+    "mismatch": 156,
+    "max_rel_diff": 0.1538213333333334,
+    "examples": [
+      {
+        "sym": "000807.SZ",
+        "date": "2010-01-06",
+        "trade_price": 14.96495,
+        "panel_open": 14.21
+      },
+      {
+        "sym": "002241.SZ",
+        "date": "2010-01-06",
+        "trade_price": 30.56053,
+        "panel_open": 29.78
+      },
+      {
+        "sym": "600009.SH",
+        "date": "2010-01-06",
+        "trade_price": 17.6176,
+        "panel_open": 18.0
+      },
+      {
+        "sym": "601998.SH",
+        "date": "2010-01-06",
+        "trade_price": 7.9079,
+        "panel_open": 8.09
+      },
+      {
+        "sym": "000661.SZ",
+        "date": "2010-02-03",
+        "trade_price": 33.58355,
+        "panel_open": 35.23
+      }
+    ]
+  },
+  "commission": {
+    "mismatch": 0,
+    "max_rel_diff": 3.1649318694152677e-16
+  },
+  "duration": {
+    "min": 1,
+    "median": 1.0,
+    "max": 720,
+    "within22": 1570,
+    "total": 1587,
+    "over22": [
+      41,
+      720,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      160,
+      160,
+      60,
+      140,
+      260,
+      261,
+      40,
+      40,
+      41
+    ]
+  },
+  "nav_reconciliation": {
+    "start": 100000000.0,
+    "end": 2379838977.61186,
+    "change": 2279838977.61186,
+    "sum_net_pnl": 2274946553.2263227,
+    "diff": 4892424.3855371475,
+    "diff_pct": 0.21459517244774806
+  },
+  "exit_price": {
+    "checked": 38,
+    "mismatch": 15
+  }
+}

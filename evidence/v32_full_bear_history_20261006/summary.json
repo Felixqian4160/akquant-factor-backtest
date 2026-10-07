@@ -1,0 +1,50 @@
+{
+  "2011_yin_die": {
+    "total_return_pct": -30.963868237572502,
+    "sharpe_ratio": -1.2975885862294239,
+    "max_drawdown_pct": 34.62619164356102,
+    "win_rate": 33.55263157894737,
+    "profit_factor": 0.6488198951086218,
+    "closed_trade_count": 152.0
+  },
+  "2015H2_gushai": {
+    "total_return_pct": -25.140227506930003,
+    "sharpe_ratio": -0.2790050649922314,
+    "max_drawdown_pct": 52.833992947537844,
+    "win_rate": 44.52554744525548,
+    "profit_factor": 0.7407611718790378,
+    "closed_trade_count": 137.0
+  },
+  "2016_ronge": {
+    "total_return_pct": 25.735841732147502,
+    "sharpe_ratio": 0.9131313687078281,
+    "max_drawdown_pct": 26.13665052213141,
+    "win_rate": 64.23841059602648,
+    "profit_factor": 2.0163922816306954,
+    "closed_trade_count": 151.0
+  },
+  "2018_quan_nian_xia_die": {
+    "total_return_pct": -22.865172015262498,
+    "sharpe_ratio": -0.8699666109232725,
+    "max_drawdown_pct": 30.274059698555106,
+    "win_rate": 38.732394366197184,
+    "profit_factor": 0.5948210770187057,
+    "closed_trade_count": 142.0
+  },
+  "2022_bear": {
+    "total_return_pct": -6.356609379827501,
+    "sharpe_ratio": -0.20507715635446463,
+    "max_drawdown_pct": 19.93611640687,
+    "win_rate": 42.17687074829932,
+    "profit_factor": 1.1835823090132154,
+    "closed_trade_count": 147.0
+  },
+  "2024H2_shark": {
+    "total_return_pct": 42.74847786116,
+    "sharpe_ratio": 1.526851488468697,
+    "max_drawdown_pct": 15.674868687103757,
+    "win_rate": 67.85714285714286,
+    "profit_factor": 4.325682157785893,
+    "closed_trade_count": 112.0
+  }
+}

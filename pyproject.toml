@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "akquant-factor-backtest"
+version = "0.1.0"
+description = "AKQuant-driven factor backtests reusing the v10.2 panel (read-only) from aurumq-rl"
+requires-python = ">=3.10"
+dependencies = [
+    "akquant>=0.3.64",
+    "polars>=1.0",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "matplotlib>=3.5",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

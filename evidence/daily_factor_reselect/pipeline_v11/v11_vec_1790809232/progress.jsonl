@@ -1,0 +1,13 @@
+{"stage": "init", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:33.213697", "start_date": "2020-01-01", "end_date": "2020-12-31", "top_factors": 10, "top_stocks_per_factor": 10, "top_stocks_final": 5}
+{"stage": "panel_loaded", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.283874", "n_rows": 1298335, "n_cols": 419}
+{"stage": "dates_loaded", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.333472", "n_dates_in_range": 243}
+{"stage": "factor_pool", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.333817", "total": ["talib_NATR", "talib_TRANGE", "gtja_gtja_159", "gtja_gtja_149", "gtja_gtja_144", "mw_vol_20d", "mw_ret_20d", "mw_rsi_14", "alpha_alpha018", "alpha_alpha028"], "valid": ["talib_NATR", "talib_TRANGE", "gtja_gtja_159", "gtja_gtja_149", "gtja_gtja_144", "mw_vol_20d", "mw_ret_20d", "alpha_alpha018", "alpha_alpha028"]}
+{"stage": "voting_done", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.462793", "n_records": 21780, "duration_sec": 0.1291804313659668}
+{"stage": "consensus_done", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.475287", "n_consensus": 1215, "duration_sec": 0.14167451858520508}
+{"stage": "picks_phase_done", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.476775", "n_days": 243, "duration_sec": 0.14316463470458984}
+{"stage": "universe_size", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.476887", "n_unique_stocks": 98}
+{"stage": "data_dict_built", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.633579", "n_symbols": 98}
+{"stage": "akquant_start", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:34.633682"}
+{"stage": "akquant_done", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:35.798414"}
+{"stage": "done", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:35.809237", "final_value": 116329956.09115, "final_return_pct": 16.32995609115, "n_days": 243, "duration_sec": 1.475625991821289}
+{"stage": "result_written", "job_id": "v11_vec_1790809232", "timestamp": "2026-10-01T07:00:35.809310", "result_file": "evidence/daily_factor_reselect/pipeline_v11/v11_vec_1790809232/result.json"}

@@ -1,0 +1,38 @@
+{
+  "period_free": {
+    "TYPPRICE": 0.0,
+    "MEDPRICE": 0.0,
+    "WCLPRICE": 0.0,
+    "AVGPRICE": 0.0,
+    "BOP": 0.0
+  },
+  "period_based": {
+    "RSI": {
+      "best_period": 14,
+      "max_diff": 2.1316282072803006e-14
+    },
+    "NATR": {
+      "best_period": 14,
+      "max_diff": 0.13089373680506755
+    },
+    "MOM": {
+      "best_period": 10,
+      "max_diff": 0.0
+    }
+  },
+  "gtja_002": {
+    "max_diff": 0.0,
+    "n_valid": 5425
+  },
+  "l_size": {
+    "transform": "log_circ_div_1e8",
+    "corr": 1.0,
+    "mean_diff": -18.42068074395237
+  },
+  "l_ami": {
+    "null": 7434,
+    "min": 5.649347686608513e-10,
+    "max": 0.0006020365992156762,
+    "mean": 3.6536404988740376e-07
+  }
+}

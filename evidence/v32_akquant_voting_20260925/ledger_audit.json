@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "check": "trades_exist",
+      "pass": true,
+      "detail": "518 trades"
+    },
+    {
+      "check": "qty_lot_multiple",
+      "pass": true,
+      "detail": "min=300.0, all %100==0 = True"
+    },
+    {
+      "check": "both_sides",
+      "pass": false,
+      "detail": "sides={'Long': 518}"
+    },
+    {
+      "check": "commission_positive",
+      "pass": true,
+      "detail": "sum=10,360,178"
+    }
+  ],
+  "summary": {
+    "total_commission_from_trades": 10360178.1118425,
+    "final_value": 259150862.162615,
+    "total_return_pct": 159.150862162615,
+    "n_trades": 518,
+    "n_rebalances": 37,
+    "avg_picks": 15.486486486486486
+  }
+}

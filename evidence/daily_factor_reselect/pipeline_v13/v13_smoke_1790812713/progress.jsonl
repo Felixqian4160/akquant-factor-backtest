@@ -1,0 +1,6 @@
+{"stage": "init", "job_id": "v13_smoke_1790812713", "timestamp": "2026-10-01T07:58:33.826572", "start_date": "2020-01-01", "end_date": "2020-02-29", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "min_stocks": 5, "max_stocks": 10, "min_hold_days": 5, "fwd_days": 20, "lot_size": 100}
+{"stage": "panel_loaded", "job_id": "v13_smoke_1790812713", "timestamp": "2026-10-01T07:58:34.905655", "n_rows": 1298335, "n_cols": 419, "n_candidates": 391}
+{"stage": "computing_forward_returns", "job_id": "v13_smoke_1790812713", "timestamp": "2026-10-01T07:58:34.906036", "fwd_days": 20}
+{"stage": "forward_returns_ready", "job_id": "v13_smoke_1790812713", "timestamp": "2026-10-01T07:58:35.654732", "n_total_dates": 36, "duration_sec": -4.76837158203125e-07}
+{"stage": "factor_scores_done", "job_id": "v13_smoke_1790812713", "timestamp": "2026-10-01T07:58:37.443583", "duration_sec": 1.7887072563171387}
+{"stage": "filtering_to_top_factors", "job_id": "v13_smoke_1790812713", "timestamp": "2026-10-01T07:58:39.754652", "top_factors": 10}

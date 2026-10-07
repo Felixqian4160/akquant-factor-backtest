@@ -1,0 +1,38 @@
+{
+  "webui_launch": {
+    "command": "/usr/bin/python3.12 webui/app.py",
+    "url": "http://localhost:8088",
+    "cwd": "/media/felix/f/quant/akquant-factor-backtest"
+  },
+  "tabs": {
+    "1_backtest_results": "只读 - 显示 v1+v2 14 stages 完整结果（107 backtests）",
+    "2_walk_forward": "跑 train/val/OOS walk-forward 验证 (Stage 5b 配置)",
+    "3_daily_strategy": "选日期 → 算 6-factor composite score → top-K picks (HS300 成分股)",
+    "4_paper_trading": "模拟交易: 起始资金 → 跑 AKQuant backtest → 显示 NAV/Sharpe/MDD + ledger"
+  },
+  "verified_evidence": {
+    "tab1": "14 stages displayed (Stage 5b = +48.32% closed, +134.1% ann, 2.927 sharpe, 17.67% MDD)",
+    "tab3_2024-02-02": "10 picks (top1=688256.SH score=0.9774, top10=300759.SZ score=0.9270)",
+    "tab4_2020-2021": "+58.82% closed, +26.0% ann, sharpe=0.756, MDD=32.36%, 31 trades, ¥1M→¥1.53M, ledger=4272 bytes"
+  },
+  "workflow_steps": [
+    "1. 启动 server: /usr/bin/python3.12 webui/app.py (listens on 8088)",
+    "2. 浏览器开 http://localhost:8088",
+    "3. Tab 1 看 v1+v2 完整 backtest 证据",
+    "4. Tab 2 配置 walk-forward windows 跑多窗口验证",
+    "5. Tab 3 选日期 (e.g. 2024-02-02) 看当日 top-K picks",
+    "6. Tab 4 设 start/end/initial_cash 跑 paper trade"
+  ],
+  "cli_backend_files": {
+    "walk_forward": "webui/scripts/walk_forward_v5b.py",
+    "daily_picks": "webui/scripts/daily_picks_v5b.py",
+    "paper_trade": "webui/scripts/paper_trade_v5b.py",
+    "strategy_class": "复用 Stage 5b BullCompositeTopK10Kill (verified alpha)"
+  },
+  "data_directory": {
+    "wf_jobs": "webui/data/wf_jobs/",
+    "daily_jobs": "webui/data/daily_jobs/",
+    "paper_sessions": "webui/data/paper_sessions/"
+  },
+  "reproducibility": "每个 CLI 都通过 subprocess 启动 + 落盘 result.json + ledger.json + log.txt 到 data/ 子目录"
+}

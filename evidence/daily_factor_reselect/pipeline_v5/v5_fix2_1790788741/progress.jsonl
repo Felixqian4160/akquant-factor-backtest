@@ -1,0 +1,8 @@
+{"stage": "init", "job_id": "v5_fix2_1790788741", "start_date": "2020-01-01", "end_date": "2020-02-29", "top_factors": 10, "top_stocks": 10, "hold_days": 10, "timestamp": "2026-10-01T01:19:02.443343"}
+{"stage": "factors_loaded", "n_factors": 406, "timestamp": "2026-10-01T01:19:02.445729"}
+{"stage": "loading_panel", "timestamp": "2026-10-01T01:19:02.445857"}
+{"stage": "panel_loaded", "n_rows": 1298335, "n_cols": 419, "timestamp": "2026-10-01T01:19:04.662523"}
+{"stage": "dates_loaded", "n_dates_in_range": 10, "timestamp": "2026-10-01T01:19:04.911067"}
+{"stage": "loop", "date": "2020-01-08", "n_done": 5, "n_total": 10, "nav": 0.940377123655672, "cycle_ret_pct": -1.36873218375, "factors": ["gtja_gtja_161", "talib_ATR", "gtja_gtja_093"], "elapsed_sec": 2.267873764038086, "timestamp": "2026-10-01T01:19:07.183997"}
+{"stage": "done", "final_nav": 0.9431554481862188, "n_cycles": 9, "timestamp": "2026-10-01T01:19:07.436476"}
+{"stage": "result_written", "result_file": "/media/felix/f/quant/akquant-factor-backtest/evidence/daily_factor_reselect/pipeline_v5/v5_fix2_1790788741/result.json", "timestamp": "2026-10-01T01:19:07.436603"}

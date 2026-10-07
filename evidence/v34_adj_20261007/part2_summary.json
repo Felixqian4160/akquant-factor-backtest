@@ -1,0 +1,216 @@
+{
+  "v34_shape": [
+    1298335,
+    461
+  ],
+  "v33_shape": [
+    1298335,
+    458
+  ],
+  "replaced_cols": 399,
+  "material_changed_cols": 380,
+  "changed_by_family": {
+    "alpha": {
+      "changed": 107,
+      "total": 107
+    },
+    "gtja": {
+      "changed": 179,
+      "total": 191
+    },
+    "talib": {
+      "changed": 69,
+      "total": 73
+    },
+    "academic": {
+      "changed": 11,
+      "total": 11
+    },
+    "github": {
+      "changed": 14,
+      "total": 17
+    }
+  },
+  "changed_top30": [
+    {
+      "col": "gtja_gtja_030",
+      "n_diff": 300000,
+      "pct": 100.0,
+      "max_abs_diff": NaN
+    },
+    {
+      "col": "r_beta",
+      "n_diff": 295176,
+      "pct": 100.0,
+      "max_abs_diff": 4.564702923709741
+    },
+    {
+      "col": "resmom_6m",
+      "n_diff": 289795,
+      "pct": 100.0,
+      "max_abs_diff": 5.79887107294101
+    },
+    {
+      "col": "gtja_gtja_032",
+      "n_diff": 287165,
+      "pct": 99.99,
+      "max_abs_diff": 2.987620310852635
+    },
+    {
+      "col": "gtja_gtja_149",
+      "n_diff": 279512,
+      "pct": 99.99,
+      "max_abs_diff": 1.296257637843936
+    },
+    {
+      "col": "alpha_alpha047",
+      "n_diff": 299527,
+      "pct": 99.97,
+      "max_abs_diff": 7.696687959740347
+    },
+    {
+      "col": "gtja_gtja_170",
+      "n_diff": 298394,
+      "pct": 99.97,
+      "max_abs_diff": 3.4299681921150826
+    },
+    {
+      "col": "coskew60",
+      "n_diff": 295098,
+      "pct": 99.97,
+      "max_abs_diff": 0.32525203964831395
+    },
+    {
+      "col": "alpha_alpha032",
+      "n_diff": 280896,
+      "pct": 99.96,
+      "max_abs_diff": 0.5295234110678958
+    },
+    {
+      "col": "alpha_alpha015",
+      "n_diff": 299576,
+      "pct": 99.91,
+      "max_abs_diff": 2.987620310852637
+    },
+    {
+      "col": "gtja_gtja_124",
+      "n_diff": 297227,
+      "pct": 99.88,
+      "max_abs_diff": 407.6798806062992
+    },
+    {
+      "col": "alpha_alpha039",
+      "n_diff": 279388,
+      "pct": 99.85,
+      "max_abs_diff": 1.9910538445422166
+    },
+    {
+      "col": "alpha_alpha020",
+      "n_diff": 299367,
+      "pct": 99.82,
+      "max_abs_diff": 0.9999999060856499
+    },
+    {
+      "col": "gtja_gtja_107",
+      "n_diff": 299367,
+      "pct": 99.82,
+      "max_abs_diff": 0.9999999060856499
+    },
+    {
+      "col": "alpha_alpha042",
+      "n_diff": 299423,
+      "pct": 99.81,
+      "max_abs_diff": 317.3529411764706
+    },
+    {
+      "col": "gtja_gtja_025",
+      "n_diff": 287346,
+      "pct": 99.81,
+      "max_abs_diff": 1.9485346625922146
+    },
+    {
+      "col": "gtja_gtja_120",
+      "n_diff": 299423,
+      "pct": 99.81,
+      "max_abs_diff": 317.3529411764706
+    },
+    {
+      "col": "gtja_gtja_012",
+      "n_diff": 298742,
+      "pct": 99.8,
+      "max_abs_diff": 0.9955601380355189
+    },
+    {
+      "col": "alpha_alpha036",
+      "n_diff": 283165,
+      "pct": 99.78,
+      "max_abs_diff": 2.1918852459016387
+    },
+    {
+      "col": "gtja_gtja_074",
+      "n_diff": 289005,
+      "pct": 99.77,
+      "max_abs_diff": 1.8769804784897162
+    },
+    {
+      "col": "gtja_gtja_064",
+      "n_diff": 275253,
+      "pct": 99.72,
+      "max_abs_diff": 0.9971509971509972
+    },
+    {
+      "col": "alpha_alpha005",
+      "n_diff": 298454,
+      "pct": 99.71,
+      "max_abs_diff": 0.9945182724252492
+    },
+    {
+      "col": "alpha_alpha003",
+      "n_diff": 295489,
+      "pct": 99.59,
+      "max_abs_diff": 1.9013395007707725
+    },
+    {
+      "col": "alpha_alpha037",
+      "n_diff": 282535,
+      "pct": 99.59,
+      "max_abs_diff": 1.56067196640168
+    },
+    {
+      "col": "gtja_gtja_105",
+      "n_diff": 295489,
+      "pct": 99.59,
+      "max_abs_diff": 1.9013395007707725
+    },
+    {
+      "col": "gtja_gtja_184",
+      "n_diff": 282535,
+      "pct": 99.59,
+      "max_abs_diff": 1.56067196640168
+    },
+    {
+      "col": "alpha_alpha098",
+      "n_diff": 290792,
+      "pct": 99.57,
+      "max_abs_diff": 1.6817460317460315
+    },
+    {
+      "col": "gtja_gtja_036",
+      "n_diff": 289377,
+      "pct": 99.57,
+      "max_abs_diff": 0.9955555555555555
+    },
+    {
+      "col": "gtja_gtja_113",
+      "n_diff": 295625,
+      "pct": 99.56,
+      "max_abs_diff": 1.7017760237406425
+    },
+    {
+      "col": "gtja_gtja_130",
+      "n_diff": 284824,
+      "pct": 99.51,
+      "max_abs_diff": 337.8425925925926
+    }
+  ]
+}

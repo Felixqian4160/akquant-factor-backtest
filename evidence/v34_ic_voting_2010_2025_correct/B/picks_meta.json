@@ -1,0 +1,1757 @@
+{
+ "2010-01-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 96,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 168,
+  "causal_score_date_end": "2010-01-04"
+ },
+ "2010-02-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 91,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 170,
+  "causal_score_date_end": "2010-02-01"
+ },
+ "2010-03-08": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 115,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 166,
+  "causal_score_date_end": "2010-03-08"
+ },
+ "2010-04-06": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 84,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 173,
+  "causal_score_date_end": "2010-04-06"
+ },
+ "2010-05-05": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 107,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 174,
+  "causal_score_date_end": "2010-05-05"
+ },
+ "2010-06-02": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 117,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 173,
+  "causal_score_date_end": "2010-06-02"
+ },
+ "2010-07-05": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 124,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 175,
+  "causal_score_date_end": "2010-07-05"
+ },
+ "2010-08-02": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 106,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 174,
+  "causal_score_date_end": "2010-08-02"
+ },
+ "2010-08-30": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 134,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 178,
+  "causal_score_date_end": "2010-08-30"
+ },
+ "2010-09-30": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 144,
+  "n_at_or_above_threshold": 5,
+  "n_stocks_with_any_vote": 187,
+  "causal_score_date_end": "2010-09-30"
+ },
+ "2010-11-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 114,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 190,
+  "causal_score_date_end": "2010-11-04"
+ },
+ "2010-12-02": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 117,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 195,
+  "causal_score_date_end": "2010-12-02"
+ },
+ "2010-12-30": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 114,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 191,
+  "causal_score_date_end": "2010-12-30"
+ },
+ "2011-01-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 102,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 192,
+  "causal_score_date_end": "2011-01-28"
+ },
+ "2011-03-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 113,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 195,
+  "causal_score_date_end": "2011-03-04"
+ },
+ "2011-04-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 100,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 191,
+  "causal_score_date_end": "2011-04-01"
+ },
+ "2011-05-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 86,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 192,
+  "causal_score_date_end": "2011-05-04"
+ },
+ "2011-06-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 121,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 196,
+  "causal_score_date_end": "2011-06-01"
+ },
+ "2011-06-30": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 102,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 193,
+  "causal_score_date_end": "2011-06-30"
+ },
+ "2011-07-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 97,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 202,
+  "causal_score_date_end": "2011-07-28"
+ },
+ "2011-08-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 402,
+  "n_picks": 10,
+  "max_votes": 111,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 201,
+  "causal_score_date_end": "2011-08-25"
+ },
+ "2011-09-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 103,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 204,
+  "causal_score_date_end": "2011-09-23"
+ },
+ "2011-10-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 86,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 207,
+  "causal_score_date_end": "2011-10-28"
+ },
+ "2011-11-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 101,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 204,
+  "causal_score_date_end": "2011-11-25"
+ },
+ "2011-12-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 83,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 207,
+  "causal_score_date_end": "2011-12-23"
+ },
+ "2012-01-31": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 404,
+  "n_picks": 10,
+  "max_votes": 80,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 206,
+  "causal_score_date_end": "2012-01-31"
+ },
+ "2012-02-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 404,
+  "n_picks": 10,
+  "max_votes": 86,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 211,
+  "causal_score_date_end": "2012-02-28"
+ },
+ "2012-03-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 78,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 211,
+  "causal_score_date_end": "2012-03-27"
+ },
+ "2012-04-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 141,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 207,
+  "causal_score_date_end": "2012-04-27"
+ },
+ "2012-05-29": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 148,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 212,
+  "causal_score_date_end": "2012-05-29"
+ },
+ "2012-06-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 403,
+  "n_picks": 10,
+  "max_votes": 99,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 210,
+  "causal_score_date_end": "2012-06-27"
+ },
+ "2012-07-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 404,
+  "n_picks": 10,
+  "max_votes": 117,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 218,
+  "causal_score_date_end": "2012-07-25"
+ },
+ "2012-08-22": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 404,
+  "n_picks": 10,
+  "max_votes": 135,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 219,
+  "causal_score_date_end": "2012-08-22"
+ },
+ "2012-09-19": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 142,
+  "n_at_or_above_threshold": 6,
+  "n_stocks_with_any_vote": 217,
+  "causal_score_date_end": "2012-09-19"
+ },
+ "2012-10-24": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 407,
+  "n_picks": 10,
+  "max_votes": 106,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 221,
+  "causal_score_date_end": "2012-10-24"
+ },
+ "2012-11-21": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 407,
+  "n_picks": 10,
+  "max_votes": 95,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 222,
+  "causal_score_date_end": "2012-11-21"
+ },
+ "2012-12-19": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 84,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 216,
+  "causal_score_date_end": "2012-12-19"
+ },
+ "2013-01-21": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 83,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 219,
+  "causal_score_date_end": "2013-01-21"
+ },
+ "2013-02-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 82,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 219,
+  "causal_score_date_end": "2013-02-25"
+ },
+ "2013-03-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 408,
+  "n_picks": 10,
+  "max_votes": 136,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 222,
+  "causal_score_date_end": "2013-03-25"
+ },
+ "2013-04-24": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 408,
+  "n_picks": 10,
+  "max_votes": 123,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 213,
+  "causal_score_date_end": "2013-04-24"
+ },
+ "2013-05-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 133,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 215,
+  "causal_score_date_end": "2013-05-27"
+ },
+ "2013-06-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 404,
+  "n_picks": 10,
+  "max_votes": 143,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 213,
+  "causal_score_date_end": "2013-06-27"
+ },
+ "2013-07-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 404,
+  "n_picks": 10,
+  "max_votes": 117,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 220,
+  "causal_score_date_end": "2013-07-25"
+ },
+ "2013-08-22": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 114,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 217,
+  "causal_score_date_end": "2013-08-22"
+ },
+ "2013-09-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 117,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 215,
+  "causal_score_date_end": "2013-09-23"
+ },
+ "2013-10-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 99,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 218,
+  "causal_score_date_end": "2013-10-28"
+ },
+ "2013-11-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 142,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 218,
+  "causal_score_date_end": "2013-11-25"
+ },
+ "2013-12-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 97,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 219,
+  "causal_score_date_end": "2013-12-23"
+ },
+ "2014-01-21": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 130,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 217,
+  "causal_score_date_end": "2014-01-21"
+ },
+ "2014-02-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 141,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 222,
+  "causal_score_date_end": "2014-02-25"
+ },
+ "2014-03-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 118,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 222,
+  "causal_score_date_end": "2014-03-25"
+ },
+ "2014-04-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 114,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 221,
+  "causal_score_date_end": "2014-04-23"
+ },
+ "2014-05-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 64,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 221,
+  "causal_score_date_end": "2014-05-23"
+ },
+ "2014-06-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 122,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 219,
+  "causal_score_date_end": "2014-06-23"
+ },
+ "2014-07-21": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 90,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 220,
+  "causal_score_date_end": "2014-07-21"
+ },
+ "2014-08-18": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 118,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 223,
+  "causal_score_date_end": "2014-08-18"
+ },
+ "2014-09-16": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 76,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 220,
+  "causal_score_date_end": "2014-09-16"
+ },
+ "2014-10-21": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 76,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 224,
+  "causal_score_date_end": "2014-10-21"
+ },
+ "2014-11-18": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 74,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 218,
+  "causal_score_date_end": "2014-11-18"
+ },
+ "2014-12-16": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 111,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 221,
+  "causal_score_date_end": "2014-12-16"
+ },
+ "2015-01-15": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 406,
+  "n_picks": 10,
+  "max_votes": 116,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 223,
+  "causal_score_date_end": "2015-01-15"
+ },
+ "2015-02-12": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 110,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 228,
+  "causal_score_date_end": "2015-02-12"
+ },
+ "2015-03-19": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 84,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 227,
+  "causal_score_date_end": "2015-03-19"
+ },
+ "2015-04-17": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 146,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 219,
+  "causal_score_date_end": "2015-04-17"
+ },
+ "2015-05-18": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 76,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 227,
+  "causal_score_date_end": "2015-05-18"
+ },
+ "2015-06-15": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 123,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 224,
+  "causal_score_date_end": "2015-06-15"
+ },
+ "2015-07-14": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 98,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 210,
+  "causal_score_date_end": "2015-07-14"
+ },
+ "2015-08-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 122,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 224,
+  "causal_score_date_end": "2015-08-11"
+ },
+ "2015-09-10": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 111,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 222,
+  "causal_score_date_end": "2015-09-10"
+ },
+ "2015-10-15": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 171,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 217,
+  "causal_score_date_end": "2015-10-15"
+ },
+ "2015-11-12": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 150,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 224,
+  "causal_score_date_end": "2015-11-12"
+ },
+ "2015-12-10": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 93,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 233,
+  "causal_score_date_end": "2015-12-10"
+ },
+ "2016-01-08": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 157,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 233,
+  "causal_score_date_end": "2016-01-08"
+ },
+ "2016-02-05": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 109,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 239,
+  "causal_score_date_end": "2016-02-05"
+ },
+ "2016-03-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 120,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 240,
+  "causal_score_date_end": "2016-03-11"
+ },
+ "2016-04-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 104,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 234,
+  "causal_score_date_end": "2016-04-11"
+ },
+ "2016-05-10": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 114,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 233,
+  "causal_score_date_end": "2016-05-10"
+ },
+ "2016-06-07": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 152,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 238,
+  "causal_score_date_end": "2016-06-07"
+ },
+ "2016-07-07": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 147,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 237,
+  "causal_score_date_end": "2016-07-07"
+ },
+ "2016-08-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 131,
+  "n_at_or_above_threshold": 5,
+  "n_stocks_with_any_vote": 238,
+  "causal_score_date_end": "2016-08-04"
+ },
+ "2016-09-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 90,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 236,
+  "causal_score_date_end": "2016-09-01"
+ },
+ "2016-10-10": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 107,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 239,
+  "causal_score_date_end": "2016-10-10"
+ },
+ "2016-11-07": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 94,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 241,
+  "causal_score_date_end": "2016-11-07"
+ },
+ "2016-12-05": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 84,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 242,
+  "causal_score_date_end": "2016-12-05"
+ },
+ "2017-01-03": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 93,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 247,
+  "causal_score_date_end": "2017-01-03"
+ },
+ "2017-02-07": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 78,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 249,
+  "causal_score_date_end": "2017-02-07"
+ },
+ "2017-03-07": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 84,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 247,
+  "causal_score_date_end": "2017-03-07"
+ },
+ "2017-04-06": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 98,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 252,
+  "causal_score_date_end": "2017-04-06"
+ },
+ "2017-05-05": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 125,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 250,
+  "causal_score_date_end": "2017-05-05"
+ },
+ "2017-06-06": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 99,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 246,
+  "causal_score_date_end": "2017-06-06"
+ },
+ "2017-07-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 117,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 246,
+  "causal_score_date_end": "2017-07-04"
+ },
+ "2017-08-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 91,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 249,
+  "causal_score_date_end": "2017-08-01"
+ },
+ "2017-08-29": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 123,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 254,
+  "causal_score_date_end": "2017-08-29"
+ },
+ "2017-09-26": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 69,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 256,
+  "causal_score_date_end": "2017-09-26"
+ },
+ "2017-10-31": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 104,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 253,
+  "causal_score_date_end": "2017-10-31"
+ },
+ "2017-11-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 164,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 262,
+  "causal_score_date_end": "2017-11-28"
+ },
+ "2017-12-26": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 106,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 264,
+  "causal_score_date_end": "2017-12-26"
+ },
+ "2018-01-24": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 105,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 260,
+  "causal_score_date_end": "2018-01-24"
+ },
+ "2018-02-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 90,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 266,
+  "causal_score_date_end": "2018-02-28"
+ },
+ "2018-03-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 130,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 264,
+  "causal_score_date_end": "2018-03-28"
+ },
+ "2018-04-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 123,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 257,
+  "causal_score_date_end": "2018-04-27"
+ },
+ "2018-05-29": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 153,
+  "n_at_or_above_threshold": 5,
+  "n_stocks_with_any_vote": 265,
+  "causal_score_date_end": "2018-05-29"
+ },
+ "2018-06-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 116,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 272,
+  "causal_score_date_end": "2018-06-27"
+ },
+ "2018-07-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 154,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 269,
+  "causal_score_date_end": "2018-07-25"
+ },
+ "2018-08-22": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 91,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 267,
+  "causal_score_date_end": "2018-08-22"
+ },
+ "2018-09-19": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 104,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 268,
+  "causal_score_date_end": "2018-09-19"
+ },
+ "2018-10-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 68,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 267,
+  "causal_score_date_end": "2018-10-25"
+ },
+ "2018-11-22": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 63,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 277,
+  "causal_score_date_end": "2018-11-22"
+ },
+ "2018-12-20": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 130,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 280,
+  "causal_score_date_end": "2018-12-20"
+ },
+ "2019-01-21": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 102,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 276,
+  "causal_score_date_end": "2019-01-21"
+ },
+ "2019-02-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 123,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 276,
+  "causal_score_date_end": "2019-02-25"
+ },
+ "2019-03-25": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 101,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 279,
+  "causal_score_date_end": "2019-03-25"
+ },
+ "2019-04-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 106,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 280,
+  "causal_score_date_end": "2019-04-23"
+ },
+ "2019-05-24": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 117,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 281,
+  "causal_score_date_end": "2019-05-24"
+ },
+ "2019-06-24": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 118,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 285,
+  "causal_score_date_end": "2019-06-24"
+ },
+ "2019-07-22": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 121,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 280,
+  "causal_score_date_end": "2019-07-22"
+ },
+ "2019-08-19": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 98,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 285,
+  "causal_score_date_end": "2019-08-19"
+ },
+ "2019-09-17": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 110,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 284,
+  "causal_score_date_end": "2019-09-17"
+ },
+ "2019-10-22": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 103,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 287,
+  "causal_score_date_end": "2019-10-22"
+ },
+ "2019-11-19": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 138,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 287,
+  "causal_score_date_end": "2019-11-19"
+ },
+ "2019-12-17": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 112,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 290,
+  "causal_score_date_end": "2019-12-17"
+ },
+ "2020-01-15": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 169,
+  "n_at_or_above_threshold": 5,
+  "n_stocks_with_any_vote": 275,
+  "causal_score_date_end": "2020-01-15"
+ },
+ "2020-02-20": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 168,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 289,
+  "causal_score_date_end": "2020-02-20"
+ },
+ "2020-03-19": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 109,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 290,
+  "causal_score_date_end": "2020-03-19"
+ },
+ "2020-04-17": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 133,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 304,
+  "causal_score_date_end": "2020-04-17"
+ },
+ "2020-05-20": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 107,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 297,
+  "causal_score_date_end": "2020-05-20"
+ },
+ "2020-06-17": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 145,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 302,
+  "causal_score_date_end": "2020-06-17"
+ },
+ "2020-07-17": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 108,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 294,
+  "causal_score_date_end": "2020-07-17"
+ },
+ "2020-08-14": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 109,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 304,
+  "causal_score_date_end": "2020-08-14"
+ },
+ "2020-09-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 117,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 309,
+  "causal_score_date_end": "2020-09-11"
+ },
+ "2020-10-19": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 73,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 314,
+  "causal_score_date_end": "2020-10-19"
+ },
+ "2020-11-16": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 112,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 311,
+  "causal_score_date_end": "2020-11-16"
+ },
+ "2020-12-14": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 130,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 309,
+  "causal_score_date_end": "2020-12-14"
+ },
+ "2021-01-12": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 122,
+  "n_at_or_above_threshold": 2,
+  "n_stocks_with_any_vote": 304,
+  "causal_score_date_end": "2021-01-12"
+ },
+ "2021-02-09": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 155,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 309,
+  "causal_score_date_end": "2021-02-09"
+ },
+ "2021-03-16": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 139,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 314,
+  "causal_score_date_end": "2021-03-16"
+ },
+ "2021-04-14": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 94,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 310,
+  "causal_score_date_end": "2021-04-14"
+ },
+ "2021-05-17": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 87,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 315,
+  "causal_score_date_end": "2021-05-17"
+ },
+ "2021-06-15": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 99,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 307,
+  "causal_score_date_end": "2021-06-15"
+ },
+ "2021-07-13": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 97,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 302,
+  "causal_score_date_end": "2021-07-13"
+ },
+ "2021-08-10": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 149,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 308,
+  "causal_score_date_end": "2021-08-10"
+ },
+ "2021-09-07": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 79,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 325,
+  "causal_score_date_end": "2021-09-07"
+ },
+ "2021-10-14": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 71,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 317,
+  "causal_score_date_end": "2021-10-14"
+ },
+ "2021-11-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 80,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 325,
+  "causal_score_date_end": "2021-11-11"
+ },
+ "2021-12-09": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 96,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 320,
+  "causal_score_date_end": "2021-12-09"
+ },
+ "2022-01-07": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 142,
+  "n_at_or_above_threshold": 4,
+  "n_stocks_with_any_vote": 315,
+  "causal_score_date_end": "2022-01-07"
+ },
+ "2022-02-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 86,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 329,
+  "causal_score_date_end": "2022-02-11"
+ },
+ "2022-03-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 72,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 329,
+  "causal_score_date_end": "2022-03-11"
+ },
+ "2022-04-12": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 92,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 327,
+  "causal_score_date_end": "2022-04-12"
+ },
+ "2022-05-13": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 84,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 320,
+  "causal_score_date_end": "2022-05-13"
+ },
+ "2022-06-13": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 103,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 314,
+  "causal_score_date_end": "2022-06-13"
+ },
+ "2022-07-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 166,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 322,
+  "causal_score_date_end": "2022-07-11"
+ },
+ "2022-08-08": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 102,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 322,
+  "causal_score_date_end": "2022-08-08"
+ },
+ "2022-09-05": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 134,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 325,
+  "causal_score_date_end": "2022-09-05"
+ },
+ "2022-10-11": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 110,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 332,
+  "causal_score_date_end": "2022-10-11"
+ },
+ "2022-11-08": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 97,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 329,
+  "causal_score_date_end": "2022-11-08"
+ },
+ "2022-12-06": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 90,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 320,
+  "causal_score_date_end": "2022-12-06"
+ },
+ "2023-01-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 95,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 323,
+  "causal_score_date_end": "2023-01-04"
+ },
+ "2023-02-08": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 62,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 332,
+  "causal_score_date_end": "2023-02-08"
+ },
+ "2023-03-08": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 90,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 332,
+  "causal_score_date_end": "2023-03-08"
+ },
+ "2023-04-06": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 62,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 334,
+  "causal_score_date_end": "2023-04-06"
+ },
+ "2023-05-09": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 89,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 333,
+  "causal_score_date_end": "2023-05-09"
+ },
+ "2023-06-06": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 80,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 333,
+  "causal_score_date_end": "2023-06-06"
+ },
+ "2023-07-06": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 64,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 338,
+  "causal_score_date_end": "2023-07-06"
+ },
+ "2023-08-03": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 125,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 335,
+  "causal_score_date_end": "2023-08-03"
+ },
+ "2023-08-31": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 96,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 338,
+  "causal_score_date_end": "2023-08-31"
+ },
+ "2023-09-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 103,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 341,
+  "causal_score_date_end": "2023-09-28"
+ },
+ "2023-11-03": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 69,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 337,
+  "causal_score_date_end": "2023-11-03"
+ },
+ "2023-12-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 93,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 336,
+  "causal_score_date_end": "2023-12-01"
+ },
+ "2023-12-29": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 102,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 327,
+  "causal_score_date_end": "2023-12-29"
+ },
+ "2024-01-29": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 67,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 333,
+  "causal_score_date_end": "2024-01-29"
+ },
+ "2024-03-05": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 80,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 334,
+  "causal_score_date_end": "2024-03-05"
+ },
+ "2024-04-02": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 67,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 334,
+  "causal_score_date_end": "2024-04-02"
+ },
+ "2024-05-07": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 88,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 335,
+  "causal_score_date_end": "2024-05-07"
+ },
+ "2024-06-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 110,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 333,
+  "causal_score_date_end": "2024-06-04"
+ },
+ "2024-07-03": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 83,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 335,
+  "causal_score_date_end": "2024-07-03"
+ },
+ "2024-07-31": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 79,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 336,
+  "causal_score_date_end": "2024-07-31"
+ },
+ "2024-08-28": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 73,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 341,
+  "causal_score_date_end": "2024-08-28"
+ },
+ "2024-09-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 97,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 331,
+  "causal_score_date_end": "2024-09-27"
+ },
+ "2024-11-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 122,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 337,
+  "causal_score_date_end": "2024-11-01"
+ },
+ "2024-11-29": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 91,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 338,
+  "causal_score_date_end": "2024-11-29"
+ },
+ "2024-12-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 81,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 342,
+  "causal_score_date_end": "2024-12-27"
+ },
+ "2025-01-27": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 76,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 341,
+  "causal_score_date_end": "2025-01-27"
+ },
+ "2025-03-04": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 101,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 333,
+  "causal_score_date_end": "2025-03-04"
+ },
+ "2025-04-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 120,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 326,
+  "causal_score_date_end": "2025-04-01"
+ },
+ "2025-04-30": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 73,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 346,
+  "causal_score_date_end": "2025-04-30"
+ },
+ "2025-06-03": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 85,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 336,
+  "causal_score_date_end": "2025-06-03"
+ },
+ "2025-07-01": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 85,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 333,
+  "causal_score_date_end": "2025-07-01"
+ },
+ "2025-07-29": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 107,
+  "n_at_or_above_threshold": 1,
+  "n_stocks_with_any_vote": 338,
+  "causal_score_date_end": "2025-07-29"
+ },
+ "2025-08-26": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 151,
+  "n_at_or_above_threshold": 5,
+  "n_stocks_with_any_vote": 340,
+  "causal_score_date_end": "2025-08-26"
+ },
+ "2025-09-23": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 148,
+  "n_at_or_above_threshold": 5,
+  "n_stocks_with_any_vote": 325,
+  "causal_score_date_end": "2025-09-23"
+ },
+ "2025-10-29": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 140,
+  "n_at_or_above_threshold": 6,
+  "n_stocks_with_any_vote": 324,
+  "causal_score_date_end": "2025-10-29"
+ },
+ "2025-11-26": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 164,
+  "n_at_or_above_threshold": 3,
+  "n_stocks_with_any_vote": 326,
+  "causal_score_date_end": "2025-11-26"
+ },
+ "2025-12-24": {
+  "n_declared_factors": 410,
+  "n_factors_with_causal_score": 405,
+  "n_picks": 10,
+  "max_votes": 97,
+  "n_at_or_above_threshold": 0,
+  "n_stocks_with_any_vote": 339,
+  "causal_score_date_end": "2025-12-24"
+ }
+}

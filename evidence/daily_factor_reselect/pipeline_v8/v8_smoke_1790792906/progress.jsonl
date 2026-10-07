@@ -1,0 +1,10 @@
+{"stage": "init", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:28:27.576305", "start_date": "2020-01-01", "end_date": "2020-02-29"}
+{"stage": "panel_loaded", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:28:29.791361", "n_rows": 1298335, "n_cols": 419}
+{"stage": "dates_loaded", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:28:30.632191", "n_dates_in_range": 30}
+{"stage": "picks_computed", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:28:58.967121", "date": "2020-01-02", "day": 0, "n_total": 30, "elapsed_sec": 28.333826541900635}
+{"stage": "picks_computed", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:36:21.966785", "date": "2020-02-07", "day": 20, "n_total": 30, "elapsed_sec": 471.3328552246094}
+{"stage": "picks_phase_done", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:39:49.699221", "n_days": 30, "n_with_picks": 30, "duration_sec": 679.0650980472565}
+{"stage": "universe_size", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:39:49.716952", "n_unique_stocks": 61}
+{"stage": "data_dict_built", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:39:50.575116", "n_symbols": 61}
+{"stage": "akquant_start", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:39:50.576485"}
+{"stage": "akquant_done", "job_id": "v8_smoke_1790792906", "timestamp": "2026-10-01T02:39:52.041355"}

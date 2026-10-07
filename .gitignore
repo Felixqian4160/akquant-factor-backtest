@@ -1,0 +1,54 @@
+# akquant-factor-backtest: v34-lb20 strategy - gitignore
+#
+# Strategy code + docs + reproducibility evidence are tracked.
+# Raw 3+ GB parquet panels and intermediate matrices >50 MB are git-ignored
+# because they are reconstructable from the public aurumq-rl cache + the
+# in-repo build scripts.
+
+# 1. Raw panel parquet (rebuilt from aurumq-rl data_cache/)
+data/*.parquet
+data/_archive/
+
+# 2. Intermediate matrices and large factor parquets (rebuilt in <2 min by
+#    examples/stage_a_1_matrices_and_picks.py)
+evidence/stage_a_20261007/matrix_*.parquet
+evidence/v34_adj_20261007/new_factors_adj.parquet
+evidence/v33_new_factors_20261003/
+evidence/v37_v14_causal/_cache/
+
+# 3. Daily factor reselect pipeline outputs (>350 MB)
+evidence/daily_factor_reselect/pipeline_*/**/result.json
+
+# 4. Per-stock/per-factor intermediate parquet caches (rebuilt by stage_a_1)
+evidence/*/net20_cache.parquet
+evidence/*/_cache/**/*.tsv
+evidence/*/factor_returns.parquet
+evidence/audit_v33_20261007/adj_study/adj_prices_354.parquet
+evidence/sweep_*/sweep_results.json
+evidence/v34_ic_voting_*/ic_scores.csv
+
+# 3. Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# 4. Local scratch
+/tmp/_test_*
+/tmp/lock_*
+
+# 5. Notebook / editor
+.ipynb_checkpoints/
+.idea/
+.vscode/
+
+# 6. Tracked artifacts — DO NOT gitignore:
+# - SYSTEM_LOCK.json + SYSTEM_VERIFY.py + system.sh (system boundary)
+# - STRATEGIES/v34_lb20_factor_return_voting.md (contract)
+# - evidence/stage_a_20261007/matrix_v34_ADJ.parquet (locked; ~17 MB; if you
+#   prefer to drop this, remove its entry in SYSTEM_LOCK.json's `artifacts`
+#   list and re-run `python SYSTEM_VERIFY.py` to lock a smaller baseline).
+# - evidence/stage5_20261007/{sims,sims_2026}/* (reproducibility audit)
+# - evidence/v34_adj_20261007/{corporate_actions_derived.parquet,
+#     C_PLAN_REPORT.md, part2_summary.json} (audit + CA events)
+# - evidence/causal_zigzag_router_20261006/router_map.json (regime router)

@@ -1,0 +1,45 @@
+{
+  "diff_replication": {
+    "l_ami": {
+      "manual": 0.2160887636625689,
+      "polars": 0.21608876366256896,
+      "match": true
+    },
+    "gtja_gtja_002": {
+      "manual": 0.18911184565390304,
+      "polars": 0.14480886417558525,
+      "match": false
+    },
+    "talib_NATR": {
+      "manual": 0.33340978920504477,
+      "polars": 0.3334097892050448,
+      "match": true
+    },
+    "pe": {
+      "manual": 0.24438127348337454,
+      "polars": 0.24438127348337454,
+      "match": true
+    },
+    "r_tv": {
+      "manual": 0.29638167468524834,
+      "polars": 0.29638167468524834,
+      "match": true
+    }
+  },
+  "score_replication": {
+    "factor": "l_ami",
+    "T": "2020-03-23",
+    "score": -0.03824025163477734,
+    "n_diffs": 20,
+    "all_causal": true
+  },
+  "causality": {
+    "checked": 50,
+    "ok": true,
+    "violations": []
+  },
+  "regime_consistency": {
+    "mismatches": 0,
+    "total": 195
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "rebal_offset": 8,
+  "router": "V27_BALANCE",
+  "router_params": {
+    "vote_threshold": 2,
+    "lookback": 5,
+    "cumulative_threshold": 5
+  },
+  "factor_count": 410,
+  "rebal_dates": 194,
+  "bear_rebal_dates": 134,
+  "directional_score_rows": 54120,
+  "selected_rows": 21106,
+  "selected_direction_counts": {
+    "high": 10457,
+    "low": 10649
+  },
+  "lookback_sessions": 30,
+  "min_observations": 10,
+  "min_factor_mean_return": 0.005,
+  "forward_contract": "T+1 raw open -> T+21 close minus 0.5% round-trip cost",
+  "leakage_guard": "historical session exit position strictly before current bear date",
+  "artifacts": {
+    "directional_scores": "evidence/v37_v14_causal_v27balance_directional_20261006/_cache/offset_8/directional_scores.tsv",
+    "selected_directions": "evidence/v37_v14_causal_v27balance_directional_20261006/_cache/offset_8/selected_directions.tsv"
+  },
+  "elapsed_sec": 25.171894788742065
+}

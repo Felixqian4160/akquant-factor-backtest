@@ -1,0 +1,60 @@
+{
+  "contract_id": "factor_research_workflow_v1_20260930_025517",
+  "title": "v1 End-to-End Factor Research Workflow (年化 12% / Sharpe 1.2 / MDD 12% target)",
+  "target": {
+    "annualized_return": ">= 12%",
+    "sharpe_ratio": ">= 1.2",
+    "max_drawdown": "<= 12%",
+    "regime_coverage": [
+      "bull",
+      "bear",
+      "sideways"
+    ]
+  },
+  "pipeline": {
+    "Stage_1_data": {
+      "name": "Data Preparation",
+      "status": "completed",
+      "input": "v2_talib panel (420 cols, 354 stocks, 5498 days)",
+      "regime_labels": "bull_legs.json + bear_legs.json + sideways (between)"
+    },
+    "Stage_2_regime_classifier": {
+      "name": "Daily Regime Classifier",
+      "status": "completed (LightGBM 3-class, evidence/regime_classifier_validation/)",
+      "method": "LightGBM classifier predicts bull/bear/sideways per day",
+      "note": "已有 evidence，但需要重新校准 target（不是 3-class，bull_composite 跑 22 年全期）"
+    },
+    "Stage_3_multi_symbol_composite": {
+      "name": "Multi-Symbol Regime-Specific Composite + Top-K",
+      "status": "to_run",
+      "method": "Use bull_composite pipeline. Per regime:\n- bull: 6 因子 composite (talib_NATR/TRANGE + gtja_159/149/144 + mw_vol_20d) × top-K=20\n- bear: reversal/morphology (KD<20 + vol_shrink + hammer + morning_star) × top-K=15\n- sideways: 空仓 / 防御 (no signal)\nper-regime closed_only_return + sharpe + MDD + commission",
+      "single_variable": "regime filter (full -> per-regime)",
+      "output": "evidence/factor_research_workflow_v1_stage3_*/per_regime.json",
+      "estimated_backtests": "bull: 10 legs, bear: 10 legs, sideways: 5 windows"
+    },
+    "Stage_4_regime_router": {
+      "name": "Regime Router + Composite Selection",
+      "status": "to_run_after_3",
+      "method": "Daily router using LightGBM classifier output:\n- bull router -> bull_composite top-K\n- bear router -> bear reversal\n- sideways router -> cash\nCost: 25bps commission + 10bps slippage per side",
+      "single_variable": "router activation logic"
+    },
+    "Stage_5_oos_validation": {
+      "name": "OOS Validation + Cost Sensitivity + Kill-Switch",
+      "status": "to_run_after_4",
+      "method": "Time-series split:\n- train 2010-01 ~ 2018-12 (8y)\n- val 2019-01 ~ 2021-12 (3y, COVID + bull recovery)\n- OOS 2022-01 ~ 2025-12 (4y, recent regime mix)\nCost sensitivity: commission={0,15,25,40} × slippage={0,5,10}\nKill-switch: if MDD > 8% -> flat for 20 days",
+      "single_variable": "time window + cost params",
+      "output": "evidence/factor_research_workflow_v1_stage5_*/oos_results.json"
+    }
+  },
+  "achievement_path": {
+    "stage_3_target": "per-regime composite alpha > 8% annual + Sharpe > 1.0",
+    "stage_4_target": "router combined Sharpe > 1.2",
+    "stage_5_target": "OOS 2022-2025 年化 >= 12% / Sharpe >= 1.2 / MDD <= 12%"
+  },
+  "single_variable_discipline": {
+    "rule": "Each Stage changes ONLY ONE variable from prior Stage. No multi-variable tuning.",
+    "rollback": "Stage N+1 failure → revert to Stage N artefacts + adjust Stage N+1 contract.",
+    "frozen_code": "panel_loader.py is FROZEN. Stage 3+ only ADD new scripts."
+  },
+  "evidence_root": "evidence/factor_research_workflow_v1/"
+}

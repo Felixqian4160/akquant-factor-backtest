@@ -1,0 +1,14 @@
+{"stage": "init", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:54:35.312603", "start_date": "2020-01-01", "end_date": "2023-12-31", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "ic_window_days": 20, "min_hold_days": 5, "fwd_days": 20, "lot_size": 100}
+{"stage": "panel_loaded", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:54:37.562442", "n_rows": 1298335, "n_cols": 419, "n_candidates": 391}
+{"stage": "computing_rolling_ic", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:55:01.692441", "factors": 391, "window": 20, "fwd_days": 20}
+{"stage": "rolling_ic_done", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:55:05.759257", "duration_sec": 4.054908275604248}
+{"stage": "top_factors_per_day_built", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:55:05.783547", "n_rows": 9630}
+{"stage": "votes_filtered", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:56:00.903821", "n_votes": 57940}
+{"stage": "regime_computed", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:56:51.683204", "n_bull": 402, "n_bear": 339, "n_neutral": 229, "bull_threshold": 0.05, "bear_threshold": -0.05}
+{"stage": "picks_phase_done", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:56:51.739864", "n_days": 962, "avg_stocks_per_day": 9.497920997920998}
+{"stage": "universe_size", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:56:51.760887", "n_unique_stocks": 338}
+{"stage": "data_dict_built", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:57:01.118240", "n_symbols": 338}
+{"stage": "akquant_start", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:57:01.119184"}
+{"stage": "akquant_done", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:57:23.092585"}
+{"stage": "done", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:57:23.327874", "final_value": 190001833.21273, "final_return_pct": 90.00183321272999, "n_days_with_picks": 962, "avg_stocks_per_day": 9.497920997920998}
+{"stage": "result_written", "job_id": "v16_regime_1790816074", "timestamp": "2026-10-01T08:57:23.328015", "result_file": "evidence/daily_factor_reselect/pipeline_v14/v16_regime_1790816074/result.json"}

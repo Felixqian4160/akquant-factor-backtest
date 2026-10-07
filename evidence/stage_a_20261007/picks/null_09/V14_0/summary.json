@@ -1,0 +1,7 @@
+{
+  "label": "null_09",
+  "matrix": "/media/felix/f/quant/akquant-factor-backtest/evidence/stage_a_20261007/matrix_v34_ADJ.parquet",
+  "panel": "/media/felix/f/quant/akquant-factor-backtest/data/wavehunter_hs300_v34_adj_20261007.parquet",
+  "n_rebalances": 195,
+  "window": "2010-01-01~2025-12-31"
+}

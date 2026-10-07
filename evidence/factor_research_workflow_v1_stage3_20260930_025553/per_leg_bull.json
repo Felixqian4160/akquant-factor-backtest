@@ -1,0 +1,19 @@
+[
+  {
+    "leg_idx": 19,
+    "regime": "bull",
+    "start": "2019-01-03",
+    "end": "2019-04-19",
+    "days": 106,
+    "n_rows": 19434,
+    "n_stocks": 276,
+    "closed_only_return_pct": 44.7702,
+    "total_return_pct": 58.7955,
+    "unrealized_pnl": 140253.0,
+    "sharpe_ratio": 4.975,
+    "max_drawdown_pct": 9.39,
+    "win_rate": 92.86,
+    "closed_trade_count": 70,
+    "elapsed_sec": 1.9
+  }
+]

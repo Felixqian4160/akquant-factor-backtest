@@ -1,0 +1,12 @@
+{"stage": "init", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T14:59:49.714228", "start_date": "2021-01-01", "end_date": "2024-12-31", "n_factors": 391, "bull_top_factors": 10, "bull_top_stocks": 10, "bull_min_votes": 2, "bull_ic_window": 20, "bear_lookback_sessions": 30, "bear_top_factors": 10, "bear_top_stocks": 10, "bear_min_votes": 3, "bear_min_factor_mean_return": 0.005, "bear_rebalance_sessions": 20, "lot_size": 100}
+{"stage": "regime_summary", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T14:59:49.979927", "regime_counts": {"bull_neutral": 613, "bear": 356}, "n_bear_rebalance_dates": 17}
+{"stage": "computing_rolling_ic", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:00:14.944646", "factors": 391, "window": 20, "fwd_days": 20}
+{"stage": "rolling_ic_done", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:00:19.235167", "duration_sec": 4.277721405029297}
+{"stage": "top_bull_factors_per_day", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:00:19.253339", "n_rows": 9640}
+{"stage": "bull_picks_ready", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:01:15.309279", "picked_dates": 963}
+{"stage": "bear_picks_ready_v24b", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:01:15.623985", "rebalance_dates": 17, "picked_dates": 17}
+{"stage": "universe_ready", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:01:15.624468", "n_symbols": 346}
+{"stage": "data_ready", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:01:22.559072", "n_symbols": 346}
+{"stage": "akquant_start", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:01:22.559192"}
+{"stage": "akquant_done", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:02:06.526051"}
+{"stage": "done", "job_id": "v24b_4y_1790837986", "timestamp": "2026-10-01T15:02:07.296920", "final_value": 187957655.375945, "final_return_pct": 87.957655375945, "n_trades": 12420, "n_orders": 15045, "result_file": "evidence/daily_factor_reselect/pipeline_v24b/v24b_4y_1790837986/result.json"}

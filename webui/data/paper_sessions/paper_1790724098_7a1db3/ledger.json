@@ -1,0 +1,250 @@
+[
+  {
+    "ts_code": "002371.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 1000,
+    "timestamp": "",
+    "commission": 866.08
+  },
+  {
+    "ts_code": "002384.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 100,
+    "timestamp": "",
+    "commission": 22.404
+  },
+  {
+    "ts_code": "300033.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 800,
+    "timestamp": "",
+    "commission": 713.696
+  },
+  {
+    "ts_code": "603799.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 2400,
+    "timestamp": "",
+    "commission": 828.768
+  },
+  {
+    "ts_code": "002837.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 1000,
+    "timestamp": "",
+    "commission": 305.64
+  },
+  {
+    "ts_code": "300014.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 1900,
+    "timestamp": "",
+    "commission": 977.74
+  },
+  {
+    "ts_code": "300223.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 1100,
+    "timestamp": "",
+    "commission": 983.048
+  },
+  {
+    "ts_code": "300502.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 100,
+    "timestamp": "",
+    "commission": 52.8
+  },
+  {
+    "ts_code": "300661.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 300,
+    "timestamp": "",
+    "commission": 722.4
+  },
+  {
+    "ts_code": "300661.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 100,
+    "timestamp": "",
+    "commission": 251.16
+  },
+  {
+    "ts_code": "601066.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 3100,
+    "timestamp": "",
+    "commission": 806.0
+  },
+  {
+    "ts_code": "601066.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 200,
+    "timestamp": "",
+    "commission": 54.32
+  },
+  {
+    "ts_code": "002371.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 800,
+    "timestamp": "",
+    "commission": 1744.0
+  },
+  {
+    "ts_code": "002384.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 3800,
+    "timestamp": "",
+    "commission": 703.152
+  },
+  {
+    "ts_code": "002384.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 400,
+    "timestamp": "",
+    "commission": 88.4
+  },
+  {
+    "ts_code": "002837.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 3200,
+    "timestamp": "",
+    "commission": 624.768
+  },
+  {
+    "ts_code": "002916.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 600,
+    "timestamp": "",
+    "commission": 878.4
+  },
+  {
+    "ts_code": "300502.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 2000,
+    "timestamp": "",
+    "commission": 728.08
+  },
+  {
+    "ts_code": "600745.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 900,
+    "timestamp": "",
+    "commission": 786.42
+  },
+  {
+    "ts_code": "603501.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 600,
+    "timestamp": "",
+    "commission": 1100.016
+  },
+  {
+    "ts_code": "603501.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 100,
+    "timestamp": "",
+    "commission": 206.4
+  },
+  {
+    "ts_code": "603799.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 2200,
+    "timestamp": "",
+    "commission": 1618.32
+  },
+  {
+    "ts_code": "603986.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 400,
+    "timestamp": "",
+    "commission": 660.768
+  },
+  {
+    "ts_code": "002459.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 200,
+    "timestamp": "",
+    "commission": 96.472
+  },
+  {
+    "ts_code": "300223.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 1100,
+    "timestamp": "",
+    "commission": 1351.416
+  },
+  {
+    "ts_code": "300347.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 900,
+    "timestamp": "",
+    "commission": 1168.308
+  },
+  {
+    "ts_code": "300661.SZ",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 500,
+    "timestamp": "",
+    "commission": 1248.1
+  },
+  {
+    "ts_code": "600460.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 2400,
+    "timestamp": "",
+    "commission": 1204.32
+  },
+  {
+    "ts_code": "600760.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 2200,
+    "timestamp": "",
+    "commission": 1274.68
+  },
+  {
+    "ts_code": "603659.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 1000,
+    "timestamp": "",
+    "commission": 1172.08
+  },
+  {
+    "ts_code": "603799.SH",
+    "side": "Long",
+    "price": 0.0,
+    "qty": 1200,
+    "timestamp": "",
+    "commission": 793.536
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "session_id": "paper_1790724023_128c22",
+  "contract": {
+    "strategy": "PaperTradingStrategy (Stage 5b)",
+    "factors": [
+      "talib_NATR",
+      "talib_TRANGE",
+      "gtja_gtja_159",
+      "gtja_gtja_149",
+      "gtja_gtja_144",
+      "mw_vol_20d"
+    ],
+    "top_k": 10,
+    "rebal_days": 20,
+    "kill_dd_threshold": 0.08,
+    "kill_cooldown_days": 20,
+    "commission_bps_per_side": 40
+  },
+  "config": {
+    "session_id": "paper_1790724023_128c22",
+    "start_date": "2020-01-01",
+    "end_date": "2020-12-31",
+    "initial_cash": 1000000.0,
+    "top_k": 10,
+    "rebal_days": 20,
+    "out_dir": "/media/felix/f/quant/akquant-factor-backtest/webui/data/paper_sessions/paper_1790724023_128c22"
+  },
+  "metrics": {
+    "closed_only_return_pct": 20.2477,
+    "total_return_pct": 23.0706,
+    "unrealized_pnl": 28229.0,
+    "sharpe_ratio": 0.73,
+    "max_drawdown_pct": 32.36,
+    "win_rate": 91.67,
+    "closed_trade_count": 12,
+    "annualized_pct": 20.2,
+    "initial_cash": 1000000.0,
+    "end_equity": 1230705.548
+  },
+  "n_rows": 70711,
+  "n_stocks": 303,
+  "elapsed_sec": 4.7
+}

@@ -1,0 +1,2 @@
+cmd: /usr/bin/python3.12 /media/felix/f/quant/akquant-factor-backtest/webui/scripts/daily_picks_v5b.py --job-id daily_1790724023_14918e --date 2024-02-02 --top-k 10 --out-dir /media/felix/f/quant/akquant-factor-backtest/webui/data/daily_jobs/daily_1790724023_14918e
+wrote /media/felix/f/quant/akquant-factor-backtest/webui/data/daily_jobs/daily_1790724023_14918e/result.json: 10 picks on 2024-02-02

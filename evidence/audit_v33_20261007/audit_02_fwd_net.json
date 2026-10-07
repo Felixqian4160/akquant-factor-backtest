@@ -1,0 +1,25 @@
+{
+  "adj_factor": {
+    "n_unique": 1,
+    "adj_close_eq_close": true
+  },
+  "extreme_moves": {
+    "n_big_drop": 491,
+    "n_big_rise": 8,
+    "beyond_21pct": 737
+  },
+  "fwd_net_replication": {
+    "max_diff": 0.0,
+    "n_large_mismatch": 0
+  },
+  "timing": {
+    "expected": -0.04446035997778718,
+    "got": -0.04446035997778718,
+    "match": true
+  },
+  "terminal": {
+    "last21_null_rate": 354.0,
+    "overall_null": 7434,
+    "expected_null": 7434
+  }
+}

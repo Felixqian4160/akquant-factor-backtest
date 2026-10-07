@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "check": "trades_exist",
+      "pass": true,
+      "detail": "754"
+    },
+    {
+      "check": "orders_exist",
+      "pass": true,
+      "detail": "1784"
+    },
+    {
+      "check": "orders_both_sides",
+      "pass": true,
+      "detail": "{'OrderSide.Sell': 1048, 'OrderSide.Buy': 736}"
+    },
+    {
+      "check": "orders_filled_all",
+      "pass": false,
+      "detail": "filled=1482, rejected=302"
+    },
+    {
+      "check": "qty_lot_multiple",
+      "pass": true,
+      "detail": "n=754"
+    },
+    {
+      "check": "nav_bounded",
+      "pass": true,
+      "detail": "last=2025-12-31"
+    },
+    {
+      "check": "rebalance_dates_in_window",
+      "pass": true,
+      "detail": "78"
+    },
+    {
+      "check": "trade_pnl_identity",
+      "pass": true,
+      "detail": "diff=-0.000000"
+    },
+    {
+      "check": "mdd_recomputed",
+      "pass": true,
+      "detail": "-0.406979"
+    },
+    {
+      "check": "holding_cap_21bars",
+      "pass": true,
+      "detail": "within_22=725/754=0.962"
+    }
+  ],
+  "summary": {
+    "final_value": 110930153.3642,
+    "total_return_pct": 10.9301533642,
+    "annualized_return": 0.006504221693181433,
+    "sharpe_ratio": 0.11844932309064617,
+    "max_drawdown_pct_engine": 40.69794422758085,
+    "max_drawdown_pct_recomputed": -40.69794422758084,
+    "win_rate": 43.76657824933687,
+    "profit_factor": 1.1859205308052498,
+    "closed_trade_count": 754.0,
+    "n_trades_ledger": 754,
+    "n_orders_ledger": 1784,
+    "n_rejected": 302,
+    "total_commission": 33824763.1078,
+    "nav_start": "2010-01-04",
+    "nav_end": "2025-12-31",
+    "n_rebalances": 78
+  }
+}

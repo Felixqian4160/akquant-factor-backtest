@@ -1,0 +1,13 @@
+{"stage": "init", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:21.818528", "start_date": "2020-01-01", "end_date": "2020-12-31", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "ic_window_days": 60, "fwd_days": 20, "lot_size": 100}
+{"stage": "panel_loaded", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:22.893886", "n_rows": 1298335, "n_cols": 419, "n_candidates": 391}
+{"stage": "computing_rolling_ic", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:23.050820", "factors": 391, "window": 60, "fwd_days": 20}
+{"stage": "rolling_ic_done", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:23.758240", "duration_sec": 0.7072868347167969}
+{"stage": "top_factors_per_day_built", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:23.762644", "n_rows": 2360}
+{"stage": "votes_filtered", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:38.053095", "n_votes": 14130}
+{"stage": "picks_phase_done", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:38.062430", "n_days": 236, "avg_stocks_per_day": 9.995762711864407}
+{"stage": "universe_size", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:38.062610", "n_unique_stocks": 132}
+{"stage": "data_dict_built", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:38.302725", "n_symbols": 132}
+{"stage": "akquant_start", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:38.302831"}
+{"stage": "akquant_done", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:40.057480"}
+{"stage": "done", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:40.109791", "final_value": 185032873.5164325, "final_return_pct": 85.03287351643249, "n_days_with_picks": 236, "avg_stocks_per_day": 9.995762711864407}
+{"stage": "result_written", "job_id": "v14_2020_1790813841", "timestamp": "2026-10-01T08:17:40.109879", "result_file": "evidence/daily_factor_reselect/pipeline_v14/v14_2020_1790813841/result.json"}

@@ -1,0 +1,18 @@
+{
+  "output": "/media/felix/f/quant/akquant-factor-backtest/evidence/v37_v14_akquant_v27balance_20261006/v27_balance_equity_curve.png",
+  "rows": 3886,
+  "missing_benchmark_dates": 0,
+  "mean_return_pct": 266.499079091657,
+  "mean_sharpe": 0.4121895908023652,
+  "mean_mdd_pct": -65.09432140963239,
+  "mean_pf": 1.2706404120051888,
+  "mean_win_pct": 54.73367139845392,
+  "final_nav": {
+    "V14_0": 7.248977888183725,
+    "V14_4": 3.0506302425174754,
+    "V14_8": 2.060246120508075,
+    "V14_12": 3.3998450650897003,
+    "V14_16": 2.565254638283875
+  },
+  "benchmark_final_nav": 1.3096575921955835
+}

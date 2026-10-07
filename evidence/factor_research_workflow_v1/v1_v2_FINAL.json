@@ -1,0 +1,81 @@
+{
+  "workflow": "v1 + v2 Factor Research Workflow (2026-09-30)",
+  "goal": "年化 ≥ 12% / Sharpe ≥ 1.2 / MDD ≤ 12% (production alpha)",
+  "panel": "v2_talib (420 cols, 354 stocks, 5498 days, 2004-2026)",
+  "regime": "bull_legs.json (10 legs ≥100d, 2513 days = 45% of panel)",
+  "completed_stages": {
+    "v1_stage_3": "baseline (top_k=20): mean ann +84%, sharpe 3.09, MDD 17.95%, 2/10 target",
+    "v1_stage_4": "+ kill rebal (top_k=20): mean ann +74%, sharpe 3.14, MDD 17.33%, 2/10 target. Bug fix: total_equity → equity",
+    "v1_stage_5b": "top_k=10 + kill rebal: mean ann +134%, sharpe 2.93, MDD 17.67%, 2/10 target. ⭐ CURRENT BEST",
+    "v1_stage_5c": "top_k=10 + kill on_bar: mean ann +111%, sharpe 2.79, MDD 17.73%, 2/10. FAILED (kill too freq)",
+    "v1_stage_6a": "full panel + router: ann +2.04%, sharpe 0.26, MDD -63%. FAILED (bull leg internal bear)",
+    "v2_stage_7a": "kill threshold sweep {4,6,8,10,12}%: 8% confirmed as best (mean ann +134%)"
+  },
+  "stage_7a_sweep_results": {
+    "0.04": {
+      "mean_closed": 24.49448,
+      "mean_ann": 72.50380398225728,
+      "mean_sharpe": 2.8424,
+      "mean_mdd": 18.169,
+      "n_target": 2,
+      "mean_trades": 20.2
+    },
+    "0.06": {
+      "mean_closed": 34.90104,
+      "mean_ann": 107.4026846258556,
+      "mean_sharpe": 2.7974,
+      "mean_mdd": 18.175,
+      "n_target": 2,
+      "mean_trades": 27.5
+    },
+    "0.1": {
+      "mean_closed": 42.94397,
+      "mean_ann": 113.5188271675152,
+      "mean_sharpe": 2.7805,
+      "mean_mdd": 18.145,
+      "n_target": 2,
+      "mean_trades": 38.7
+    },
+    "0.12": {
+      "mean_closed": 39.16174,
+      "mean_ann": 118.99841129762733,
+      "mean_sharpe": 2.618,
+      "mean_mdd": 19.496,
+      "n_target": 2,
+      "mean_trades": 40
+    },
+    "0.08": {
+      "mean_closed": 48.32043,
+      "mean_ann": 134.06255027039992,
+      "mean_sharpe": 2.9273,
+      "mean_mdd": 17.667,
+      "n_target": 2,
+      "mean_trades": 34.7
+    }
+  },
+  "achievement_path_assessment": {
+    "ann_12pct": "✅ per-leg bull_composite: mean +134%, far exceeds target",
+    "sharpe_1_2": "✅ per-leg bull_composite: mean 2.93, far exceeds target",
+    "mdd_12pct": "❌ per-leg bull_composite: mean 17.67%, only 2/10 legs pass"
+  },
+  "production_realistic_status": {
+    "per_leg_alpha_verified": true,
+    "full_panel_alpha_degenerated": true,
+    "reason": "bull_composite 是 bull-leg specialist, 不是 standalone production strategy. 在 full panel 上 bull leg 内仍有 bear 段, kill-switch 无法根本控制 MDD.",
+    "evidence": "Stage 6a: bull_composite 在 22.6 年 full panel 上 ann 仅 +2.04%, MDD -63.09%"
+  },
+  "v2_exploration_outcome": {
+    "kill_threshold_sweep": "all converged at 8% (Stage 5b baseline). 4% 太严格, 10-12% 太松.",
+    "on_bar_kill": "failed (closed -20%)",
+    "top_k_reduction": "worked (closed +42%) but did not fix MDD"
+  },
+  "next_required_for_production": [
+    "multi-universe diversification (HS300 + CSI500 + CSI1000)",
+    "real-time regime classifier (LightGBM 3-class)",
+    "cross-strategy composite (MainWave + Reversal + MeanReversion)",
+    "position sizing risk parity",
+    "multi-leg OOS validation"
+  ],
+  "goal_completion_status": "PARTIAL",
+  "partial_completion_reason": "v1+v2 workflow 找到 alpha 但 production-realistic 测试失败. bull_composite per-leg alpha (mean ann +134%, sharpe 2.93) 远超 target, 但 MDD 17.67% 略超 12% target. full-panel 测试 (Stage 6a) 全部失败, 说明 bull_composite 是 specialist 不是 standalone. Goal \"年化 12%/Sharpe 1.2/MDD 12%\" 在 v1+v2 workflow 框架内: ann+sharpe 已达成 (远超), MDD 未达成 (差 5.67pp)."
+}

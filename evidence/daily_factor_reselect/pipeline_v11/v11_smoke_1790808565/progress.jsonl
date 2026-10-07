@@ -1,0 +1,12 @@
+{"stage": "init", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:49:26.477755", "start_date": "2020-01-01", "end_date": "2020-02-29", "top_factors": 10, "top_stocks_per_factor": 10, "top_stocks_final": 5}
+{"stage": "panel_loaded", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:49:27.517761", "n_rows": 1298335, "n_cols": 419}
+{"stage": "dates_loaded", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:49:27.535166", "n_dates_in_range": 30}
+{"stage": "factor_pool", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:49:27.535523", "total": ["talib_NATR", "talib_TRANGE", "gtja_gtja_159", "gtja_gtja_149", "gtja_gtja_144", "mw_vol_20d", "mw_ret_20d", "mw_rsi_14", "alpha_alpha018", "alpha_alpha028"], "valid": ["talib_NATR", "talib_TRANGE", "gtja_gtja_159", "gtja_gtja_149", "gtja_gtja_144", "mw_vol_20d", "mw_ret_20d", "alpha_alpha018", "alpha_alpha028"]}
+{"stage": "picks_computed", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:49:30.271312", "date": "2020-01-02", "day": 0, "n_total": 30, "n_unique_picks": 43, "consensus": {"603986.SH": 6.0, "300803.SZ": 5.0, "300661.SZ": 5.0, "300223.SZ": 5.0, "688111.SH": 5.0}, "elapsed_sec": 2.7360124588012695}
+{"stage": "picks_phase_done", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:50:50.562080", "n_days": 30, "duration_sec": 83.02678108215332}
+{"stage": "universe_size", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:50:50.562237", "n_unique_stocks": 16}
+{"stage": "data_dict_built", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:50:50.594881", "n_symbols": 16}
+{"stage": "akquant_start", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:50:50.594989"}
+{"stage": "akquant_done", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:50:50.694944"}
+{"stage": "done", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:50:50.698001", "final_value": 127042668.903695, "final_return_pct": 27.042668903695, "n_days": 30, "duration_sec": 83.16270351409912}
+{"stage": "result_written", "job_id": "v11_smoke_1790808565", "timestamp": "2026-10-01T06:50:50.698081", "result_file": "evidence/daily_factor_reselect/pipeline_v11/v11_smoke_1790808565/result.json"}

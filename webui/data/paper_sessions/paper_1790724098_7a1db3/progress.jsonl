@@ -1,0 +1,3 @@
+{"event": "start", "args": {"session_id": "paper_1790724098_7a1db3", "start_date": "2020-01-01", "end_date": "2021-12-31", "initial_cash": 1000000.0, "top_k": 10, "rebal_days": 20, "out_dir": "/media/felix/f/quant/akquant-factor-backtest/webui/data/paper_sessions/paper_1790724098_7a1db3"}}
+{"event": "running", "n_rows": 146484, "n_stocks": 321}
+{"event": "finished", "elapsed_sec": 9.0, "metrics": {"closed_only_return_pct": 58.8203, "total_return_pct": 52.5867, "unrealized_pnl": -62336.0, "sharpe_ratio": 0.756, "max_drawdown_pct": 32.36, "win_rate": 64.52, "closed_trade_count": 31, "annualized_pct": 26.0, "initial_cash": 1000000.0, "end_equity": 1525866.612}}

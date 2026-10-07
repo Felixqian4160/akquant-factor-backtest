@@ -1,0 +1,2 @@
+{"stage": "init", "job_id": "v6_smoke_1790790545", "timestamp": "2026-10-01T01:49:06.250080", "start_date": "2020-01-01", "end_date": "2020-02-29"}
+{"stage": "panel_loaded", "job_id": "v6_smoke_1790790545", "timestamp": "2026-10-01T01:49:08.515335", "n_rows": 1298335, "n_cols": 419}

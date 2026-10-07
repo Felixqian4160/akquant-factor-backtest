@@ -1,0 +1,351 @@
+cmd: /usr/bin/python3.12 /media/felix/f/quant/akquant-factor-backtest/webui/scripts/walk_forward_v5b.py --job-id wf_1790724190_c28bcc --train-start 2010-01-01 --train-end 2018-12-31 --val-months 6 --oos-months 12 --step-months 6 --max-windows 62 --out-dir /media/felix/f/quant/akquant-factor-backtest/webui/data/wf_jobs/wf_1790724190_c28bcc
+2026-09-30 07:23:12 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:12 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 122889.600, Available: 118512.70000
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 152314.83200, Available: 126206.22800
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 169204.1200, Available: 156667.50400
+2026-09-30 07:23:13 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 165126.87600, Available: 141673.76800
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 164907.0000, Available: 144503.42800
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 193280.04000, Available: 176472.72800
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:14 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 247014.1200, Available: 237668.77200
+2026-09-30 07:23:17 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:17 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 133371.3600, Available: 129422.74400
+2026-09-30 07:23:22 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:27 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:29 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:30 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:32 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:33 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:38 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:43 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:44 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:44 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:44 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:44 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:49 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 8630.38400, Available: 8287.61200
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 101906.0000, Available: 96789.34400
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:50 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:51 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:51 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:51 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:51 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:51 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:51 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 137371.29600, Available: 122610.19200
+2026-09-30 07:23:55 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:23:59 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:59 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:59 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:23:59 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:01 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:24:02 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:02 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:02 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:02 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:02 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:02 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:02 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 132126.4000, Available: 117065.78800
+2026-09-30 07:24:04 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:04 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:04 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:04 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:04 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:04 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:04 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:05 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:05 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:05 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:05 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:05 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:05 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:05 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:05 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:07 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:24:07 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:07 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:07 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:07 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:07 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:08 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:08 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:08 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:09 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 135901.4400, Available: 120516.79200
+2026-09-30 07:24:10 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:10 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:10 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:10 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:10 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:10 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:10 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:13 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:14 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:16 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:16 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:16 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:16 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:16 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:16 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:16 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:16 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 134844.22800, Available: 126103.60400
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 138050.000, Available: 126103.60400
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:17 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:19 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:24:19 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:19 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:19 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:19 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:19 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:20 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:21 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:21 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:21 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:21 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:22 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 264959.61600, Available: 255674.26400
+2026-09-30 07:24:23 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:23 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:23 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:23 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:23 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:23 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:23 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:24 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:25 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Rejected order due to insufficient margin during execution. Required: 129666.6000, Available: 120687.05200
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:26 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:27 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:30 | INFO | akquant.backtest | Running backtest via run_backtest()...
+2026-09-30 07:24:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+2026-09-30 07:24:31 | WARNING | akquant.execution.simulated | Deferred same-cycle order until cross-symbol reduce-first orders finish in current slice
+wrote /media/felix/f/quant/akquant-factor-backtest/webui/data/wf_jobs/wf_1790724190_c28bcc/result.json
+summary: {'n_windows': 15, 'n_valid': 15, 'n_pass_target': 0, 'mean_oos_ann_pct': 38.4, 'mean_oos_sharpe': 0.764, 'mean_oos_mdd_pct': 32.75}

@@ -1,0 +1,27 @@
+{
+  "n_event_rows": 6563,
+  "n_split": 915,
+  "n_dividend": 5648,
+  "n_noop": 0,
+  "n_invalid": 0,
+  "n_rows_post2010": 5678,
+  "n_invalid_post2010": 0,
+  "n_error_rows_post2010": 0,
+  "source_breakdown": [
+    {
+      "source": "total_share",
+      "len": 6466
+    },
+    {
+      "source": "grid",
+      "len": 84
+    },
+    {
+      "source": "snap",
+      "len": 13
+    }
+  ],
+  "ex_date_min": "2004-03-18",
+  "ex_date_max": "2026-08-24",
+  "n_codes": 365
+}

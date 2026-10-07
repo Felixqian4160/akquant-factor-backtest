@@ -1,0 +1,309 @@
+{
+  "contract": {
+    "job_id": "wf_1790724190_c28bcc",
+    "strategy": "BullCompositeTopK10Kill (Stage 5b)",
+    "factors": [
+      "talib_NATR",
+      "talib_TRANGE",
+      "gtja_gtja_159",
+      "gtja_gtja_149",
+      "gtja_gtja_144",
+      "mw_vol_20d"
+    ],
+    "top_k": 10,
+    "rebal_days": 20,
+    "kill_dd_threshold": 0.08,
+    "kill_cooldown_days": 20,
+    "commission_bps_per_side": 40
+  },
+  "config": {
+    "job_id": "wf_1790724190_c28bcc",
+    "train_start": "2010-01-01",
+    "train_end": "2018-12-31",
+    "val_months": 6,
+    "oos_months": 12,
+    "step_months": 6,
+    "max_windows": 62,
+    "out_dir": "/media/felix/f/quant/akquant-factor-backtest/webui/data/wf_jobs/wf_1790724190_c28bcc"
+  },
+  "windows": [
+    {
+      "idx": 1,
+      "oos_start": "2019-06-29",
+      "oos_end": "2020-06-23",
+      "metrics": {
+        "closed_only_return_pct": 80.1982,
+        "total_return_pct": 121.036,
+        "unrealized_pnl": 408378.0,
+        "sharpe_ratio": 2.205,
+        "max_drawdown_pct": 28.61,
+        "win_rate": 76.56,
+        "closed_trade_count": 64,
+        "annualized_pct": 81.7,
+        "elapsed_sec": 4.5,
+        "n_rows": 68166,
+        "n_stocks": 289
+      }
+    },
+    {
+      "idx": 2,
+      "oos_start": "2019-12-26",
+      "oos_end": "2020-12-20",
+      "metrics": {
+        "closed_only_return_pct": 15.4049,
+        "total_return_pct": 36.3707,
+        "unrealized_pnl": 209658.0,
+        "sharpe_ratio": 1.015,
+        "max_drawdown_pct": 30.17,
+        "win_rate": 88.89,
+        "closed_trade_count": 9,
+        "annualized_pct": 15.6,
+        "elapsed_sec": 4.4,
+        "n_rows": 69134,
+        "n_stocks": 302
+      }
+    },
+    {
+      "idx": 3,
+      "oos_start": "2020-06-23",
+      "oos_end": "2021-06-18",
+      "metrics": {
+        "closed_only_return_pct": 31.2,
+        "total_return_pct": 28.5361,
+        "unrealized_pnl": -26639.0,
+        "sharpe_ratio": 0.863,
+        "max_drawdown_pct": 29.19,
+        "win_rate": 77.27,
+        "closed_trade_count": 22,
+        "annualized_pct": 31.7,
+        "elapsed_sec": 4.7,
+        "n_rows": 71956,
+        "n_stocks": 311
+      }
+    },
+    {
+      "idx": 4,
+      "oos_start": "2020-12-20",
+      "oos_end": "2021-12-15",
+      "metrics": {
+        "closed_only_return_pct": 86.4515,
+        "total_return_pct": 108.9098,
+        "unrealized_pnl": 224583.0,
+        "sharpe_ratio": 1.899,
+        "max_drawdown_pct": 29.64,
+        "win_rate": 76.0,
+        "closed_trade_count": 50,
+        "annualized_pct": 88.1,
+        "elapsed_sec": 5.0,
+        "n_rows": 74639,
+        "n_stocks": 321
+      }
+    },
+    {
+      "idx": 5,
+      "oos_start": "2021-06-18",
+      "oos_end": "2022-06-13",
+      "metrics": {
+        "closed_only_return_pct": 11.7466,
+        "total_return_pct": -6.1051,
+        "unrealized_pnl": -178517.0,
+        "sharpe_ratio": 0.031,
+        "max_drawdown_pct": 46.94,
+        "win_rate": 92.31,
+        "closed_trade_count": 13,
+        "annualized_pct": 11.9,
+        "elapsed_sec": 5.0,
+        "n_rows": 76045,
+        "n_stocks": 327
+      }
+    },
+    {
+      "idx": 6,
+      "oos_start": "2021-12-15",
+      "oos_end": "2022-12-10",
+      "metrics": {
+        "closed_only_return_pct": -0.3819,
+        "total_return_pct": -28.417,
+        "unrealized_pnl": -280351.0,
+        "sharpe_ratio": -0.752,
+        "max_drawdown_pct": 38.45,
+        "win_rate": 0.0,
+        "closed_trade_count": 0,
+        "annualized_pct": -0.4,
+        "elapsed_sec": 5.0,
+        "n_rows": 78396,
+        "n_stocks": 334
+      }
+    },
+    {
+      "idx": 7,
+      "oos_start": "2022-06-13",
+      "oos_end": "2023-06-08",
+      "metrics": {
+        "closed_only_return_pct": 0.8909,
+        "total_return_pct": -21.0546,
+        "unrealized_pnl": -219455.0,
+        "sharpe_ratio": -0.639,
+        "max_drawdown_pct": 33.46,
+        "win_rate": 60.0,
+        "closed_trade_count": 5,
+        "annualized_pct": 0.9,
+        "elapsed_sec": 5.3,
+        "n_rows": 81001,
+        "n_stocks": 340
+      }
+    },
+    {
+      "idx": 8,
+      "oos_start": "2022-12-10",
+      "oos_end": "2023-12-05",
+      "metrics": {
+        "closed_only_return_pct": 6.2307,
+        "total_return_pct": 12.8695,
+        "unrealized_pnl": 66388.0,
+        "sharpe_ratio": 0.507,
+        "max_drawdown_pct": 43.28,
+        "win_rate": 51.61,
+        "closed_trade_count": 31,
+        "annualized_pct": 6.3,
+        "elapsed_sec": 5.4,
+        "n_rows": 81232,
+        "n_stocks": 346
+      }
+    },
+    {
+      "idx": 9,
+      "oos_start": "2023-06-08",
+      "oos_end": "2024-06-02",
+      "metrics": {
+        "closed_only_return_pct": 11.8588,
+        "total_return_pct": 10.1464,
+        "unrealized_pnl": -17124.0,
+        "sharpe_ratio": 0.451,
+        "max_drawdown_pct": 38.28,
+        "win_rate": 71.43,
+        "closed_trade_count": 7,
+        "annualized_pct": 12.0,
+        "elapsed_sec": 5.2,
+        "n_rows": 81875,
+        "n_stocks": 349
+      }
+    },
+    {
+      "idx": 10,
+      "oos_start": "2023-12-05",
+      "oos_end": "2024-11-29",
+      "metrics": {
+        "closed_only_return_pct": 78.0089,
+        "total_return_pct": 109.6137,
+        "unrealized_pnl": 316048.0,
+        "sharpe_ratio": 1.743,
+        "max_drawdown_pct": 24.37,
+        "win_rate": 81.25,
+        "closed_trade_count": 32,
+        "annualized_pct": 79.4,
+        "elapsed_sec": 5.5,
+        "n_rows": 83371,
+        "n_stocks": 351
+      }
+    },
+    {
+      "idx": 11,
+      "oos_start": "2024-06-02",
+      "oos_end": "2025-05-28",
+      "metrics": {
+        "closed_only_return_pct": 37.8754,
+        "total_return_pct": 21.8341,
+        "unrealized_pnl": -160413.0,
+        "sharpe_ratio": 0.665,
+        "max_drawdown_pct": 25.88,
+        "win_rate": 68.75,
+        "closed_trade_count": 32,
+        "annualized_pct": 38.5,
+        "elapsed_sec": 5.5,
+        "n_rows": 83604,
+        "n_stocks": 351
+      }
+    },
+    {
+      "idx": 12,
+      "oos_start": "2024-11-29",
+      "oos_end": "2025-11-24",
+      "metrics": {
+        "closed_only_return_pct": 15.4151,
+        "total_return_pct": 37.7998,
+        "unrealized_pnl": 223847.0,
+        "sharpe_ratio": 0.996,
+        "max_drawdown_pct": 24.86,
+        "win_rate": 50.0,
+        "closed_trade_count": 30,
+        "annualized_pct": 15.6,
+        "elapsed_sec": 5.5,
+        "n_rows": 83522,
+        "n_stocks": 351
+      }
+    },
+    {
+      "idx": 13,
+      "oos_start": "2025-05-28",
+      "oos_end": "2026-05-23",
+      "metrics": {
+        "closed_only_return_pct": 148.6482,
+        "total_return_pct": 193.2262,
+        "unrealized_pnl": 445780.0,
+        "sharpe_ratio": 2.611,
+        "max_drawdown_pct": 18.79,
+        "win_rate": 76.0,
+        "closed_trade_count": 75,
+        "annualized_pct": 151.8,
+        "elapsed_sec": 5.7,
+        "n_rows": 83401,
+        "n_stocks": 351
+      }
+    },
+    {
+      "idx": 14,
+      "oos_start": "2025-11-24",
+      "oos_end": "2026-08-21",
+      "metrics": {
+        "closed_only_return_pct": 22.5699,
+        "total_return_pct": 16.7764,
+        "unrealized_pnl": -57935.0,
+        "sharpe_ratio": 0.671,
+        "max_drawdown_pct": 39.31,
+        "win_rate": 73.53,
+        "closed_trade_count": 34,
+        "annualized_pct": 31.7,
+        "elapsed_sec": 4.3,
+        "n_rows": 63578,
+        "n_stocks": 351
+      }
+    },
+    {
+      "idx": 15,
+      "oos_start": "2026-05-23",
+      "oos_end": "2026-08-21",
+      "metrics": {
+        "closed_only_return_pct": 2.6839,
+        "total_return_pct": -18.0911,
+        "unrealized_pnl": -207750.0,
+        "sharpe_ratio": -0.811,
+        "max_drawdown_pct": 39.97,
+        "win_rate": 75.0,
+        "closed_trade_count": 4,
+        "annualized_pct": 11.3,
+        "elapsed_sec": 1.9,
+        "n_rows": 22407,
+        "n_stocks": 351
+      }
+    }
+  ],
+  "summary": {
+    "n_windows": 15,
+    "n_valid": 15,
+    "n_pass_target": 0,
+    "mean_oos_ann_pct": 38.4,
+    "mean_oos_sharpe": 0.764,
+    "mean_oos_mdd_pct": 32.75
+  }
+}

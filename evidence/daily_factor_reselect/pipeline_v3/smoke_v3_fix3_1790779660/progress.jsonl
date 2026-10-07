@@ -1,0 +1,44 @@
+{"stage": "init", "job_id": "smoke_v3_fix3_1790779660", "start_date": "2024-01-01", "end_date": "2024-02-29", "rebal_days": 20, "top_k": 10, "n_options": [5, 6, 7, 8, 9, 10], "timestamp": "2026-09-30T22:47:40.991617"}
+{"stage": "loading_panel", "timestamp": "2026-09-30T22:47:40.993953"}
+{"stage": "panel_loaded", "n_rows": 1298335, "n_cols": 419, "timestamp": "2026-09-30T22:47:43.296267"}
+{"stage": "metrics_done", "date": "2023-05-12", "n_dates_done": 5, "n_dates_total": 199, "pct": 2.512562814070352, "timestamp": "2026-09-30T22:47:46.296424"}
+{"stage": "metrics_done", "date": "2023-05-19", "n_dates_done": 10, "n_dates_total": 199, "pct": 5.025125628140704, "timestamp": "2026-09-30T22:47:46.302604"}
+{"stage": "metrics_done", "date": "2023-05-26", "n_dates_done": 15, "n_dates_total": 199, "pct": 7.537688442211055, "timestamp": "2026-09-30T22:47:46.308470"}
+{"stage": "metrics_done", "date": "2023-06-02", "n_dates_done": 20, "n_dates_total": 199, "pct": 10.050251256281408, "timestamp": "2026-09-30T22:47:46.313591"}
+{"stage": "metrics_done", "date": "2023-06-09", "n_dates_done": 25, "n_dates_total": 199, "pct": 12.562814070351758, "timestamp": "2026-09-30T22:47:47.065455"}
+{"stage": "metrics_done", "date": "2023-06-16", "n_dates_done": 30, "n_dates_total": 199, "pct": 15.07537688442211, "timestamp": "2026-09-30T22:47:47.072596"}
+{"stage": "metrics_done", "date": "2023-06-27", "n_dates_done": 35, "n_dates_total": 199, "pct": 17.587939698492463, "timestamp": "2026-09-30T22:47:47.079551"}
+{"stage": "metrics_done", "date": "2023-07-04", "n_dates_done": 40, "n_dates_total": 199, "pct": 20.100502512562816, "timestamp": "2026-09-30T22:47:47.085741"}
+{"stage": "metrics_done", "date": "2023-07-11", "n_dates_done": 45, "n_dates_total": 199, "pct": 22.613065326633166, "timestamp": "2026-09-30T22:47:47.091143"}
+{"stage": "metrics_done", "date": "2023-07-18", "n_dates_done": 50, "n_dates_total": 199, "pct": 25.125628140703515, "timestamp": "2026-09-30T22:47:47.096458"}
+{"stage": "metrics_done", "date": "2023-07-25", "n_dates_done": 55, "n_dates_total": 199, "pct": 27.63819095477387, "timestamp": "2026-09-30T22:47:47.101556"}
+{"stage": "metrics_done", "date": "2023-08-01", "n_dates_done": 60, "n_dates_total": 199, "pct": 30.15075376884422, "timestamp": "2026-09-30T22:47:47.106500"}
+{"stage": "metrics_done", "date": "2023-08-08", "n_dates_done": 65, "n_dates_total": 199, "pct": 32.663316582914575, "timestamp": "2026-09-30T22:47:47.111617"}
+{"stage": "metrics_done", "date": "2023-08-15", "n_dates_done": 70, "n_dates_total": 199, "pct": 35.175879396984925, "timestamp": "2026-09-30T22:47:47.116278"}
+{"stage": "metrics_done", "date": "2023-08-22", "n_dates_done": 75, "n_dates_total": 199, "pct": 37.68844221105528, "timestamp": "2026-09-30T22:47:47.121161"}
+{"stage": "metrics_done", "date": "2023-08-29", "n_dates_done": 80, "n_dates_total": 199, "pct": 40.20100502512563, "timestamp": "2026-09-30T22:47:47.125721"}
+{"stage": "metrics_done", "date": "2023-09-05", "n_dates_done": 85, "n_dates_total": 199, "pct": 42.71356783919598, "timestamp": "2026-09-30T22:47:47.130339"}
+{"stage": "metrics_done", "date": "2023-09-12", "n_dates_done": 90, "n_dates_total": 199, "pct": 45.22613065326633, "timestamp": "2026-09-30T22:47:47.135456"}
+{"stage": "metrics_done", "date": "2023-09-19", "n_dates_done": 95, "n_dates_total": 199, "pct": 47.73869346733669, "timestamp": "2026-09-30T22:47:47.140348"}
+{"stage": "metrics_done", "date": "2023-09-26", "n_dates_done": 100, "n_dates_total": 199, "pct": 50.25125628140703, "timestamp": "2026-09-30T22:47:47.145432"}
+{"stage": "metrics_done", "date": "2023-10-11", "n_dates_done": 105, "n_dates_total": 199, "pct": 52.76381909547738, "timestamp": "2026-09-30T22:47:47.150193"}
+{"stage": "metrics_done", "date": "2023-10-18", "n_dates_done": 110, "n_dates_total": 199, "pct": 55.27638190954774, "timestamp": "2026-09-30T22:47:47.154968"}
+{"stage": "metrics_done", "date": "2023-10-25", "n_dates_done": 115, "n_dates_total": 199, "pct": 57.78894472361809, "timestamp": "2026-09-30T22:47:47.159560"}
+{"stage": "metrics_done", "date": "2023-11-01", "n_dates_done": 120, "n_dates_total": 199, "pct": 60.30150753768844, "timestamp": "2026-09-30T22:47:47.164254"}
+{"stage": "metrics_done", "date": "2023-11-08", "n_dates_done": 125, "n_dates_total": 199, "pct": 62.8140703517588, "timestamp": "2026-09-30T22:47:47.168925"}
+{"stage": "metrics_done", "date": "2023-11-15", "n_dates_done": 130, "n_dates_total": 199, "pct": 65.32663316582915, "timestamp": "2026-09-30T22:47:47.173801"}
+{"stage": "metrics_done", "date": "2023-11-22", "n_dates_done": 135, "n_dates_total": 199, "pct": 67.8391959798995, "timestamp": "2026-09-30T22:47:47.178453"}
+{"stage": "metrics_done", "date": "2023-11-29", "n_dates_done": 140, "n_dates_total": 199, "pct": 70.35175879396985, "timestamp": "2026-09-30T22:47:47.183331"}
+{"stage": "metrics_done", "date": "2023-12-06", "n_dates_done": 145, "n_dates_total": 199, "pct": 72.8643216080402, "timestamp": "2026-09-30T22:47:47.188019"}
+{"stage": "metrics_done", "date": "2023-12-13", "n_dates_done": 150, "n_dates_total": 199, "pct": 75.37688442211056, "timestamp": "2026-09-30T22:47:47.192787"}
+{"stage": "metrics_done", "date": "2023-12-20", "n_dates_done": 155, "n_dates_total": 199, "pct": 77.88944723618091, "timestamp": "2026-09-30T22:47:47.197403"}
+{"stage": "metrics_done", "date": "2023-12-27", "n_dates_done": 160, "n_dates_total": 199, "pct": 80.40201005025126, "timestamp": "2026-09-30T22:47:47.202046"}
+{"stage": "metrics_done", "date": "2024-01-04", "n_dates_done": 165, "n_dates_total": 199, "pct": 82.91457286432161, "timestamp": "2026-09-30T22:47:47.206836"}
+{"stage": "metrics_done", "date": "2024-01-11", "n_dates_done": 170, "n_dates_total": 199, "pct": 85.42713567839196, "timestamp": "2026-09-30T22:47:47.211680"}
+{"stage": "metrics_done", "date": "2024-01-18", "n_dates_done": 175, "n_dates_total": 199, "pct": 87.93969849246231, "timestamp": "2026-09-30T22:47:47.216523"}
+{"stage": "metrics_done", "date": "2024-01-25", "n_dates_done": 180, "n_dates_total": 199, "pct": 90.45226130653266, "timestamp": "2026-09-30T22:47:47.221171"}
+{"stage": "metrics_done", "date": "2024-02-01", "n_dates_done": 185, "n_dates_total": 199, "pct": 92.96482412060301, "timestamp": "2026-09-30T22:47:47.224669"}
+{"stage": "metrics_done", "date": "2024-02-08", "n_dates_done": 190, "n_dates_total": 199, "pct": 95.47738693467338, "timestamp": "2026-09-30T22:47:47.227914"}
+{"stage": "metrics_done", "date": "2024-02-23", "n_dates_done": 195, "n_dates_total": 199, "pct": 97.98994974874373, "timestamp": "2026-09-30T22:47:47.231245"}
+{"stage": "metrics_done", "date": "2024-02-29", "n_dates_done": 199, "n_dates_total": 199, "pct": 100.0, "timestamp": "2026-09-30T22:47:47.233941"}
+{"stage": "rebal_starting", "n_cycles": 3, "timestamp": "2026-09-30T22:47:47.322072"}

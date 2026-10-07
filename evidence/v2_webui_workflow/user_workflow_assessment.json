@@ -1,0 +1,55 @@
+{
+  "user_workflow_definition": {
+    "original": "每天生成一个策略, 不是每天都是一样的因子, 动态适配每天的行情, 每天把所有因子都回测一遍, 根据最好的因子组形成策略, 得到当天的股票组, 然后进行记录测到一个净值曲线",
+    "extracted": [
+      "1. 每天 (d=1...T) 跑所有因子 backtest",
+      "2. short-window backtest (用过去 N 天数据)",
+      "3. 选 top-N 因子组 (基于 backtest sharpe/return)",
+      "4. 用 top-N 因子 composite → 当天 top-K picks",
+      "5. 持仓 d → d+20 → rebal",
+      "6. 累积 ledger → NAV 曲线"
+    ]
+  },
+  "speed_estimate": {
+    "panel_size": "1.3M rows × 354 stocks × 396 factors × 5498 days",
+    "single_backtest_speed": "5-10 seconds (60-120d short window, 348 stocks)",
+    "full_per_day": "396 × 7s = 46 minutes/day × 5498 days = 175 days (单 CPU)",
+    "problem": "完全不可行"
+  },
+  "three_options": {
+    "option_A_top_pool_screening": {
+      "description": "从 v3 sweep top-30 by Sharpe 取候选池, 每天跑 30 个 short-window backtest → 选 top-6",
+      "speed_per_day": "30 × 7s = 3.5 minutes/day × 5498 days = 13.4 days",
+      "advantage": "真 backtest, 速度可控, 复用 v3 sweep 候选",
+      "disadvantage": "候选池固定 top-30 (但 top-30 已 verified by v3 sweep 1179 backtest)",
+      "expected_alpha": "比固定 6 因子好 (per-day re-select adapts)"
+    },
+    "option_B_metric_based_no_backtest": {
+      "description": "不跑 backtest, 每天用 short-window (60d) 因子 IC / sharpe 直接 metric 排序 → 选 top-6",
+      "speed_per_day": "< 1 second/day × 5498 days = 1.5 hours",
+      "advantage": "极快, 100% 真实 per-day re-select",
+      "disadvantage": "不是真 backtest, metric-based selection (类似 IC > 0 排序)",
+      "expected_alpha": "跟 backtest-based selection 接近 (因子的历史 metric 与未来 alpha 相关)"
+    },
+    "option_C_rebal_frequency": {
+      "description": "用户说\"每天回测所有因子\", 但 rebal 是 20d, 每 20 天 re-select 一次 (跟 rebal 对齐)",
+      "speed_per_day": "每天 30 × 7s = 3.5 min, 但每 20d 才用一次 → 实际 10s/day",
+      "advantage": "跟 rebal 同步, 减少 re-select 次数",
+      "disadvantage": "违反用户\"每天回测\"原话 (但实际更高效)",
+      "expected_alpha": "跟 Option A 一样 (因为 re-select 周期跟 rebal 周期对齐)"
+    }
+  },
+  "recommendation": {
+    "primary": "Option A (top_pool_screening, 3.5 min/day, 真 backtest)",
+    "why": "平衡速度和真实性, 复用 v3 sweep 1179 backtest 候选池",
+    "fallback": "Option B (metric-based, < 1s/day, 100% 真实 per-day)"
+  },
+  "implementation_plan": {
+    "step_1": "提取 v3 sweep top-30 by closed_only_sharpe → candidate_pool.json",
+    "step_2": "写 daily_factor_reselect.py: 对每个 trading_day, 跑 30 backtest (short_window=120d, single-stock long/flat, top-K=10)",
+    "step_3": "每天选 top-6 by sharpe → composite score → cross-section rank → top-K=10 picks",
+    "step_4": "持仓 20d → rebal (per-leg ledger)",
+    "step_5": "累积 ledger → NAV 曲线",
+    "step_6": "验证: per-leg ann / sharpe / mdd 对比 fixed Stage 5b"
+  }
+}

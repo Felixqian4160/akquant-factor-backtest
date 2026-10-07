@@ -1,0 +1,12 @@
+{"stage": "init", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:02:21.846975", "start_date": "2021-01-01", "end_date": "2024-12-31", "n_factors": 391, "bull_top_factors": 10, "bull_top_stocks": 10, "bull_min_votes": 2, "bull_ic_window": 20, "bear_lookback_sessions": 30, "bear_top_factors": 10, "bear_top_stocks": 10, "bear_min_votes": 3, "bear_min_factor_mean_return": 0.005, "bear_rebalance_sessions": 20, "lot_size": 100}
+{"stage": "regime_summary", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:02:22.067597", "regime_counts": {"bull_neutral": 613, "bear": 356}, "n_bear_rebalance_dates": 17}
+{"stage": "computing_rolling_ic", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:02:47.455648", "factors": 391, "window": 20, "fwd_days": 20}
+{"stage": "rolling_ic_done", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:02:51.866568", "duration_sec": 4.3991007804870605}
+{"stage": "top_bull_factors_per_day", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:02:51.884047", "n_rows": 9640}
+{"stage": "bull_picks_ready", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:03:47.941416", "picked_dates": 963}
+{"stage": "bear_picks_ready_v24c", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:03:48.176773", "rebalance_dates": 17, "picked_dates": 15}
+{"stage": "universe_ready", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:03:48.177334", "n_symbols": 344}
+{"stage": "data_ready", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:03:54.894789", "n_symbols": 344}
+{"stage": "akquant_start", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:03:54.894900"}
+{"stage": "akquant_done", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:04:35.680658"}
+{"stage": "done", "job_id": "v24c_4y_1790838138", "timestamp": "2026-10-01T15:04:36.423249", "final_value": 191311057.19420254, "final_return_pct": 91.31105719420253, "n_trades": 11982, "n_orders": 14461, "result_file": "evidence/daily_factor_reselect/pipeline_v24c/v24c_4y_1790838138/result.json"}

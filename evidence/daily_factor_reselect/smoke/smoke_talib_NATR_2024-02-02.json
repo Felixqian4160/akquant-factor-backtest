@@ -1,0 +1,14 @@
+{
+  "factor": "talib_NATR",
+  "date": "2024-02-02",
+  "window_days": 120,
+  "top_k": 10,
+  "elapsed_sec": 0.11671018600463867,
+  "metrics": {
+    "sharpe": -5.403014378685953,
+    "ann_return": -0.888144252417288,
+    "total_return": -0.15957939658774953,
+    "mdd": -0.31915879317549906,
+    "n_periods": 1
+  }
+}

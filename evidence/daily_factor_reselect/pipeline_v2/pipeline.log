@@ -1,0 +1,3 @@
+[2026-09-30T15:43:44.462636] start pipeline: 2010-01-01 ~ 2025-12-31 rebal=20d window=60d top_k=20 N_options=[5, 6, 7, 8, 9, 10]
+[2026-09-30T15:43:44.462945] loading panel...
+[2026-09-30T15:43:46.473356] panel loaded: 1298335 rows × 419 cols, 406 factors

@@ -1,0 +1,3 @@
+{"stage": "init", "job_id": "v12_smoke_1790810874", "timestamp": "2026-10-01T07:27:54.969019", "start_date": "2020-01-01", "end_date": "2020-02-29", "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 2, "min_stocks": 5, "max_stocks": 10, "min_hold_days": 5}
+{"stage": "panel_loaded", "job_id": "v12_smoke_1790810874", "timestamp": "2026-10-01T07:27:56.029058", "n_rows": 1298335, "n_cols": 419, "n_candidates": 23}
+{"stage": "dates_loaded", "job_id": "v12_smoke_1790810874", "timestamp": "2026-10-01T07:27:56.047339", "n_dates_in_range": 30}

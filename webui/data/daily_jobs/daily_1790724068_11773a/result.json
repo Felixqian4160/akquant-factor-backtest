@@ -1,0 +1,207 @@
+{
+  "job_id": "daily_1790724068_11773a",
+  "date_requested": "2024-02-02",
+  "date_used": "2024-02-02",
+  "factors": [
+    "talib_NATR",
+    "talib_TRANGE",
+    "gtja_gtja_159",
+    "gtja_gtja_149",
+    "gtja_gtja_144",
+    "mw_vol_20d"
+  ],
+  "top_k": 10,
+  "n_stocks_scored": 348,
+  "picks": [
+    {
+      "rank": 1,
+      "ts_code": "688256.SH",
+      "score": 0.9774,
+      "close": 108.49,
+      "open": 117.48,
+      "high": 117.98,
+      "low": 104.1,
+      "vol": 91139,
+      "factors": {
+        "talib_NATR": 8.128649,
+        "talib_TRANGE": 13.88,
+        "gtja_gtja_159": -1302.180029,
+        "gtja_gtja_149": 2.306927,
+        "gtja_gtja_144": 0.002784,
+        "mw_vol_20d": 3.713027
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 2,
+      "ts_code": "300502.SZ",
+      "score": 0.9582,
+      "close": 45.5,
+      "open": 45.45,
+      "high": 47.6,
+      "low": 44.37,
+      "vol": 487338,
+      "factors": {
+        "talib_NATR": 8.139714,
+        "talib_TRANGE": 3.23,
+        "gtja_gtja_159": -1087.728129,
+        "gtja_gtja_149": 2.560809,
+        "gtja_gtja_144": 0.002785,
+        "mw_vol_20d": 5.281843
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 3,
+      "ts_code": "300418.SZ",
+      "score": 0.9573,
+      "close": 29.89,
+      "open": 30.75,
+      "high": 31.76,
+      "low": 29.03,
+      "vol": 745519,
+      "factors": {
+        "talib_NATR": 9.512916,
+        "talib_TRANGE": 2.73,
+        "gtja_gtja_159": -1051.458994,
+        "gtja_gtja_149": 2.90425,
+        "gtja_gtja_144": 0.002819,
+        "mw_vol_20d": 5.566012
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 4,
+      "ts_code": "300394.SZ",
+      "score": 0.9534,
+      "close": 99.0,
+      "open": 98.51,
+      "high": 100.99,
+      "low": 95.23,
+      "vol": 166521,
+      "factors": {
+        "talib_NATR": 6.678743,
+        "talib_TRANGE": 5.76,
+        "gtja_gtja_159": -1121.70788,
+        "gtja_gtja_149": 2.216416,
+        "gtja_gtja_144": 0.002282,
+        "mw_vol_20d": 5.191392
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 5,
+      "ts_code": "688047.SH",
+      "score": 0.951,
+      "close": 75.82,
+      "open": 80.81,
+      "high": 82.0,
+      "low": 73.58,
+      "vol": 35952,
+      "factors": {
+        "talib_NATR": 7.187281,
+        "talib_TRANGE": 8.42,
+        "gtja_gtja_159": -1565.51699,
+        "gtja_gtja_149": 1.787315,
+        "gtja_gtja_144": 0.003358,
+        "mw_vol_20d": 3.216761
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 6,
+      "ts_code": "301236.SZ",
+      "score": 0.9476,
+      "close": 31.25,
+      "open": 32.9,
+      "high": 33.3,
+      "low": 30.29,
+      "vol": 463712,
+      "factors": {
+        "talib_NATR": 8.925247,
+        "talib_TRANGE": 3.01,
+        "gtja_gtja_159": -1372.428704,
+        "gtja_gtja_149": 1.774578,
+        "gtja_gtja_144": 0.003403,
+        "mw_vol_20d": 5.641747
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 7,
+      "ts_code": "300033.SZ",
+      "score": 0.9462,
+      "close": 112.5,
+      "open": 117.6,
+      "high": 118.96,
+      "low": 108.04,
+      "vol": 92546,
+      "factors": {
+        "talib_NATR": 6.391435,
+        "talib_TRANGE": 10.92,
+        "gtja_gtja_159": -1756.602631,
+        "gtja_gtja_149": 2.502479,
+        "gtja_gtja_144": 0.002427,
+        "mw_vol_20d": 3.869784
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 8,
+      "ts_code": "605117.SH",
+      "score": 0.9304,
+      "close": 68.89,
+      "open": 71.45,
+      "high": 72.45,
+      "low": 67.2,
+      "vol": 152944,
+      "factors": {
+        "talib_NATR": 8.238157,
+        "talib_TRANGE": 5.25,
+        "gtja_gtja_159": -1222.13022,
+        "gtja_gtja_149": 1.300288,
+        "gtja_gtja_144": 0.002635,
+        "mw_vol_20d": 5.201208
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 9,
+      "ts_code": "300803.SZ",
+      "score": 0.9289,
+      "close": 40.04,
+      "open": 42.55,
+      "high": 43.1,
+      "low": 39.0,
+      "vol": 136807,
+      "factors": {
+        "talib_NATR": 6.43529,
+        "talib_TRANGE": 4.1,
+        "gtja_gtja_159": -1735.778138,
+        "gtja_gtja_149": 1.959343,
+        "gtja_gtja_144": 0.002699,
+        "mw_vol_20d": 4.094607
+      },
+      "weight_pct": 10.0
+    },
+    {
+      "rank": 10,
+      "ts_code": "300759.SZ",
+      "score": 0.927,
+      "close": 19.56,
+      "open": 21.48,
+      "high": 21.6,
+      "low": 18.75,
+      "vol": 541808,
+      "factors": {
+        "talib_NATR": 7.309994,
+        "talib_TRANGE": 2.85,
+        "gtja_gtja_159": -1432.488103,
+        "gtja_gtja_149": 1.692118,
+        "gtja_gtja_144": 0.002785,
+        "mw_vol_20d": 3.781537
+      },
+      "weight_pct": 10.0
+    }
+  ]
+}

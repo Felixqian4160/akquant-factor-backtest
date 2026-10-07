@@ -1,0 +1,16 @@
+{"stage": "init", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:27.998596", "start_date": "2015-06-01", "end_date": "2016-06-01", "n_factors": 391, "fwd_days": 20, "bear_lookback_sessions": 30, "top_factors": 10, "top_stocks_per_factor": 10, "min_votes": 3, "min_stocks": 5, "max_stocks": 10, "bear_rebalance_sessions": 20, "min_factor_mean_return": 0.005, "lot_size": 100}
+{"stage": "bear_history_rows", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:28.289095", "rows": 38315, "bear_dates": 170}
+{"stage": "factor_returns_progress", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:28.564115", "completed": 50, "total": 391, "elapsed_sec": 0.27487707138061523}
+{"stage": "factor_returns_progress", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:28.834235", "completed": 100, "total": 391, "elapsed_sec": 0.5449986457824707}
+{"stage": "factor_returns_progress", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:29.090366", "completed": 150, "total": 391, "elapsed_sec": 0.8011293411254883}
+{"stage": "factor_returns_progress", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:29.355559", "completed": 200, "total": 391, "elapsed_sec": 1.0663223266601562}
+{"stage": "factor_returns_progress", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:29.624239", "completed": 250, "total": 391, "elapsed_sec": 1.3350024223327637}
+{"stage": "factor_returns_progress", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:29.885153", "completed": 300, "total": 391, "elapsed_sec": 1.595916509628296}
+{"stage": "factor_returns_progress", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:30.136345", "completed": 350, "total": 391, "elapsed_sec": 1.8471086025238037}
+{"stage": "factor_returns_ready", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:30.366734", "rows": 123886, "duration_sec": 2.0774948596954346}
+{"stage": "bear_picks_ready", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:30.621499", "rebalance_dates": 5, "picked_dates": 5}
+{"stage": "universe_ready", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:30.627776", "n_symbols": 35}
+{"stage": "data_ready", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:30.718581", "n_symbols": 35}
+{"stage": "akquant_start", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:30.718686"}
+{"stage": "akquant_done", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:31.091198"}
+{"stage": "done", "job_id": "v19best_2015H2_gushai", "timestamp": "2026-10-06T14:54:31.107840", "final_value": 131536320.9196525, "final_return_pct": 31.536320919652503, "n_trades": 45, "n_orders": 90, "result_file": "evidence/v19_best_cross_bear_20261006/v19best_2015H2_gushai/result.json"}

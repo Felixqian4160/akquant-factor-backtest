@@ -1,0 +1,57 @@
+{
+  "workflow_name": "Daily Factor Reselect",
+  "spec": {
+    "phase_1_historical": {
+      "description": "第一阶段: 跑历史全 396 因子 × 全 5498 天 short-window backtest",
+      "expected_duration": "175 days (单 CPU, 实际可并行加速)",
+      "output": "evidence/daily_factor_reselect/historical_factor_metrics.parquet (date, factor, sharpe, ann, mdd, return)"
+    },
+    "phase_2_incremental": {
+      "description": "第二阶段: 每天只跑 (today-1) 的 396 backtest",
+      "duration_per_day": "~46 minutes",
+      "output": "追加到 historical_factor_metrics"
+    },
+    "factor_selection": {
+      "description": "每天 re-select 因子组",
+      "candidates": "全 396 因子 (用户明确拒绝 30 候选池)",
+      "metric_ranking": "按 (sharpe + return) 综合排名",
+      "N_options": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "hard_filter": "前一天 (d-1) 必须正收益 (return > 0)",
+      "selection_method": "从过 filter 的因子选 top-N by metric"
+    },
+    "picks_generation": {
+      "description": "用选出的 N 因子 composite → cross-section rank → top-K=10 picks",
+      "K": 10,
+      "composite_method": "per-day cross-section percentile rank → average"
+    },
+    "execution": {
+      "rebal_days": 20,
+      "cost_bps_per_side": 25,
+      "slippage_bps": 10,
+      "initial_cash": 1000000
+    },
+    "ledger": {
+      "description": "累积 per-leg ledger → NAV 曲线",
+      "output": "evidence/daily_factor_reselect/nav_curve.parquet + ledger.json"
+    }
+  },
+  "verification_plan": {
+    "phase_1_smoke": "先跑 1 个 rebal cycle (~30 天 panel, 396 因子 × 30 天 = 11,880 backtests, ~22 小时) 验证 correctness",
+    "phase_2_metrics": "per-leg ann / sharpe / mdd 对比 fixed Stage 5b (+134% / 2.93 / 17.67%)",
+    "phase_3_production": "full panel 5498 天 (174 天单 CPU) - 分批跑"
+  },
+  "constraints_from_user": [
+    "跑全部 396 因子 (不预筛)",
+    "每次选 N ∈ {5,6,7,8,9,10} (6 个 N 都试)",
+    "根据因子收益排名 (不只是 sharpe)",
+    "至少前一天要是正收益 (hard filter)",
+    "第一次跑历史, 后面 incremental 只跑 (today-1)"
+  ]
+}

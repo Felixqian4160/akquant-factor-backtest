@@ -1,0 +1,17 @@
+{
+  "session_id": "paper_1790724023_128c22",
+  "latest_metrics": {
+    "closed_only_return_pct": 20.2477,
+    "total_return_pct": 23.0706,
+    "unrealized_pnl": 28229.0,
+    "sharpe_ratio": 0.73,
+    "max_drawdown_pct": 32.36,
+    "win_rate": 91.67,
+    "closed_trade_count": 12,
+    "annualized_pct": 20.2,
+    "initial_cash": 1000000.0,
+    "end_equity": 1230705.548
+  },
+  "n_trades": 12,
+  "updated_at": "2026-09-30T07:20:29.080484"
+}

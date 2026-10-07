@@ -1,0 +1,79 @@
+{
+  "lock_version": 1,
+  "locked_at": "2026-10-07T17:13:35+0800",
+  "description": "v34-lb20 factor-return voting strategy - production locked artifacts",
+  "scripts": {
+    "examples/build_picks_v34_factorrank.py": {
+      "sha256": "cb2e788b134255109a8204594c0c07fe6623b5be381a124e2095550c76ce7d4b",
+      "bytes": 11702
+    },
+    "examples/v41_run_akquant_v34.py": {
+      "sha256": "7619ae1290a934b330330a0dc160fd5cadb978845e90ea3e50515db65754ee75",
+      "bytes": 18182
+    },
+    "examples/stage_a_1_matrices_and_picks.py": {
+      "sha256": "4d60ad2ef3850eb6b52e4d5b52fe71086ef7c08d4909366363e65d000134abcb",
+      "bytes": 12616
+    },
+    "examples/stage_a_2_run_sims.py": {
+      "sha256": "fa70b90ab3bbb3393f06b08c3275370af0465904df39a3a11c133c92a62b9e09",
+      "bytes": 2122
+    },
+    "examples/stage5_picks_and_sims.py": {
+      "sha256": "eb5ecd077fb84ea09b803450b72672b022cfd57a0b5e76f264695778a63677ab",
+      "bytes": 7033
+    },
+    "examples/stage5_run_sims.py": {
+      "sha256": "8ec84f7c1a711951ed0d374fd4a27ba626d2c62c3a2702264165527f8a559b08",
+      "bytes": 2225
+    },
+    "examples/stage5_report.py": {
+      "sha256": "41334e7e3b66c098e1d3eadc48c862c7e2e76e0fb6dc2e3b5736eae0dfb88066",
+      "bytes": 12020
+    },
+    "examples/diag_split_mechanism.py": {
+      "sha256": "0f161181e96d54468c6770dd0639946c4efca3e3b2b435cf4bbfdaca84ed6998",
+      "bytes": 3452
+    },
+    "examples/derive_corporate_actions_local.py": {
+      "sha256": "6745588c3a682c9f52a4b9ace20d5d7e9f8d1ee887ab7490794e1454b4b69265",
+      "bytes": 7925
+    }
+  },
+  "artifacts": {
+    "data/wavehunter_hs300_v34_adj_20261007.parquet": {
+      "sha256": "6b5b730055b675a5aec70f4fd4c84bfc2aa651e2aaaa505d693d8869e301253e",
+      "bytes": 2974864694
+    },
+    "evidence/stage_a_20261007/matrix_v34_ADJ.parquet": {
+      "sha256": "c8843a2a27d7836f345662f3f1b9226d92893e7eb1b923dd8f64a738207cf857",
+      "bytes": 17665023
+    },
+    "evidence/v34_adj_20261007/corporate_actions_derived.parquet": {
+      "sha256": "ffb3611bf7f88a93c458b8c88fead3134da653d1b6db5f85a2ca7361798cbf35",
+      "bytes": 134339
+    },
+    "evidence/causal_zigzag_router_20261006/router_map.json": {
+      "sha256": "2af38efc15f3fd0cbc3098646e229d4a555b8635ce9099ed0d5538055e476fc2",
+      "bytes": 156172
+    },
+    "STRATEGIES/v34_lb20_factor_return_voting.md": {
+      "sha256": "cd5bd201aa6beadc57ea8776df365c9aa26e43dbba1427d662416c6bb011af5d",
+      "bytes": 8373
+    },
+    "SYSTEM_VERIFY.py": {
+      "sha256": "e7299d6d0d6439a2d801872baf5ecb69eb9e56eba33db1f42f6891ccfaffd5c3",
+      "bytes": 1647
+    },
+    "system.sh": {
+      "sha256": "dce4b577d78c3c1cbb1a0d22ea42eb3b0aa1dac93affb9d2933850272a2a5e18",
+      "bytes": 2428
+    }
+  },
+  "ev_dirs": [
+    "evidence/stage_a_20261007",
+    "evidence/stage5_20261007",
+    "evidence/v34_adj_20261007",
+    "evidence/causal_zigzag_router_20261006"
+  ]
+}
