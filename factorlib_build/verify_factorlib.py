@@ -20,7 +20,7 @@ import polars as pl
 LIB = Path(__file__).resolve().parent.parent / "factorlib"
 sys.path.insert(0, str(LIB.parent))
 
-GROUPS = {"alpha": 107, "gtja": 191, "talib": 77, "academic": 22, "github": 15}
+GROUPS = {"alpha": 107, "gtja": 177, "talib": 77, "academic": 22, "github": 15}
 
 
 def build_synthetic_panel() -> tuple[pl.DataFrame, int]:

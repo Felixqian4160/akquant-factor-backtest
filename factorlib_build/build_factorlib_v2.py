@@ -9,6 +9,11 @@ Run order (see REGENERATE.sh):
 
 The wipe step is guarded: OUT must end with "factorlib".
 
+Deduplication (2026-10-10): 14 GTJA191 modules are bit-exact duplicates of
+Alpha101 modules on the v34 panel (see
+evidence/audit_lookahead_20261010/v34_exact_dups.json). One implementation per
+formula is kept — the alpha side — so the GTJA group ships 177 modules.
+
 Dependency carrying:
 - Module-level private helpers referenced by a factor (e.g. `_abs`,
   `_stock_row_index`, `_bool_lt_signed`) are carried into the emitted file,
@@ -26,6 +31,15 @@ from pathlib import Path
 
 SRC = Path("/media/felix/f/quant/aurumq-rl/quant_workflow/src/aurumq_rl/factors")
 OUT = Path("/media/felix/f/quant/akquant-factor-backtest/factorlib")
+
+# 2026-10-10: exact duplicates removed — each module below is bit-identical to the
+# Alpha101 module on the v34 panel (see
+# evidence/audit_lookahead_20261010/v34_exact_dups.json); the alpha side is kept.
+DROP_DUPLICATES = {
+    "gtja_007", "gtja_013", "gtja_016", "gtja_042", "gtja_083", "gtja_086",
+    "gtja_095", "gtja_099", "gtja_104", "gtja_105", "gtja_107", "gtja_120",
+    "gtja_139", "gtja_184",
+}
 
 
 def top_functions(path: Path) -> list[ast.FunctionDef]:
@@ -123,6 +137,8 @@ def build_group(group: str, source_dir: Path, out_dir: Path,
         for fn in top_functions(path):
             if not (fn.name.startswith("alpha") or fn.name.startswith("gtja")):
                 continue
+            if fn.name in DROP_DUPLICATES:
+                continue
             write_factor_file(out_dir / f"{fn.name}.py", group, path, fn, ops, ops_module, funcs)
             names.append(fn.name)
             count += 1
@@ -158,7 +174,7 @@ def main() -> None:
         '"""107 standalone WorldQuant Alpha101 factor modules."""\n'
     )
     (OUT / "gtja" / "__init__.py").write_text(
-        '"""191 standalone GTJA191 factor modules."""\n'
+        '"""177 standalone GTJA191 factor modules (14 exact duplicates of Alpha101 factors removed)."""\n'
     )
     (OUT / "__init__.py").write_text('''"""factorlib: standalone Alpha101 and GTJA191 formula library.
 
@@ -168,7 +184,7 @@ Every factor is one module with one public entry point:
 
 The library does not import aurumq_rl. Alpha101 and GTJA191 operators remain
 separate because same-named operators can have different semantics.
-"""
+""",
 ''')
 
     manifest = {
@@ -177,6 +193,13 @@ separate because same-named operators can have different semantics.
         "alpha_count": alpha_n,
         "gtja_count": gtja_n,
         "total_count": alpha_n + gtja_n,
+        "dropped_duplicates": sorted(DROP_DUPLICATES),
+        "dropped_note": (
+            "14 GTJA191 modules removed as bit-exact duplicates of Alpha101 "
+            "factors (verified on the v34 panel, 2026-10-10; see "
+            "evidence/audit_lookahead_20261010/v34_exact_dups.json). "
+            "Alpha side kept; formulas remain recoverable from the aurumq_rl source."
+        ),
         "alpha_names": alpha_names,
         "gtja_names": gtja_names,
         "operator_modules": [

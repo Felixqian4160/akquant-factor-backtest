@@ -1,0 +1,26 @@
+duplicate pair check (before deletion), 2026-10-10
+
+alpha/alpha003.py vs gtja/gtja_105.py: compute_body_identical=False
+alpha/alpha006.py vs gtja/gtja_139.py: compute_body_identical=False
+alpha/alpha011.py vs gtja/gtja_007.py: compute_body_identical=False
+alpha/alpha013.py vs gtja/gtja_099.py: compute_body_identical=False
+alpha/alpha016.py vs gtja/gtja_083.py: compute_body_identical=False
+alpha/alpha020.py vs gtja/gtja_107.py: compute_body_identical=False
+alpha/alpha022.py vs gtja/gtja_104.py: compute_body_identical=False
+alpha/alpha037.py vs gtja/gtja_184.py: compute_body_identical=False
+alpha/alpha040.py vs gtja/gtja_042.py: compute_body_identical=False
+alpha/alpha041.py vs gtja/gtja_013.py: compute_body_identical=False
+alpha/alpha042.py vs gtja/gtja_120.py: compute_body_identical=False
+alpha/alpha046.py vs gtja/gtja_086.py: compute_body_identical=False
+alpha/alpha050.py vs gtja/gtja_016.py: compute_body_identical=False
+github/alpha191_095.py vs gtja/gtja_095.py: compute_body_identical=False
+
+summary: 0/14 pairs have identical compute bodies (text-level); value-level bit-identity already proven on the v34 panel (v34_exact_dups.json)
+
+--- clarification (methodology, 2026-10-10) ---
+The two libraries implement the same formula independently (separate op
+namespaces alpha101_ops / gtja191_ops), so compute-body TEXT differs
+(docstrings, aliases, op names). Dedup criterion = (1) same formula AND
+(2) bit-identical VALUES on the v34 panel (v34_exact_dups.json: 15 groups,
+max|diff| = 0.00). Example: alpha003 -1*correlation(rank(open), rank(volume), 10)
+  === gtja_105 -1*CORR(RANK(OPEN), RANK(VOLUME), 10).

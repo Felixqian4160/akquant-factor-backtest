@@ -56,3 +56,4 @@ __pycache__/
 # 7. fsdb panel build artifacts
 data/_superseded/
 factorlib_build/_v4_cache/
+evidence/v34_dedup_20261010/_cache/

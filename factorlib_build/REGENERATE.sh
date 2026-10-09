@@ -4,7 +4,8 @@
 #   bash REGENERATE.sh
 #
 # Library location : /media/felix/f/quant/akquant-factor-backtest/factorlib/
-# Groups           : alpha (107) + gtja (191) + talib (77) + academic (22) + github (15;
+# Groups           : alpha (107) + gtja (177; 14 exact duplicates of alpha-* removed
+#                    2026-10-10) + talib (77) + academic (22) + github (15;
 #                    accruals_sloan / gp_novymarx removed 2026-10-10 — no financial data source)
 #
 # Steps (order matters — step 1 wipes and rebuilds the library root):

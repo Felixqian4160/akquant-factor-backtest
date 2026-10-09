@@ -301,15 +301,16 @@ if __name__ == "__main__":
     github = build_github()
     manifest = {
         "alpha": 107,
-        "gtja": 191,
+        "gtja": 177,
         "talib_formula_outputs": len(talib),
         "academic": len(academic),
         "github": len(github),
-        "total_formula_modules": 107 + 191 + len(talib) + len(academic) + len(github),
+        "total_formula_modules": 107 + 177 + len(talib) + len(academic) + len(github),
         "removed_factors": {
             "accruals_sloan": "deleted 2026-10-10 — requires bps+netprofit_yoy; no financial data source",
             "gp_novymarx": "deleted 2026-10-10 — requires grossprofit_margin; no financial data source",
         },
+        "dropped_duplicates": "14 GTJA modules removed as bit-exact duplicates of alpha factors (2026-10-10; see factorlib/manifest.json)",
         "talib_names": talib,
         "academic_names": academic,
         "github_names": github,
