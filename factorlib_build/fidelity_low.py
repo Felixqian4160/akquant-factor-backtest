@@ -30,8 +30,10 @@ LOW_FACTORS = [
     "alpha_alpha078", "alpha_alpha097", "alpha_alpha088", "alpha_alpha089",
     # gtja
     "gtja_gtja_032", "gtja_gtja_064", "gtja_gtja_143", "gtja_gtja_090",
-    "gtja_gtja_036", "gtja_gtja_016", "gtja_gtja_083", "gtja_gtja_099",
-    "gtja_gtja_140", "gtja_gtja_101", "gtja_gtja_105", "gtja_gtja_141",
+    # NOTE (2026-10-10): gtja_016 / gtja_083 / gtja_099 / gtja_105 removed —
+    # bit-exact duplicates of alpha_003 / alpha_016 / alpha_013 / alpha_011
+    # (see evidence/audit_lookahead_20261010/v34_exact_dups.json).
+    "gtja_gtja_036", "gtja_gtja_140", "gtja_gtja_101", "gtja_gtja_141",
     "gtja_gtja_074", "gtja_gtja_130", "gtja_gtja_119", "gtja_gtja_138",
     "gtja_gtja_179",
     # academic
@@ -85,12 +87,8 @@ MODULE = {
     "gtja_gtja_143": ("gtja", "gtja_143"),
     "gtja_gtja_090": ("gtja", "gtja_090"),
     "gtja_gtja_036": ("gtja", "gtja_036"),
-    "gtja_gtja_016": ("gtja", "gtja_016"),
-    "gtja_gtja_083": ("gtja", "gtja_083"),
-    "gtja_gtja_099": ("gtja", "gtja_099"),
     "gtja_gtja_140": ("gtja", "gtja_140"),
     "gtja_gtja_101": ("gtja", "gtja_101"),
-    "gtja_gtja_105": ("gtja", "gtja_105"),
     "gtja_gtja_141": ("gtja", "gtja_141"),
     "gtja_gtja_074": ("gtja", "gtja_074"),
     "gtja_gtja_130": ("gtja", "gtja_130"),
