@@ -1,0 +1,155 @@
+{
+ "source": "/media/felix/f/quant/akquant-factor-backtest/data/wavehunter_hs300_v34_adj_20261007.parquet",
+ "output": "/media/felix/f/quant/akquant-factor-backtest/data/wavehunter_hs300_v34_dedup_20261010.parquet",
+ "built_at": "2026-10-10 07:32:56",
+ "criterion": "exact duplicate only (values/formula identical; NOT correlation-based)",
+ "n_cols_before": 461,
+ "n_cols_after": 446,
+ "n_voting_factors_before": 428,
+ "n_voting_factors_after": 413,
+ "removed_columns": [
+  "grossprofit_margin",
+  "gtja_gtja_007",
+  "gtja_gtja_013",
+  "gtja_gtja_016",
+  "gtja_gtja_042",
+  "gtja_gtja_083",
+  "gtja_gtja_086",
+  "gtja_gtja_095",
+  "gtja_gtja_099",
+  "gtja_gtja_104",
+  "gtja_gtja_105",
+  "gtja_gtja_107",
+  "gtja_gtja_120",
+  "gtja_gtja_139",
+  "gtja_gtja_184"
+ ],
+ "groups": [
+  {
+   "members": [
+    "gp_novymarx",
+    "grossprofit_margin"
+   ],
+   "keep": "gp_novymarx",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha003",
+    "gtja_gtja_105"
+   ],
+   "keep": "alpha_alpha003",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha006",
+    "gtja_gtja_139"
+   ],
+   "keep": "alpha_alpha006",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha011",
+    "gtja_gtja_007"
+   ],
+   "keep": "alpha_alpha011",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha013",
+    "gtja_gtja_099"
+   ],
+   "keep": "alpha_alpha013",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha016",
+    "gtja_gtja_083"
+   ],
+   "keep": "alpha_alpha016",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha020",
+    "gtja_gtja_107"
+   ],
+   "keep": "alpha_alpha020",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha022",
+    "gtja_gtja_104"
+   ],
+   "keep": "alpha_alpha022",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha037",
+    "gtja_gtja_184"
+   ],
+   "keep": "alpha_alpha037",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha040",
+    "gtja_gtja_042"
+   ],
+   "keep": "alpha_alpha040",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha041",
+    "gtja_gtja_013"
+   ],
+   "keep": "alpha_alpha041",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha042",
+    "gtja_gtja_120"
+   ],
+   "keep": "alpha_alpha042",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha046",
+    "gtja_gtja_086"
+   ],
+   "keep": "alpha_alpha046",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha050",
+    "gtja_gtja_016"
+   ],
+   "keep": "alpha_alpha050",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha191_095",
+    "gtja_gtja_095"
+   ],
+   "keep": "alpha191_095",
+   "max_abs_diff": 0.0
+  }
+ ],
+ "all_nan_cols": [
+  "gtja_gtja_030",
+  "talib_MAX2",
+  "talib_MIN2"
+ ],
+ "note": "reference only: correlation clustering (|rho|>=0.95 -> 318 reps) lives in factor_dedup_groups.json; NOT used for this panel"
+}

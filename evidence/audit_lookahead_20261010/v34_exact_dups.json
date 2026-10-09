@@ -1,0 +1,132 @@
+{
+ "n_factors": 428,
+ "n_groups": 15,
+ "n_removed": 15,
+ "all_nan_cols": [
+  "gtja_gtja_030",
+  "talib_MAX2",
+  "talib_MIN2"
+ ],
+ "groups": [
+  {
+   "members": [
+    "gp_novymarx",
+    "grossprofit_margin"
+   ],
+   "keep": "gp_novymarx",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha003",
+    "gtja_gtja_105"
+   ],
+   "keep": "alpha_alpha003",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha006",
+    "gtja_gtja_139"
+   ],
+   "keep": "alpha_alpha006",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha011",
+    "gtja_gtja_007"
+   ],
+   "keep": "alpha_alpha011",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha013",
+    "gtja_gtja_099"
+   ],
+   "keep": "alpha_alpha013",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha016",
+    "gtja_gtja_083"
+   ],
+   "keep": "alpha_alpha016",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha020",
+    "gtja_gtja_107"
+   ],
+   "keep": "alpha_alpha020",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha022",
+    "gtja_gtja_104"
+   ],
+   "keep": "alpha_alpha022",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha037",
+    "gtja_gtja_184"
+   ],
+   "keep": "alpha_alpha037",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha040",
+    "gtja_gtja_042"
+   ],
+   "keep": "alpha_alpha040",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha041",
+    "gtja_gtja_013"
+   ],
+   "keep": "alpha_alpha041",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha042",
+    "gtja_gtja_120"
+   ],
+   "keep": "alpha_alpha042",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha046",
+    "gtja_gtja_086"
+   ],
+   "keep": "alpha_alpha046",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha_alpha050",
+    "gtja_gtja_016"
+   ],
+   "keep": "alpha_alpha050",
+   "max_abs_diff": 0.0
+  },
+  {
+   "members": [
+    "alpha191_095",
+    "gtja_gtja_095"
+   ],
+   "keep": "alpha191_095",
+   "max_abs_diff": 0.0
+  }
+ ]
+}
