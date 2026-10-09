@@ -1,0 +1,75 @@
+loaded: (1298335, 32) in 0s
+panel: (1298335, 32) in 0s
+contract frame: (1298335, 32)
+industry nulls: 8492
+
+=== Part 1: replay on v34 contract (exact-match test) ===
+factor                    n_both  n_diff>1e-6      max_abs  verdict
+alpha_alpha015           1297627            0          0.0  EXACT
+alpha_alpha096           1293733            0          0.0  EXACT
+alpha_alpha050           1243021            0          0.0  EXACT
+alpha_alpha027           1298335            0          0.0  EXACT
+alpha_alpha004           1295503            0          0.0  EXACT
+alpha_alpha016           1296919            0          0.0  EXACT
+alpha_alpha068           1298335            0          0.0  EXACT
+alpha_alpha081           1298335            0          0.0  EXACT
+alpha_alpha093           1283467            0          0.0  EXACT
+alpha_alpha013           1296919            0          0.0  EXACT
+alpha_alpha003           1287707            0          0.0  EXACT
+alpha_alpha092           1291609            0          0.0  EXACT
+alpha_alpha074           1298335            0          0.0  EXACT
+alpha_alpha075           1283081            0          0.0  EXACT
+alpha_alpha091           1287361            0          0.0  EXACT
+alpha_alpha076           1294087            0          0.0  EXACT
+alpha_alpha082           1293025            0          0.0  EXACT
+alpha_alpha062           1287715            0          0.0  EXACT
+alpha_alpha098           1269481            0          0.0  EXACT
+alpha_alpha069           1294087            0          0.0  EXACT
+alpha_alpha078           1273620            0          0.0  EXACT
+alpha_alpha097           1277449            0          0.0  EXACT
+alpha_alpha088           1295857            0          0.0  EXACT
+alpha_alpha089           1289131            0          0.0  EXACT
+gtja_gtja_032            1259854            0          0.0  EXACT
+gtja_gtja_064            1224562            0          0.0  EXACT
+gtja_gtja_143            1297981            0          0.0  EXACT
+gtja_gtja_090            1279974            0          0.0  EXACT
+gtja_gtja_036            1268781            0          0.0  EXACT
+gtja_gtja_016            1243021            0          0.0  EXACT
+gtja_gtja_083            1296919            0          0.0  EXACT
+gtja_gtja_099            1296919            0          0.0  EXACT
+gtja_gtja_140            1295857            0          0.0  EXACT
+gtja_gtja_101            1262533            0          0.0  EXACT
+gtja_gtja_105            1287707            0          0.0  EXACT
+gtja_gtja_141            1279022            0          0.0  EXACT
+gtja_gtja_074            1259901            0          0.0  EXACT
+gtja_gtja_130            1251245            0          0.0  EXACT
+gtja_gtja_119            1278865            0          0.0  EXACT
+gtja_gtja_138            1256563            0          0.0  EXACT
+gtja_gtja_179            1265123            0          0.0  EXACT
+p_pr                     1298335      1249816 5.7436398440  1249816 diff
+v_ep                     1241488            0          0.0  EXACT
+
+=== Part 1b: industry-neutral alphas on v34 contract ===
+alpha_alpha048           1209556            0 n_diff>1e-6
+alpha_alpha058           1293025            0 n_diff>1e-6
+alpha_alpha059           1289485            0 n_diff>1e-6
+alpha_alpha063           1277095            0 n_diff>1e-6
+alpha_alpha067           1193630            0 n_diff>1e-6
+alpha_alpha069           1294087            0 n_diff>1e-6
+alpha_alpha070           1286299            0 n_diff>1e-6
+alpha_alpha076           1294087            0 n_diff>1e-6
+alpha_alpha079           1193611            0 n_diff>1e-6
+alpha_alpha080           1295149            0 n_diff>1e-6
+alpha_alpha082           1293025            0 n_diff>1e-6
+alpha_alpha087           1296919            0 n_diff>1e-6
+alpha_alpha089           1289131            0 n_diff>1e-6
+alpha_alpha090           1296211            0 n_diff>1e-6
+alpha_alpha091           1287361            0 n_diff>1e-6
+alpha_alpha093           1283467            0 n_diff>1e-6
+alpha_alpha097           1277449            0 n_diff>1e-6
+alpha_alpha100           1286453            0 n_diff>1e-6
+
+=== Part 2: raw data diff (stockdb vs Tushare on matched rows) ===
+close    matched=1297510  median_rel_diff=0.00e+00  p99=0.00e+00  frac>1%=0.0026
+vol      matched=1297510  median_rel_diff=0.00e+00  p99=2.03e-06  frac>1%=0.0000
+amount   matched=1297510  median_rel_diff=2.03e-08  p99=1.09e-06  frac>1%=0.0000

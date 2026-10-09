@@ -1,0 +1,16 @@
+# Replay of the last unattributed low-rho factors on the v34 input contract
+# Command: python3.12 factorlib_build/replay_remaining.py
+# Run at 2026-10-10 00:02 CST (current library, post deletion + regen)
+
+loaded: (1298335, 32) in 0s
+panel: (1298335, 32) in 0s
+contract frame: (1298335, 32)
+
+factor                    n_both   n_diff      max_abs  verdict
+talib_MININDEX           1288069        0    0.000e+00  EXACT
+talib_MAXINDEX           1288069        0    0.000e+00  EXACT
+v_ep                     1241488        0    0.000e+00  EXACT
+
+# Conclusion: exact match => the v4-vs-v34 rank-corr gap for these factors
+# comes from input data source differences (stockdb vs Tushare adjustment /
+# industry / pe), not from the formula implementation.

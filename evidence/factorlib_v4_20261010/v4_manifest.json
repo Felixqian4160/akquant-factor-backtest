@@ -1,0 +1,20 @@
+{
+  "panel": "/media/felix/f/quant/akquant-factor-backtest/data/wavehunter_hs300_fsdb_v4_20261009_235409.parquet",
+  "shape": [
+    1388089,
+    551
+  ],
+  "base_panel": "/media/felix/f/quant/akquant-factor-backtest/data/wavehunter_hs300_fsdb_v3_20261009_001500.parquet",
+  "factor_count_expected": 412,
+  "factor_count_present": 412,
+  "removed_from_library": {
+    "github.accruals_sloan": "deleted 2026-10-10: requires bps+netprofit_yoy; no financial data source",
+    "github.gp_novymarx": "deleted 2026-10-10: requires grossprofit_margin; no financial data source"
+  },
+  "const_cols": [
+    "gtja_gtja_030"
+  ],
+  "hi_null_count": 0,
+  "hi_null_sample": [],
+  "built_at": "20261009_235409"
+}

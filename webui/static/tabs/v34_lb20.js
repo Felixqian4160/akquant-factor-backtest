@@ -116,7 +116,7 @@ async function _v34LoadJobs() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function _v34Boot() {
   if ($('v34VerifyBtn')) $('v34VerifyBtn').onclick = () => _v34Run('verify', {});
   if ($('v34PicksBtn')) $('v34PicksBtn').onclick = () => _v34Run('derive-picks', {});
   if ($('v34SimBtn')) $('v34SimBtn').onclick = () => _v34Run('run-sim', {offset: 0, window: 'oos'});
@@ -131,4 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
   _v34RefreshSystemStatus();
   _v34LoadJobs();
   setInterval(_v34RefreshSystemStatus, 30000);  // refresh status every 30s
-});
+}
+
+// Boot as soon as DOM is ready (handles both already-loaded and still-loading cases).
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', _v34Boot);
+} else {
+  _v34Boot();
+}

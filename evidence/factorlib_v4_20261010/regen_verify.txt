@@ -1,0 +1,12 @@
+# REGENERATE.sh — full one-click rebuild + verification
+# Run at 2026-10-10 00:01-00:02 CST (after deletion of accruals_sloan / gp_novymarx)
+# Command: bash factorlib_build/REGENERATE.sh
+
+{"alpha_count": 107, "gtja_count": 191, "total_count": 298}
+output=/media/felix/f/quant/akquant-factor-backtest/factorlib
+{"alpha": 107, "gtja": 191, "talib_formula_outputs": 77, "academic": 22, "github": 15, "total_formula_modules": 412}
+panel: (6000, 33)
+executed: 412 / 412
+VERIFY_PASS — all modules computed on real panel execution
+REGENERATE_OK
+regen exit: 0

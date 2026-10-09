@@ -52,3 +52,7 @@ __pycache__/
 # - evidence/v34_adj_20261007/{corporate_actions_derived.parquet,
 #     C_PLAN_REPORT.md, part2_summary.json} (audit + CA events)
 # - evidence/causal_zigzag_router_20261006/router_map.json (regime router)
+
+# 7. fsdb panel build artifacts
+data/_superseded/
+factorlib_build/_v4_cache/
