@@ -1,0 +1,113 @@
+{
+  "semantics": {
+    "cells": [
+      {
+        "date": "2005-04-04",
+        "factor": "alpha_alpha001",
+        "manual_recompute": 0.06102660018469002,
+        "matrix": 0.061026600184690034,
+        "abs_diff": 1.3877787807814457e-17
+      },
+      {
+        "date": "2005-04-04",
+        "factor": "gtja_gtja_002",
+        "manual_recompute": -0.12352144793950975,
+        "matrix": -0.12352144793950978,
+        "abs_diff": 2.7755575615628914e-17
+      },
+      {
+        "date": "2005-04-04",
+        "factor": "talib_RSI",
+        "manual_recompute": 0.040449349029852075,
+        "matrix": 0.040449349029852075,
+        "abs_diff": 0.0
+      },
+      {
+        "date": "2010-03-10",
+        "factor": "alpha_alpha001",
+        "manual_recompute": 0.10744010024048402,
+        "matrix": 0.10744010024048399,
+        "abs_diff": 2.7755575615628914e-17
+      },
+      {
+        "date": "2010-03-10",
+        "factor": "gtja_gtja_002",
+        "manual_recompute": 0.021290109483931764,
+        "matrix": 0.021290109483931764,
+        "abs_diff": 0.0
+      },
+      {
+        "date": "2010-03-10",
+        "factor": "talib_RSI",
+        "manual_recompute": 0.0632094452462727,
+        "matrix": 0.06320944524627273,
+        "abs_diff": 2.7755575615628914e-17
+      }
+    ],
+    "max_abs_diff": 2.7755575615628914e-17,
+    "note": "manual recompute of a forward window [t+1 -> t+21]; row t value settles at t+21"
+  },
+  "leaky_repro": {
+    "dates_compared": 195,
+    "dates_equal": 195,
+    "mismatch_dates": []
+  },
+  "overlap_offset0": {
+    "n_dates": 195,
+    "mean_factor_jaccard": 0.06923064322445129,
+    "mean_stock_jaccard": 0.1361390991850625
+  },
+  "score_diagnostics": [
+    {
+      "date": "2005-08-29",
+      "n_factors": 405,
+      "corr_leaky_vs_next20d": 0.1426916746372441,
+      "corr_causal_vs_next20d": -0.28456271497821733,
+      "corr_leaky_vs_settledpast": -0.5402840717436185
+    },
+    {
+      "date": "2007-09-19",
+      "n_factors": 406,
+      "corr_leaky_vs_next20d": 0.3529404304181454,
+      "corr_causal_vs_next20d": -0.1717380060567541,
+      "corr_leaky_vs_settledpast": 0.2891867750175883
+    },
+    {
+      "date": "2009-10-13",
+      "n_factors": 406,
+      "corr_leaky_vs_next20d": 0.4174994102364237,
+      "corr_causal_vs_next20d": 0.24912022330298422,
+      "corr_leaky_vs_settledpast": 0.10120005223665302
+    },
+    {
+      "date": "2011-11-01",
+      "n_factors": 424,
+      "corr_leaky_vs_next20d": 0.2098932911735738,
+      "corr_causal_vs_next20d": -0.04336635713597502,
+      "corr_leaky_vs_settledpast": -0.14269339000181874
+    },
+    {
+      "date": "2013-11-27",
+      "n_factors": 424,
+      "corr_leaky_vs_next20d": 0.3221999265461152,
+      "corr_causal_vs_next20d": 0.07333768660391896,
+      "corr_leaky_vs_settledpast": 0.09349773490466741
+    },
+    {
+      "date": "2015-12-14",
+      "n_factors": 424,
+      "corr_leaky_vs_next20d": 0.4559065103202711,
+      "corr_causal_vs_next20d": -0.012247365656731159,
+      "corr_leaky_vs_settledpast": 0.05939606208233909
+    },
+    {
+      "date": "2017-12-28",
+      "n_factors": 424,
+      "corr_leaky_vs_next20d": 0.2218375689873733,
+      "corr_causal_vs_next20d": 0.04280748490601674,
+      "corr_leaky_vs_settledpast": 0.2761202300851348
+    }
+  ],
+  "causal_offset0_dates": 195,
+  "leaky_offset0_dates": 195
+}

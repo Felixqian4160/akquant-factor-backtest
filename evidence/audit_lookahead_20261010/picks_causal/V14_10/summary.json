@@ -1,0 +1,7 @@
+{
+  "tag": "V14_10",
+  "mode": "causal_settled_lag21",
+  "window": "score = mean(diff[i-41:i-21]) \u2014 fully settled at decision i",
+  "n_rebalances": 194,
+  "avg_n_stocks": 8.29896907216495
+}
