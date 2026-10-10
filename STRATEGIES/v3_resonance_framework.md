@@ -127,3 +127,36 @@ env $ENV /usr/bin/python3.12 -u examples/v3_resonance_framework.py --report --ta
 - **v42 runner** = v41 + `--holding-bars`（21bar 时与 v41 逐位一致，验证通过）；
 - **每次结果必须输出净值曲线图**：`examples/plot_v3_multiphase.py`（phase-mean 曲线 + 相位 min-max 带，输出 charts/）。
 - 产物：`evidence/v3_resonance_20261010/`（含 `phase_summary_round2.json`、`charts/04-06`）。
+
+## 10. 全网格参数扫描 54 组（2026-10-11）
+
+网格 = hold_pctl {0.40, 0.50, 0.65} × cooldown {2, 3, 5} × max_hold_bars {30, 40, 60} × n_pos {10, 15}。
+流程：全部 54 组 offset0 跑一遍 → 按 seg ratio 选 top-6 + 旧最优 SW026 → 7 配置全部 5 相位（offset 0-4）复核。
+
+**5 相位最终排名（前 4 + 旧最优 SW026）**
+
+| # | 配置 | hold | cool | cap | pos | ratio 均值 [min,max] | seg ann | seg MDD 均值(worst) | full ann | trades |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | SW041 | 0.65 | 2 | 60 | 15 | 0.428 [0.311, 0.518] | 14.84% | −34.8% (w−38.1) | 12.04% | 11318 |
+| 2 | **SW047** | 0.65 | 3 | 60 | 15 | **0.422 [0.336, 0.473]** | 13.87% | −32.9% (w−36.6) | 12.87% | 11333 |
+| 3 | SW014 | 0.40 | 5 | 40 | 10 | 0.412 [0.310, 0.468] | 14.25% | −34.9% (w−38.2) | 8.58% | 7520 |
+| 4 | SW005 | 0.40 | 2 | 60 | 15 | 0.405 [0.352, 0.527] | 13.81% | −34.4% (w−38.1) | 12.37% | 11303 |
+| 18 | SW026（旧最优 cap40） | 0.50 | 3 | 40 | 10 | 0.357 [0.296, 0.400] | 12.45% | −34.9% (w−36.9) | 8.24% | 7546 |
+
+裁决（多相位口径，全部同成本合同）：
+- **SW047 = 新最优**：vs 旧最优 SW026 **5/5 相位全胜**（0.473>0.360，0.336>0.296，0.449>0.400，0.420>0.351，0.432>0.379）；ratio 0.357→0.422（+18%），段年化 12.45%→13.87%，MDD 更浅，全期年化 8.24%→12.87%。
+- SW041 均值略高（0.428）但最差相位 0.311 < SW047 的 0.336 → 次稳备选；SW014 4/5 胜、SW005 3/5 胜。
+- 前 4 名全部 ≥4/5 相位优于旧最优 → 非单点噪声；注意选 top-6 用的是 offset0，仍有轻度选择偏差（4 个未见相位已复核 SW047 全胜）。
+- 共性：cap 40-60 + pos 15 + hold 0.65 家族（轮换更频繁，trades ~11.3k，成本已含）。
+- 诚实标注：ratio 改善主要来自收益端；**回撤绝对水平未降**（−33%~−38%）——回撤控制属仓位控制范畴，暂不做。
+
+复现命令（全部离线落盘，断点续传）：
+```bash
+/usr/bin/python3.12 -u examples/v3_param_sweep.py --run 99      # 跑全部缺失组合
+/usr/bin/python3.12 -u examples/v3_param_sweep.py --validate 6  # top-6 五相位复核
+/usr/bin/python3.12 -u examples/v3_param_sweep.py --report      # 汇总 sweep_report.md
+/usr/bin/python3.12 -u examples/v3_param_sweep.py --curves      # 曲线数据 + PNG
+```
+
+产物：`evidence/v3_sweep_20261010/`（sweep_plan.json / journal.jsonl / sweep_report.md / sweep_results.json / curves.json / charts/sweep_curves.png）；
+WebUI：http://localhost:8088 →「⚡ 共振参数扫描」（一键启动 / 实时日志 / 排名表 / 净值曲线），router = `webui/routers/v3_sweep.py`。

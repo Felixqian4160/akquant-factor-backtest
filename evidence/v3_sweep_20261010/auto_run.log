@@ -5,3 +5,108 @@ AUTO_RUN_START 2026年 10月 11日 星期日 05:40:49 CST
 [05:46:30] [13/54] SW012 {'hold_pctl': 0.4, 'cooldown': 5, 'max_hold_bars': 30, 'n_pos': 10} -> seg 13.23% mdd -38.2% ratio 0.346 (78s)
 [05:48:27] [14/54] SW013 {'hold_pctl': 0.4, 'cooldown': 5, 'max_hold_bars': 30, 'n_pos': 15} -> seg 10.61% mdd -35.8% ratio 0.296 (117s)
 [05:49:42] [15/54] SW014 {'hold_pctl': 0.4, 'cooldown': 5, 'max_hold_bars': 40, 'n_pos': 10} -> seg 14.10% mdd -30.1% ratio 0.468 (75s)
+[05:51:27] [16/54] SW015 {'hold_pctl': 0.4, 'cooldown': 5, 'max_hold_bars': 40, 'n_pos': 15} -> seg 12.00% mdd -36.0% ratio 0.334 (105s)
+[05:52:32] [17/54] SW016 {'hold_pctl': 0.4, 'cooldown': 5, 'max_hold_bars': 60, 'n_pos': 10} -> seg 11.71% mdd -33.9% ratio 0.345 (64s)
+[05:54:06] [18/54] SW017 {'hold_pctl': 0.4, 'cooldown': 5, 'max_hold_bars': 60, 'n_pos': 15} -> seg 13.01% mdd -33.5% ratio 0.389 (94s)
+[05:55:23] [19/54] SW018 {'hold_pctl': 0.5, 'cooldown': 2, 'max_hold_bars': 30, 'n_pos': 10} -> seg 13.66% mdd -35.1% ratio 0.389 (77s)
+[05:57:11] [20/54] SW019 {'hold_pctl': 0.5, 'cooldown': 2, 'max_hold_bars': 30, 'n_pos': 15} -> seg 11.79% mdd -36.7% ratio 0.321 (108s)
+[05:58:17] [21/54] SW020 {'hold_pctl': 0.5, 'cooldown': 2, 'max_hold_bars': 40, 'n_pos': 10} -> seg 11.60% mdd -38.2% ratio 0.304 (67s)
+[05:59:57] [22/54] SW021 {'hold_pctl': 0.5, 'cooldown': 2, 'max_hold_bars': 40, 'n_pos': 15} -> seg 12.77% mdd -35.1% ratio 0.364 (99s)
+[06:00:57] [23/54] SW022 {'hold_pctl': 0.5, 'cooldown': 2, 'max_hold_bars': 60, 'n_pos': 10} -> seg 11.73% mdd -40.8% ratio 0.288 (60s)
+[06:02:24] [24/54] SW023 {'hold_pctl': 0.5, 'cooldown': 2, 'max_hold_bars': 60, 'n_pos': 15} -> seg 16.67% mdd -32.0% ratio 0.520 (87s)
+[06:03:42] [25/54] SW024 {'hold_pctl': 0.5, 'cooldown': 3, 'max_hold_bars': 30, 'n_pos': 10} -> seg 11.20% mdd -36.3% ratio 0.308 (78s)
+[06:05:27] [26/54] SW025 {'hold_pctl': 0.5, 'cooldown': 3, 'max_hold_bars': 30, 'n_pos': 15} -> seg 11.39% mdd -35.9% ratio 0.317 (106s)
+[06:07:13] [28/54] SW027 {'hold_pctl': 0.5, 'cooldown': 3, 'max_hold_bars': 40, 'n_pos': 15} -> seg 10.88% mdd -34.0% ratio 0.320 (105s)
+[06:08:11] [29/54] SW028 {'hold_pctl': 0.5, 'cooldown': 3, 'max_hold_bars': 60, 'n_pos': 10} -> seg 8.89% mdd -39.0% ratio 0.228 (59s)
+[06:09:43] [30/54] SW029 {'hold_pctl': 0.5, 'cooldown': 3, 'max_hold_bars': 60, 'n_pos': 15} -> seg 12.06% mdd -34.0% ratio 0.355 (91s)
+[06:11:02] [31/54] SW030 {'hold_pctl': 0.5, 'cooldown': 5, 'max_hold_bars': 30, 'n_pos': 10} -> seg 12.70% mdd -37.9% ratio 0.335 (79s)
+[06:12:53] [32/54] SW031 {'hold_pctl': 0.5, 'cooldown': 5, 'max_hold_bars': 30, 'n_pos': 15} -> seg 9.74% mdd -37.2% ratio 0.262 (111s)
+[06:14:06] [33/54] SW032 {'hold_pctl': 0.5, 'cooldown': 5, 'max_hold_bars': 40, 'n_pos': 10} -> seg 13.36% mdd -31.2% ratio 0.429 (72s)
+[06:16:03] [34/54] SW033 {'hold_pctl': 0.5, 'cooldown': 5, 'max_hold_bars': 40, 'n_pos': 15} -> seg 12.72% mdd -35.7% ratio 0.356 (118s)
+[06:17:05] [35/54] SW034 {'hold_pctl': 0.5, 'cooldown': 5, 'max_hold_bars': 60, 'n_pos': 10} -> seg 11.07% mdd -31.8% ratio 0.348 (62s)
+[06:18:40] [36/54] SW035 {'hold_pctl': 0.5, 'cooldown': 5, 'max_hold_bars': 60, 'n_pos': 15} -> seg 13.65% mdd -34.7% ratio 0.394 (95s)
+[06:19:57] [37/54] SW036 {'hold_pctl': 0.65, 'cooldown': 2, 'max_hold_bars': 30, 'n_pos': 10} -> seg 14.69% mdd -36.5% ratio 0.402 (77s)
+[06:21:46] [38/54] SW037 {'hold_pctl': 0.65, 'cooldown': 2, 'max_hold_bars': 30, 'n_pos': 15} -> seg 12.22% mdd -34.4% ratio 0.355 (109s)
+[06:22:55] [39/54] SW038 {'hold_pctl': 0.65, 'cooldown': 2, 'max_hold_bars': 40, 'n_pos': 10} -> seg 10.65% mdd -40.2% ratio 0.265 (69s)
+[06:24:38] [40/54] SW039 {'hold_pctl': 0.65, 'cooldown': 2, 'max_hold_bars': 40, 'n_pos': 15} -> seg 12.65% mdd -37.2% ratio 0.340 (104s)
+[06:25:38] [41/54] SW040 {'hold_pctl': 0.65, 'cooldown': 2, 'max_hold_bars': 60, 'n_pos': 10} -> seg 13.96% mdd -38.7% ratio 0.360 (60s)
+[06:27:07] [42/54] SW041 {'hold_pctl': 0.65, 'cooldown': 2, 'max_hold_bars': 60, 'n_pos': 15} -> seg 16.60% mdd -32.0% ratio 0.518 (88s)
+[06:28:23] [43/54] SW042 {'hold_pctl': 0.65, 'cooldown': 3, 'max_hold_bars': 30, 'n_pos': 10} -> seg 12.08% mdd -35.3% ratio 0.342 (77s)
+[06:30:12] [44/54] SW043 {'hold_pctl': 0.65, 'cooldown': 3, 'max_hold_bars': 30, 'n_pos': 15} -> seg 12.07% mdd -35.2% ratio 0.343 (108s)
+[06:31:20] [45/54] SW044 {'hold_pctl': 0.65, 'cooldown': 3, 'max_hold_bars': 40, 'n_pos': 10} -> seg 12.67% mdd -32.8% ratio 0.386 (68s)
+[06:33:09] [46/54] SW045 {'hold_pctl': 0.65, 'cooldown': 3, 'max_hold_bars': 40, 'n_pos': 15} -> seg 12.20% mdd -35.8% ratio 0.341 (109s)
+[06:34:12] [47/54] SW046 {'hold_pctl': 0.65, 'cooldown': 3, 'max_hold_bars': 60, 'n_pos': 10} -> seg 13.29% mdd -36.3% ratio 0.366 (63s)
+[06:35:42] [48/54] SW047 {'hold_pctl': 0.65, 'cooldown': 3, 'max_hold_bars': 60, 'n_pos': 15} -> seg 15.57% mdd -32.9% ratio 0.473 (90s)
+[06:37:00] [49/54] SW048 {'hold_pctl': 0.65, 'cooldown': 5, 'max_hold_bars': 30, 'n_pos': 10} -> seg 12.15% mdd -34.7% ratio 0.350 (78s)
+[06:38:52] [50/54] SW049 {'hold_pctl': 0.65, 'cooldown': 5, 'max_hold_bars': 30, 'n_pos': 15} -> seg 8.85% mdd -38.9% ratio 0.228 (112s)
+[06:40:08] [51/54] SW050 {'hold_pctl': 0.65, 'cooldown': 5, 'max_hold_bars': 40, 'n_pos': 10} -> seg 11.52% mdd -32.2% ratio 0.357 (76s)
+[06:41:53] [52/54] SW051 {'hold_pctl': 0.65, 'cooldown': 5, 'max_hold_bars': 40, 'n_pos': 15} -> seg 10.74% mdd -35.3% ratio 0.304 (105s)
+[06:42:56] [53/54] SW052 {'hold_pctl': 0.65, 'cooldown': 5, 'max_hold_bars': 60, 'n_pos': 10} -> seg 8.41% mdd -42.8% ratio 0.196 (63s)
+[06:44:27] [54/54] SW053 {'hold_pctl': 0.65, 'cooldown': 5, 'max_hold_bars': 60, 'n_pos': 15} -> seg 10.78% mdd -34.5% ratio 0.312 (92s)
+[06:44:27] batch done: 44 configs this call
+[06:44:28] validate: idx [5, 23, 41, 47, 14, 32, 26]
+[06:45:56]   SW005 o1: seg 12.85% ratio 0.352
+[06:47:26]   SW005 o2: seg 12.80% ratio 0.390
+[06:48:55]   SW005 o3: seg 12.73% ratio 0.388
+[06:50:22]   SW005 o4: seg 13.99% ratio 0.367
+[06:51:50]   SW023 o1: seg 12.65% ratio 0.336
+[06:53:18]   SW023 o2: seg 11.89% ratio 0.336
+[06:54:47]   SW023 o3: seg 11.80% ratio 0.342
+[06:56:13]   SW023 o4: seg 12.63% ratio 0.363
+[06:57:40]   SW041 o1: seg 11.06% ratio 0.311
+[06:59:05]   SW041 o2: seg 14.32% ratio 0.453
+[07:00:34]   SW041 o3: seg 13.39% ratio 0.363
+[07:01:57]   SW041 o4: seg 18.86% ratio 0.495
+[07:03:24]   SW047 o1: seg 10.86% ratio 0.336
+[07:04:52]   SW047 o2: seg 13.52% ratio 0.449
+[07:06:20]   SW047 o3: seg 13.60% ratio 0.420
+[07:07:54]   SW047 o4: seg 15.82% ratio 0.432
+[07:09:09]   SW014 o1: seg 16.40% ratio 0.440
+[07:10:25]   SW014 o2: seg 15.15% ratio 0.453
+[07:11:37]   SW014 o3: seg 13.78% ratio 0.387
+[07:12:46]   SW014 o4: seg 11.83% ratio 0.310
+[07:14:00]   SW032 o1: seg 15.80% ratio 0.440
+[07:15:12]   SW032 o2: seg 14.65% ratio 0.414
+[07:16:24]   SW032 o3: seg 12.78% ratio 0.362
+[07:17:33]   SW032 o4: seg 12.03% ratio 0.315
+[07:18:45]   SW026 o1: seg 10.75% ratio 0.296
+[07:19:56]   SW026 o2: seg 12.71% ratio 0.400
+[07:21:08]   SW026 o3: seg 12.32% ratio 0.351
+[07:22:16]   SW026 o4: seg 13.97% ratio 0.379
+[07:22:16] validate batch done
+# v3 参数扫描结果（收益/回撤比排名）
+
+| # | idx | params | 相位 | seg ann | seg MDD | ratio | full ann | trades |
+|---|---|---|---|---|---|---|---|---|
+| 1 | SW041 | {"hold_pctl": 0.65, "cooldown": 2, "max_hold_bars": 60, "n_pos": 15} | 5 | 14.84% | -34.8% (w-38.1%) | **0.428** | 12.04% | 11318 |
+| 2 | SW047 | {"hold_pctl": 0.65, "cooldown": 3, "max_hold_bars": 60, "n_pos": 15} | 5 | 13.87% | -32.9% (w-36.6%) | **0.422** | 12.87% | 11333 |
+| 3 | SW014 | {"hold_pctl": 0.4, "cooldown": 5, "max_hold_bars": 40, "n_pos": 10} | 5 | 14.25% | -34.9% (w-38.2%) | **0.412** | 8.58% | 7520 |
+| 4 | SW005 | {"hold_pctl": 0.4, "cooldown": 2, "max_hold_bars": 60, "n_pos": 15} | 5 | 13.81% | -34.4% (w-38.1%) | **0.405** | 12.37% | 11303 |
+| 5 | SW036 | {"hold_pctl": 0.65, "cooldown": 2, "max_hold_bars": 30, "n_pos": 10} | 1 | 14.69% | -36.5% | 0.402 | 9.94% | 7509 |
+| 6 | SW035 | {"hold_pctl": 0.5, "cooldown": 5, "max_hold_bars": 60, "n_pos": 15} | 1 | 13.65% | -34.7% | 0.394 | 10.85% | 11268 |
+| 7 | SW032 | {"hold_pctl": 0.5, "cooldown": 5, "max_hold_bars": 40, "n_pos": 10} | 5 | 13.73% | -35.2% (w-38.2%) | **0.392** | 8.87% | 7547 |
+| 8 | SW018 | {"hold_pctl": 0.5, "cooldown": 2, "max_hold_bars": 30, "n_pos": 10} | 1 | 13.66% | -35.1% | 0.389 | 8.84% | 7480 |
+| 9 | SW017 | {"hold_pctl": 0.4, "cooldown": 5, "max_hold_bars": 60, "n_pos": 15} | 1 | 13.01% | -33.5% | 0.389 | 11.84% | 11247 |
+| 10 | SW044 | {"hold_pctl": 0.65, "cooldown": 3, "max_hold_bars": 40, "n_pos": 10} | 1 | 12.67% | -32.8% | 0.386 | 8.11% | 7423 |
+| 11 | SW023 | {"hold_pctl": 0.5, "cooldown": 2, "max_hold_bars": 60, "n_pos": 15} | 5 | 13.13% | -34.9% (w-37.7%) | **0.379** | 12.22% | 11343 |
+| 12 | SW046 | {"hold_pctl": 0.65, "cooldown": 3, "max_hold_bars": 60, "n_pos": 10} | 1 | 13.29% | -36.3% | 0.366 | 11.36% | 7548 |
+| 13 | SW000 | {"hold_pctl": 0.4, "cooldown": 2, "max_hold_bars": 30, "n_pos": 10} | 1 | 13.63% | -37.5% | 0.364 | 9.09% | 7492 |
+| 14 | SW021 | {"hold_pctl": 0.5, "cooldown": 2, "max_hold_bars": 40, "n_pos": 15} | 1 | 12.77% | -35.1% | 0.364 | 7.83% | 11205 |
+| 15 | SW040 | {"hold_pctl": 0.65, "cooldown": 2, "max_hold_bars": 60, "n_pos": 10} | 1 | 13.96% | -38.7% | 0.360 | 10.72% | 7539 |
+| 16 | SW007 | {"hold_pctl": 0.4, "cooldown": 3, "max_hold_bars": 30, "n_pos": 15} | 1 | 12.09% | -33.7% | 0.359 | 5.34% | 10985 |
+| 17 | SW050 | {"hold_pctl": 0.65, "cooldown": 5, "max_hold_bars": 40, "n_pos": 10} | 1 | 11.52% | -32.2% | 0.357 | 8.37% | 7529 |
+| 18 | SW026 | {"hold_pctl": 0.5, "cooldown": 3, "max_hold_bars": 40, "n_pos": 10} | 5 | 12.45% | -34.9% (w-36.9%) | **0.357** | 8.24% | 7546 |
+| 19 | SW033 | {"hold_pctl": 0.5, "cooldown": 5, "max_hold_bars": 40, "n_pos": 15} | 1 | 12.72% | -35.7% | 0.356 | 7.96% | 11118 |
+| 20 | SW037 | {"hold_pctl": 0.65, "cooldown": 2, "max_hold_bars": 30, "n_pos": 15} | 1 | 12.22% | -34.4% | 0.355 | 7.58% | 11058 |
+| 21 | SW029 | {"hold_pctl": 0.5, "cooldown": 3, "max_hold_bars": 60, "n_pos": 15} | 1 | 12.06% | -34.0% | 0.355 | 10.17% | 11282 |
+| 22 | SW003 | {"hold_pctl": 0.4, "cooldown": 2, "max_hold_bars": 40, "n_pos": 15} | 1 | 13.00% | -37.1% | 0.350 | 7.53% | 11241 |
+| 23 | SW048 | {"hold_pctl": 0.65, "cooldown": 5, "max_hold_bars": 30, "n_pos": 10} | 1 | 12.15% | -34.7% | 0.350 | 8.02% | 7287 |
+| 24 | SW034 | {"hold_pctl": 0.5, "cooldown": 5, "max_hold_bars": 60, "n_pos": 10} | 1 | 11.07% | -31.8% | 0.348 | 7.70% | 7571 |
+| 25 | SW012 | {"hold_pctl": 0.4, "cooldown": 5, "max_hold_bars": 30, "n_pos": 10} | 1 | 13.23% | -38.2% | 0.346 | 7.59% | 7461 |
+| 26 | SW016 | {"hold_pctl": 0.4, "cooldown": 5, "max_hold_bars": 60, "n_pos": 10} | 1 | 11.71% | -33.9% | 0.345 | 8.76% | 7574 |
+| 27 | SW043 | {"hold_pctl": 0.65, "cooldown": 3, "max_hold_bars": 30, "n_pos": 15} | 1 | 12.07% | -35.2% | 0.343 | 5.96% | 10948 |
+| 28 | SW042 | {"hold_pctl": 0.65, "cooldown": 3, "max_hold_bars": 30, "n_pos": 10} | 1 | 12.08% | -35.3% | 0.342 | 5.58% | 7441 |
+| 29 | SW045 | {"hold_pctl": 0.65, "cooldown": 3, "max_hold_bars": 40, "n_pos": 15} | 1 | 12.20% | -35.8% | 0.341 | 7.80% | 11079 |
+| 30 | SW039 | {"hold_pctl": 0.65, "cooldown": 2, "max_hold_bars": 40, "n_pos": 15} | 1 | 12.65% | -37.2% | 0.340 | 7.83% | 11169 |
+[07:22:17] report -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_sweep_20261010/sweep_report.md + sweep_results.json
+AUTO_RUN_COMPLETE 2026年 10月 11日 星期日 07:22:17 CST exit=0
