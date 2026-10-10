@@ -48,6 +48,8 @@ def load_benchmarks():
     ix = ix[["d", "idx_close"]].rename(columns={"idx_close": "value"}).reset_index(drop=True)
     ew.to_csv(CH / "ew_nav.csv", index=False)
     ix.to_csv(CH / "hs300_nav.csv", index=False)
+    ew = ew[ew["d"] <= pd.Timestamp("2025-12-31")]
+    ix = ix[ix["d"] <= pd.Timestamp("2025-12-31")]
     return ew, ix
 
 
