@@ -44,6 +44,7 @@ AKQ = pathlib.Path("/media/felix/f/quant/akquant-factor-backtest")
 PANEL = AKQ / "data" / "wavehunter_hs300_v34_dedup_20261010.parquet"
 MAT = AKQ / "evidence" / "v34_dedup_20261010" / "matrix_v34_dedup_ADJ.parquet"
 RUNNER = AKQ / "examples" / "v41_run_akquant_v34.py"
+RUNNERS = {"v41": RUNNER, "v42": AKQ / "examples" / "v42_run_akquant_v34.py"}
 OUT = AKQ / "evidence" / "v3_resonance_20261010"
 CACHE = OUT / "_cache"
 PICKS = OUT / "picks"
@@ -57,6 +58,20 @@ DIR_WIN, LAG = 250, 21
 N_POS, MAX_GRID_AGE, COOLDOWN = 10, 4, 1
 FACTOR_BATCH = 20
 TAG = "V14_0"
+
+
+def _resolve_ws(windows=None):
+    if not windows:
+        return WS
+    return tuple(int(x) for x in str(windows).replace(" ", "").split(","))
+
+
+def _cache_path(res_mode, ws):
+    if res_mode == "any2" and ws == WS:
+        return CACHE / "votes_batches.npz"
+    if res_mode == "streak" and ws == WS:
+        return CACHE / "votes_streak.npz"
+    return CACHE / f"votes_{res_mode}_{'_'.join(map(str, ws))}.npz"
 
 
 def log(m):
@@ -88,14 +103,15 @@ def compute_dirs(M):
     return D
 
 
-def signals(max_batches, res_mode="any2"):
+def signals(max_batches, res_mode="any2", windows=None):
     factors, M, dates = load_matrix()
     T, F = M.shape
     OUT.mkdir(parents=True, exist_ok=True)
     CACHE.mkdir(parents=True, exist_ok=True)
     D = compute_dirs(M)
+    ws = _resolve_ws(windows)
     n_batches = (F + FACTOR_BATCH - 1) // FACTOR_BATCH
-    ck = CACHE / ("votes_batches.npz" if res_mode == "any2" else f"votes_{res_mode}.npz")
+    ck = _cache_path(res_mode, ws)
 
     bull = np.zeros((T, 0), dtype=np.int16)
     bear = np.zeros((T, 0), dtype=np.int16)
@@ -148,7 +164,7 @@ def signals(max_batches, res_mode="any2"):
             if res_mode == "any2":
                 upcnt = np.zeros((T, S), dtype=np.int8)
                 dncnt = np.zeros((T, S), dtype=np.int8)
-                for W in WS:
+                for W in ws:
                     num = P[W:] - P[:-W]
                     den = NP[W:] - NP[:-W]
                     with np.errstate(invalid="ignore", divide="ignore"):
@@ -159,7 +175,7 @@ def signals(max_batches, res_mode="any2"):
                 bear += (dncnt >= NEED_WIN).astype(np.int16)
             else:  # streak: >=1 adjacent window pair both up (10&20|20&40|40&60|60&120)
                 ups, downs = [], []
-                for W in WS:
+                for W in ws:
                     num = P[W:] - P[:-W]
                     den = NP[W:] - NP[:-W]
                     with np.errstate(invalid="ignore", divide="ignore"):
@@ -172,7 +188,7 @@ def signals(max_batches, res_mode="any2"):
                     downs.append(d)
                 su = np.zeros((T, S), dtype=bool)
                 sd = np.zeros((T, S), dtype=bool)
-                for i in range(len(WS) - 1):
+                for i in range(len(ws) - 1):
                     su |= ups[i] & ups[i + 1]
                     sd |= downs[i] & downs[i + 1]
                 bull += su.astype(np.int16)
@@ -194,12 +210,14 @@ def status():
 
 
 def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
-          bear_pctl=0.90, res_mode="any2", net_min_pctl=None, rank_by="bull", offset=0):
+          bear_pctl=0.90, res_mode="any2", net_min_pctl=None, rank_by="bull", offset=0,
+          max_hold_bars=20, windows=None):
     cool = int(cooldown)
     gstep = int(grid_step)
     off = int(offset)
-    age_cap = max(1, 20 // gstep)
-    ck = CACHE / ("votes_batches.npz" if res_mode == "any2" else f"votes_{res_mode}.npz")
+    ws = _resolve_ws(windows)
+    age_cap = max(1, int(max_hold_bars) // gstep)
+    ck = _cache_path(res_mode, ws)
     if not ck.exists():
         raise SystemExit("signals incomplete")
     z = np.load(ck)
@@ -269,9 +287,10 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
         stats["n_picks"].append(len(basket))
     # recompute survivor/new split per date for meta (light pass)
     contract = {
-        "framework": "v3_resonance", "windows": list(WS), "up_th": UP_TH, "down_th": DOWN_TH,
+        "framework": "v3_resonance", "up_th": UP_TH, "down_th": DOWN_TH,
         "need_win": NEED_WIN, "dir_window": DIR_WIN, "lag": LAG, "grid_step": gstep,
         "age_cap_grids": age_cap, "offset": off,
+        "max_hold_bars": int(max_hold_bars), "windows": list(ws),
         "n_pos": N_POS, "max_grid_age": MAX_GRID_AGE, "cooldown_grids": cool,
         "hold_pctl": hold_pctl, "bear_pctl": bear_pctl, "res_mode": res_mode,
         "net_min": NET_MIN, "rank_by": rank_by,
@@ -293,14 +312,16 @@ def result_path(tag=TAG):
     return SIMS / tag / "result.json"
 
 
-def run_sims(max_n, tag=TAG):
+def run_sims(max_n, tag=TAG, runner=None, holding_bars=0):
     if result_path(tag).exists():
         log("sim already exists")
         return
     t0 = time.time()
-    cmd = [sys.executable, "-u", str(RUNNER), "--tag", tag,
+    cmd = [sys.executable, "-u", str(runner or RUNNER), "--tag", tag,
            "--picks-base", str(PICKS), "--actions", "on", "--ca-mode", "all",
            "--prices", "raw", "--end", "2025-12-31", "--out-base", str(SIMS)]
+    if holding_bars:
+        cmd += ["--holding-bars", str(int(holding_bars))]
     subprocess.run(cmd, capture_output=True, text=True, cwd=str(AKQ))
     ok = result_path(tag).exists()
     log(f"sim: {'OK' if ok else 'FAIL'} ({time.time()-t0:.0f}s)")
@@ -372,17 +393,22 @@ def main():
     ap.add_argument("--net-min-pctl", type=float, default=None)
     ap.add_argument("--rank-by", choices=["bull", "net"], default="bull")
     ap.add_argument("--offset", type=int, default=0)
+    ap.add_argument("--max-hold-bars", type=int, default=20)
+    ap.add_argument("--windows", default="")
+    ap.add_argument("--runner", choices=["v41", "v42"], default="v41")
+    ap.add_argument("--holding-bars", type=int, default=0)
     ap.add_argument("--tag", default=TAG)
     args = ap.parse_args()
     if args.signals is not None:
-        signals(args.signals, args.res_mode)
+        signals(args.signals, args.res_mode, args.windows)
     elif args.status:
         status()
     elif args.build:
         build(args.hold_pctl, args.cooldown, args.tag, args.grid_step,
-              args.bear_pctl, args.res_mode, args.net_min_pctl, args.rank_by, args.offset)
+              args.bear_pctl, args.res_mode, args.net_min_pctl, args.rank_by, args.offset,
+              args.max_hold_bars, args.windows)
     elif args.run is not None:
-        run_sims(args.run, args.tag)
+        run_sims(args.run, args.tag, RUNNERS[args.runner], args.holding_bars)
     elif args.report:
         report(args.tag)
     else:

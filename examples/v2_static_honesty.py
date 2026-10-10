@@ -120,7 +120,7 @@ def build():
         picks, meta = {}, {}
         for rd in rebal:
             i = dpos[rd]
-            if arm == "static_2017":
+            if arm.startswith("static_2017"):
                 s, dr = set17, dirs17
             else:
                 s, dr = roll_set(i)
@@ -145,7 +145,7 @@ def build():
         outdir.mkdir(parents=True, exist_ok=True)
         (outdir / "picks.json").write_text(json.dumps(picks, ensure_ascii=False, indent=1))
         (outdir / "picks_meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1))
-        if arm == "static_roll250":
+        if arm.startswith("static_roll250"):
             log(f"[static_roll250] n_reselections={len(roll_cache)}")
         log(f"picks[{arm}]: {len(picks)} dates")
 
@@ -226,7 +226,13 @@ def main():
     ap.add_argument("--build", action="store_true")
     ap.add_argument("--run", type=int, metavar="N")
     ap.add_argument("--segments", action="store_true")
+    ap.add_argument("--offset", type=int, default=0)
+    ap.add_argument("--only-static", action="store_true")
     args = ap.parse_args()
+    global OFFSET, NEW_ARMS
+    OFFSET = int(args.offset)
+    arms = ["static_2017"] if args.only_static else ["static_2017", "static_roll250"]
+    NEW_ARMS = [a if OFFSET == 0 else f"{a}_o{OFFSET}" for a in arms]
     if args.build:
         build()
     elif args.run is not None:
