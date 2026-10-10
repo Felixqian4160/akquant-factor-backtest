@@ -26,6 +26,7 @@ from routers import (
     paper_trading,
     daily_factor_reselect,
     v34_lb20,
+    v3_sweep,
 )  # noqa: E402
 
 app = FastAPI(title="AKQuant v2 Workflow", version="0.1.0")
@@ -44,6 +45,7 @@ app.include_router(daily_strategy.router)
 app.include_router(paper_trading.router)
 app.include_router(daily_factor_reselect.router)
 app.include_router(v34_lb20.router)
+app.include_router(v3_sweep.router)
 
 
 @app.get("/health")

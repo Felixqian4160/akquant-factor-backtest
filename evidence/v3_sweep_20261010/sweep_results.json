@@ -1,0 +1,242 @@
+[
+ {
+  "idx": 5,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 2,
+   "max_hold_bars": 60,
+   "n_pos": 15
+  },
+  "n_phase": 1,
+  "seg_ann": 0.16673294730620514,
+  "seg_mdd": -0.31651809884311966,
+  "ratio_w1": 0.5267722380351,
+  "full_ann": 0.1236577662441043,
+  "full_mdd": 0.47597946687600756,
+  "trades": 11303.0
+ },
+ {
+  "idx": 0,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 2,
+   "max_hold_bars": 30,
+   "n_pos": 10
+  },
+  "n_phase": 1,
+  "seg_ann": 0.13626589534307576,
+  "seg_mdd": -0.3748206506163827,
+  "ratio_w1": 0.3635495939697828,
+  "full_ann": 0.09090582549132398,
+  "full_mdd": 0.5883947297390284,
+  "trades": 7492.0
+ },
+ {
+  "idx": 26,
+  "params": {
+   "hold_pctl": 0.5,
+   "cooldown": 3,
+   "max_hold_bars": 40,
+   "n_pos": 10
+  },
+  "n_phase": 1,
+  "seg_ann": 0.12472208142742658,
+  "seg_mdd": -0.346112363169808,
+  "ratio_w1": 0.36035141965222445,
+  "full_ann": 0.0824362908841132,
+  "full_mdd": 0.6177647317023712,
+  "trades": 7546.0
+ },
+ {
+  "idx": 7,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 3,
+   "max_hold_bars": 30,
+   "n_pos": 15
+  },
+  "n_phase": 1,
+  "seg_ann": 0.12094762055835817,
+  "seg_mdd": -0.33676743835407097,
+  "ratio_w1": 0.359142858791461,
+  "full_ann": 0.05343748866278286,
+  "full_mdd": 0.5744316195560495,
+  "trades": 10985.0
+ },
+ {
+  "idx": 3,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 2,
+   "max_hold_bars": 40,
+   "n_pos": 15
+  },
+  "n_phase": 1,
+  "seg_ann": 0.12997274679762905,
+  "seg_mdd": -0.3710609182508753,
+  "ratio_w1": 0.3502733389716729,
+  "full_ann": 0.0753461201459662,
+  "full_mdd": 0.6100685664852717,
+  "trades": 11241.0
+ },
+ {
+  "idx": 12,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 5,
+   "max_hold_bars": 30,
+   "n_pos": 10
+  },
+  "n_phase": 1,
+  "seg_ann": 0.13227121109679052,
+  "seg_mdd": -0.38185485467682123,
+  "ratio_w1": 0.34639133030988134,
+  "full_ann": 0.07592942485313325,
+  "full_mdd": 0.5121149669712104,
+  "trades": 7461.0
+ },
+ {
+  "idx": 8,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 3,
+   "max_hold_bars": 40,
+   "n_pos": 10
+  },
+  "n_phase": 1,
+  "seg_ann": 0.1173973247490292,
+  "seg_mdd": -0.34732957934101605,
+  "ratio_w1": 0.3379997896285299,
+  "full_ann": 0.09096039669305478,
+  "full_mdd": 0.5794439671984725,
+  "trades": 7554.0
+ },
+ {
+  "idx": 11,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 3,
+   "max_hold_bars": 60,
+   "n_pos": 15
+  },
+  "n_phase": 1,
+  "seg_ann": 0.11712633387923699,
+  "seg_mdd": -0.3501836097901466,
+  "ratio_w1": 0.3344712048328787,
+  "full_ann": 0.10874288184133407,
+  "full_mdd": 0.4664821584849303,
+  "trades": 11267.0
+ },
+ {
+  "idx": 1,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 2,
+   "max_hold_bars": 30,
+   "n_pos": 15
+  },
+  "n_phase": 1,
+  "seg_ann": 0.12088742822655862,
+  "seg_mdd": -0.3665777172167355,
+  "ratio_w1": 0.32977298550605877,
+  "full_ann": 0.0676182746635261,
+  "full_mdd": 0.5318553444513134,
+  "trades": 11013.0
+ },
+ {
+  "idx": 9,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 3,
+   "max_hold_bars": 40,
+   "n_pos": 15
+  },
+  "n_phase": 1,
+  "seg_ann": 0.10789671809983181,
+  "seg_mdd": -0.33491235040401157,
+  "ratio_w1": 0.32216404671154647,
+  "full_ann": 0.07728722344987826,
+  "full_mdd": 0.5422870499329498,
+  "trades": 11221.0
+ },
+ {
+  "idx": 2,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 2,
+   "max_hold_bars": 40,
+   "n_pos": 10
+  },
+  "n_phase": 1,
+  "seg_ann": 0.11743225089141429,
+  "seg_mdd": -0.3818916284866938,
+  "ratio_w1": 0.30750150600775994,
+  "full_ann": 0.08876574369399726,
+  "full_mdd": 0.578686587248991,
+  "trades": 7558.0
+ },
+ {
+  "idx": 13,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 5,
+   "max_hold_bars": 30,
+   "n_pos": 15
+  },
+  "n_phase": 1,
+  "seg_ann": 0.10606861183797811,
+  "seg_mdd": -0.3582673373822298,
+  "ratio_w1": 0.29605995515247086,
+  "full_ann": 0.05942605787397692,
+  "full_mdd": 0.5975783216643575,
+  "trades": 10802.0
+ },
+ {
+  "idx": 4,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 2,
+   "max_hold_bars": 60,
+   "n_pos": 10
+  },
+  "n_phase": 1,
+  "seg_ann": 0.11283637898257592,
+  "seg_mdd": -0.38703112844287624,
+  "ratio_w1": 0.291543420387257,
+  "full_ann": 0.095126987231823,
+  "full_mdd": 0.5305034956159271,
+  "trades": 7557.0
+ },
+ {
+  "idx": 6,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 3,
+   "max_hold_bars": 30,
+   "n_pos": 10
+  },
+  "n_phase": 1,
+  "seg_ann": 0.10405532246064975,
+  "seg_mdd": -0.38163997519565573,
+  "ratio_w1": 0.27265310036587126,
+  "full_ann": 0.05254037928412636,
+  "full_mdd": 0.602650443697448,
+  "trades": 7441.0
+ },
+ {
+  "idx": 10,
+  "params": {
+   "hold_pctl": 0.4,
+   "cooldown": 3,
+   "max_hold_bars": 60,
+   "n_pos": 10
+  },
+  "n_phase": 1,
+  "seg_ann": 0.09963252997583205,
+  "seg_mdd": -0.4244407979796744,
+  "ratio_w1": 0.23473834383989461,
+  "full_ann": 0.08302625916376583,
+  "full_mdd": 0.6448820748753971,
+  "trades": 7517.0
+ }
+]

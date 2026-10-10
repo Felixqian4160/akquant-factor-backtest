@@ -1,0 +1,37 @@
+{
+ "objective": "seg_ann / |seg_mdd| (2018-2025)",
+ "wave1": "54 combos, offset 0, screening only",
+ "wave2": "top-K by ratio (+ champion) x offsets 0-4, verdict by phase mean",
+ "grid": {
+  "hold_pctl": [
+   0.4,
+   0.5,
+   0.65
+  ],
+  "cooldown": [
+   2,
+   3,
+   5
+  ],
+  "max_hold_bars": [
+   30,
+   40,
+   60
+  ],
+  "n_pos": [
+   10,
+   15
+  ],
+  "fixed": {
+   "grid_step": 5,
+   "bear_pctl": 0.9
+  }
+ },
+ "champion": {
+  "hold_pctl": 0.5,
+  "cooldown": 3,
+  "max_hold_bars": 40,
+  "n_pos": 10
+ },
+ "n_combos": 54
+}
