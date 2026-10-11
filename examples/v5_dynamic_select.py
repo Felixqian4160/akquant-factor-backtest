@@ -162,7 +162,8 @@ def curves():
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
-    entries = [e for e in load_journal() if e["seg"] and e["offset"] == 0]
+    CURATED = {"V5_P413_RET_RANK", "V5_C120HIT", "V5_P413_C120HIT", "V5_P80_C120HIT", "V5_P413_BORDA"}
+    entries = [e for e in load_journal() if e["seg"] and e["offset"] == 0 and e["set"] in CURATED]
     if not entries:
         log("no entries")
         return

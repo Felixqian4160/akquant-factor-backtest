@@ -86,6 +86,10 @@ cd /media/felix/f/quant/akquant-factor-backtest
 （2022-06 选 MID 三元组、2024-06 选动量族 4 个、2020-06 选 size 对）→ 机制 = **风格动量集中押注**；
 与 hit 选择器持仓重叠 Jaccard 仅 0.12。
 
+**敏感性（o0 单变量，两方向均大幅变差，确认甜点）**：
+trail 60 → 0.536 ｜ **trail 120 → 0.785** ｜ trail 250 → 0.161；topn 8 → 0.474（vs topn 5 → 0.785）。
+trail=120/topn=5 为 v5 先验值（非事后调参）。
+
 ### 6.2 全库 × 8 方法总表（o0）
 
 | 方法 | ratio | ann | MDD | R² | 裁决 |

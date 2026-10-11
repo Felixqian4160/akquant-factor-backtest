@@ -5,3 +5,44 @@
   rmean = np.nanmean(mat[lo:hi, :], axis=0)
 /home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
   var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[01:38:02] dynamic-select: trail=60 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[01:38:02] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[01:38:02] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[01:38:02] picks: 770 dates; avg picks/day 14.4; avg eligible/day 22.3
+[01:38:02] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5_P413_RET_T60_o0/picks_meta.json
+=== V5_P413_RET_T60 sim (01:38:02) ===
+[01:40:14] sim: OK (132s)
+=== V5_P413_RET_T250 build (01:40:14) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:350: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:351: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo:hi, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[01:40:26] dynamic-select: trail=250 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[01:40:26] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[01:40:26] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[01:40:26] picks: 777 dates; avg picks/day 13.9; avg eligible/day 24.5
+[01:40:26] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5_P413_RET_T250_o0/picks_meta.json
+=== V5_P413_RET_T250 sim (01:40:26) ===
+[01:42:36] sim: OK (129s)
+=== V5_P413_RET_T120_K8 build (01:42:36) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:350: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:351: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo:hi, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[01:42:47] dynamic-select: trail=120 metric=mean topn=8 -> ENT_MIN=5 HOLD_MIN=2 BEAR_MAX=4 (2010-17 dynamic votes)
+[01:42:47] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=5 HOLD_MIN(P65)=2 BEAR_MAX(P90)=4 NET_MIN(-)=None res=any2
+[01:42:47] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[01:42:47] picks: 777 dates; avg picks/day 14.8; avg eligible/day 37.6
+[01:42:47] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5_P413_RET_T120_K8_o0/picks_meta.json
+=== V5_P413_RET_T120_K8 sim (01:42:48) ===
+[01:45:07] sim: OK (139s)
+=== journal (01:45:07) ===
+[01:45:07] journal + V5_P413_RET_T60_o0: seg ann 15.95% mdd -29.7% ratio 0.536 R2 0.789 pos60 58%
+[01:45:07] journal + V5_P413_RET_T250_o0: seg ann 6.12% mdd -37.9% ratio 0.161 R2 0.395 pos60 47%
+[01:45:07] journal + V5_P413_RET_T120_K8_o0: seg ann 16.26% mdd -34.3% ratio 0.474 R2 0.798 pos60 55%
+journal total entries: 40
+P413_C_DONE
