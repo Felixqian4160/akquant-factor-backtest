@@ -32,6 +32,7 @@ from v4_five_factor import seg_metrics_and_smooth, group_key  # noqa: E402
 OUT = AKQ / "evidence" / "v5_dynamic_select_20261011"
 FS = OUT / "run_factsets"
 JOURNAL = OUT / "journal.jsonl"
+CACHE_DIR = AKQ / "evidence" / "v3_resonance_20261010" / "_cache"
 FR = AKQ / "examples" / "v3_resonance_framework.py"
 PICKS = AKQ / "evidence" / "v3_resonance_20261010" / "picks"
 SIMS = AKQ / "evidence" / "v3_resonance_20261010" / "sims"
@@ -49,8 +50,17 @@ SELECT_VARIANTS = [
     ("V5_C120HIT", ["--select-trail", "120", "--select-metric", "hit", "--select-topn", "5"]),
     ("V5_C120HIT_M3", ["--select-trail", "120", "--select-metric", "hit", "--select-topn", "5",
                        "--decide", "disp"]),
+    ("V5_D60MO", ["--select-trail", "60", "--select-metric", "mo", "--select-topn", "5"]),
+    ("V5_E120MO", ["--select-trail", "120", "--select-metric", "mo", "--select-topn", "5"]),
+    ("V5_F_WSUM_HIT", ["--select-trail", "120", "--select-metric", "hit", "--select-topn", "5",
+                       "--select-mode", "wsum"]),
 ]
 REF_SETS = ["s1d_top5_t_div", "V4_S1_N3", "V4_S1_N3_BP75", "s1_top5_t"]
+
+# 池子大小单变量实验 (20 → 80 → 413)
+POOL_VARIANTS = [
+    ("V5_P80_C120HIT", "v5_pool80", ["--select-trail", "120", "--select-metric", "hit", "--select-topn", "5"]),
+]
 
 
 def log(m):
@@ -231,10 +241,10 @@ def main():
     ap.add_argument("--curves", action="store_true")
     args = ap.parse_args()
     if args.plan:
-        for vtag, _ in SELECT_VARIANTS:
+        for vtag, pool, _x in [(v, POOL, x) for v, x in SELECT_VARIANTS] + POOL_VARIANTS:
             rtag = f"{vtag}_o{args.offset}"
             done = (SIMS / rtag / "result.json").exists()
-            log(f"{vtag:12s} -> {rtag:16s} {'DONE' if done else 'pending'}")
+            log(f"{vtag:16s} [{pool}] -> {rtag:20s} {'DONE' if done else 'pending'}")
         return
     if args.report:
         report()
@@ -242,17 +252,20 @@ def main():
     if args.curves:
         curves()
         return
-    for vtag, extra in SELECT_VARIANTS:
+    jobs = [(v, POOL, x) for v, x in SELECT_VARIANTS] + POOL_VARIANTS
+    for vtag, pool, extra in jobs:
         rtag = f"{vtag}_o{args.offset}"
         if (SIMS / rtag / "result.json").exists():
             log(f"{rtag}: sim exists, skip")
             ensure_journal(vtag, rtag, args.offset)
             continue
         t0 = time.time()
-        ff = FS / f"{POOL}.json"
+        ff = FS / f"{pool}.json"
         log(f"=== {vtag} -> {rtag} ===")
-        if not run_cmd(["--factset", str(ff), "--signals", "99"]):
-            continue
+        ck = CACHE_DIR / f"votes__{pool}__any2_10_20_40_60_120.npz"
+        if not ck.exists():
+            if not run_cmd(["--factset", str(ff), "--signals", "99"]):
+                continue
         if not run_cmd(["--factset", str(ff), "--build", "--tag", rtag,
                         "--offset", str(args.offset)] + BASE_PARAMS + extra):
             continue

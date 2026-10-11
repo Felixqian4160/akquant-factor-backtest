@@ -1,0 +1,7 @@
+=== V5_P413_RET_T60 build (01:37:50) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:350: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:351: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo:hi, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,

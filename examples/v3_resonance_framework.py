@@ -222,8 +222,10 @@ def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=No
                         fbe[jj] = (dncnt >= nw).astype(np.int8)
                 bull += (upcnt >= nw).astype(np.int16)
                 bear += (dncnt >= nw).astype(np.int16)
-            else:  # streak: >=1 adjacent window pair both up (10&20|20&40|40&60|60&120)
+            else:  # streak: adjacent pair 共振; sl: 短端(20) & 长端(120) 同时确认
                 ups, downs = [], []
+                facc = np.zeros((T, S)) if score is not None else None
+                fcnt = np.zeros((T, S)) if score is not None else None
                 for W in ws:
                     num = P[W:] - P[:-W]
                     den = NP[W:] - NP[:-W]
@@ -235,11 +237,29 @@ def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=No
                     d[W - 1:] = (sw <= dn)
                     ups.append(u)
                     downs.append(d)
-                su = np.zeros((T, S), dtype=bool)
-                sd = np.zeros((T, S), dtype=bool)
-                for i in range(len(ws) - 1):
-                    su |= ups[i] & ups[i + 1]
-                    sd |= downs[i] & downs[i + 1]
+                    if facc is not None:
+                        okw = np.isfinite(sw)
+                        facc[W - 1:][okw] += sw[okw]
+                        fcnt[W - 1:][okw] += 1.0
+                if res_mode == "sl":
+                    ish = ws.index(20) if 20 in ws else 0
+                    ilg = len(ws) - 1
+                    su = ups[ish] & ups[ilg]
+                    sd = downs[ish] & downs[ilg]
+                else:
+                    su = np.zeros((T, S), dtype=bool)
+                    sd = np.zeros((T, S), dtype=bool)
+                    for i in range(len(ws) - 1):
+                        su |= ups[i] & ups[i + 1]
+                        sd |= downs[i] & downs[i + 1]
+                if facc is not None:
+                    fsc = np.where(fcnt > 0, facc / np.maximum(fcnt, 1.0), 0.0).astype(np.float32)
+                    score += fsc
+                    if fs is not None:
+                        jj = bi * FACTOR_BATCH + j
+                        fs[jj] = fsc
+                        fb[jj] = su.astype(np.int8)
+                        fbe[jj] = sd.astype(np.int8)
                 bull += su.astype(np.int16)
                 bear += sd.astype(np.int16)
         extra = {"score": score} if score is not None else {}
@@ -265,7 +285,8 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
           bear_pctl=0.90, res_mode="any2", net_min_pctl=None, rank_by="bull", offset=0,
           max_hold_bars=20, windows=None, n_pos=N_POS, fact=None, fact_names=None,
           ent_pctl=0.95, up_th=None, down_th=None, need_win=None,
-          decide="count", gate_idx=0, select_trail=0, select_metric="mean", select_topn=5):
+          decide="count", gate_idx=0, select_trail=0, select_metric="mean", select_topn=5,
+          select_mode="top", select_matrix="m", select_tau=0.7):
     cool = int(cooldown)
     gstep = int(grid_step)
     off = int(offset)
@@ -288,6 +309,18 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
     if decide in ("gate", "disp") and fs is None:
         raise SystemExit(f"decide={decide} requires per-factor cache fields (re-run signals)")
     factors, M, dates = load_matrix(fact_names)
+    # 选择矩阵: m=收益矩阵(默认) / ic=IC矩阵; borda 需双矩阵
+    MIC = None
+    if select_matrix == "ic" or select_mode == "borda":
+        icp = AKQ / "evidence" / "v34_dedup_20261010" / "matrix_ic_ADJ.parquet"
+        if not icp.exists():
+            raise SystemExit("IC matrix missing: build matrix_ic_ADJ.parquet first")
+        imm = pl.read_parquet(icp)
+        missing = [f for f in factors if f not in imm.columns]
+        if missing:
+            raise SystemExit(f"ic matrix missing factors: {missing[:5]}")
+        MIC = imm.select(list(factors)).to_numpy().astype(np.float64)
+    MX = MIC if select_matrix == "ic" else M
     n_batches = (len(factors) + FACTOR_BATCH - 1) // FACTOR_BATCH
     assert int(z["next_batch"]) == n_batches, f"signals not complete: {int(z['next_batch'])}/{n_batches}"
     codes = pl.read_parquet(PANEL, columns=["ts_code"]).get_column("ts_code").unique().sort().to_list()
@@ -301,33 +334,86 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
     sel_trail = int(select_trail) if select_trail else 0
 
     def _dyn_rows(rows):
-        """动态选因子: 每行日期按近期效力 (settled) 选 top-N, 返回其选票矩阵."""
-        bb = np.zeros((len(rows), S), dtype=np.int32)
-        rr = np.zeros((len(rows), S), dtype=np.int32)
+        """动态选因子: 每行日期按近期效力 (settled) 打分 (矩阵 MX = m/ic).
+        mode: top=top-N计数; wsum=全池加权软票; dedup=相关性去重; cluster=种子+一致性近邻; borda=收益+IC双榜."""
+        bb = np.zeros((len(rows), S), dtype=np.float32)
+        rr = np.zeros((len(rows), S), dtype=np.float32)
         ss = np.zeros((len(rows), S), dtype=np.float32)
         for k, i in enumerate(rows):
             hi = max(i - 20, 0)
             lo = max(hi - sel_trail, 0)
             llo = max(hi - DIR_WIN, 0)
-            if hi - lo < 20 or fbull is None:
-                sel = np.arange(len(factors))
-            else:
-                with np.errstate(all="ignore"):
-                    lmean = np.nanmean(M[llo:hi, :], axis=0)
-                    rmean = np.nanmean(M[lo:hi, :], axis=0)
-                    rstd = np.nanstd(M[lo:hi, :], axis=0)
-                    rhit = np.nanmean(M[lo:hi, :] > 0, axis=0)
-                d = np.where(np.nan_to_num(lmean, nan=0.0) >= 0, 1.0, -1.0)
-                if select_metric == "ir":
-                    sc = d * np.where(rstd > 0, rmean / np.maximum(rstd, 1e-12), -1e18)
-                elif select_metric == "hit":
-                    sc = np.where(d > 0, rhit, 1.0 - rhit)
+            sc = None
+            if hi - lo >= 20 and fbull is not None:
+                def _metric(mat):
+                    with np.errstate(all="ignore"):
+                        lmean = np.nanmean(mat[llo:hi, :], axis=0)
+                        rmean = np.nanmean(mat[lo:hi, :], axis=0)
+                        rstd = np.nanstd(mat[lo:hi, :], axis=0)
+                        rhit = np.nanmean(mat[lo:hi, :] > 0, axis=0)
+                    d = np.where(np.nan_to_num(lmean, nan=0.0) >= 0, 1.0, -1.0)
+                    if select_metric == "ir":
+                        return d * np.where(rstd > 0, rmean / np.maximum(rstd, 1e-12), -1e18)
+                    if select_metric == "hit":
+                        return np.where(d > 0, rhit, 1.0 - rhit)
+                    if select_metric == "mo":  # 效力动量: 本期 vs 上一窗口的改善
+                        return d * (rmean - np.nanmean(mat[max(lo - sel_trail, 0):lo, :], axis=0))
+                    return d * rmean
+                if select_mode == "borda":
+                    a1 = np.nan_to_num(_metric(M), nan=-1e18)
+                    a2 = np.nan_to_num(_metric(MIC), nan=-1e18)
+                    sc = (np.argsort(np.argsort(a1)) + np.argsort(np.argsort(a2))).astype(np.float64)
                 else:
-                    sc = d * rmean
-                sel = np.argsort(-np.nan_to_num(sc, nan=-1e18))[:int(select_topn)]
-            bb[k] = fbull[sel, i, :].sum(axis=0)
-            rr[k] = fbear[sel, i, :].sum(axis=0)
-            ss[k] = fs[sel, i, :].sum(axis=0)
+                    sc = _metric(MX)
+            if sc is not None:
+                order = np.argsort(-np.nan_to_num(sc, nan=-1e18))
+            if select_mode == "wsum" and sc is not None:
+                w = np.maximum(np.nan_to_num(sc, nan=0.0), 0.0)
+                tot = w.sum()
+                w = (w / tot if tot > 0 else np.ones(len(factors)) / len(factors)) * select_topn
+                bb[k] = (w[:, None] * fbull[:, i, :]).sum(axis=0)
+                rr[k] = (w[:, None] * fbear[:, i, :]).sum(axis=0)
+                ss[k] = (w[:, None] * fs[:, i, :]).sum(axis=0)
+            else:
+                if sc is not None and select_mode == "dedup":
+                    sel = []
+                    for c in order[:100]:
+                        if len(sel) >= int(select_topn):
+                            break
+                        okc = True
+                        for s0 in sel:
+                            a = M[lo:hi, c]
+                            b2 = M[lo:hi, s0]
+                            msk = np.isfinite(a) & np.isfinite(b2)
+                            if msk.sum() >= 30 and abs(np.corrcoef(a[msk], b2[msk])[0, 1]) > select_tau:
+                                okc = False
+                                break
+                        if okc:
+                            sel.append(int(c))
+                    for c in order:
+                        if len(sel) >= int(select_topn):
+                            break
+                        if int(c) not in sel:
+                            sel.append(int(c))
+                    sel = np.array(sel[:int(select_topn)])
+                elif sc is not None and select_mode == "cluster":
+                    seed = int(order[0])
+                    cands = [int(c) for c in order[1:1 + 30]]
+                    smask = fbull[seed, lo:hi, :] > 0
+                    inter = np.array([np.logical_and(smask, fbull[c, lo:hi, :] > 0).sum() for c in cands],
+                                     dtype=np.float64)
+                    union = np.array([np.logical_or(smask, fbull[c, lo:hi, :] > 0).sum() for c in cands],
+                                     dtype=np.float64)
+                    agr = inter / np.maximum(union, 1)
+                    peers = [cands[j] for j in np.argsort(-agr)[: int(select_topn) - 1]]
+                    sel = np.array([seed] + peers)
+                elif sc is not None:
+                    sel = order[:int(select_topn)]
+                else:
+                    sel = np.arange(len(factors))
+                bb[k] = fbull[sel, i, :].sum(axis=0)
+                rr[k] = fbear[sel, i, :].sum(axis=0)
+                ss[k] = fs[sel, i, :].sum(axis=0)
         return bb, rr, ss
 
     if sel_trail:
@@ -442,7 +528,9 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
         "ent_min": ENT_MIN, "hold_min": HOLD_MIN, "bear_max": BEAR_MAX, "ent_pctl": ent_pctl,
         "decide": decide, "gate_factor": (factors[gate_idx] if decide == "gate" else None),
         "score_cuts": [S_ENT, S_HOLD], "gate_cuts": [G1, G2], "disp_cuts": [D1, D2],
-        "dynamic_select": ({"trail": sel_trail, "metric": select_metric, "topn": int(select_topn)}
+        "dynamic_select": ({"trail": sel_trail, "metric": select_metric, "topn": int(select_topn),
+                            "mode": select_mode, "matrix": select_matrix,
+                            "tau": (select_tau if select_mode == "dedup" else None)}
                            if sel_trail else None),
         "calibration": "2010-2017 grid rows",
         "factor_pool": (f"{len(factors)} factors factset={fact}" if fact else f"{len(factors)} dedup factors"),
@@ -540,7 +628,7 @@ def main():
     ap.add_argument("--cooldown", type=int, default=1)
     ap.add_argument("--grid-step", type=int, default=GRID_STEP)
     ap.add_argument("--bear-pctl", type=float, default=0.90)
-    ap.add_argument("--res-mode", choices=["any2", "streak"], default="any2")
+    ap.add_argument("--res-mode", choices=["any2", "streak", "sl"], default="any2")
     ap.add_argument("--net-min-pctl", type=float, default=None)
     ap.add_argument("--rank-by", choices=["bull", "net", "score"], default="bull")
     ap.add_argument("--offset", type=int, default=0)
@@ -558,8 +646,11 @@ def main():
     ap.add_argument("--decide", choices=["count", "score", "gate", "disp"], default="count")
     ap.add_argument("--gate-idx", type=int, default=0)
     ap.add_argument("--select-trail", type=int, default=0)
-    ap.add_argument("--select-metric", choices=["mean", "ir", "hit"], default="mean")
+    ap.add_argument("--select-metric", choices=["mean", "ir", "hit", "mo"], default="mean")
     ap.add_argument("--select-topn", type=int, default=5)
+    ap.add_argument("--select-mode", choices=["top", "wsum", "dedup", "cluster", "borda"], default="top")
+    ap.add_argument("--select-matrix", choices=["m", "ic"], default="m")
+    ap.add_argument("--dedup-tau", type=float, default=0.7)
     args = ap.parse_args()
     fact, fact_names = (None, None)
     if args.factset:
@@ -574,7 +665,8 @@ def main():
               args.bear_pctl, args.res_mode, args.net_min_pctl, args.rank_by, args.offset,
               args.max_hold_bars, args.windows, args.n_pos, fact, fact_names, args.ent_pctl,
               args.up_th, args.down_th, args.need_win, args.decide, args.gate_idx,
-              args.select_trail, args.select_metric, args.select_topn)
+              args.select_trail, args.select_metric, args.select_topn, args.select_mode,
+              args.select_matrix, args.dedup_tau)
     elif args.run is not None:
         run_sims(args.run, args.tag, RUNNERS[args.runner], args.holding_bars)
     elif args.report:

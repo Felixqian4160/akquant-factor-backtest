@@ -1,0 +1,35 @@
+[preflight] check cache completeness
+next_batch = 21
+=== V5_P413_C120HIT build (00:56:02) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:350: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:351: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo:hi, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[00:56:13] dynamic-select: trail=120 metric=hit topn=5 -> ENT_MIN=3 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[00:56:13] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=3 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[00:56:13] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[00:56:13] picks: 777 dates; avg picks/day 14.8; avg eligible/day 52.7
+[00:56:13] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5_P413_C120HIT_o0/picks_meta.json
+=== V5_P413_C120HIT sim (00:56:13) ===
+[00:58:23] sim: OK (130s)
+=== V5_P413_WSUM_HIT build (00:58:23) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:350: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:351: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo:hi, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[00:58:35] dynamic-select: trail=120 metric=hit topn=5 -> ENT_MIN=2 HOLD_MIN=2 BEAR_MAX=2 (2010-17 dynamic votes)
+[00:58:35] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=2 HOLD_MIN(P65)=2 BEAR_MAX(P90)=2 NET_MIN(-)=None res=any2
+[00:58:35] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[00:58:35] picks: 302 dates; avg picks/day 1.2; avg eligible/day 1.3
+[00:58:35] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5_P413_WSUM_HIT_o0/picks_meta.json
+=== V5_P413_WSUM_HIT sim (00:58:35) ===
+[00:59:09] sim: OK (33s)
+=== journal (00:59:09) ===
+[00:59:09] journal + V5_P413_C120HIT_o0: seg ann 13.01% mdd -30.0% ratio 0.433 R2 0.873 pos60 58%
+[00:59:09] journal + V5_P413_WSUM_HIT_o0: seg ann 13.91% mdd -73.6% ratio 0.189 R2 0.095 pos60 51%
+journal total entries: 22
+P413_SCRIPT_DONE

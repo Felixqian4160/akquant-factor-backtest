@@ -1,6 +1,7 @@
-"""v5 动态选择池: 2010-17 t top-20 作为每期选因子的候选池."""
+"""v5 动态选择池: 2010-17 t top-N 作为每期选因子的候选池."""
 from __future__ import annotations
 
+import argparse
 import json
 import pathlib
 
@@ -14,6 +15,9 @@ FS = OUT / "run_factsets"
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--topn", type=int, default=20)
+    args = ap.parse_args()
     FS.mkdir(parents=True, exist_ok=True)
     mat = pl.read_parquet(MAT)
     factors = [c for c in mat.columns if c != "trade_date"]
@@ -28,11 +32,12 @@ def main():
     valid = n > 500
     order = sorted([f for f in factors if valid[factors.index(f)]],
                    key=lambda f: -(t[factors.index(f)] if np.isfinite(t[factors.index(f)]) else -1e9))
-    pool = order[:20]
-    (FS / "v5_pool20.json").write_text(json.dumps(
-        {"tag": "v5_pool20", "factors": pool, "reason": "2010-17 t top-20 (动态选择池)"},
+    pool = order[: args.topn]
+    (FS / f"v5_pool{args.topn}.json").write_text(json.dumps(
+        {"tag": f"v5_pool{args.topn}", "factors": pool,
+         "reason": f"2010-17 t top-{args.topn} (动态选择池)"},
         ensure_ascii=False, indent=1))
-    print("pool20:", pool)
+    print(f"pool{args.topn}:", pool[:25], "..." if len(pool) > 25 else "")
 
 
 if __name__ == "__main__":

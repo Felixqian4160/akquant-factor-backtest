@@ -1,0 +1,1873 @@
+{
+ "contract": {
+  "framework": "v3_resonance",
+  "up_th": 0.65,
+  "down_th": 0.35,
+  "need_win": 2,
+  "dir_window": 250,
+  "lag": 21,
+  "grid_step": 5,
+  "age_cap_grids": 12,
+  "offset": 0,
+  "max_hold_bars": 60,
+  "windows": [
+   10,
+   20,
+   40,
+   60,
+   120
+  ],
+  "n_pos": 15,
+  "max_grid_age": 4,
+  "cooldown_grids": 3,
+  "hold_pctl": 0.65,
+  "bear_pctl": 0.9,
+  "res_mode": "any2",
+  "net_min": null,
+  "rank_by": "score",
+  "ent_min": 2,
+  "hold_min": 2,
+  "bear_max": 2,
+  "ent_pctl": 0.95,
+  "decide": "count",
+  "gate_factor": null,
+  "score_cuts": [
+   null,
+   null
+  ],
+  "gate_cuts": [
+   null,
+   null
+  ],
+  "disp_cuts": [
+   null,
+   null
+  ],
+  "dynamic_select": {
+   "trail": 120,
+   "metric": "hit",
+   "topn": 5,
+   "mode": "wsum",
+   "matrix": "m",
+   "tau": null
+  },
+  "calibration": "2010-2017 grid rows",
+  "factor_pool": "413 factors factset=v5_pool413",
+  "factset": "v5_pool413",
+  "execution": "v41 (T+1 NextOpen, equal weight 90%, comm 0.25% + slip 0.10%, CA, 21bar cap)"
+ },
+ "per_day": {
+  "2010-01-06": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2010-01-13": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2010-01-20": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 1,
+   "n_new": 4
+  },
+  "2010-01-27": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 4,
+   "n_new": 0
+  },
+  "2010-02-03": {
+   "n_picks": 7,
+   "n_elig": 7,
+   "n_survivors": 4,
+   "n_new": 3
+  },
+  "2010-02-10": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 3,
+   "n_new": 0
+  },
+  "2010-03-24": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2010-04-22": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2010-04-29": {
+   "n_picks": 6,
+   "n_elig": 6,
+   "n_survivors": 2,
+   "n_new": 4
+  },
+  "2010-05-07": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 2,
+   "n_new": 3
+  },
+  "2010-05-14": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2010-05-21": {
+   "n_picks": 2,
+   "n_elig": 3,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2010-05-28": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2010-06-04": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 2,
+   "n_new": 3
+  },
+  "2010-06-11": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 4,
+   "n_new": 4
+  },
+  "2010-06-23": {
+   "n_picks": 6,
+   "n_elig": 6,
+   "n_survivors": 6,
+   "n_new": 0
+  },
+  "2010-06-30": {
+   "n_picks": 6,
+   "n_elig": 6,
+   "n_survivors": 6,
+   "n_new": 0
+  },
+  "2010-07-07": {
+   "n_picks": 4,
+   "n_elig": 5,
+   "n_survivors": 4,
+   "n_new": 0
+  },
+  "2010-07-14": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2010-08-04": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2010-08-11": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 0,
+   "n_new": 4
+  },
+  "2010-08-18": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 4,
+   "n_new": 4
+  },
+  "2010-08-25": {
+   "n_picks": 9,
+   "n_elig": 10,
+   "n_survivors": 7,
+   "n_new": 2
+  },
+  "2010-09-01": {
+   "n_picks": 14,
+   "n_elig": 14,
+   "n_survivors": 9,
+   "n_new": 5
+  },
+  "2010-09-08": {
+   "n_picks": 15,
+   "n_elig": 16,
+   "n_survivors": 12,
+   "n_new": 3
+  },
+  "2010-09-15": {
+   "n_picks": 15,
+   "n_elig": 16,
+   "n_survivors": 12,
+   "n_new": 3
+  },
+  "2010-09-27": {
+   "n_picks": 15,
+   "n_elig": 22,
+   "n_survivors": 15,
+   "n_new": 0
+  },
+  "2010-10-11": {
+   "n_picks": 14,
+   "n_elig": 16,
+   "n_survivors": 12,
+   "n_new": 2
+  },
+  "2010-10-18": {
+   "n_picks": 12,
+   "n_elig": 12,
+   "n_survivors": 11,
+   "n_new": 1
+  },
+  "2010-10-25": {
+   "n_picks": 9,
+   "n_elig": 9,
+   "n_survivors": 8,
+   "n_new": 1
+  },
+  "2010-11-01": {
+   "n_picks": 11,
+   "n_elig": 11,
+   "n_survivors": 7,
+   "n_new": 4
+  },
+  "2010-11-08": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 8,
+   "n_new": 0
+  },
+  "2010-11-15": {
+   "n_picks": 3,
+   "n_elig": 5,
+   "n_survivors": 3,
+   "n_new": 0
+  },
+  "2010-11-22": {
+   "n_picks": 4,
+   "n_elig": 7,
+   "n_survivors": 1,
+   "n_new": 3
+  },
+  "2010-11-29": {
+   "n_picks": 8,
+   "n_elig": 11,
+   "n_survivors": 3,
+   "n_new": 5
+  },
+  "2010-12-06": {
+   "n_picks": 8,
+   "n_elig": 10,
+   "n_survivors": 4,
+   "n_new": 4
+  },
+  "2010-12-13": {
+   "n_picks": 7,
+   "n_elig": 7,
+   "n_survivors": 5,
+   "n_new": 2
+  },
+  "2010-12-20": {
+   "n_picks": 4,
+   "n_elig": 6,
+   "n_survivors": 2,
+   "n_new": 2
+  },
+  "2010-12-27": {
+   "n_picks": 4,
+   "n_elig": 5,
+   "n_survivors": 2,
+   "n_new": 2
+  },
+  "2011-03-08": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2011-03-15": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2011-03-22": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2011-07-18": {
+   "n_picks": 6,
+   "n_elig": 6,
+   "n_survivors": 0,
+   "n_new": 6
+  },
+  "2011-07-25": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 4,
+   "n_new": 4
+  },
+  "2011-08-01": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 3,
+   "n_new": 1
+  },
+  "2011-08-08": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 2,
+   "n_new": 2
+  },
+  "2011-08-15": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2011-08-22": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2011-08-29": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2011-09-05": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2011-09-27": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2011-10-11": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2011-11-15": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2011-11-22": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2011-11-29": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2012-01-12": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2012-03-15": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 0,
+   "n_new": 4
+  },
+  "2012-03-22": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 2,
+   "n_new": 2
+  },
+  "2012-03-29": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2012-05-17": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2012-05-24": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2012-05-31": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2012-06-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2012-06-29": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 0,
+   "n_new": 3
+  },
+  "2012-07-06": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 3,
+   "n_new": 0
+  },
+  "2012-07-13": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2012-07-20": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2012-07-27": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2012-08-03": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2012-09-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2012-10-19": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2013-05-29": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 0,
+   "n_new": 4
+  },
+  "2013-07-01": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 0,
+   "n_new": 4
+  },
+  "2013-07-08": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2013-07-15": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2013-07-29": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2014-10-16": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2014-11-27": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2014-12-18": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2014-12-25": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2015-01-12": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2015-02-02": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 0,
+   "n_new": 3
+  },
+  "2015-02-09": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2015-05-06": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2015-06-17": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2015-06-25": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2015-07-02": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2015-07-09": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2015-07-23": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2015-10-26": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-02-16": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-05-19": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-05-26": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2016-06-02": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2016-06-13": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2016-06-20": {
+   "n_picks": 2,
+   "n_elig": 3,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2016-07-04": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-07-11": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2016-07-18": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-07-25": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2016-08-01": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2016-08-22": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-08-29": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-09-12": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-09-21": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2016-10-12": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 0,
+   "n_new": 4
+  },
+  "2016-10-19": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 4,
+   "n_new": 0
+  },
+  "2016-10-26": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2016-11-02": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-11-09": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2016-11-30": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2016-12-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2017-09-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2017-09-21": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2017-09-28": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2017-10-12": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2017-10-19": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2017-10-26": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2017-11-09": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2017-11-16": {
+   "n_picks": 2,
+   "n_elig": 3,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2017-11-23": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 2,
+   "n_new": 2
+  },
+  "2017-12-07": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2017-12-21": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2017-12-28": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2018-01-05": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 2,
+   "n_new": 3
+  },
+  "2018-01-12": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 4,
+   "n_new": 4
+  },
+  "2018-01-19": {
+   "n_picks": 12,
+   "n_elig": 12,
+   "n_survivors": 6,
+   "n_new": 6
+  },
+  "2018-01-26": {
+   "n_picks": 13,
+   "n_elig": 14,
+   "n_survivors": 10,
+   "n_new": 3
+  },
+  "2018-02-02": {
+   "n_picks": 12,
+   "n_elig": 12,
+   "n_survivors": 11,
+   "n_new": 1
+  },
+  "2018-02-09": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 6,
+   "n_new": 2
+  },
+  "2018-02-23": {
+   "n_picks": 3,
+   "n_elig": 4,
+   "n_survivors": 3,
+   "n_new": 0
+  },
+  "2018-03-02": {
+   "n_picks": 2,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2018-03-09": {
+   "n_picks": 2,
+   "n_elig": 4,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2018-03-16": {
+   "n_picks": 9,
+   "n_elig": 9,
+   "n_survivors": 2,
+   "n_new": 7
+  },
+  "2018-03-23": {
+   "n_picks": 14,
+   "n_elig": 14,
+   "n_survivors": 7,
+   "n_new": 7
+  },
+  "2018-03-30": {
+   "n_picks": 13,
+   "n_elig": 13,
+   "n_survivors": 11,
+   "n_new": 2
+  },
+  "2018-04-10": {
+   "n_picks": 6,
+   "n_elig": 6,
+   "n_survivors": 4,
+   "n_new": 2
+  },
+  "2018-04-17": {
+   "n_picks": 5,
+   "n_elig": 6,
+   "n_survivors": 4,
+   "n_new": 1
+  },
+  "2018-04-24": {
+   "n_picks": 5,
+   "n_elig": 8,
+   "n_survivors": 5,
+   "n_new": 0
+  },
+  "2018-05-03": {
+   "n_picks": 8,
+   "n_elig": 9,
+   "n_survivors": 3,
+   "n_new": 5
+  },
+  "2018-05-10": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 5,
+   "n_new": 0
+  },
+  "2018-05-17": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 4,
+   "n_new": 0
+  },
+  "2018-05-24": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 3,
+   "n_new": 1
+  },
+  "2018-05-31": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 3,
+   "n_new": 1
+  },
+  "2018-06-07": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 4,
+   "n_new": 1
+  },
+  "2018-06-14": {
+   "n_picks": 8,
+   "n_elig": 9,
+   "n_survivors": 4,
+   "n_new": 4
+  },
+  "2018-06-22": {
+   "n_picks": 9,
+   "n_elig": 10,
+   "n_survivors": 7,
+   "n_new": 2
+  },
+  "2018-06-29": {
+   "n_picks": 7,
+   "n_elig": 8,
+   "n_survivors": 6,
+   "n_new": 1
+  },
+  "2018-07-06": {
+   "n_picks": 7,
+   "n_elig": 8,
+   "n_survivors": 5,
+   "n_new": 2
+  },
+  "2018-07-13": {
+   "n_picks": 6,
+   "n_elig": 6,
+   "n_survivors": 4,
+   "n_new": 2
+  },
+  "2018-07-20": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 5,
+   "n_new": 0
+  },
+  "2018-07-27": {
+   "n_picks": 3,
+   "n_elig": 4,
+   "n_survivors": 3,
+   "n_new": 0
+  },
+  "2018-08-03": {
+   "n_picks": 2,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2018-08-10": {
+   "n_picks": 2,
+   "n_elig": 4,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2018-08-17": {
+   "n_picks": 3,
+   "n_elig": 5,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2018-08-24": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2018-08-31": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2018-09-07": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2018-09-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2019-05-07": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2019-05-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2019-05-28": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2019-06-04": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2019-06-12": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2019-06-19": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2019-06-26": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2019-11-07": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2019-11-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2019-11-21": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2019-12-05": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2019-12-12": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2019-12-19": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2019-12-26": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-01-03": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-01-10": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2020-01-17": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2020-02-03": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2020-02-10": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 2,
+   "n_new": 1
+  },
+  "2020-02-17": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 3,
+   "n_new": 0
+  },
+  "2020-02-24": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2020-03-02": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2020-03-09": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-03-16": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-03-30": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2020-04-07": {
+   "n_picks": 4,
+   "n_elig": 5,
+   "n_survivors": 1,
+   "n_new": 3
+  },
+  "2020-04-14": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 3,
+   "n_new": 5
+  },
+  "2020-04-21": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 3,
+   "n_new": 2
+  },
+  "2020-04-28": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 3,
+   "n_new": 5
+  },
+  "2020-05-08": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 5,
+   "n_new": 3
+  },
+  "2020-05-15": {
+   "n_picks": 11,
+   "n_elig": 11,
+   "n_survivors": 6,
+   "n_new": 5
+  },
+  "2020-05-22": {
+   "n_picks": 10,
+   "n_elig": 11,
+   "n_survivors": 8,
+   "n_new": 2
+  },
+  "2020-05-29": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 2,
+   "n_new": 2
+  },
+  "2020-06-05": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-06-12": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-06-19": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 0,
+   "n_new": 3
+  },
+  "2020-06-30": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 2,
+   "n_new": 1
+  },
+  "2020-07-07": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2020-07-14": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 2,
+   "n_new": 1
+  },
+  "2020-07-21": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-07-28": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-08-04": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-08-11": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2020-08-18": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2020-08-25": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2020-09-01": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-09-08": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2020-09-22": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2020-11-11": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2020-11-18": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2020-12-16": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2020-12-23": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2020-12-30": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 2,
+   "n_new": 1
+  },
+  "2021-01-07": {
+   "n_picks": 10,
+   "n_elig": 10,
+   "n_survivors": 3,
+   "n_new": 7
+  },
+  "2021-01-14": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 4,
+   "n_new": 4
+  },
+  "2021-01-21": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 3,
+   "n_new": 2
+  },
+  "2021-01-28": {
+   "n_picks": 8,
+   "n_elig": 10,
+   "n_survivors": 4,
+   "n_new": 4
+  },
+  "2021-02-04": {
+   "n_picks": 5,
+   "n_elig": 6,
+   "n_survivors": 5,
+   "n_new": 0
+  },
+  "2021-02-18": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 3,
+   "n_new": 2
+  },
+  "2021-02-25": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2021-03-04": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2021-03-18": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2021-05-12": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2021-07-01": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2021-07-08": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 2,
+   "n_new": 1
+  },
+  "2021-07-15": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 1,
+   "n_new": 3
+  },
+  "2021-07-22": {
+   "n_picks": 7,
+   "n_elig": 8,
+   "n_survivors": 3,
+   "n_new": 4
+  },
+  "2021-07-29": {
+   "n_picks": 9,
+   "n_elig": 11,
+   "n_survivors": 5,
+   "n_new": 4
+  },
+  "2021-08-12": {
+   "n_picks": 2,
+   "n_elig": 3,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2021-08-19": {
+   "n_picks": 4,
+   "n_elig": 5,
+   "n_survivors": 1,
+   "n_new": 3
+  },
+  "2021-08-26": {
+   "n_picks": 8,
+   "n_elig": 9,
+   "n_survivors": 3,
+   "n_new": 5
+  },
+  "2021-09-02": {
+   "n_picks": 8,
+   "n_elig": 8,
+   "n_survivors": 3,
+   "n_new": 5
+  },
+  "2021-09-09": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2021-09-16": {
+   "n_picks": 2,
+   "n_elig": 4,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2021-09-27": {
+   "n_picks": 1,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2021-10-11": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2021-10-18": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2021-10-25": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2022-06-08": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 0,
+   "n_new": 5
+  },
+  "2022-06-15": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2022-07-06": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 0,
+   "n_new": 5
+  },
+  "2022-07-13": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 3,
+   "n_new": 1
+  },
+  "2022-07-20": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2022-07-27": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2022-08-03": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2022-09-07": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 0,
+   "n_new": 2
+  },
+  "2022-09-15": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2022-09-22": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2022-09-29": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2022-10-13": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2022-10-20": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2022-10-27": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2022-11-03": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2022-11-10": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2022-12-08": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2022-12-15": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2022-12-22": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2022-12-29": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2023-02-03": {
+   "n_picks": 4,
+   "n_elig": 4,
+   "n_survivors": 0,
+   "n_new": 4
+  },
+  "2023-02-10": {
+   "n_picks": 13,
+   "n_elig": 13,
+   "n_survivors": 3,
+   "n_new": 10
+  },
+  "2023-02-17": {
+   "n_picks": 7,
+   "n_elig": 7,
+   "n_survivors": 5,
+   "n_new": 2
+  },
+  "2023-03-17": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2023-04-17": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2023-04-24": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2023-08-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2023-08-21": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2023-10-17": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2023-10-24": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2023-10-31": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2023-11-07": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2023-11-28": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2023-12-05": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2023-12-12": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2024-02-07": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 0,
+   "n_new": 3
+  },
+  "2024-02-22": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 2,
+   "n_new": 0
+  },
+  "2024-02-29": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2024-03-07": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2024-03-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2024-03-21": {
+   "n_picks": 4,
+   "n_elig": 5,
+   "n_survivors": 0,
+   "n_new": 4
+  },
+  "2024-03-28": {
+   "n_picks": 3,
+   "n_elig": 3,
+   "n_survivors": 3,
+   "n_new": 0
+  },
+  "2024-04-08": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2024-04-15": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2024-07-05": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2024-07-19": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2024-07-26": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2024-10-08": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2024-10-15": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2025-01-08": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2025-01-15": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2025-01-22": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2025-07-17": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2025-08-07": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2025-08-14": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2025-08-21": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2025-08-28": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2025-09-04": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2025-09-11": {
+   "n_picks": 3,
+   "n_elig": 4,
+   "n_survivors": 1,
+   "n_new": 2
+  },
+  "2025-09-18": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 2,
+   "n_new": 3
+  },
+  "2025-09-25": {
+   "n_picks": 5,
+   "n_elig": 5,
+   "n_survivors": 4,
+   "n_new": 1
+  },
+  "2025-10-10": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  },
+  "2025-10-17": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 1,
+   "n_new": 0
+  },
+  "2025-12-19": {
+   "n_picks": 1,
+   "n_elig": 1,
+   "n_survivors": 0,
+   "n_new": 1
+  },
+  "2025-12-26": {
+   "n_picks": 2,
+   "n_elig": 2,
+   "n_survivors": 1,
+   "n_new": 1
+  }
+ }
+}
