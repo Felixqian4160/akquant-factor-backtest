@@ -66,14 +66,20 @@ def _resolve_ws(windows=None):
     return tuple(int(x) for x in str(windows).replace(" ", "").split(","))
 
 
-def _cache_path(res_mode, ws, fact=None):
+def _th_suffix(up, dn, nw):
+    if up == UP_TH and dn == DOWN_TH and nw == NEED_WIN:
+        return ""
+    return f"__u{int(round(up * 100))}d{int(round(dn * 100))}n{nw}"
+
+
+def _cache_path(res_mode, ws, fact=None, th_suffix=""):
     if fact:
-        return CACHE / f"votes__{fact}__{res_mode}_{'_'.join(map(str, ws))}.npz"
-    if res_mode == "any2" and ws == WS:
+        return CACHE / f"votes__{fact}__{res_mode}_{'_'.join(map(str, ws))}{th_suffix}.npz"
+    if res_mode == "any2" and ws == WS and not th_suffix:
         return CACHE / "votes_batches.npz"
-    if res_mode == "streak" and ws == WS:
+    if res_mode == "streak" and ws == WS and not th_suffix:
         return CACHE / "votes_streak.npz"
-    return CACHE / f"votes_{res_mode}_{'_'.join(map(str, ws))}.npz"
+    return CACHE / f"votes_{res_mode}_{'_'.join(map(str, ws))}{th_suffix}.npz"
 
 
 def _read_factset(path):
@@ -115,15 +121,20 @@ def compute_dirs(M):
     return D
 
 
-def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=None):
+def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=None,
+            up_th=None, down_th=None, need_win=None):
     factors, M, dates = load_matrix(fact_names)
     T, F = M.shape
     OUT.mkdir(parents=True, exist_ok=True)
     CACHE.mkdir(parents=True, exist_ok=True)
     D = compute_dirs(M)
     ws = _resolve_ws(windows)
+    up = UP_TH if up_th is None else float(up_th)
+    dn = DOWN_TH if down_th is None else float(down_th)
+    nw = NEED_WIN if need_win is None else int(need_win)
+    ths = _th_suffix(up, dn, nw)
     n_batches = (F + FACTOR_BATCH - 1) // FACTOR_BATCH
-    ck = _cache_path(res_mode, ws, fact)
+    ck = _cache_path(res_mode, ws, fact, ths)
 
     bull = np.zeros((T, 0), dtype=np.int16)
     bear = np.zeros((T, 0), dtype=np.int16)
@@ -188,16 +199,16 @@ def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=No
                     den = NP[W:] - NP[:-W]
                     with np.errstate(invalid="ignore", divide="ignore"):
                         sw = np.where(den >= max(5, int(W * 0.4)), num / np.maximum(den, 1), np.nan)
-                    upcnt[W - 1:] += (sw >= UP_TH).astype(np.int8)
-                    dncnt[W - 1:] += (sw <= DOWN_TH).astype(np.int8)
+                    upcnt[W - 1:] += (sw >= up).astype(np.int8)
+                    dncnt[W - 1:] += (sw <= dn).astype(np.int8)
                     if facc is not None:
                         okw = np.isfinite(sw)
                         facc[W - 1:][okw] += sw[okw]
                         fcnt[W - 1:][okw] += 1.0
                 if facc is not None:
                     score += np.where(fcnt > 0, facc / np.maximum(fcnt, 1.0), 0.0).astype(np.float32)
-                bull += (upcnt >= NEED_WIN).astype(np.int16)
-                bear += (dncnt >= NEED_WIN).astype(np.int16)
+                bull += (upcnt >= nw).astype(np.int16)
+                bear += (dncnt >= nw).astype(np.int16)
             else:  # streak: >=1 adjacent window pair both up (10&20|20&40|40&60|60&120)
                 ups, downs = [], []
                 for W in ws:
@@ -206,9 +217,9 @@ def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=No
                     with np.errstate(invalid="ignore", divide="ignore"):
                         sw = np.where(den >= max(5, int(W * 0.4)), num / np.maximum(den, 1), np.nan)
                     u = np.zeros((T, S), dtype=bool)
-                    u[W - 1:] = (sw >= UP_TH)
+                    u[W - 1:] = (sw >= up)
                     d = np.zeros((T, S), dtype=bool)
-                    d[W - 1:] = (sw <= DOWN_TH)
+                    d[W - 1:] = (sw <= dn)
                     ups.append(u)
                     downs.append(d)
                 su = np.zeros((T, S), dtype=bool)
@@ -238,13 +249,16 @@ def status():
 def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
           bear_pctl=0.90, res_mode="any2", net_min_pctl=None, rank_by="bull", offset=0,
           max_hold_bars=20, windows=None, n_pos=N_POS, fact=None, fact_names=None,
-          ent_pctl=0.95):
+          ent_pctl=0.95, up_th=None, down_th=None, need_win=None):
     cool = int(cooldown)
     gstep = int(grid_step)
     off = int(offset)
     ws = _resolve_ws(windows)
+    up = UP_TH if up_th is None else float(up_th)
+    dn = DOWN_TH if down_th is None else float(down_th)
+    nw = NEED_WIN if need_win is None else int(need_win)
     age_cap = max(1, int(max_hold_bars) // gstep)
-    ck = _cache_path(res_mode, ws, fact)
+    ck = _cache_path(res_mode, ws, fact, _th_suffix(up, dn, nw))
     if not ck.exists():
         raise SystemExit("signals incomplete")
     z = np.load(ck)
@@ -322,8 +336,8 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
         stats["n_picks"].append(len(basket))
     # recompute survivor/new split per date for meta (light pass)
     contract = {
-        "framework": "v3_resonance", "up_th": UP_TH, "down_th": DOWN_TH,
-        "need_win": NEED_WIN, "dir_window": DIR_WIN, "lag": LAG, "grid_step": gstep,
+        "framework": "v3_resonance", "up_th": up, "down_th": dn,
+        "need_win": nw, "dir_window": DIR_WIN, "lag": LAG, "grid_step": gstep,
         "age_cap_grids": age_cap, "offset": off,
         "max_hold_bars": int(max_hold_bars), "windows": list(ws),
         "n_pos": int(n_pos), "max_grid_age": MAX_GRID_AGE, "cooldown_grids": cool,
@@ -438,18 +452,23 @@ def main():
     ap.add_argument("--tag", default=TAG)
     ap.add_argument("--factset", default=None)
     ap.add_argument("--ent-pctl", type=float, default=0.95)
+    ap.add_argument("--up-th", type=float, default=None)
+    ap.add_argument("--down-th", type=float, default=None)
+    ap.add_argument("--need-win", type=int, default=None)
     args = ap.parse_args()
     fact, fact_names = (None, None)
     if args.factset:
         fact, fact_names = _read_factset(args.factset)
     if args.signals is not None:
-        signals(args.signals, args.res_mode, args.windows, fact, fact_names)
+        signals(args.signals, args.res_mode, args.windows, fact, fact_names,
+                args.up_th, args.down_th, args.need_win)
     elif args.status:
         status()
     elif args.build:
         build(args.hold_pctl, args.cooldown, args.tag, args.grid_step,
               args.bear_pctl, args.res_mode, args.net_min_pctl, args.rank_by, args.offset,
-              args.max_hold_bars, args.windows, args.n_pos, fact, fact_names, args.ent_pctl)
+              args.max_hold_bars, args.windows, args.n_pos, fact, fact_names, args.ent_pctl,
+              args.up_th, args.down_th, args.need_win)
     elif args.run is not None:
         run_sims(args.run, args.tag, RUNNERS[args.runner], args.holding_bars)
     elif args.report:

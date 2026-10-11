@@ -39,7 +39,7 @@ PY = sys.executable
 
 BASE_PARAMS = ["--hold-pctl", "0.65", "--cooldown", "3", "--max-hold-bars", "60",
                "--n-pos", "15", "--rank-by", "score"]
-ORDER = ["s1_top5_t", "s1d_top5_t_div", "s2_consist", "s3_family", "s4_control", "s1_n3", "s1_n8"]
+ORDER = ["s1_top5_t", "s1d_top5_t_div", "s2_consist", "s3_family", "s4_control", "s1_n3", "s1_n8", "s1_n4"]
 
 # 单变量筛选 (从 s1 基线出发, 变量 = 退出/冷却/买入门槛/持仓数; 目的 = 降低回撤提高直线度)
 SCREEN_VARIANTS = [
@@ -52,11 +52,26 @@ SCREEN_VARIANTS = [
     ("V4_S1_POS10_o0", ["--n-pos", "10"]),
 ]
 
+# n3 (3因子) 微调组: 从最直形态出发
+SCREEN_VARIANTS_N3 = [
+    ("V4_S1_N3_CD6_o0", ["--cooldown", "6"]),
+    ("V4_S1_N3_POS10_o0", ["--n-pos", "10"]),
+    ("V4_S1_N3_POS20_o0", ["--n-pos", "20"]),
+    ("V4_S1_N3_CAP100_o0", ["--max-hold-bars", "100"]),
+    ("V4_S1_N3_BP75_o0", ["--bear-pctl", "0.75"]),
+    ("V4_S1_N3_CD6BP75_o0", ["--cooldown", "6", "--bear-pctl", "0.75"]),
+    ("V4_S1_N3_UP70_o0", ["--up-th", "0.70"]),
+    ("V4_S1_N3_NW3_o0", ["--need-win", "3"]),
+    ("V4_S1_N3_ENT90_o0", ["--ent-pctl", "0.90"]),
+]
+
 # 筛选赢家的相位验证 (跨相位机制裁决)
 PHASE_VARIANTS = [
     ("V4_S1_CD6", "s1_top5_t", ["--cooldown", "6"]),
     ("V4_S1D_CD6", "s1d_top5_t_div", ["--cooldown", "6"]),
     ("V4_S1_N3", "s1_n3", []),
+    ("V4_S1_N3_CD6", "s1_n3", ["--cooldown", "6"]),
+    ("V4_S1_N3_BP75", "s1_n3", ["--bear-pctl", "0.75"]),
 ]
 
 
@@ -230,8 +245,11 @@ def curves():
     by = {}
     for e in entries:
         by.setdefault(group_key(e), []).append(e)
+    PREFERRED = ["s1d_top5_t_div", "V4_S1_N3", "V4_S1_N3_BP75", "V4_S1_N3_CD6"]  # 直线候选优先
     order = sorted(by.keys(), key=lambda k: -np.mean([x["seg"]["ratio"] for x in by[k]]))
-    order = [k for k in order if len(by[k]) >= 2][:6]  # 只画多相位配置 (≥2), top-6
+    order = [k for k in order if len(by[k]) >= 2]
+    order = [k for k in PREFERRED if k in order] + [k for k in order if k not in PREFERRED]
+    order = order[:6]
     if not order:
         log("no entries")
         return
@@ -324,6 +342,7 @@ def main():
     ap.add_argument("--curves", action="store_true")
     ap.add_argument("--phases", default=None)
     ap.add_argument("--screen", default=None, help="factset tag to run SCREEN_VARIANTS on")
+    ap.add_argument("--screen-n3", default=None, help="factset tag to run SCREEN_VARIANTS_N3 on")
     ap.add_argument("--vphases", default=None, help="comma list of PHASE_VARIANTS keys")
     args = ap.parse_args()
     order = ORDER
@@ -369,6 +388,24 @@ def main():
                 ensure_journal(vtag, vtag, 0)
                 continue
             log(f"=== {vtag} ===")
+            if not run_cmd(["--factset", str(ff), "--build", "--tag", vtag,
+                            "--offset", "0"] + BASE_PARAMS + extra):
+                continue
+            if not run_cmd(["--factset", str(ff), "--run", "1", "--tag", vtag,
+                            "--runner", "v42", "--holding-bars", "60"], timeout=900):
+                continue
+            ensure_journal(vtag, vtag, 0)
+        return
+    if args.screen_n3:
+        ff = FS / f"{args.screen_n3}.json"
+        for vtag, extra in SCREEN_VARIANTS_N3:
+            if (SIMS / vtag / "result.json").exists():
+                log(f"{vtag}: sim exists, skip")
+                ensure_journal(vtag, vtag, 0)
+                continue
+            log(f"=== {vtag} ===")
+            if not run_cmd(["--factset", str(ff), "--signals", "99"] + extra):
+                continue
             if not run_cmd(["--factset", str(ff), "--build", "--tag", vtag,
                             "--offset", "0"] + BASE_PARAMS + extra):
                 continue

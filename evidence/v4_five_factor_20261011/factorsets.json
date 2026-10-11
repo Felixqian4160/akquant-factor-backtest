@@ -257,6 +257,18 @@
      "gtja_gtja_144": 9.01
     }
    }
+  },
+  "s1_n4": {
+   "reason": "t top-4 (个数验证)",
+   "factors": [
+    "l_ami",
+    "alpha_alpha040",
+    "gtja_gtja_113",
+    "hl_52w_disposition"
+   ],
+   "stats": {
+    "per_factor": {}
+   }
   }
  }
 }
