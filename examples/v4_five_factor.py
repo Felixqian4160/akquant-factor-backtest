@@ -231,7 +231,7 @@ def curves():
     for e in entries:
         by.setdefault(group_key(e), []).append(e)
     order = sorted(by.keys(), key=lambda k: -np.mean([x["seg"]["ratio"] for x in by[k]]))
-    order = order[:6]  # 图只保留 top-6 配置, 避免拥挤
+    order = [k for k in order if len(by[k]) >= 2][:6]  # 只画多相位配置 (≥2), top-6
     if not order:
         log("no entries")
         return
