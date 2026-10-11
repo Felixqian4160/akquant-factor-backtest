@@ -1,0 +1,11 @@
+{
+ "tag": "s1d_top5_t_div",
+ "factors": [
+  "l_ami",
+  "alpha_alpha040",
+  "gtja_gtja_113",
+  "hl_52w_disposition",
+  "gtja_gtja_015"
+ ],
+ "reason": "t 排序 + 贪心 |corr| 约束"
+}

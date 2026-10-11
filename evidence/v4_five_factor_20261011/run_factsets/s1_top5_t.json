@@ -1,0 +1,11 @@
+{
+ "tag": "s1_top5_t",
+ "factors": [
+  "l_ami",
+  "alpha_alpha040",
+  "gtja_gtja_113",
+  "hl_52w_disposition",
+  "alpha_alpha006"
+ ],
+ "reason": "2010-2017 t 最高 5 因子"
+}

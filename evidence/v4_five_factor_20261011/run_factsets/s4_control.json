@@ -1,0 +1,11 @@
+{
+ "tag": "s4_control",
+ "factors": [
+  "p_m11",
+  "alpha_alpha_custom_argmax_recent",
+  "gtja_gtja_025",
+  "gtja_gtja_129",
+  "talib_LINEARREG_SLOPE"
+ ],
+ "reason": "随机 5 (seed=20261011) null 对照"
+}

@@ -66,7 +66,9 @@ def _resolve_ws(windows=None):
     return tuple(int(x) for x in str(windows).replace(" ", "").split(","))
 
 
-def _cache_path(res_mode, ws):
+def _cache_path(res_mode, ws, fact=None):
+    if fact:
+        return CACHE / f"votes__{fact}__{res_mode}_{'_'.join(map(str, ws))}.npz"
     if res_mode == "any2" and ws == WS:
         return CACHE / "votes_batches.npz"
     if res_mode == "streak" and ws == WS:
@@ -74,12 +76,22 @@ def _cache_path(res_mode, ws):
     return CACHE / f"votes_{res_mode}_{'_'.join(map(str, ws))}.npz"
 
 
+def _read_factset(path):
+    d = json.loads(pathlib.Path(path).read_text())
+    return str(d["tag"]), [str(f) for f in d["factors"]]
+
+
 def log(m):
     print(f"[{time.strftime('%H:%M:%S')}] {m}", flush=True)
 
 
-def load_matrix():
+def load_matrix(fact_names=None):
     mat = pl.read_parquet(MAT)
+    if fact_names is not None:
+        missing = [f for f in fact_names if f not in mat.columns]
+        if missing:
+            raise SystemExit(f"factset missing columns: {missing[:8]}")
+        mat = mat.select(["trade_date"] + list(fact_names))
     factors = [c for c in mat.columns if c != "trade_date"]
     M = mat.select(factors).to_numpy().astype(np.float64)
     dates = [str(d)[:10] for d in mat["trade_date"].to_list()]
@@ -103,15 +115,15 @@ def compute_dirs(M):
     return D
 
 
-def signals(max_batches, res_mode="any2", windows=None):
-    factors, M, dates = load_matrix()
+def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=None):
+    factors, M, dates = load_matrix(fact_names)
     T, F = M.shape
     OUT.mkdir(parents=True, exist_ok=True)
     CACHE.mkdir(parents=True, exist_ok=True)
     D = compute_dirs(M)
     ws = _resolve_ws(windows)
     n_batches = (F + FACTOR_BATCH - 1) // FACTOR_BATCH
-    ck = _cache_path(res_mode, ws)
+    ck = _cache_path(res_mode, ws, fact)
 
     bull = np.zeros((T, 0), dtype=np.int16)
     bear = np.zeros((T, 0), dtype=np.int16)
@@ -125,13 +137,18 @@ def signals(max_batches, res_mode="any2", windows=None):
     assert len(mat_ms) == len(pan_ms) and np.array_equal(mat_ms, pan_ms), "panel/matrix date mismatch"
     date_ms_global = mat_ms
 
+    score = None
     if ck.exists():
         z = np.load(ck)
         bull = z["bull"]; bear = z["bear"]; start_batch = int(z["next_batch"])
+        if "score" in z.files:
+            score = z["score"]
         log(f"resume: batches done={start_batch}/{n_batches}")
     else:
         bull = np.zeros((T, S), dtype=np.int16)
         bear = np.zeros((T, S), dtype=np.int16)
+        if fact is not None:
+            score = np.zeros((T, S), dtype=np.float32)
 
     done_now = 0
     for bi in range(start_batch, n_batches):
@@ -164,6 +181,8 @@ def signals(max_batches, res_mode="any2", windows=None):
             if res_mode == "any2":
                 upcnt = np.zeros((T, S), dtype=np.int8)
                 dncnt = np.zeros((T, S), dtype=np.int8)
+                facc = np.zeros((T, S)) if score is not None else None
+                fcnt = np.zeros((T, S)) if score is not None else None
                 for W in ws:
                     num = P[W:] - P[:-W]
                     den = NP[W:] - NP[:-W]
@@ -171,6 +190,12 @@ def signals(max_batches, res_mode="any2", windows=None):
                         sw = np.where(den >= max(5, int(W * 0.4)), num / np.maximum(den, 1), np.nan)
                     upcnt[W - 1:] += (sw >= UP_TH).astype(np.int8)
                     dncnt[W - 1:] += (sw <= DOWN_TH).astype(np.int8)
+                    if facc is not None:
+                        okw = np.isfinite(sw)
+                        facc[W - 1:][okw] += sw[okw]
+                        fcnt[W - 1:][okw] += 1.0
+                if facc is not None:
+                    score += np.where(fcnt > 0, facc / np.maximum(fcnt, 1.0), 0.0).astype(np.float32)
                 bull += (upcnt >= NEED_WIN).astype(np.int16)
                 bear += (dncnt >= NEED_WIN).astype(np.int16)
             else:  # streak: >=1 adjacent window pair both up (10&20|20&40|40&60|60&120)
@@ -193,7 +218,8 @@ def signals(max_batches, res_mode="any2", windows=None):
                     sd |= downs[i] & downs[i + 1]
                 bull += su.astype(np.int16)
                 bear += sd.astype(np.int16)
-        np.savez_compressed(ck, bull=bull, bear=bear, next_batch=bi + 1)
+        extra = {"score": score} if score is not None else {}
+        np.savez_compressed(ck, bull=bull, bear=bear, next_batch=bi + 1, **extra)
         done_now += 1
         log(f"batch {bi+1}/{n_batches} ({len(batch)} factors) {time.time()-t0:.0f}s  "
             f"[bull mean {bull.sum(1).mean()/S:.1f}, bear mean {bear.sum(1).mean()/S:.1f}]")
@@ -211,18 +237,22 @@ def status():
 
 def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
           bear_pctl=0.90, res_mode="any2", net_min_pctl=None, rank_by="bull", offset=0,
-          max_hold_bars=20, windows=None):
+          max_hold_bars=20, windows=None, n_pos=N_POS, fact=None, fact_names=None,
+          ent_pctl=0.95):
     cool = int(cooldown)
     gstep = int(grid_step)
     off = int(offset)
     ws = _resolve_ws(windows)
     age_cap = max(1, int(max_hold_bars) // gstep)
-    ck = _cache_path(res_mode, ws)
+    ck = _cache_path(res_mode, ws, fact)
     if not ck.exists():
         raise SystemExit("signals incomplete")
     z = np.load(ck)
     bull, bear = z["bull"], z["bear"]
-    factors, M, dates = load_matrix()
+    score = z["score"] if "score" in z.files else None
+    if rank_by == "score" and score is None:
+        raise SystemExit("rank_by=score requires a factset cache with score")
+    factors, M, dates = load_matrix(fact_names)
     n_batches = (len(factors) + FACTOR_BATCH - 1) // FACTOR_BATCH
     assert int(z["next_batch"]) == n_batches, f"signals not complete: {int(z['next_batch'])}/{n_batches}"
     codes = pl.read_parquet(PANEL, columns=["ts_code"]).get_column("ts_code").unique().sort().to_list()
@@ -233,14 +263,14 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
 
     # calibrate on 2010-2017 grids
     cal = gi_all[np.array([d <= "2017-12-31" for d in grid])]
-    ENT_MIN = int(np.ceil(np.quantile(bull[cal], 0.95)))
+    ENT_MIN = int(np.ceil(np.quantile(bull[cal], ent_pctl)))
     HOLD_MIN = int(np.ceil(np.quantile(bull[cal], hold_pctl)))
     BEAR_MAX = int(np.ceil(np.quantile(bear[cal], bear_pctl)))
     NET_MIN = None
     if net_min_pctl is not None:
         net_cal = bull[cal].astype(np.int32) - bear[cal].astype(np.int32)
         NET_MIN = int(np.ceil(np.quantile(net_cal, net_min_pctl)))
-    log(f"calibrated (2010-2017 grids n={len(cal)}): ENT_MIN(P95)={ENT_MIN} "
+    log(f"calibrated (2010-2017 grids n={len(cal)}): ENT_MIN(P{int(ent_pctl*100)})={ENT_MIN} "
         f"HOLD_MIN(P{int(hold_pctl*100)})={HOLD_MIN} BEAR_MAX(P{int(bear_pctl*100)})={BEAR_MAX} "
         f"NET_MIN({int(net_min_pctl*100) if net_min_pctl else '-'})={NET_MIN} res={res_mode}")
     log(f"bull dist: mean {bull[cal].mean():.1f} p90 {np.quantile(bull[cal],0.90):.0f} "
@@ -267,13 +297,18 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
                 cooldown[c] = gi
                 del hold[c]
         n_surv = len(survivors)
-        slots = N_POS - n_surv
+        slots = n_pos - n_surv
         n_new = 0
         if slots > 0:
             cand = [j for j in range(S) if elig[j] and codes[j] not in hold
                     and (gi - cooldown.get(codes[j], -999)) >= cool]
-            cand.sort(key=lambda j: (-net_row[j], r_row[j], codes[j]) if rank_by == "net"
-                      else (-b_row[j], r_row[j], codes[j]))
+            if rank_by == "net":
+                cand.sort(key=lambda j: (-net_row[j], r_row[j], codes[j]))
+            elif rank_by == "score":
+                s_row = score[i].astype(np.float64)
+                cand.sort(key=lambda j: (-s_row[j], r_row[j], codes[j]))
+            else:
+                cand.sort(key=lambda j: (-b_row[j], r_row[j], codes[j]))
             for j in cand[:slots]:
                 hold[codes[j]] = gi
                 survivors.append(codes[j])
@@ -291,11 +326,13 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
         "need_win": NEED_WIN, "dir_window": DIR_WIN, "lag": LAG, "grid_step": gstep,
         "age_cap_grids": age_cap, "offset": off,
         "max_hold_bars": int(max_hold_bars), "windows": list(ws),
-        "n_pos": N_POS, "max_grid_age": MAX_GRID_AGE, "cooldown_grids": cool,
+        "n_pos": int(n_pos), "max_grid_age": MAX_GRID_AGE, "cooldown_grids": cool,
         "hold_pctl": hold_pctl, "bear_pctl": bear_pctl, "res_mode": res_mode,
         "net_min": NET_MIN, "rank_by": rank_by,
-        "ent_min": ENT_MIN, "hold_min": HOLD_MIN, "bear_max": BEAR_MAX,
-        "calibration": "2010-2017 grid rows", "factor_pool": f"{len(factors)} dedup factors",
+        "ent_min": ENT_MIN, "hold_min": HOLD_MIN, "bear_max": BEAR_MAX, "ent_pctl": ent_pctl,
+        "calibration": "2010-2017 grid rows",
+        "factor_pool": (f"{len(factors)} factors factset={fact}" if fact else f"{len(factors)} dedup factors"),
+        "factset": fact,
         "execution": "v41 (T+1 NextOpen, equal weight 90%, comm 0.25% + slip 0.10%, CA, 21bar cap)",
     }
     outdir = PICKS / tag
@@ -391,22 +428,28 @@ def main():
     ap.add_argument("--bear-pctl", type=float, default=0.90)
     ap.add_argument("--res-mode", choices=["any2", "streak"], default="any2")
     ap.add_argument("--net-min-pctl", type=float, default=None)
-    ap.add_argument("--rank-by", choices=["bull", "net"], default="bull")
+    ap.add_argument("--rank-by", choices=["bull", "net", "score"], default="bull")
     ap.add_argument("--offset", type=int, default=0)
     ap.add_argument("--max-hold-bars", type=int, default=20)
+    ap.add_argument("--n-pos", type=int, default=N_POS)
     ap.add_argument("--windows", default="")
     ap.add_argument("--runner", choices=["v41", "v42"], default="v41")
     ap.add_argument("--holding-bars", type=int, default=0)
     ap.add_argument("--tag", default=TAG)
+    ap.add_argument("--factset", default=None)
+    ap.add_argument("--ent-pctl", type=float, default=0.95)
     args = ap.parse_args()
+    fact, fact_names = (None, None)
+    if args.factset:
+        fact, fact_names = _read_factset(args.factset)
     if args.signals is not None:
-        signals(args.signals, args.res_mode, args.windows)
+        signals(args.signals, args.res_mode, args.windows, fact, fact_names)
     elif args.status:
         status()
     elif args.build:
         build(args.hold_pctl, args.cooldown, args.tag, args.grid_step,
               args.bear_pctl, args.res_mode, args.net_min_pctl, args.rank_by, args.offset,
-              args.max_hold_bars, args.windows)
+              args.max_hold_bars, args.windows, args.n_pos, fact, fact_names, args.ent_pctl)
     elif args.run is not None:
         run_sims(args.run, args.tag, RUNNERS[args.runner], args.holding_bars)
     elif args.report:

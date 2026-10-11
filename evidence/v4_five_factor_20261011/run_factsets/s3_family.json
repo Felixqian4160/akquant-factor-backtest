@@ -1,0 +1,11 @@
+{
+ "tag": "s3_family",
+ "factors": [
+  "l_ami",
+  "alpha_alpha040",
+  "gtja_gtja_113",
+  "talib_ADX",
+  "hl_52w_disposition"
+ ],
+ "reason": "alpha/gtja/talib/其他 各组 t 最佳 + 剩余最佳"
+}

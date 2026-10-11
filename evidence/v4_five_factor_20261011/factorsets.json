@@ -1,0 +1,262 @@
+{
+ "generated": "2026-10-11 20:51:02",
+ "window": "2010-01-01..2017-12-31",
+ "source": "/media/felix/f/quant/akquant-factor-backtest/evidence/v34_dedup_20261010/matrix_v34_dedup_ADJ.parquet",
+ "sets": {
+  "s1_top5_t": {
+   "reason": "2010-2017 t 最高 5 因子",
+   "factors": [
+    "l_ami",
+    "alpha_alpha040",
+    "gtja_gtja_113",
+    "hl_52w_disposition",
+    "alpha_alpha006"
+   ],
+   "stats": {
+    "mean_t": 12.21482185690528,
+    "min_t": 9.570662293152091,
+    "sum_py": 35,
+    "max_corr": 0.5911206239336041,
+    "per_factor": {
+     "l_ami": {
+      "t": 15.14,
+      "mean": 0.04219,
+      "py": 6
+     },
+     "alpha_alpha040": {
+      "t": 14.07,
+      "mean": 0.02286,
+      "py": 8
+     },
+     "gtja_gtja_113": {
+      "t": 11.72,
+      "mean": 0.01846,
+      "py": 7
+     },
+     "hl_52w_disposition": {
+      "t": 10.58,
+      "mean": 0.0232,
+      "py": 7
+     },
+     "alpha_alpha006": {
+      "t": 9.57,
+      "mean": 0.01509,
+      "py": 7
+     }
+    }
+   }
+  },
+  "s1d_top5_t_div": {
+   "reason": "t 排序 + 贪心 |corr| 约束",
+   "factors": [
+    "l_ami",
+    "alpha_alpha040",
+    "gtja_gtja_113",
+    "hl_52w_disposition",
+    "gtja_gtja_015"
+   ],
+   "stats": {
+    "mean_t": 12.211106875417013,
+    "min_t": 9.552087385710752,
+    "sum_py": 35,
+    "max_corr": 0.46991849212671816,
+    "per_factor": {
+     "l_ami": {
+      "t": 15.14,
+      "mean": 0.04219,
+      "py": 6
+     },
+     "alpha_alpha040": {
+      "t": 14.07,
+      "mean": 0.02286,
+      "py": 8
+     },
+     "gtja_gtja_113": {
+      "t": 11.72,
+      "mean": 0.01846,
+      "py": 7
+     },
+     "hl_52w_disposition": {
+      "t": 10.58,
+      "mean": 0.0232,
+      "py": 7
+     },
+     "gtja_gtja_015": {
+      "t": 9.55,
+      "mean": 0.02044,
+      "py": 7
+     }
+    }
+   }
+  },
+  "s2_consist": {
+   "reason": "(pos_years,t) 排序 + 贪心 corr<0.6",
+   "factors": [
+    "alpha_alpha040",
+    "alpha_alpha045",
+    "alpha_alpha003",
+    "alpha_alpha055",
+    "alpha_alpha013"
+   ],
+   "stats": {
+    "mean_t": 8.808232517625532,
+    "min_t": 5.768225475655132,
+    "sum_py": 40,
+    "max_corr": 0.3519380138482114,
+    "per_factor": {
+     "alpha_alpha040": {
+      "t": 14.07,
+      "mean": 0.02286,
+      "py": 8
+     },
+     "alpha_alpha045": {
+      "t": 8.59,
+      "mean": 0.01217,
+      "py": 8
+     },
+     "alpha_alpha003": {
+      "t": 8.08,
+      "mean": 0.01057,
+      "py": 8
+     },
+     "alpha_alpha055": {
+      "t": 7.53,
+      "mean": 0.00974,
+      "py": 8
+     },
+     "alpha_alpha013": {
+      "t": 5.77,
+      "mean": 0.00904,
+      "py": 8
+     }
+    }
+   }
+  },
+  "s3_family": {
+   "reason": "alpha/gtja/talib/其他 各组 t 最佳 + 剩余最佳",
+   "factors": [
+    "l_ami",
+    "alpha_alpha040",
+    "gtja_gtja_113",
+    "talib_ADX",
+    "hl_52w_disposition"
+   ],
+   "stats": {
+    "mean_t": 11.553469504325507,
+    "min_t": 6.263900530253221,
+    "sum_py": 34,
+    "max_corr": 0.46991849212671816,
+    "per_factor": {
+     "l_ami": {
+      "t": 15.14,
+      "mean": 0.04219,
+      "py": 6
+     },
+     "alpha_alpha040": {
+      "t": 14.07,
+      "mean": 0.02286,
+      "py": 8
+     },
+     "gtja_gtja_113": {
+      "t": 11.72,
+      "mean": 0.01846,
+      "py": 7
+     },
+     "talib_ADX": {
+      "t": 6.26,
+      "mean": 0.01222,
+      "py": 6
+     },
+     "hl_52w_disposition": {
+      "t": 10.58,
+      "mean": 0.0232,
+      "py": 7
+     }
+    }
+   }
+  },
+  "s4_control": {
+   "reason": "随机 5 (seed=20261011) null 对照",
+   "factors": [
+    "p_m11",
+    "alpha_alpha_custom_argmax_recent",
+    "gtja_gtja_025",
+    "gtja_gtja_129",
+    "talib_LINEARREG_SLOPE"
+   ],
+   "stats": {
+    "mean_t": 2.0788901510672195,
+    "min_t": -0.499123388507925,
+    "sum_py": 23,
+    "max_corr": 0.508568432950474,
+    "per_factor": {
+     "p_m11": {
+      "t": 8.54,
+      "mean": 0.01689,
+      "py": 7
+     },
+     "alpha_alpha_custom_argmax_recent": {
+      "t": -0.35,
+      "mean": -0.00063,
+      "py": 4
+     },
+     "gtja_gtja_025": {
+      "t": 1.04,
+      "mean": 0.00218,
+      "py": 4
+     },
+     "gtja_gtja_129": {
+      "t": -0.5,
+      "mean": -0.00078,
+      "py": 4
+     },
+     "talib_LINEARREG_SLOPE": {
+      "t": 1.66,
+      "mean": 0.00284,
+      "py": 4
+     }
+    }
+   }
+  },
+  "s1_n3": {
+   "reason": "t top-3 (个数验证)",
+   "factors": [
+    "l_ami",
+    "alpha_alpha040",
+    "gtja_gtja_113"
+   ],
+   "stats": {
+    "per_factor": {
+     "l_ami": 15.14,
+     "alpha_alpha040": 14.07,
+     "gtja_gtja_113": 11.72
+    }
+   }
+  },
+  "s1_n8": {
+   "reason": "t top-8 (个数验证)",
+   "factors": [
+    "l_ami",
+    "alpha_alpha040",
+    "gtja_gtja_113",
+    "hl_52w_disposition",
+    "alpha_alpha006",
+    "gtja_gtja_015",
+    "l_turna",
+    "gtja_gtja_144"
+   ],
+   "stats": {
+    "per_factor": {
+     "l_ami": 15.14,
+     "alpha_alpha040": 14.07,
+     "gtja_gtja_113": 11.72,
+     "hl_52w_disposition": 10.58,
+     "alpha_alpha006": 9.57,
+     "gtja_gtja_015": 9.55,
+     "l_turna": 9.43,
+     "gtja_gtja_144": 9.01
+    }
+   }
+  }
+ }
+}

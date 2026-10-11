@@ -1,0 +1,11 @@
+{
+ "tag": "s2_consist",
+ "factors": [
+  "alpha_alpha040",
+  "alpha_alpha045",
+  "alpha_alpha003",
+  "alpha_alpha055",
+  "alpha_alpha013"
+ ],
+ "reason": "(pos_years,t) 排序 + 贪心 corr<0.6"
+}
