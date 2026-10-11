@@ -149,17 +149,24 @@ def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=No
     date_ms_global = mat_ms
 
     score = None
+    fs = fb = fbe = None
     if ck.exists():
         z = np.load(ck)
         bull = z["bull"]; bear = z["bear"]; start_batch = int(z["next_batch"])
         if "score" in z.files:
             score = z["score"]
+        if "fs" in z.files:
+            fs, fb, fbe = z["fs"], z["fbull"], z["fbear"]
         log(f"resume: batches done={start_batch}/{n_batches}")
     else:
         bull = np.zeros((T, S), dtype=np.int16)
         bear = np.zeros((T, S), dtype=np.int16)
         if fact is not None:
             score = np.zeros((T, S), dtype=np.float32)
+    if fact is not None and fs is None:
+        fs = np.zeros((F, T, S), dtype=np.float32)
+        fb = np.zeros((F, T, S), dtype=np.int8)
+        fbe = np.zeros((F, T, S), dtype=np.int8)
 
     done_now = 0
     for bi in range(start_batch, n_batches):
@@ -206,7 +213,13 @@ def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=No
                         facc[W - 1:][okw] += sw[okw]
                         fcnt[W - 1:][okw] += 1.0
                 if facc is not None:
-                    score += np.where(fcnt > 0, facc / np.maximum(fcnt, 1.0), 0.0).astype(np.float32)
+                    fsc = np.where(fcnt > 0, facc / np.maximum(fcnt, 1.0), 0.0).astype(np.float32)
+                    score += fsc
+                    if fs is not None:
+                        jj = bi * FACTOR_BATCH + j
+                        fs[jj] = fsc
+                        fb[jj] = (upcnt >= nw).astype(np.int8)
+                        fbe[jj] = (dncnt >= nw).astype(np.int8)
                 bull += (upcnt >= nw).astype(np.int16)
                 bear += (dncnt >= nw).astype(np.int16)
             else:  # streak: >=1 adjacent window pair both up (10&20|20&40|40&60|60&120)
@@ -230,6 +243,8 @@ def signals(max_batches, res_mode="any2", windows=None, fact=None, fact_names=No
                 bull += su.astype(np.int16)
                 bear += sd.astype(np.int16)
         extra = {"score": score} if score is not None else {}
+        if fs is not None:
+            extra.update({"fs": fs, "fbull": fb, "fbear": fbe})
         np.savez_compressed(ck, bull=bull, bear=bear, next_batch=bi + 1, **extra)
         done_now += 1
         log(f"batch {bi+1}/{n_batches} ({len(batch)} factors) {time.time()-t0:.0f}s  "
@@ -249,7 +264,8 @@ def status():
 def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
           bear_pctl=0.90, res_mode="any2", net_min_pctl=None, rank_by="bull", offset=0,
           max_hold_bars=20, windows=None, n_pos=N_POS, fact=None, fact_names=None,
-          ent_pctl=0.95, up_th=None, down_th=None, need_win=None):
+          ent_pctl=0.95, up_th=None, down_th=None, need_win=None,
+          decide="count", gate_idx=0, select_trail=0, select_metric="mean", select_topn=5):
     cool = int(cooldown)
     gstep = int(grid_step)
     off = int(offset)
@@ -266,6 +282,11 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
     score = z["score"] if "score" in z.files else None
     if rank_by == "score" and score is None:
         raise SystemExit("rank_by=score requires a factset cache with score")
+    fs = z["fs"] if "fs" in z.files else None
+    fbull = z["fbull"] if "fbull" in z.files else None
+    fbear = z["fbear"] if "fbear" in z.files else None
+    if decide in ("gate", "disp") and fs is None:
+        raise SystemExit(f"decide={decide} requires per-factor cache fields (re-run signals)")
     factors, M, dates = load_matrix(fact_names)
     n_batches = (len(factors) + FACTOR_BATCH - 1) // FACTOR_BATCH
     assert int(z["next_batch"]) == n_batches, f"signals not complete: {int(z['next_batch'])}/{n_batches}"
@@ -277,13 +298,69 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
 
     # calibrate on 2010-2017 grids
     cal = gi_all[np.array([d <= "2017-12-31" for d in grid])]
-    ENT_MIN = int(np.ceil(np.quantile(bull[cal], ent_pctl)))
-    HOLD_MIN = int(np.ceil(np.quantile(bull[cal], hold_pctl)))
-    BEAR_MAX = int(np.ceil(np.quantile(bear[cal], bear_pctl)))
+    sel_trail = int(select_trail) if select_trail else 0
+
+    def _dyn_rows(rows):
+        """动态选因子: 每行日期按近期效力 (settled) 选 top-N, 返回其选票矩阵."""
+        bb = np.zeros((len(rows), S), dtype=np.int32)
+        rr = np.zeros((len(rows), S), dtype=np.int32)
+        ss = np.zeros((len(rows), S), dtype=np.float32)
+        for k, i in enumerate(rows):
+            hi = max(i - 20, 0)
+            lo = max(hi - sel_trail, 0)
+            llo = max(hi - DIR_WIN, 0)
+            if hi - lo < 20 or fbull is None:
+                sel = np.arange(len(factors))
+            else:
+                with np.errstate(all="ignore"):
+                    lmean = np.nanmean(M[llo:hi, :], axis=0)
+                    rmean = np.nanmean(M[lo:hi, :], axis=0)
+                    rstd = np.nanstd(M[lo:hi, :], axis=0)
+                    rhit = np.nanmean(M[lo:hi, :] > 0, axis=0)
+                d = np.where(np.nan_to_num(lmean, nan=0.0) >= 0, 1.0, -1.0)
+                if select_metric == "ir":
+                    sc = d * np.where(rstd > 0, rmean / np.maximum(rstd, 1e-12), -1e18)
+                elif select_metric == "hit":
+                    sc = np.where(d > 0, rhit, 1.0 - rhit)
+                else:
+                    sc = d * rmean
+                sel = np.argsort(-np.nan_to_num(sc, nan=-1e18))[:int(select_topn)]
+            bb[k] = fbull[sel, i, :].sum(axis=0)
+            rr[k] = fbear[sel, i, :].sum(axis=0)
+            ss[k] = fs[sel, i, :].sum(axis=0)
+        return bb, rr, ss
+
+    if sel_trail:
+        if fs is None or fbull is None or fbear is None:
+            raise SystemExit("select layer requires fs/fbull/fbear cache (re-run signals)")
+        DB, DR, DS = _dyn_rows(gi_all)
+        mcal = np.isin(gi_all, cal)
+        ENT_MIN = int(np.ceil(np.quantile(DB[mcal], ent_pctl)))
+        HOLD_MIN = int(np.ceil(np.quantile(DB[mcal], hold_pctl)))
+        BEAR_MAX = int(np.ceil(np.quantile(DR[mcal], bear_pctl)))
+        log(f"dynamic-select: trail={sel_trail} metric={select_metric} topn={select_topn} "
+            f"-> ENT_MIN={ENT_MIN} HOLD_MIN={HOLD_MIN} BEAR_MAX={BEAR_MAX} (2010-17 dynamic votes)")
+    else:
+        ENT_MIN = int(np.ceil(np.quantile(bull[cal], ent_pctl)))
+        HOLD_MIN = int(np.ceil(np.quantile(bull[cal], hold_pctl)))
+        BEAR_MAX = int(np.ceil(np.quantile(bear[cal], bear_pctl)))
     NET_MIN = None
     if net_min_pctl is not None:
         net_cal = bull[cal].astype(np.int32) - bear[cal].astype(np.int32)
         NET_MIN = int(np.ceil(np.quantile(net_cal, net_min_pctl)))
+    S_ENT = S_HOLD = G1 = G2 = D1 = D2 = None
+    if decide == "score":
+        S_ENT = float(np.quantile(score[cal], ent_pctl))
+        S_HOLD = float(np.quantile(score[cal], hold_pctl))
+    elif decide == "gate":
+        G1 = float(np.quantile(fs[gate_idx][cal], 0.75))
+        G2 = float(np.quantile(fs[gate_idx][cal], 0.50))
+    elif decide == "disp":
+        dcal = fs[:, cal, :].std(axis=0)
+        D1 = float(np.quantile(dcal, 0.75))
+        D2 = float(np.quantile(dcal, 0.90))
+    if decide != "count":
+        log(f"decide={decide}: S_ENT={S_ENT} S_HOLD={S_HOLD} G1={G1} G2={G2} D1={D1} D2={D2} gate_idx={gate_idx}")
     log(f"calibrated (2010-2017 grids n={len(cal)}): ENT_MIN(P{int(ent_pctl*100)})={ENT_MIN} "
         f"HOLD_MIN(P{int(hold_pctl*100)})={HOLD_MIN} BEAR_MAX(P{int(bear_pctl*100)})={BEAR_MAX} "
         f"NET_MIN({int(net_min_pctl*100) if net_min_pctl else '-'})={NET_MIN} res={res_mode}")
@@ -296,13 +373,32 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
     stats = {"n_elig": [], "n_picks": [], "n_surv": [], "n_new": []}
     for gi, d in enumerate(grid):
         i = gpos[d]
-        b_row = bull[i].astype(np.int32)
-        r_row = bear[i].astype(np.int32)
+        if sel_trail:
+            b_row = DB[gi]
+            r_row = DR[gi]
+            s_dyn = DS[gi]
+        else:
+            b_row = bull[i].astype(np.int32)
+            r_row = bear[i].astype(np.int32)
+            s_dyn = None
         net_row = b_row - r_row
-        elig = (b_row >= ENT_MIN) & (r_row <= BEAR_MAX)
+        if decide == "score":
+            srow = score[i].astype(np.float32)
+            elig = (srow >= S_ENT) & (r_row <= BEAR_MAX)
+            keep = (srow >= S_HOLD) & (r_row <= BEAR_MAX)
+        elif decide == "gate":
+            grow = fs[gate_idx][i]
+            elig = (grow >= G1) & (b_row >= ENT_MIN) & (r_row <= BEAR_MAX)
+            keep = (grow >= G2) & (b_row >= HOLD_MIN) & (r_row <= BEAR_MAX)
+        elif decide == "disp":
+            drow = fs[:, i, :].std(axis=0)
+            elig = (b_row >= ENT_MIN) & (r_row <= BEAR_MAX) & (drow <= D1)
+            keep = (b_row >= HOLD_MIN) & (r_row <= BEAR_MAX) & (drow <= D2)
+        else:
+            elig = (b_row >= ENT_MIN) & (r_row <= BEAR_MAX)
+            keep = (b_row >= HOLD_MIN) & (r_row <= BEAR_MAX)
         if NET_MIN is not None:
             elig &= (net_row >= NET_MIN)
-        keep = (b_row >= HOLD_MIN) & (r_row <= BEAR_MAX)
         n_elig = int(elig.sum())
         survivors = [c for c in hold if keep[codes.index(c)] and (gi - hold[c]) < age_cap]
         # drops (condition break or age) -> cooldown
@@ -319,7 +415,7 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
             if rank_by == "net":
                 cand.sort(key=lambda j: (-net_row[j], r_row[j], codes[j]))
             elif rank_by == "score":
-                s_row = score[i].astype(np.float64)
+                s_row = (s_dyn if s_dyn is not None else score[i]).astype(np.float64)
                 cand.sort(key=lambda j: (-s_row[j], r_row[j], codes[j]))
             else:
                 cand.sort(key=lambda j: (-b_row[j], r_row[j], codes[j]))
@@ -344,6 +440,10 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
         "hold_pctl": hold_pctl, "bear_pctl": bear_pctl, "res_mode": res_mode,
         "net_min": NET_MIN, "rank_by": rank_by,
         "ent_min": ENT_MIN, "hold_min": HOLD_MIN, "bear_max": BEAR_MAX, "ent_pctl": ent_pctl,
+        "decide": decide, "gate_factor": (factors[gate_idx] if decide == "gate" else None),
+        "score_cuts": [S_ENT, S_HOLD], "gate_cuts": [G1, G2], "disp_cuts": [D1, D2],
+        "dynamic_select": ({"trail": sel_trail, "metric": select_metric, "topn": int(select_topn)}
+                           if sel_trail else None),
         "calibration": "2010-2017 grid rows",
         "factor_pool": (f"{len(factors)} factors factset={fact}" if fact else f"{len(factors)} dedup factors"),
         "factset": fact,
@@ -455,6 +555,11 @@ def main():
     ap.add_argument("--up-th", type=float, default=None)
     ap.add_argument("--down-th", type=float, default=None)
     ap.add_argument("--need-win", type=int, default=None)
+    ap.add_argument("--decide", choices=["count", "score", "gate", "disp"], default="count")
+    ap.add_argument("--gate-idx", type=int, default=0)
+    ap.add_argument("--select-trail", type=int, default=0)
+    ap.add_argument("--select-metric", choices=["mean", "ir", "hit"], default="mean")
+    ap.add_argument("--select-topn", type=int, default=5)
     args = ap.parse_args()
     fact, fact_names = (None, None)
     if args.factset:
@@ -468,7 +573,8 @@ def main():
         build(args.hold_pctl, args.cooldown, args.tag, args.grid_step,
               args.bear_pctl, args.res_mode, args.net_min_pctl, args.rank_by, args.offset,
               args.max_hold_bars, args.windows, args.n_pos, fact, fact_names, args.ent_pctl,
-              args.up_th, args.down_th, args.need_win)
+              args.up_th, args.down_th, args.need_win, args.decide, args.gate_idx,
+              args.select_trail, args.select_metric, args.select_topn)
     elif args.run is not None:
         run_sims(args.run, args.tag, RUNNERS[args.runner], args.holding_bars)
     elif args.report:

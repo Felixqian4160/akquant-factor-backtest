@@ -1,0 +1,26 @@
+{
+ "tag": "v5_pool20",
+ "factors": [
+  "l_ami",
+  "alpha_alpha040",
+  "gtja_gtja_113",
+  "hl_52w_disposition",
+  "alpha_alpha006",
+  "gtja_gtja_015",
+  "l_turna",
+  "gtja_gtja_144",
+  "alpha_alpha045",
+  "p_m11",
+  "mom12m_jt",
+  "gtja_gtja_062",
+  "pe",
+  "alpha_alpha003",
+  "alpha_alpha044",
+  "or_yoy",
+  "alpha_alpha027",
+  "alpha_alpha055",
+  "gtja_gtja_136",
+  "alpha_alpha014"
+ ],
+ "reason": "2010-17 t top-20 (动态选择池)"
+}

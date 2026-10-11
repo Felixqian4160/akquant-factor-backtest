@@ -63,6 +63,9 @@ SCREEN_VARIANTS_N3 = [
     ("V4_S1_N3_UP70_o0", ["--up-th", "0.70"]),
     ("V4_S1_N3_NW3_o0", ["--need-win", "3"]),
     ("V4_S1_N3_ENT90_o0", ["--ent-pctl", "0.90"]),
+    ("V4_S1_N3_M1SCORE_o0", ["--decide", "score"]),
+    ("V4_S1_N3_M2GATE_o0", ["--decide", "gate"]),
+    ("V4_S1_N3_M3DISP_o0", ["--decide", "disp"]),
 ]
 
 # 筛选赢家的相位验证 (跨相位机制裁决)
@@ -72,6 +75,7 @@ PHASE_VARIANTS = [
     ("V4_S1_N3", "s1_n3", []),
     ("V4_S1_N3_CD6", "s1_n3", ["--cooldown", "6"]),
     ("V4_S1_N3_BP75", "s1_n3", ["--bear-pctl", "0.75"]),
+    ("V4_S1_N3_M3DISP", "s1_n3", ["--decide", "disp"]),
 ]
 
 
@@ -245,7 +249,7 @@ def curves():
     by = {}
     for e in entries:
         by.setdefault(group_key(e), []).append(e)
-    PREFERRED = ["s1d_top5_t_div", "V4_S1_N3", "V4_S1_N3_BP75", "V4_S1_N3_CD6"]  # 直线候选优先
+    PREFERRED = ["s1d_top5_t_div", "V4_S1_N3_M3DISP", "V4_S1_N3_BP75", "V4_S1_N3", "V4_S1_N3_CD6"]  # 直线候选优先
     order = sorted(by.keys(), key=lambda k: -np.mean([x["seg"]["ratio"] for x in by[k]]))
     order = [k for k in order if len(by[k]) >= 2]
     order = [k for k in PREFERRED if k in order] + [k for k in order if k not in PREFERRED]

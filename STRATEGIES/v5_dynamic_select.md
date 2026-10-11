@@ -1,0 +1,72 @@
+# v5 动态因子选择 + 决策层方法（2026-10-11）
+
+> 用户合同："本质是找到在某个时期最有效的因子的方法，从而选择 5 个因子进行投票。"
+> 两个新实验轴：(1) **动态选择层** — 每期用近期效力挑 5 个因子（不再固定集合）；
+> (2) **决策层方法** — 连续得分制 / 分工门槛制 / 分歧度制。
+
+## 1. 动态选择层（v5）
+
+- 候选池 `v5_pool20` = 2010-17 t top-20（l_ami, alpha040, gtja113, hl_52w, alpha006, gtja015, l_turna, gtja144, mom12m_jt, pe, or_yoy …）
+- 每 5 日网格：只用 **settled** 数据（矩阵行 ≤ t-21）给 20 个因子打"当期效力分"：
+  - 方向修正：`sc_j = dir_long_j × 近期表现_j`（dir_long = 250 日结算均值符号）
+  - 三种度量：**A** 60 日均值（快）｜**B** 120 日 IR=mean/std｜**C** 120 日胜率（正天占比）
+- 取 top-5 → 其共振投票（v3 计数制，阈值在 2010-17 动态票上自校准）→ v42 执行
+- 实现：framework `--select-trail / --select-metric / --select-topn`；驱动 `examples/v5_dynamic_select.py`
+  （注意：选择层需 signals 缓存含 `fs/fbull/fbear` 逐因子字段）
+
+### 结果（5 相位均值，2018-2025 段）
+
+| 方法 | ratio mean [min,max] | 段年化 | worst MDD | mean R² | pos60 |
+|---|---|---|---|---|---|
+| A 60日均值 | 0.236 [0.106, 0.420] | 9.92% | -52.7% | 0.413 | 53% |
+| B 120日IR | 0.528 [0.414, 0.748] | 16.75% | -34.4% | 0.787 | 57% |
+| **C 120日胜率** | **0.548 [0.514, 0.599]** | **18.68%** | -36.6% | 0.795 | 60% |
+| — 静态 n3 对照 | 0.508 [0.419, 0.578] | 12.50% | -26.2% | 0.933 | 65% |
+
+裁决：**快轮动（60日）有害**（噪声追高）；**慢指标（120日）可用**——动态 C 比值超静态 n3（+0.040），
+相位地板明显更稳（0.514 vs 0.419）、年化 +6.2pp；但曲线更颠簸（R² 0.795 vs 0.933）、回撤更深
+→ 动态选择是"收益路线"，不是"直线路线"。
+
+**组合测试**：动态 C + M3 分歧度 = 0.487 (o0) < C 单独 0.562 → **不叠加**（本框架第 3 次验证"组合不叠加"规律）。
+
+## 2. 决策层三方法（n3, 单变量）
+
+| 方法 | 机制（vs 计数制）| 5相位 mean ratio | ann | worst MDD | R² |
+|---|---|---|---|---|---|
+| M1 连续得分制 | score 均值阈值代替计数阈值 | 0.439 (o0) ❌ | 11.63% | -26.5% | 0.936 |
+| M2 分工门槛制 | 1号因子门槛 (P75/P50) + 其余投票 | 0.474 (o0) ≈ | 12.27% | -25.9% | 0.943 |
+| M3 分歧度制 | 因子间 std ≤ P75 才买 / ≤ P90 才持 | **0.537 [0.387, 0.616]** | 13.84% | -28.6% | 0.922 |
+
+M3 单相位最强（o0 0.616），但仅 2/5 相位胜基线 → **边际，与基线在噪声内**（诚实标注）。
+
+## 3. n3 家族方法全景（5 相位均值）
+
+| 变体 | mean ratio [min,max] | ann | worst MDD | R² |
+|---|---|---|---|---|
+| n3 baseline | 0.508 [0.419, 0.578] | 12.50% | **-26.2%** | 0.933 |
+| n3_CD6 | 0.533 [0.374, 0.632] | 14.27% | -30.5% | 0.935 |
+| n3_BP75 | 0.528 [0.466, 0.575] | 14.76% | -30.4% | **0.945** |
+| n3_M3DISP | 0.537 [0.387, 0.616] | 13.84% | -28.6% | 0.922 |
+| 动态 C | 0.548 [0.514, 0.599] | 18.68% | -36.6% | 0.795 |
+| （对照）s1d 静态 5f | 0.661 [0.519, 0.751] | 19.67% | -33.8% | 0.896 |
+
+## 4. 复现命令
+
+```bash
+cd /media/felix/f/quant/akquant-factor-backtest
+/usr/bin/python3.12 -u examples/v5_select_pool.py                  # 生成 pool20
+/usr/bin/python3.12 -u examples/v3_resonance_framework.py \
+  --factset evidence/v5_dynamic_select_20261011/run_factsets/v5_pool20.json --signals 99
+/usr/bin/python3.12 -u examples/v5_dynamic_select.py --run         # A/B/C (+组合) 全跑
+/usr/bin/python3.12 -u examples/v5_dynamic_select.py --run --offset 1   # 相位验证
+/usr/bin/python3.12 -u examples/v5_dynamic_select.py --report / --curves
+# 决策层 (framework 直调):
+#   --decide score|gate|disp  (+ --select-trail 120 --select-metric hit 可叠加)
+```
+
+## 5. 产物
+
+- 台账：`evidence/v5_dynamic_select_20261011/{journal.jsonl, v5_report.md, charts/v5_dynamic_select.png}`
+- 池定义：`evidence/v5_dynamic_select_20261010/run_factsets/v5_pool20.json`
+- 逐因子缓存：`evidence/v3_resonance_20261010/_cache/votes__v5_pool20__any2_10_20_40_60_120.npz`（含 fs/fbull/fbear）
+- picks/sims：`evidence/v3_resonance_20261010/{picks,sims}/V5_*` 与 `V4_S1_N3_M*`
