@@ -156,6 +156,16 @@ trail=120/topn=5 为 v5 先验值（非事后调参）。
 
 **工具**：`v43_run_akquant_v34.py`（exposure: idx/idxhard/idxl/dd/volt/scale/combo）、`v44_run_akquant_v34.py`（weight: equal/invvol/hrp + w-cap + 可叠加）、`--select-lag`。产物：`evidence/v5_dynamic_select_20261011/charts/exposure_frontier.png`。
 
+### 6.8 H2 批次1：QuantsPlaybook 因子移植（2026-10-12 深夜）
+
+- 侦察：10 个候选因子族 notebook 公式提取（`evidence/v35_new_factors_20261012/refs/*.py`）；批次1 移植 上/下影线×4 + 均线收敛×4（价/量/额/换手，`-log(1+std([raw,MA5..120]))`）+ 振幅隐藏×2
+- 初筛（decile-spread，同 v34 口径）：qp_vcf 230bps **t=17.8** / qp_acf 222bps t=16.3 / qp_af_low 194bps t=12.9 / qp_af_high 102bps——数字惊人
+- **归因审计（vs 413 库截面秩相关，275 采样日）**：6/8 高 spread 因子 = **重包装的已知族**：vcf/acf ≈ 量能/流动性因子（|corr| 0.86-0.90）、af/pcf ≈ 波动率族（0.87-0.91）、trcf ≈ 换手族（0.80）❌
+- 仅 **qp_shadow_up（标准化上影线，max|corr| 0.34）** 有独立信息（spread 25.6bps t=3.2，2018+ 衰减至 t≈1）；qp_shadow_lo 低相关但信号≈0
+- 教训（与 V33 相符并扩展）：券商"新因子"多为标准序列变换 → **移植前必查现库相关**；高 t 值 ≠ 新 alpha
+- 批次2 候选（公式已就绪）：**CGO 处置效应**（成本价换手衰减，行为金融，预期低相关）/ STR 凸显性 / 网络中心度；CGO 需 EMA/cumsum 向量化
+- 产物：`evidence/v35_new_factors_20261012/{refs/, screen_b1.csv, new_factors_b1.parquet(76MB 可再生不入库)}`；脚本 `examples/port_qp_factors_b1.py` + `audit_qp_b1.py`
+
 ## 5. 产物
 
 - 台账：`evidence/v5_dynamic_select_20261011/{journal.jsonl, v5_report.md, charts/v5_dynamic_select.png}`
