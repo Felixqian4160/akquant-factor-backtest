@@ -140,6 +140,22 @@ trail=120/topn=5 为 v5 先验值（非事后调参）。
 - 工具：`examples/filter_picks_ma.py`（mode d/w/dw/dc/dcw/rand + fstyle entry/full）
 - 规律（第 3 次验证）：任何"追加硬确认"在本框架减分；有效共振 = 框架内置的个股信号层 5 窗口温和确认
 
+### 6.7 暴露前沿 + 论文/GitHub 侦察波次（2026-10-12 深夜）
+
+**暴露前沿（v43 runner, 11 机制）**：纯缩仓线 ratio 0.785 恒定（SCALE50/75 精确成线）；全部择时暴露（IDX/IDXH/IDXL/DD/DD2/VOLT/COMBO）在线下方 → 择时不创造比率，只沿前沿滑动。前沿点：(-14.6%, 11.5%) / (-21.6%, 16.9%) / (-28.0%, 22.0%)。**"20%+ & ≤15% 回撤"需要比率 1.5+，当前 0.785 不可达**。
+
+**H1 组合权重（v44 runner）** ❌ 全谱系封闭：等权 0.785 / invvol 0.640 / HRP(修复版) 0.400 / HRP+cap 0.400。
+- 首版 HRP 有递归方向 bug（"反-HRP" 0.768、年化 32.85%），已修复 + 诊断验证（修复后组合波动降 10-20% 但收益降更多）
+- 结论：冠军 alpha 集中高波动个股，风险平价化=稀释 alpha；**等权最优**
+
+**H3 因子动量跳过期（清华五道口构建，`--select-lag`）** ❌ 单相位诱人、相位不成立：
+- o0 0.854（ann 27.97% R² 0.915）但 5 相位 mean **0.686 [0.493, 0.854] < 冠军 0.758**
+- lag 轴 0→0.758 / 20→0.686 / 40→0.599 单调向下 → 关闭；机制：论文跳月针对月度调仓，我们 5 日调仓下最近月仍有真实信号
+
+**H2 新因子族移植（下一波，未启动）**：QuantsPlaybook（券商金工复现库）候选：振幅隐藏结构、上下影线、均线收敛发散、筹码分布、处置效应CGO、凸显性STR、网络中心度——日线可算、不在现有 413 库；路径 = 移植 → 面板 v35 → 重跑冠军。**提升比率的唯一剩余路径**。
+
+**工具**：`v43_run_akquant_v34.py`（exposure: idx/idxhard/idxl/dd/volt/scale/combo）、`v44_run_akquant_v34.py`（weight: equal/invvol/hrp + w-cap + 可叠加）、`--select-lag`。产物：`evidence/v5_dynamic_select_20261011/charts/exposure_frontier.png`。
+
 ## 5. 产物
 
 - 台账：`evidence/v5_dynamic_select_20261011/{journal.jsonl, v5_report.md, charts/v5_dynamic_select.png}`

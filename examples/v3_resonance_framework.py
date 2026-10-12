@@ -286,7 +286,7 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
           max_hold_bars=20, windows=None, n_pos=N_POS, fact=None, fact_names=None,
           ent_pctl=0.95, up_th=None, down_th=None, need_win=None,
           decide="count", gate_idx=0, select_trail=0, select_metric="mean", select_topn=5,
-          select_mode="top", select_matrix="m", select_tau=0.7):
+          select_mode="top", select_matrix="m", select_tau=0.7, select_lag=0):
     cool = int(cooldown)
     gstep = int(grid_step)
     off = int(offset)
@@ -332,6 +332,7 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
     # calibrate on 2010-2017 grids
     cal = gi_all[np.array([d <= "2017-12-31" for d in grid])]
     sel_trail = int(select_trail) if select_trail else 0
+    sel_lag = int(select_lag) if select_lag else 0
 
     def _dyn_rows(rows):
         """动态选因子: 每行日期按近期效力 (settled) 打分 (矩阵 MX = m/ic).
@@ -348,12 +349,13 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
             if hi - lo >= 20 and fbull is not None:
                 def _metric(mat, trail=None):
                     tr = sel_trail if trail is None else trail
-                    lo2 = max(hi - tr, 0)
+                    hi2 = max(hi - sel_lag, 0)          # 跳过期 (清华论文: skip 最近1月)
+                    lo2 = max(hi2 - tr, 0)
                     with np.errstate(all="ignore"):
                         lmean = np.nanmean(mat[llo:hi, :], axis=0)
-                        rmean = np.nanmean(mat[lo2:hi, :], axis=0)
-                        rstd = np.nanstd(mat[lo2:hi, :], axis=0)
-                        rhit = np.nanmean(mat[lo2:hi, :] > 0, axis=0)
+                        rmean = np.nanmean(mat[lo2:hi2, :], axis=0)
+                        rstd = np.nanstd(mat[lo2:hi2, :], axis=0)
+                        rhit = np.nanmean(mat[lo2:hi2, :] > 0, axis=0)
                     d = np.where(np.nan_to_num(lmean, nan=0.0) >= 0, 1.0, -1.0)
                     if select_metric == "ir":
                         return d * np.where(rstd > 0, rmean / np.maximum(rstd, 1e-12), -1e18)
@@ -549,7 +551,7 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
         "decide": decide, "gate_factor": (factors[gate_idx] if decide == "gate" else None),
         "score_cuts": [S_ENT, S_HOLD], "gate_cuts": [G1, G2], "disp_cuts": [D1, D2],
         "dynamic_select": ({"trail": sel_trail, "metric": select_metric, "topn": int(select_topn),
-                            "mode": select_mode, "matrix": select_matrix,
+                            "mode": select_mode, "matrix": select_matrix, "lag": sel_lag,
                             "tau": (select_tau if select_mode == "dedup" else None)}
                            if sel_trail else None),
         "calibration": "2010-2017 grid rows",
@@ -668,6 +670,7 @@ def main():
     ap.add_argument("--select-trail", type=int, default=0)
     ap.add_argument("--select-metric", choices=["mean", "ir", "hit", "mo"], default="mean")
     ap.add_argument("--select-topn", type=int, default=5)
+    ap.add_argument("--select-lag", type=int, default=0)
     ap.add_argument("--select-mode", choices=["top", "wsum", "dedup", "cluster", "borda", "dual", "dualx"], default="top")
     ap.add_argument("--select-matrix", choices=["m", "ic"], default="m")
     ap.add_argument("--dedup-tau", type=float, default=0.7)
@@ -686,7 +689,7 @@ def main():
               args.max_hold_bars, args.windows, args.n_pos, fact, fact_names, args.ent_pctl,
               args.up_th, args.down_th, args.need_win, args.decide, args.gate_idx,
               args.select_trail, args.select_metric, args.select_topn, args.select_mode,
-              args.select_matrix, args.dedup_tau)
+              args.select_matrix, args.dedup_tau, args.select_lag)
     elif args.run is not None:
         run_sims(args.run, args.tag, RUNNERS[args.runner], args.holding_bars)
     elif args.report:

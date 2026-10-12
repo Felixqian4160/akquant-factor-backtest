@@ -1,0 +1,63 @@
+=== V5L_LAG20 o1 build (22:59:10) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:355: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:356: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo2:hi2, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[22:59:21] dynamic-select: trail=120 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[22:59:21] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[22:59:21] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[22:59:21] picks: 774 dates; avg picks/day 14.1; avg eligible/day 22.5
+[22:59:21] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5L_LAG20_o1/picks_meta.json
+=== V5L_LAG20 o1 sim (22:59:22) ===
+[23:01:38] sim: OK (136s)
+=== V5L_LAG20 o2 build (23:01:38) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:355: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:356: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo2:hi2, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[23:01:49] dynamic-select: trail=120 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[23:01:49] calibrated (2010-2017 grids n=388): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[23:01:49] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[23:01:49] picks: 777 dates; avg picks/day 14.2; avg eligible/day 22.8
+[23:01:49] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5L_LAG20_o2/picks_meta.json
+=== V5L_LAG20 o2 sim (23:01:49) ===
+[23:03:55] sim: OK (125s)
+=== V5L_LAG20 o3 build (23:03:55) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:355: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:356: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo2:hi2, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[23:04:07] dynamic-select: trail=120 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[23:04:07] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[23:04:07] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[23:04:07] picks: 777 dates; avg picks/day 14.3; avg eligible/day 22.9
+[23:04:07] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5L_LAG20_o3/picks_meta.json
+=== V5L_LAG20 o3 sim (23:04:07) ===
+[23:06:20] sim: OK (133s)
+=== V5L_LAG20 o4 build (23:06:20) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:355: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:356: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo2:hi2, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[23:06:32] dynamic-select: trail=120 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[23:06:32] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[23:06:32] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[23:06:32] picks: 775 dates; avg picks/day 14.2; avg eligible/day 23.0
+[23:06:32] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5L_LAG20_o4/picks_meta.json
+=== V5L_LAG20 o4 sim (23:06:32) ===
+[23:08:52] sim: OK (140s)
+=== journal (23:08:52) ===
+[23:08:52] journal + V5L_LAG20_o1: seg ann 23.65% mdd -33.7% ratio 0.702 R2 0.958 pos60 67%
+[23:08:52] journal + V5L_LAG20_o2: seg ann 15.25% mdd -30.9% ratio 0.493 R2 0.847 pos60 63%
+[23:08:52] journal + V5L_LAG20_o3: seg ann 18.99% mdd -31.3% ratio 0.607 R2 0.872 pos60 66%
+[23:08:52] journal + V5L_LAG20_o4: seg ann 25.52% mdd -32.9% ratio 0.776 R2 0.949 pos60 72%
+journal total entries: 87
+LAGPH_DONE
