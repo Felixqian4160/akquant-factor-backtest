@@ -166,6 +166,13 @@ trail=120/topn=5 为 v5 先验值（非事后调参）。
 - 批次2 候选（公式已就绪）：**CGO 处置效应**（成本价换手衰减，行为金融，预期低相关）/ STR 凸显性 / 网络中心度；CGO 需 EMA/cumsum 向量化
 - 产物：`evidence/v35_new_factors_20261012/{refs/, screen_b1.csv, new_factors_b1.parquet(76MB 可再生不入库)}`；脚本 `examples/port_qp_factors_b1.py` + `audit_qp_b1.py`
 
+**批次2**：CGO（N=100 成本衰减）❌ 重包装（max|corr| 0.88，gtja_067/PPO/RSI 族）；STR（凸显性，δ^rank 加权滚动 cov）⚠️ 中等新颖（0.53）+ 18-25 强信号（t=6.9）但 10-17 反号。
+
+**v35 终极验证（新原料有增量吗）**：面板 v35（449 列）+ 矩阵 v35（417）+ 池416（413+3）→ 冠军重跑 **0.775 ≈ 0.785（无增量）**。
+- 诊断：STR 仅进入 top5 共 **7/777** grids；两个影线因子 **0 次**；picks 68% 与冠军相同 → 净效应 = 0（选择机制只选"当下最热"，新因子从未足够热）
+- **H2 结论（封闭）**：QuantsPlaybook 线 = 13 候选 → 3 新颖 → **0 有效增量**。413 库已覆盖这些公式家族。
+- 比率突破的剩余路径 = **真正的新数据源**（行业分类 / 资金流向 / 龙虎榜 / 分析师数据）——存在于面板信息集之外的信息，而非更多公式变换。
+
 ## 5. 产物
 
 - 台账：`evidence/v5_dynamic_select_20261011/{journal.jsonl, v5_report.md, charts/v5_dynamic_select.png}`
