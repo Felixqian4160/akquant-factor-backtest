@@ -31,6 +31,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import pathlib
 import subprocess
 import sys
@@ -41,8 +42,8 @@ import pandas as pd
 import polars as pl
 
 AKQ = pathlib.Path("/media/felix/f/quant/akquant-factor-backtest")
-PANEL = AKQ / "data" / "wavehunter_hs300_v34_dedup_20261010.parquet"
-MAT = AKQ / "evidence" / "v34_dedup_20261010" / "matrix_v34_dedup_ADJ.parquet"
+PANEL = pathlib.Path(os.environ.get("AKQ_PANEL", str(AKQ / "data" / "wavehunter_hs300_v34_dedup_20261010.parquet")))
+MAT = pathlib.Path(os.environ.get("AKQ_MATRIX", str(AKQ / "evidence" / "v34_dedup_20261010" / "matrix_v34_dedup_ADJ.parquet")))
 RUNNER = AKQ / "examples" / "v41_run_akquant_v34.py"
 RUNNERS = {"v41": RUNNER, "v42": AKQ / "examples" / "v42_run_akquant_v34.py"}
 OUT = AKQ / "evidence" / "v3_resonance_20261010"
