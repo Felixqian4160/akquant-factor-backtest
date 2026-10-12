@@ -1,0 +1,64 @@
+=== V5_P413_RET_T20 build (20:39:11) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:353: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:354: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo2:hi, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[20:39:23] dynamic-select: trail=20 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[20:39:23] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[20:39:23] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[20:39:23] picks: 776 dates; avg picks/day 14.4; avg eligible/day 21.5
+[20:39:23] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5_P413_RET_T20_o0/picks_meta.json
+=== V5_P413_RET_T20 sim (20:39:23) ===
+[20:41:48] sim: OK (145s)
+=== V5_P413_RET_DUAL build (20:41:48) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:353: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:354: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo2:hi, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[20:42:00] dynamic-select: trail=120 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[20:42:00] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[20:42:00] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[20:42:00] picks: 777 dates; avg picks/day 14.4; avg eligible/day 22.5
+[20:42:00] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5_P413_RET_DUAL_o0/picks_meta.json
+=== V5_P413_RET_DUAL sim (20:42:00) ===
+[20:44:29] sim: OK (149s)
+=== V5_P413_RET_DUALX build (20:44:29) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:353: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:354: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo2:hi, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[20:44:41] dynamic-select: trail=120 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[20:44:41] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[20:44:41] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[20:44:41] picks: 777 dates; avg picks/day 14.5; avg eligible/day 22.0
+[20:44:41] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5_P413_RET_DUALX_o0/picks_meta.json
+=== V5_P413_RET_DUALX sim (20:44:41) ===
+[20:47:04] sim: OK (143s)
+V5_P413_RET_RANK_o0_MA_DW_ENTRY: 777 days | holdings 10974 -> 4286 (39.1%) | avg/day 5.5 (orig 14.1)
+V5_P413_RET_RANK_o0_MA_DW_FULL: 777 days | holdings 10974 -> 2826 (25.8%) | avg/day 3.6 (orig 14.1)
+V5_P413_RET_RANK_o0_MA_D_ENTRY: 777 days | holdings 10974 -> 5301 (48.3%) | avg/day 6.8 (orig 14.1)
+V5_P413_RET_RANK_o0_MA_W_ENTRY: 777 days | holdings 10974 -> 5019 (45.7%) | avg/day 6.5 (orig 14.1)
+=== V5_P413_RET_RANK_o0_MA_DW_ENTRY sim (20:47:07) ===
+[20:48:15] sim: OK (67s)
+=== V5_P413_RET_RANK_o0_MA_DW_FULL sim (20:48:15) ===
+[20:49:16] sim: OK (60s)
+=== V5_P413_RET_RANK_o0_MA_D_ENTRY sim (20:49:16) ===
+[20:50:34] sim: OK (78s)
+=== V5_P413_RET_RANK_o0_MA_W_ENTRY sim (20:50:34) ===
+[20:51:59] sim: OK (84s)
+=== journal (20:51:59) ===
+[20:51:59] journal + V5_P413_RET_T20_o0: seg ann 3.10% mdd -43.9% ratio 0.071 R2 0.693 pos60 51%
+[20:51:59] journal + V5_P413_RET_DUAL_o0: seg ann 11.45% mdd -33.9% ratio 0.338 R2 0.812 pos60 56%
+[20:51:59] journal + V5_P413_RET_DUALX_o0: seg ann 10.63% mdd -35.2% ratio 0.302 R2 0.709 pos60 53%
+[20:51:59] journal + V5_P413_RET_RANK_o0_MA_DW_ENTRY: seg ann 11.97% mdd -43.1% ratio 0.278 R2 0.543 pos60 51%
+[20:51:59] journal + V5_P413_RET_RANK_o0_MA_DW_FULL: seg ann -0.24% mdd -56.9% ratio -0.004 R2 0.141 pos60 49%
+[20:51:59] journal + V5_P413_RET_RANK_o0_MA_D_ENTRY: seg ann 13.87% mdd -39.0% ratio 0.356 R2 0.618 pos60 55%
+[20:51:59] journal + V5_P413_RET_RANK_o0_MA_W_ENTRY: seg ann 5.84% mdd -59.6% ratio 0.098 R2 0.091 pos60 49%
+journal total entries: 47
+DUAL_MA_DONE

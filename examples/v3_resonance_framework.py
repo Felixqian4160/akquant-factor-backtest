@@ -344,25 +344,37 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
             lo = max(hi - sel_trail, 0)
             llo = max(hi - DIR_WIN, 0)
             sc = None
+            dual_top2 = None
             if hi - lo >= 20 and fbull is not None:
-                def _metric(mat):
+                def _metric(mat, trail=None):
+                    tr = sel_trail if trail is None else trail
+                    lo2 = max(hi - tr, 0)
                     with np.errstate(all="ignore"):
                         lmean = np.nanmean(mat[llo:hi, :], axis=0)
-                        rmean = np.nanmean(mat[lo:hi, :], axis=0)
-                        rstd = np.nanstd(mat[lo:hi, :], axis=0)
-                        rhit = np.nanmean(mat[lo:hi, :] > 0, axis=0)
+                        rmean = np.nanmean(mat[lo2:hi, :], axis=0)
+                        rstd = np.nanstd(mat[lo2:hi, :], axis=0)
+                        rhit = np.nanmean(mat[lo2:hi, :] > 0, axis=0)
                     d = np.where(np.nan_to_num(lmean, nan=0.0) >= 0, 1.0, -1.0)
                     if select_metric == "ir":
                         return d * np.where(rstd > 0, rmean / np.maximum(rstd, 1e-12), -1e18)
                     if select_metric == "hit":
                         return np.where(d > 0, rhit, 1.0 - rhit)
                     if select_metric == "mo":  # 效力动量: 本期 vs 上一窗口的改善
-                        return d * (rmean - np.nanmean(mat[max(lo - sel_trail, 0):lo, :], axis=0))
+                        return d * (rmean - np.nanmean(mat[max(lo2 - tr, 0):lo2, :], axis=0))
                     return d * rmean
                 if select_mode == "borda":
                     a1 = np.nan_to_num(_metric(M), nan=-1e18)
                     a2 = np.nan_to_num(_metric(MIC), nan=-1e18)
                     sc = (np.argsort(np.argsort(a1)) + np.argsort(np.argsort(a2))).astype(np.float64)
+                elif select_mode == "dual":
+                    # 双回看共振: 120日排名 + 20日排名 的秩和 (收益 mean 口径)
+                    a1 = np.nan_to_num(_metric(MX, 120), nan=-1e18)
+                    a2 = np.nan_to_num(_metric(MX, 20), nan=-1e18)
+                    sc = (np.argsort(np.argsort(a1)) + np.argsort(np.argsort(a2))).astype(np.float64)
+                elif select_mode == "dualx":
+                    # 硬交集: 20日榜 top15 内, 按 120日分排序
+                    sc = _metric(MX, 120)
+                    dual_top2 = set(np.argsort(-np.nan_to_num(_metric(MX, 20), nan=-1e18))[:15].tolist())
                 else:
                     sc = _metric(MX)
             if sc is not None:
@@ -407,6 +419,14 @@ def build(hold_pctl=0.90, cooldown=1, tag=TAG, grid_step=GRID_STEP,
                     agr = inter / np.maximum(union, 1)
                     peers = [cands[j] for j in np.argsort(-agr)[: int(select_topn) - 1]]
                     sel = np.array([seed] + peers)
+                elif sc is not None and select_mode == "dualx" and dual_top2 is not None:
+                    sel = [int(c) for c in order if int(c) in dual_top2]
+                    for c in order:
+                        if len(sel) >= int(select_topn):
+                            break
+                        if int(c) not in sel:
+                            sel.append(int(c))
+                    sel = np.array(sel[:int(select_topn)])
                 elif sc is not None:
                     sel = order[:int(select_topn)]
                 else:
@@ -648,7 +668,7 @@ def main():
     ap.add_argument("--select-trail", type=int, default=0)
     ap.add_argument("--select-metric", choices=["mean", "ir", "hit", "mo"], default="mean")
     ap.add_argument("--select-topn", type=int, default=5)
-    ap.add_argument("--select-mode", choices=["top", "wsum", "dedup", "cluster", "borda"], default="top")
+    ap.add_argument("--select-mode", choices=["top", "wsum", "dedup", "cluster", "borda", "dual", "dualx"], default="top")
     ap.add_argument("--select-matrix", choices=["m", "ic"], default="m")
     ap.add_argument("--dedup-tau", type=float, default=0.7)
     args = ap.parse_args()
