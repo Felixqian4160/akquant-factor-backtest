@@ -51,7 +51,7 @@ CACHE = OUT / "_cache"
 PICKS = OUT / "picks"
 SIMS = OUT / "sims"
 
-START, END = "2010-01-01", "2025-12-31"
+START, END = "2010-01-01", os.environ.get("AKQ_END", "2025-12-31")
 GRID_STEP = 5
 WS = (10, 20, 40, 60, 120)
 UP_TH, DOWN_TH, NEED_WIN = 0.65, 0.35, 2
@@ -581,7 +581,7 @@ def run_sims(max_n, tag=TAG, runner=None, holding_bars=0):
     t0 = time.time()
     cmd = [sys.executable, "-u", str(runner or RUNNER), "--tag", tag,
            "--picks-base", str(PICKS), "--actions", "on", "--ca-mode", "all",
-           "--prices", "raw", "--end", "2025-12-31", "--out-base", str(SIMS)]
+           "--prices", "raw", "--end", END, "--out-base", str(SIMS)]
     if holding_bars:
         cmd += ["--holding-bars", str(int(holding_bars))]
     subprocess.run(cmd, capture_output=True, text=True, cwd=str(AKQ))

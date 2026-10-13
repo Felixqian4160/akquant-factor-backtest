@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "check": "trades_exist",
+      "pass": true,
+      "detail": "332"
+    },
+    {
+      "check": "orders_exist",
+      "pass": true,
+      "detail": "464"
+    },
+    {
+      "check": "orders_both_sides",
+      "pass": true,
+      "detail": "{'OrderSide.Buy': 249, 'OrderSide.Sell': 215}"
+    },
+    {
+      "check": "orders_rejected_classified",
+      "pass": true,
+      "detail": "filled=419, rejected=0, suspension=0, margin=0"
+    },
+    {
+      "check": "buy_qty_lot_multiple",
+      "pass": true,
+      "detail": "n_buys=249"
+    },
+    {
+      "check": "sell_odd_lots_info",
+      "pass": true,
+      "detail": "odd_sells=0/215 (split residues)"
+    },
+    {
+      "check": "nav_bounded",
+      "pass": true,
+      "detail": "last=2026-08-19"
+    },
+    {
+      "check": "rebalance_dates_in_window",
+      "pass": true,
+      "detail": "31"
+    },
+    {
+      "check": "trade_pnl_identity",
+      "pass": true,
+      "detail": "diff=0.000000"
+    },
+    {
+      "check": "mdd_recomputed",
+      "pass": true,
+      "detail": "-0.119729"
+    },
+    {
+      "check": "duration_info_cap60",
+      "pass": true,
+      "detail": "pct_20_22=0.117 median=25.0 n_le_1=0"
+    }
+  ],
+  "summary": {
+    "final_value": 114579718.55023,
+    "total_return_pct": 14.579718550230004,
+    "annualized_return": 0.008216196224873684,
+    "sharpe_ratio": 0.17083102093729183,
+    "max_drawdown_pct_engine": 11.97291367863238,
+    "max_drawdown_pct_recomputed": -11.972913678632368,
+    "win_rate": 59.93975903614458,
+    "profit_factor": 2.166382007612945,
+    "closed_trade_count": 332.0,
+    "n_trades_ledger": 332,
+    "n_orders_ledger": 464,
+    "n_rejected": 0,
+    "n_rejected_suspension": 0,
+    "n_rejected_margin": 0,
+    "total_commission": 2501378.25977,
+    "nav_start": "2010-01-04",
+    "nav_end": "2026-08-19",
+    "n_rebalances": 31,
+    "duration_stats": {
+      "n": 332,
+      "n_le_1": 0,
+      "pct_le_1": 0.0,
+      "n_20_22": 39,
+      "pct_20_22": 0.11746987951807229,
+      "median": 25.0,
+      "max": 60.0
+    },
+    "n_corporate_actions": 568
+  }
+}
