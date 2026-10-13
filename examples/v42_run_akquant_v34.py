@@ -40,7 +40,9 @@ DATA_START = pd.Timestamp("2010-01-01")
 DEFAULT_END = "2025-12-31"
 COMMISSION_RATE = 0.0025
 SLIPPAGE = {"type": "percent", "value": 0.0010}
+STAMP_TAX_RATE = 0.0
 LOT_SIZE = 100
+ST_CODES_PATH = None
 TARGET_TOTAL = 0.90
 INITIAL_CASH = 100_000_000.0
 HOLDING_BARS = 21
@@ -292,10 +294,22 @@ def main():
     parser.add_argument("--ca-mode", choices=["all", "div", "spl"], default="all")
     parser.add_argument("--prices", choices=["raw", "hfq"], default="raw")
     parser.add_argument("--holding-bars", type=int, default=21)
+    parser.add_argument("--broker-rate", type=float, default=0.0025,
+                        help="commission per side, default 0.0025 (0.25%)")
+    parser.add_argument("--stamp-tax-rate", type=float, default=0.0,
+                        help="stamp tax on SELL only, default 0 (v41/v42 default)")
+    parser.add_argument("--slippage", type=float, default=0.001,
+                        help="slippage per side, default 0.001 (0.10%)")
+    parser.add_argument("--st-codes-path", default=None,
+                        help="path to JSON list of ts_code to exclude (ST/*ST filter)")
     args = parser.parse_args()
 
-    global _CA_ACTIONS, HOLDING_BARS
+    global _CA_ACTIONS, HOLDING_BARS, COMMISSION_RATE, SLIPPAGE, STAMP_TAX_RATE, ST_CODES_PATH
     HOLDING_BARS = int(args.holding_bars)
+    COMMISSION_RATE = float(args.broker_rate)
+    STAMP_TAX_RATE = float(args.stamp_tax_rate)
+    SLIPPAGE = {"type": "percent", "value": float(args.slippage)}
+    ST_CODES_PATH = pathlib.Path(args.st_codes_path) if args.st_codes_path else None
     end_ts = pd.Timestamp(args.end)
     tag = args.tag
     picks_path = pathlib.Path(args.picks_base) / tag / "picks.json"
@@ -306,6 +320,11 @@ def main():
     meta = json.loads(meta_path.read_text()) if meta_path.exists() else {}
     log(f"V41 v34 [{tag}]: picks={len(picks)}; window_end={args.end}; actions={args.actions}")
     universe = sorted({s for basket in picks.values() for s in basket})
+    if ST_CODES_PATH is not None and ST_CODES_PATH.exists():
+        st_set = set(json.loads(ST_CODES_PATH.read_text()))
+        before = len(universe)
+        universe = [s for s in universe if s not in st_set]
+        log(f"ST filter: {before} -> {len(universe)} (excluded {before-len(universe)} ST/*ST codes)")
     log(f"universe={len(universe)} symbols")
 
     data = build_data(universe, end_ts, args.prices)
@@ -411,6 +430,7 @@ def main():
             strategy=V42Strategy,
             initial_cash=INITIAL_CASH,
             commission_rate=COMMISSION_RATE,
+            stamp_tax_rate=STAMP_TAX_RATE,
             slippage=SLIPPAGE,
             t_plus_one=True,
             fill_policy=aq.NextOpen(),
@@ -445,7 +465,9 @@ def main():
             "ca_source": str(CA_PATH),
             "target_total": TARGET_TOTAL,
             "t_plus_one": True, "fill_policy": "NextOpen",
-            "commission_rate": COMMISSION_RATE, "slippage": SLIPPAGE, "lot_size": LOT_SIZE,
+            "commission_rate": COMMISSION_RATE, "stamp_tax_rate": STAMP_TAX_RATE,
+            "slippage": SLIPPAGE, "lot_size": LOT_SIZE,
+            "st_codes_path": str(ST_CODES_PATH) if ST_CODES_PATH else None,
         },
         "metrics": metrics,
         "audit": audit_result,
