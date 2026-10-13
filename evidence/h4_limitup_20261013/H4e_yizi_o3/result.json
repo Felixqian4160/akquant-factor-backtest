@@ -1,0 +1,175 @@
+{
+  "contract": {
+    "runner": "v41_run_akquant_v34",
+    "panel": "data/wavehunter_hs300_v34_adj_20261007.parquet",
+    "picks": "/media/felix/f/quant/akquant-factor-backtest/evidence/h4_limitup_20261013/H4e_yizi_o3/picks.json",
+    "window": "2010-01-01 ~ 2025-12-31",
+    "selector": "factor_return_voting lb=20 (BULL+BEAR), v34 adjusted factors",
+    "holding_cap_bars": 60,
+    "panel_days_fixed": true,
+    "corporate_actions": "on",
+    "prices": "raw",
+    "n_corporate_actions": 3975,
+    "ca_source": "evidence/v34_adj_20261007/corporate_actions_derived.parquet",
+    "target_total": 0.9,
+    "t_plus_one": true,
+    "fill_policy": "NextOpen",
+    "commission_rate": 0.00025,
+    "stamp_tax_rate": 0.001,
+    "slippage": {
+      "type": "percent",
+      "value": 0.0005
+    },
+    "lot_size": 100,
+    "st_codes_path": "data/st_codes.json"
+  },
+  "metrics": {
+    "start_time": "2010-01-04T00:00:00+08:00",
+    "end_time": "2025-12-31T00:00:00+08:00",
+    "duration": "5840 days, 0:00:00",
+    "total_bars": 3886.0,
+    "closed_trade_count": 5271.0,
+    "execution_count": 5888.0,
+    "open_position_count": 20.0,
+    "initial_market_value": 100000000.0,
+    "end_market_value": 1191879544.3669608,
+    "total_pnl": 1091879544.3669608,
+    "unrealized_pnl": 70106512.51692286,
+    "total_return_pct": 1091.879544366961,
+    "annualized_return": 0.16752052148640773,
+    "volatility": 0.17486034112075918,
+    "total_profit": 2032005726.953912,
+    "total_loss": -1034515287.2416229,
+    "total_commission": 37612894.04856841,
+    "max_drawdown": 0.2854606075263333,
+    "max_drawdown_value": 260735960.17100462,
+    "max_drawdown_pct": 28.54606075263333,
+    "win_rate": 57.27565926769114,
+    "loss_rate": 42.72434073230886,
+    "winning_trades": 3019.0,
+    "losing_trades": 2252.0,
+    "avg_pnl": 189241.21413627182,
+    "avg_return_pct": 5.5876701335827,
+    "avg_trade_bars": 31.277746158224247,
+    "avg_profit": 673072.45013379,
+    "avg_profit_pct": 15.726417710426002,
+    "avg_winning_trade_bars": 31.35640940708844,
+    "avg_loss": -459376.23767390003,
+    "avg_loss_pct": -8.00419440215883,
+    "avg_losing_trade_bars": 31.17229129662522,
+    "largest_win": 102984182.4,
+    "largest_win_pct": 226.34016325170748,
+    "largest_win_bars": 60.0,
+    "largest_loss": -19191244.919,
+    "largest_loss_pct": -21.39794686662349,
+    "largest_loss_bars": 20.0,
+    "max_wins": 69.0,
+    "max_losses": 28.0,
+    "sharpe_ratio": 1.006888005600932,
+    "sortino_ratio": 1.5379689505282361,
+    "profit_factor": 1.9642104394338578,
+    "ulcer_index": 0.06655628551962206,
+    "upi": 2.5169752214765575,
+    "equity_r2": 0.7248249258399041,
+    "std_error": 154983429.78098375,
+    "calmar_ratio": 0.5868428675257906,
+    "exposure_time_pct": 49.90990990990991,
+    "var_95": -0.01537432384447734,
+    "var_99": -0.03160784266565062,
+    "cvar_95": -0.026188804745324853,
+    "cvar_99": -0.045293825432428,
+    "sqn": 6.047822381315464,
+    "kelly_criterion": 0.28116024374293647,
+    "max_leverage": 0.9999421947738796,
+    "min_margin_level": 1.0000578085677578
+  },
+  "audit": {
+    "checks": [
+      {
+        "check": "trades_exist",
+        "pass": true,
+        "detail": "5271"
+      },
+      {
+        "check": "orders_exist",
+        "pass": true,
+        "detail": "6425"
+      },
+      {
+        "check": "orders_both_sides",
+        "pass": true,
+        "detail": "{'OrderSide.Buy': 3302, 'OrderSide.Sell': 3123}"
+      },
+      {
+        "check": "orders_rejected_classified",
+        "pass": false,
+        "detail": "filled=5888, rejected=490, suspension=20, margin=169"
+      },
+      {
+        "check": "buy_qty_lot_multiple",
+        "pass": true,
+        "detail": "n_buys=3302"
+      },
+      {
+        "check": "sell_odd_lots_info",
+        "pass": true,
+        "detail": "odd_sells=10/3123 (split residues)"
+      },
+      {
+        "check": "nav_bounded",
+        "pass": true,
+        "detail": "last=2025-12-31"
+      },
+      {
+        "check": "rebalance_dates_in_window",
+        "pass": false,
+        "detail": "419"
+      },
+      {
+        "check": "trade_pnl_identity",
+        "pass": true,
+        "detail": "diff=0.000000"
+      },
+      {
+        "check": "mdd_recomputed",
+        "pass": true,
+        "detail": "-0.285461"
+      },
+      {
+        "check": "duration_info_cap60",
+        "pass": true,
+        "detail": "pct_20_22=0.090 median=30.0 n_le_1=0"
+      }
+    ],
+    "summary": {
+      "final_value": 1191879544.3669608,
+      "total_return_pct": 1091.879544366961,
+      "annualized_return": 0.16752052148640773,
+      "sharpe_ratio": 1.006888005600932,
+      "max_drawdown_pct_engine": 28.54606075263333,
+      "max_drawdown_pct_recomputed": -28.54606075263333,
+      "win_rate": 57.27565926769114,
+      "profit_factor": 1.9642104394338578,
+      "closed_trade_count": 5271.0,
+      "n_trades_ledger": 5271,
+      "n_orders_ledger": 6425,
+      "n_rejected": 490,
+      "n_rejected_suspension": 20,
+      "n_rejected_margin": 169,
+      "total_commission": 37612894.04856841,
+      "nav_start": "2010-01-04",
+      "nav_end": "2025-12-31",
+      "n_rebalances": 419,
+      "duration_stats": {
+        "n": 5271,
+        "n_le_1": 0,
+        "pct_le_1": 0.0,
+        "n_20_22": 475,
+        "pct_20_22": 0.09011572756592677,
+        "median": 30.0,
+        "max": 775.0
+      },
+      "n_corporate_actions": 3975
+    }
+  }
+}
