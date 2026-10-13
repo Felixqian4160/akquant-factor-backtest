@@ -1,0 +1,40 @@
+=== signals pool414 (12:28:22) ===
+[12:28:46] batch 1/21 (20 factors) 24s  [bull mean 3.7, bear mean 3.7]
+[12:29:13] batch 2/21 (20 factors) 28s  [bull mean 6.4, bear mean 6.3]
+[12:29:46] batch 3/21 (20 factors) 32s  [bull mean 8.3, bear mean 8.1]
+[12:30:22] batch 4/21 (20 factors) 36s  [bull mean 10.0, bear mean 9.7]
+[12:31:01] batch 5/21 (20 factors) 40s  [bull mean 11.8, bear mean 11.5]
+[12:31:45] batch 6/21 (20 factors) 43s  [bull mean 14.0, bear mean 13.5]
+[12:32:32] batch 7/21 (20 factors) 47s  [bull mean 16.2, bear mean 15.7]
+[12:33:23] batch 8/21 (20 factors) 51s  [bull mean 18.4, bear mean 17.8]
+[12:34:18] batch 9/21 (20 factors) 55s  [bull mean 20.8, bear mean 20.1]
+[12:35:20] batch 10/21 (20 factors) 61s  [bull mean 24.2, bear mean 23.3]
+[12:36:24] batch 11/21 (20 factors) 65s  [bull mean 27.3, bear mean 26.4]
+[12:37:32] batch 12/21 (20 factors) 68s  [bull mean 30.3, bear mean 29.3]
+[12:38:43] batch 13/21 (20 factors) 71s  [bull mean 33.5, bear mean 32.4]
+[12:39:58] batch 14/21 (20 factors) 76s  [bull mean 36.7, bear mean 35.5]
+[12:41:17] batch 15/21 (20 factors) 79s  [bull mean 39.7, bear mean 38.4]
+[12:42:40] batch 16/21 (20 factors) 83s  [bull mean 43.3, bear mean 42.0]
+[12:44:06] batch 17/21 (20 factors) 86s  [bull mean 46.9, bear mean 45.5]
+[12:45:37] batch 18/21 (20 factors) 91s  [bull mean 50.6, bear mean 49.1]
+[12:47:11] batch 19/21 (20 factors) 94s  [bull mean 54.6, bear mean 53.1]
+[12:48:48] batch 20/21 (20 factors) 97s  [bull mean 59.2, bear mean 57.5]
+[12:50:25] batch 21/21 (14 factors) 98s  [bull mean 61.8, bear mean 60.1]
+[12:50:25] signals: 21/21 batches
+=== build o0 v36 (12:50:25) ===
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:356: RuntimeWarning: Mean of empty slice
+  lmean = np.nanmean(mat[llo:hi, :], axis=0)
+/media/felix/f/quant/akquant-factor-backtest/examples/v3_resonance_framework.py:357: RuntimeWarning: Mean of empty slice
+  rmean = np.nanmean(mat[lo2:hi2, :], axis=0)
+/home/felix/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+[12:50:37] dynamic-select: trail=120 metric=mean topn=5 -> ENT_MIN=4 HOLD_MIN=1 BEAR_MAX=3 (2010-17 dynamic votes)
+[12:50:37] calibrated (2010-2017 grids n=389): ENT_MIN(P95)=4 HOLD_MIN(P65)=1 BEAR_MAX(P90)=3 NET_MIN(-)=None res=any2
+[12:50:37] bull dist: mean 57.8 p90 118 p95 129 p99 148 | bear mean 56.1
+[12:50:37] picks: 808 dates; avg picks/day 14.1; avg eligible/day 23.0
+[12:50:37] contract -> /media/felix/f/quant/akquant-factor-backtest/evidence/v3_resonance_20261010/picks/V5V36_RET_RANK_o0/picks_meta.json
+=== sim 2018-2025 o0 v36 (12:50:37) ===
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'evidence/v3_resonance_20261010/picks/V5V36_RET_RANK_o0/V5V36_OOS_o0_2018_2025/picks.json'
+V36_DONE
