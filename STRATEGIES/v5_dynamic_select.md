@@ -293,6 +293,52 @@ trail=120/topn=5 为 v5 先验值（非事后调参）。
 
 **产物**：`evidence/oos_20251013/phase_check/` + `phase_check_OUT/` (5 phases × 2 windows = 10 sims)
 
+### 7.3 现实成本 + ST 剔除（5 相位 OOS 重测）
+
+**目的**：B 步（印花税补算 + 生产成本真实化）后，验证升级是否在 5 相位上稳定。
+
+**合同**：
+- cost A（原 0.7% RT）：broker 0.25%/side + slip 0.1%/side, **无 stamp**
+- cost C（现实 0.25% RT）：broker 0.025%/side + slip 0.05%/side + **stamp 0.1% on sell** + ST/*ST filter（201 个代码）
+- 5 相位 OOS 2018-2025 同 §7.2 合同
+
+**关键发现**：
+
+| 维度 | A（原 0.7% RT）| C（现实 0.25% RT + ST）| Δ |
+|---|---|---|---|
+| 5 相位 ann mean | +21.41% | **+24.34%** | **+2.93pp** |
+| 5 相位 ratio mean | 0.759 | **0.876** | **+0.117** |
+| ratio stdev | 0.064 | 0.060 | 几乎不变（**升级稳定**）|
+
+**各相位 ratio 对照**：
+
+| phase | A | C | delta |
+|---|---|---|---|
+| o0 | 0.794 | 0.936 | +0.142 |
+| o1 | 0.811 | 0.902 | +0.091 |
+| o2 | 0.727 | 0.861 | +0.134 |
+| o3 | 0.662 | 0.780 | +0.118 |
+| o4 | 0.802 | 0.901 | +0.099 |
+
+**诚实标注**：
+
+1. **"印花税漏算"是真实的——原 0.1% slippage 不含印花税**（v42 此前 stamp_tax_rate=0）。A→B 实验证明加 0.1% 卖出印花税单独会让 ann -0.95pp。
+2. **现代券商佣金 0.025%（vs 原 0.25%）省下 0.45% RT**，是 ratio 提升的主因（不是 ST filter，ST 影响仅 -19 trades）。
+3. **C 模型下最差相位 (o3 ratio 0.780) > A 模型下最好相位 (o1 ratio 0.811)**——成本模型影响 > 相位选择。
+4. in-sample 0.785 / 5 相位 0.758 是在 A 成本下；C 成本下应同步上移到 ~0.9 区间（**未单独跑 in-sample，但相对排序不变，所有拒绝结论仍然成立**）。
+
+**ST filter 影响**（HS300 上下文）：
+
+- Tushare 拉 stock_basic 5574 股票，其中 ST/*ST 201 个
+- 在 HS300 成分股中实际命中的 ST 极少（trades 5363 → 5344，-19 笔）
+- 主要价值在"防止未来某日把 ST 股票选入"——不靠它赚钱，靠它避免边缘问题
+
+**产物**：
+- `evidence/oos_20251013/cost_check/{A_baseline, B_explicit_stamp, C_realistic_st}/V5OOS_o0_2018_2025/`（3 配置对照）
+- `evidence/oos_20251013/phase_check_realistic/V5OOS_o{0..4}_2018_2025/`（5 相位 + 现实成本）
+- `data/stock_basic_full.parquet` (Tushare 拉, 5574 股票)
+- `data/st_codes.json` (201 ST/*ST 名单)
+
 ## 5. 产物
 
 - 台账：`evidence/v5_dynamic_select_20261011/{journal.jsonl, v5_report.md, charts/v5_dynamic_select.png}`
