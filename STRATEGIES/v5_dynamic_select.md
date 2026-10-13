@@ -339,6 +339,71 @@ trail=120/topn=5 为 v5 先验值（非事后调参）。
 - `data/stock_basic_full.parquet` (Tushare 拉, 5574 股票)
 - `data/st_codes.json` (201 ST/*ST 名单)
 
+### 7.4 H4 涨停 momentum — 5 相位验证通过（ratio 0.876 → 1.278）
+
+**学术调研**：搜论文 + GitHub 时发现 A 股"涨停敢死队"现象。台湾市场学术研究（鎖漲停與隔日沖行為）认为涨停后 T+1~T+5 是反转；A 股 retail-driven 市场则**完全不同**。
+
+**诚实假设 vs 实证发现**：
+
+| 假设（H4 论文预想）| 实证 | 结论 |
+|---|---|---|
+| 涨停后 T+1~T+5 是反转 | A 股涨停后 20d **+264bps momentum**（t=7.69）| **方向完全反向** |
+
+**Augment 机制**（基于实证发现的方向）：
+
+- 在 framework 选出的 top-15 picks 之外，**额外加 3 只"昨日涨停"**股票（按涨停强度 gap 排序）
+- 不替换，仅补充（最多 18 只/grid）
+- 涨停 alpha 真实存在但 RET_RANK 仅 26% grid 命中 → augment 显式捕获
+
+**5 相位 OOS 2018-2025 结果（realistic cost + ST filter）**：
+
+| phase | ann | mdd | ratio | trades |
+|---|---|---|---|---|
+| o0 | +34.29% | -28.35% | 1.210 | 6346 |
+| o1 | **+41.13%** | **-24.10%** | **1.707** | 6350 |
+| o2 | +33.25% | -29.25% | 1.136 | 6339 |
+| o3 | +25.92% | -26.95% | 0.962 | 6388 |
+| o4 | +34.96% | -25.47% | 1.373 | 6294 |
+| **mean ± stdev** | **+33.91% ± 5.42%** | **-26.82% ± 2.09%** | **1.278 ± 0.282** | — |
+| 5-phase baseline | +24.34% ± 1.12% | -27.83% ± 0.82% | 0.876 ± 0.060 | — |
+
+**逐相位 delta vs baseline**：
+
+| phase | baseline ann | H4 ann | Δann | baseline ratio | H4 ratio | Δratio |
+|---|---|---|---|---|---|---|
+| o0 | +25.20% | +34.29% | +9.09pp | 0.936 | 1.210 | +0.274 |
+| o1 | +25.33% | +41.13% | +15.80pp | 0.902 | 1.707 | +0.805 |
+| o2 | +23.70% | +33.25% | +9.55pp | 0.861 | 1.136 | +0.275 |
+| o3 | +22.69% | +25.92% | +3.23pp | 0.780 | 0.962 | +0.182 |
+| o4 | +24.78% | +34.96% | +10.18pp | 0.901 | 1.373 | +0.472 |
+| **mean Δ** | — | — | **+9.57pp** | — | — | **+0.402 (+46%)** |
+
+**核心结论**：
+
+1. **5/5 相位 ratio 都超 baseline**（worst o3 = 0.962 > baseline max 0.936）
+2. **4/5 相位 ratio > 1.0**（生产可接受关口）
+3. **ann 提升 +9.57pp 稳定**（每相位都正向，o1 极致 +15.8pp）
+4. **mdd 略改善 -1pp**（0.876 baseline → 1.278 时反而更稳）
+5. **ratio stdev 上升**（0.060 → 0.282）但 mean 远高于上界
+
+**H4 否定面的诚实标注**：
+- 假设**完全错误**（momentum vs reversal）—— 学界 A 股结论不能直接搬
+- 但**实证找到真 alpha** —— A 股 retail FOMO 持续推高涨停
+- Framework 自然只抓 26% grid → augment 显著提升
+
+**N 敏感度扫描**（待 §7.5）：H4_N0..H4_N10 找最优 augment 数量
+
+**产物**：
+- `examples/port_h4_limitup.py`（诊断 + 排除涨停对照）
+- `examples/port_h4_augment.py`（augment 3 LU 实现）
+- `evidence/h4_limitup_20261013/{H4_no_lu_yesterday, H4_augment_3lu_o0..o4, H4_N0..N10}/`
+
+### 7.5 H4 N 敏感度扫描（待 N=4..10 完成）
+
+待补（取决于 N sweep 实际结果）
+
+
+
 ## 5. 产物
 
 - 台账：`evidence/v5_dynamic_select_20261011/{journal.jsonl, v5_report.md, charts/v5_dynamic_select.png}`
